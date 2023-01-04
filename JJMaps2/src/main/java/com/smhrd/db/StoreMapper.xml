@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="StoreMapper">
 
-<select id="StoreSelect">
+<select id="StoreSelect" resultType="com.smhrd.model.StoreVO">
 	select * from stores where store_cate =#{store_cate}
 </select>
 </mapper>
