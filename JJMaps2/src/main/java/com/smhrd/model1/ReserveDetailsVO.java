@@ -1,4 +1,4 @@
-package com.smhrd.model;
+package com.smhrd.model1;
 
 //예약 상세
 public class ReserveDetailsVO {

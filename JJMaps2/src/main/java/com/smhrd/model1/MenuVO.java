@@ -1,4 +1,4 @@
-package com.smhrd.model;
+package com.smhrd.model1;
 
 //메뉴
 public class MenuVO {

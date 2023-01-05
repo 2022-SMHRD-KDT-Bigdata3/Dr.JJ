@@ -1,4 +1,4 @@
-package com.smhrd.controller;
+package com.smhrd.controller1;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.model.StoreDAO;
-import com.smhrd.model.StoreVO;
+import com.smhrd.model1.StoreDAO;
+import com.smhrd.model1.StoreVO;
 
 
 public class MapService extends HttpServlet {

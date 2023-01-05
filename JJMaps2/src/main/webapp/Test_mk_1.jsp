@@ -76,7 +76,26 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 // 지도를 생성합니다    
 var map = new kakao.maps.Map(mapContainer, mapOption); 
-downloadUrl('http://')
+downloadUrl('http://localhost:8081/JJMaps2/com.smhrd.db.output.xml', function(data){
+	var xml= data.responseXML;
+	var markers = xml.documenElement.getElementsByTagName('marker');
+	Array.prototype.forEach.call(markers, function(markerElem){
+		var name= markerElem.getAttribute('stor_name');
+		var address = markerElem.getAtttribute('stor_addr');
+		var infowincontent = document.createElement('div');
+		var Strong = documen.createElement('strong'));
+		strong.textContent = name
+		infowincontent.apppendChild(strong);
+		infowincontent.appendChild(document.createElement('br'));
+		
+		var text = document.createElement('text);
+		text.textContent = address
+		infowincontent.appendChild(text);
+		var icon = customLabel[type] || {};
+		var marker = new
+		
+	})
+}
 
 // 장소 검색 객체를 생성합니다
 var ps = new kakao.maps.services.Places();   

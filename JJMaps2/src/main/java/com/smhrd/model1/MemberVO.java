@@ -1,4 +1,4 @@
-package com.smhrd.model;
+package com.smhrd.model1;
 
 public class MemberVO {
 

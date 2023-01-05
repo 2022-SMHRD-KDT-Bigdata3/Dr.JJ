@@ -1,11 +1,12 @@
-package com.smhrd.model;
+package com.smhrd.model1;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.smhrd.db1.SqlSessionManager;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.smhrd.db.SqlSessionManager;
 
 public class StoreDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
