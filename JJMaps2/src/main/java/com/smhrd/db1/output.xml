@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<stores>
+	<stores store_id="store_id 1" store_name="store_name 1" store_addr="광주 북구 용봉택지로 25" store_tel="store_tel 1" store_open_dt="store_close_dt 1" store_card_yn="1" store_status="1" store_cate="붕어빵"/>
+	<stores store_id="store_id 01" store_name="store_name 01" store_addr="광주광역시 북구 군왕로181번길 12-16" store_tel="store_tel 01" store_open_dt="store_close_dt 01" store_card_yn="1" store_status="1" store_cate="붕어빵"/>
+	<stores store_id="store_id 25" store_name="store_name 25" store_addr="광주 광산구 소촌로 60" store_tel="store_tel 25" store_open_dt="store_close_dt 25" store_card_yn="25" store_status="25" store_cate="기타"/>
+	<stores store_id="store_id 02" store_name="store_name 02" store_addr="광주광역시 북구 면앙로32번길 18" store_tel="store_tel 02" store_open_dt="store_close_dt 02" store_card_yn="2" store_status="2" store_cate="타코야끼"/>
+	<stores store_id="store_id 27" store_name="store_name 27" store_addr="광주 동구 황금동 46-1번지 2층" store_tel="store_tel 27" store_open_dt="store_close_dt 27" store_card_yn="27" store_status="27" store_cate="분식"/>
+	<stores store_id="store_id 03" store_name="store_name 03" store_addr="광주광역시 북구 효산로 26 1층" store_tel="store_tel 03" store_open_dt="store_close_dt 03" store_card_yn="3" store_status="3" store_cate="붕어빵"/>
+	<stores store_id="store_id 04" store_name="store_name 04" store_addr="광주광역시 북구 두암동 574-1" store_tel="store_tel 04" store_open_dt="store_close_dt 04" store_card_yn="4" store_status="4" store_cate="붕어빵"/>
+	<stores store_id="store_id 15" store_name="store_name 15" store_addr="광주광역시 동구 산수동 540-18" store_tel="store_tel 15" store_open_dt="store_close_dt 15" store_card_yn="15" store_status="15" store_cate="분식"/>
+	<stores store_id="store_id 26" store_name="store_name 26" store_addr="광주 광산구 수완로 10번길94 1층" store_tel="store_tel 26" store_open_dt="store_close_dt 26" store_card_yn="26" store_status="26" store_cate="타꼬야끼"/>
+	<stores store_id="store_id 28" store_name="store_name 28" store_addr="광주광역시 동구 황금동 79-4번지" store_tel="store_tel 28" store_open_dt="store_close_dt 28" store_card_yn="28" store_status="28" store_cate="호떡"/>
+	<stores store_id="store_id 05" store_name="store_name 05" store_addr="광주광역시 서구 치평동 1184-3" store_tel="store_tel 05" store_open_dt="store_close_dt 05" store_card_yn="5" store_status="5" store_cate="타코야끼"/>
+	<stores store_id="store_id 29" store_name="store_name 29" store_addr="광주광역시 동구  광산동 79-8번지" store_tel="store_tel 29" store_open_dt="store_close_dt 29" store_card_yn="29" store_status="29" store_cate="붕어빵"/>
+	<stores store_id="store_id 30" store_name="store_name 30" store_addr="광주광역시 서구 풍암동 1157-2" store_tel="store_tel 30" store_open_dt="store_close_dt 30" store_card_yn="30" store_status="30" store_cate="타코야끼"/>
+	<stores store_id="store_id 31" store_name="store_name 31" store_addr="광주광역시 서구 풍암동 943번지 1층" store_tel="store_tel 31" store_open_dt="store_close_dt 31" store_card_yn="31" store_status="31" store_cate="타코야끼"/>
+	<stores store_id="store_id 32" store_name="store_name 32" store_addr="광주광역시 서구 풍암동 1071-3" store_tel="store_tel 32" store_open_dt="store_close_dt 32" store_card_yn="32" store_status="32" store_cate="분식"/>
+	<stores store_id="store_id 33" store_name="store_name 33" store_addr="광주광역시 북구 운암동 451-8번지 1층" store_tel="store_tel 33" store_open_dt="store_close_dt 33" store_card_yn="33" store_status="33" store_cate="호떡"/>
+	<stores store_id="store_id 34" store_name="store_name 34" store_addr="광주광역시 서구 광천동 무진대로 904" store_tel="store_tel 34" store_open_dt="store_close_dt 34" store_card_yn="34" store_status="34" store_cate="붕어빵"/>
+	<stores store_id="store_id 35" store_name="store_name 35" store_addr="광주 서구 광천동 49-1" store_tel="store_tel 35" store_open_dt="store_close_dt 35" store_card_yn="35" store_status="35" store_cate="타코야끼"/>
+	<stores store_id="store_id 36" store_name="store_name 36" store_addr="광주광역시 동구 제봉로110번길 5-1" store_tel="store_tel 36" store_open_dt="store_close_dt 36" store_card_yn="36" store_status="36" store_cate="기타"/>
+	<stores store_id="store_id 37" store_name="store_name 37" store_addr="광주광역시 남구 봉선1동 봉선로 21" store_tel="store_tel 37" store_open_dt="store_close_dt 37" store_card_yn="37" store_status="37" store_cate="붕어빵"/>
+	<stores store_id="store_id 38" store_name="store_name 38" store_addr="광주광역시 남구 주월1동 1254-17" store_tel="store_tel 38" store_open_dt="store_close_dt 38" store_card_yn="38" store_status="38" store_cate="호떡"/>
+	<stores store_id="store_id 39" store_name="store_name 39" store_addr="광주광역시 남구 월산동 월산로116번길 22" store_tel="store_tel 39" store_open_dt="store_close_dt 39" store_card_yn="39" store_status="39" store_cate="붕어빵"/>
+	<stores store_id="store_id 40" store_name="store_name 40" store_addr="광주광역시 북구 용두동 282-7" store_tel="store_tel 40" store_open_dt="store_close_dt 40" store_card_yn="40" store_status="40" store_cate="타코야끼"/>
+	<stores store_id="store_id 41" store_name="store_name 41" store_addr="광주광역시 서구 풍암동 1076-6번지 1층" store_tel="store_tel 41" store_open_dt="store_close_dt 41" store_card_yn="41" store_status="41" store_cate="분식"/>
+	<stores store_id="store_id 42" store_name="store_name 42" store_addr="광주광역시 광산구 송정2동 820-5" store_tel="store_tel 42" store_open_dt="store_close_dt 42" store_card_yn="42" store_status="42" store_cate="붕어빵"/>
+	<stores store_id="store_id 43" store_name="store_name 43" store_addr="광주광역시 북구 운암1동 368-2" store_tel="store_tel 43" store_open_dt="store_close_dt 43" store_card_yn="43" store_status="43" store_cate="분식"/>
+	<stores store_id="store_id 44" store_name="store_name 44" store_addr="광주광역시 동구 황금동 57 2층" store_tel="store_tel 44" store_open_dt="store_close_dt 44" store_card_yn="44" store_status="44" store_cate="호떡"/>
+	<stores store_id="store_id 06" store_name="store_name 06" store_addr="광주광역시 북구 용봉동 1129-1" store_tel="store_tel 06" store_open_dt="store_close_dt 06" store_card_yn="6" store_status="6" store_cate="기타"/>
+	<stores store_id="store_id 07" store_name="store_name 07" store_addr="광주광역시 남구 백운동 604-14" store_tel="store_tel 07" store_open_dt="store_close_dt 07" store_card_yn="7" store_status="7" store_cate="분식"/>
+	<stores store_id="store_id 08" store_name="store_name 08" store_addr="광주광역시 남구 백운동 603-35" store_tel="store_tel 08" store_open_dt="store_close_dt 08" store_card_yn="8" store_status="8" store_cate="호떡"/>
+	<stores store_id="store_id 09" store_name="store_name 09" store_addr="광주광역시 남구 봉선동 1114-3" store_tel="store_tel 09" store_open_dt="store_close_dt 09" store_card_yn="9" store_status="9" store_cate="붕어빵"/>
+	<stores store_id="store_id 10" store_name="store_name 10" store_addr="광주광역시 남구 봉선동 1018-11" store_tel="store_tel 10" store_open_dt="store_close_dt 10" store_card_yn="10" store_status="10" store_cate="타코야끼"/>
+	<stores store_id="store_id 11" store_name="store_name 11" store_addr="광주광역시 남구 방림동 464-26" store_tel="store_tel 11" store_open_dt="store_close_dt 11" store_card_yn="11" store_status="11" store_cate="분식"/>
+	<stores store_id="store_id 12" store_name="store_name 12" store_addr="광주광역시 동구 동명동 11-14" store_tel="store_tel 12" store_open_dt="store_close_dt 12" store_card_yn="12" store_status="12" store_cate="호떡"/>
+	<stores store_id="store_id 13" store_name="store_name 13" store_addr="광주광역시 동구 지산동 722-37" store_tel="store_tel 13" store_open_dt="store_close_dt 13" store_card_yn="13" store_status="13" store_cate="호떡"/>
+	<stores store_id="store_id 14" store_name="store_name 14" store_addr="광주광역시 동구 산수동 522-1" store_tel="store_tel 14" store_open_dt="store_close_dt 14" store_card_yn="14" store_status="14" store_cate="붕어빵"/>
+	<stores store_id="store_id 16" store_name="store_name 16" store_addr="광주광역시 동구 산수동 539-30" store_tel="store_tel 16" store_open_dt="store_close_dt 16" store_card_yn="16" store_status="16" store_cate="붕어빵"/>
+	<stores store_id="store_id 17" store_name="store_name 17" store_addr="광주광역시 서구 금호동 747-6" store_tel="store_tel 17" store_open_dt="store_close_dt 17" store_card_yn="17" store_status="17" store_cate="기타"/>
+	<stores store_id="store_id 18" store_name="store_name 18" store_addr="광주 서구 금화로115번길 9" store_tel="store_tel 18" store_open_dt="store_close_dt 18" store_card_yn="18" store_status="18" store_cate="타코야끼"/>
+	<stores store_id="store_id 19" store_name="store_name 19" store_addr="광주광역시 서구 금호동 239-8" store_tel="store_tel 19" store_open_dt="store_close_dt 19" store_card_yn="19" store_status="19" store_cate="분식"/>
+	<stores store_id="store_id 20" store_name="store_name 20" store_addr="광주 서구 화개1로 31" store_tel="store_tel 20" store_open_dt="store_close_dt 20" store_card_yn="20" store_status="20" store_cate="호떡"/>
+	<stores store_id="store_id 21" store_name="store_name 21" store_addr="광주광역시 광산구 선암동 567" store_tel="store_tel 21" store_open_dt="store_close_dt 21" store_card_yn="21" store_status="21" store_cate="붕어빵"/>
+	<stores store_id="store_id 22" store_name="store_name 22" store_addr="광주 광산구 선운로2번길 63-5" store_tel="store_tel 22" store_open_dt="store_close_dt 22" store_card_yn="22" store_status="22" store_cate="타코야끼"/>
+	<stores store_id="store_id 23" store_name="store_name 23" store_addr="광주 광산구 선운로20번길 34-1" store_tel="store_tel 23" store_open_dt="store_close_dt 23" store_card_yn="23" store_status="23" store_cate="호떡"/>
+	<stores store_id="store_id 24" store_name="store_name 24" store_addr="광주 광산구 선운로20번길 60" store_tel="store_tel 24" store_open_dt="store_close_dt 24" store_card_yn="24" store_status="24" store_cate="호떡"/>
+	<stores store_id="store_id 45" store_name="store_name 45" store_addr="광주광역시 광산구 송정동 831-21" store_tel="store_tel 45" store_open_dt="store_close_dt 45" store_card_yn="45" store_status="45" store_cate="붕어빵"/>
+	<stores store_id="store_id 50" store_name="store_name 50" store_addr="광주광역시 서구 광천동 636-8" store_tel="store_tel 50" store_open_dt="store_close_dt 50" store_card_yn="50" store_status="50" store_cate="분식"/>
+	<stores store_id="store_id 46" store_name="store_name 46" store_addr="광주광역시 광산구 운남동 787-5" store_tel="store_tel 46" store_open_dt="store_close_dt 46" store_card_yn="46" store_status="46" store_cate="호떡"/>
+	<stores store_id="store_id 47" store_name="store_name 47" store_addr="광주광역시 광산구 장신로19번안길 23" store_tel="store_tel 47" store_open_dt="store_close_dt 47" store_card_yn="47" store_status="47" store_cate="호떡"/>
+	<stores store_id="store_id 48" store_name="store_name 48" store_addr="광주광역시 남구 봉선동 178-40" store_tel="store_tel 48" store_open_dt="store_close_dt 48" store_card_yn="48" store_status="48" store_cate="붕어빵"/>
+	<stores store_id="store_id 49" store_name="store_name 49" store_addr="광주광역시 광산구 평동 평동로 421" store_tel="store_tel 49" store_open_dt="store_close_dt 49" store_card_yn="49" store_status="49" store_cate="타코야끼"/>
+</stores>
