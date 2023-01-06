@@ -1,11 +1,10 @@
 package com.smhrd.model1;
+
 import java.io.*;
 import java.util.*;
 import java.sql.*;
 import org.dom4j.*;
 import org.dom4j.io.*;
-
-
 
 public class CreateXML {
 
@@ -14,23 +13,23 @@ public class CreateXML {
 	private static String jdbcUrl = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 	private static String userName = "campus_f_1227_3";
 	private static String userPwd = "smhrd3";
-	
+
 	public static void main(String[] args) {
 		Document document;
 		try {
 			document = createDocument();
 			OutputFormat format = new OutputFormat("\t", true);
-			Writer out = new OutputStreamWriter(new FileOutputStream("D:/output.xml"),"UTF-8");
+			Writer out = new OutputStreamWriter(new FileOutputStream("D:/output.xml"), "UTF-8");
 			XMLWriter writer = new XMLWriter(out, format);
 			writer.write(document);
 			out.close();
-		}catch(IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static Document createDocument() {
 		Document document = DocumentHelper.createDocument();
 		Element root = document.addElement("stores");
@@ -50,7 +49,8 @@ public class CreateXML {
 				superNod.addAttribute("store_card_yn", Integer.toString(maker.getStoreCardYn()));
 				superNod.addAttribute("store_status", Integer.toString(maker.getStoreStatus()));
 				superNod.addAttribute("store_cate", maker.getStoreCate());
-				
+				superNod.addAttribute("latitude", Double.toString(maker.getLatitude()));
+				superNod.addAttribute("longitude", Double.toString(maker.getLongitude()));
 			}
 			System.out.println("출력완료");
 		}catch(Exception e){
@@ -59,21 +59,20 @@ public class CreateXML {
 		return document;
 	}
 
-
 	private static ArrayList<StoreVO> getStoreList() {
 		ArrayList<StoreVO> storeList = new ArrayList<StoreVO>();
 		Connection con = null;
 		PreparedStatement psmt = null;
-		ResultSet rs =  null;
+		ResultSet rs = null;
 		try {
-			Driver driver = (Driver)Class.forName(jdbcDriver).newInstance();
+			Driver driver = (Driver) Class.forName(jdbcDriver).newInstance();
 			con = DriverManager.getConnection(jdbcUrl, userName, userPwd);
 			String sql = "select * from stores";
 			psmt = con.prepareStatement(sql);
 			rs = psmt.executeQuery();
-			
+
 			while (rs.next()) {
-				StoreVO store =new StoreVO();
+				StoreVO store = new StoreVO();
 				store.setStoreId(rs.getString("store_id"));
 				store.setStoreName(rs.getString("store_name"));
 				store.setStoreAddr(rs.getString("store_addr"));
@@ -83,17 +82,16 @@ public class CreateXML {
 				store.setStoreCardYn(rs.getInt("store_card_yn"));
 				store.setStoreStatus(rs.getInt("store_status"));
 				store.setStoreCate(rs.getString("store_cate"));
-				
+				store.setLatitude(rs.getDouble("latitude"));
+				store.setLongitude(rs.getDouble("longitude"));
 				storeList.add(store);
-				
+
 			}
-			
-		}catch(Exception e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return storeList;
 	}
 
-
 }
-
