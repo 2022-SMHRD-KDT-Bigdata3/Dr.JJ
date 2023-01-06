@@ -30,11 +30,7 @@ body {
 	>	
 	</script>
 	<script type="text/javascript">
-	 	function search() {
-	        const search = {
-	          bounds: map.getBounds(),
-	          types: ["veterinary_care"],
-	        };
+
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center : new google.maps.LatLng(35.15, 126.8),
@@ -45,13 +41,13 @@ body {
 			downloadUrl('http://localhost:14510/JJMap/output.xml', function(data) {
 						var xml = data.responseXML;
 						var markers = xml.documentElement.getElementsByTagName('marker');
+						console.log(markers)
 						Array.prototype.forEach.call(markers, function(markerElem) {
-									var name = markerElem.getAttribute('store_name');
-									var address = markerElem.getAttribute('store_addr');
-									var cate = markerElem.getAttribute('store_cate');
+									var name = markers.getAttribute('store_name');
+									var address = markers.getAttribute('store_addr');
 									var point = new google.maps.LatLng(
-											parseFloat(markerElem.getAttribute('latitude')),
-											parseFloat(markerElem.getAttribute('longitude')));
+											Double.parseDouble(markers.getAttribute('latitude')),
+											Double.parseDouble(markers.getAttribute('longitude')));
 									
 									var infowincontent = document.createElement('div');
 									var strong = document.createElement('storng');
@@ -60,10 +56,9 @@ body {
 									infowincontent.appendChild(document.createElement('br'));
 									
 									var text = document.createElement('text');
-									text.textContent = address+" , "+cate;
+									text.textContent = address
 									infowincontent.appendChild(text);
-									
-									
+
 									var marker = new google.maps.Marker({
 										map:map,
 										position : point,
@@ -82,16 +77,16 @@ body {
 					
 			request.onreadystatechange = function(){
 				if(request.readyState == 4){
-					
+					request.onreadystatechange = doNothing;
 					callback(request, request.status);
 				}
 			};
 			request.open('GET',url, true);
 			request.send(null);
 		}
-		
-		
-
+		function doNoting(){
+			return null;
+		}
 	</script>
 
 </body>
