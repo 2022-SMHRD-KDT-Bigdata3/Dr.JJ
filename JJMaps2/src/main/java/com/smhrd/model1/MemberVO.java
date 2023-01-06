@@ -4,7 +4,13 @@ public class MemberVO {
 
     private String userId;
 
-    private String userPw;
+    public MemberVO(String userId, String userPw) {
+		super();
+		this.userId = userId;
+		this.userPw = userPw;
+	}
+
+	private String userPw;
 
     private String userNick;
 

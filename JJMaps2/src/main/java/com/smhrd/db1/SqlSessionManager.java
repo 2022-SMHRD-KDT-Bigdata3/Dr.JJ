@@ -13,7 +13,7 @@ public class SqlSessionManager {
 	//클래스 초기화 블록 : 클래스가 처음 로딩될 때 딱 한번만 수행
 	static {
 		//읽어올 파일 경로 지정(DB관련 설정 정보 작성)
-		String resource = "com/smhrd/db/config.xml";
+		String resource = "com/smhrd/db1/config.xml";
 		
 		Reader reader;
 		try {

@@ -30,11 +30,7 @@ body {
 	>	
 	</script>
 	<script type="text/javascript">
-	 	function search() {
-	        const search = {
-	          bounds: map.getBounds(),
-	          types: ["veterinary_care"],
-	        };
+
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center : new google.maps.LatLng(35.15, 126.8),
@@ -42,7 +38,7 @@ body {
 			});
 			var infoWindow = new google.maps.InfoWindow;
 
-			downloadUrl('http://localhost:14510/JJMap/output.xml', function(data) {
+			downloadUrl('http://localhost:8081/JJMap/output.xml', function(data) {
 						var xml = data.responseXML;
 						var markers = xml.documentElement.getElementsByTagName('marker');
 						Array.prototype.forEach.call(markers, function(markerElem) {
