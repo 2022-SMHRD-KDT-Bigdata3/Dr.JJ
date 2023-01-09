@@ -54,10 +54,10 @@
             
 
             <div class="button">
-                <p class="btn btn-1"><a href="Reserve1.jsp">현재 예약 보기</a></p>
+                <p class="btn btn-1" onClick='location.href="Reserve1.jsp"'>현재 예약 보기</p>
                 <p class="btn btn-1">내 주문내역 보기</p>
-                <p class="btn btn-1"><a href="Myreview.jsp">내 리뷰 보기</a></p>
-                <p class="btn btn-1"><a href="MystoreJoin.jsp">점포등록</a></p>
+                <p class="btn btn-1" onClick='location.href="Myreview.jsp"'>내 리뷰 보기</p>
+                <p class="btn btn-1" onClick='location.href="MystoreJoin.jsp"'>점포등록</p>
                 <p class="btn btn-1">내 점포 관리</p>
                 
             </div>

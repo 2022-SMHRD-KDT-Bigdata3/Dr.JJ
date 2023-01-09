@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<div class="button">
-		<p class="btn btn-1">주문하러 가기</p>
+		<p class="btn btn-1" onClick='location.href="#"'>주문하러 가기</p>
 	</div>
 	<%
 	} else {
