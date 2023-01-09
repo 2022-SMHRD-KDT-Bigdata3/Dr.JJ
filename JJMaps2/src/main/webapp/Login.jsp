@@ -12,7 +12,7 @@
    <body>
       <div id="login_Body">
             <header>
-                <a id="main_Logo" href="main.jsp">로고</a>
+                <a id="main_Logo" href="Main.jsp">로고</a>
             </header>
 
             <a id="login_logo">로그인</a>
