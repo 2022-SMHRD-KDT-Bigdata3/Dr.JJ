@@ -1,0 +1,69 @@
+@charset "utf-8";
+body{
+    margin: 0;   
+}
+
+.menu_count{
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.title{
+    color: antiquewhite;
+    margin-bottom: 45px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #ff7300;
+}
+
+img{
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin : auto;
+}
+
+.info{
+    text-align : center;
+}
+
+.pagename{
+    text-decoration: antiquewhite;
+    position:relative ;  
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 40px;
+}
+
+
+.menu_select{
+    padding: 30px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;     
+}
+
+
+.menu_name{
+    color: #ff7300;
+    text-decoration: solid;
+}
+
+.menu{
+    font-weight: bold; 
+    text-align: center;
+    background-color: orange;
+}
+
+.total_price{
+    text-align : center;
+}
+
+.reno_bnt{
+    text-align: center;
+    margin-bottom: 50px;
+}
