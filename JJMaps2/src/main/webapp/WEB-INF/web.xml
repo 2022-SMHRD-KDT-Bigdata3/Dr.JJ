@@ -4,6 +4,7 @@
 
 <web-app>
   <display-name>MapJJ</display-name>
+  
   <servlet>
   	<servlet-name>Login</servlet-name>
   	<display-name>Login</display-name>
@@ -11,14 +12,35 @@
   	<servlet-class>com.smhrd.controller1.Login</servlet-class>
   </servlet>
   <servlet>
+  	<servlet-name>JoinService</servlet-name>
+  	<display-name>JoinService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.JoinService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutService</servlet-name>
+  	<display-name>LogoutService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.LogoutService</servlet-class>
+  </servlet>
+  <servlet>
   	<servlet-name>WebSocket</servlet-name>
   	<display-name>WebSocket</display-name>
   	<description></description>
   	<servlet-class>WebSocket.WebSocket</servlet-class>
   </servlet>
+  
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JoinService</servlet-name>
+  	<url-pattern>/JoinService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutService</servlet-name>
+  	<url-pattern>/LogoutService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>WebSocket</servlet-name>
