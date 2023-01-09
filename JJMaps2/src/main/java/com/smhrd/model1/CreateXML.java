@@ -40,15 +40,15 @@ public class CreateXML {
 				Element superNod = root.addElement("stores");
 				StoreVO maker = storeList.get(i);
 				
-				superNod.addAttribute("store_id", maker.getStoreId());
-				superNod.addAttribute("store_name", maker.getStoreName());
-				superNod.addAttribute("store_addr", maker.getStoreAddr());
-				superNod.addAttribute("store_tel", maker.getStoreTel());
-				superNod.addAttribute("store_open_dt", maker.getStoreOpenDt());
-				superNod.addAttribute("store_open_dt", maker.getStoreCloseDt());
-				superNod.addAttribute("store_card_yn", Integer.toString(maker.getStoreCardYn()));
-				superNod.addAttribute("store_status", Integer.toString(maker.getStoreStatus()));
-				superNod.addAttribute("store_cate", maker.getStoreCate());
+				superNod.addAttribute("store_id", maker.getStore_Id());
+				superNod.addAttribute("store_name", maker.getStore_Name());
+				superNod.addAttribute("store_addr", maker.getStore_Addr());
+				superNod.addAttribute("store_tel", maker.getStore_Tel());
+				superNod.addAttribute("store_open_dt", maker.getStore_Open_Dt());
+				superNod.addAttribute("store_close_dt", maker.getStore_Close_Dt());
+				superNod.addAttribute("store_card_yn", Integer.toString(maker.getStore_Card_Yn()));
+				superNod.addAttribute("store_status", Integer.toString(maker.getStore_Status()));
+				superNod.addAttribute("store_cate", maker.getStore_Cate());
 				superNod.addAttribute("latitude", Double.toString(maker.getLatitude()));
 				superNod.addAttribute("longitude", Double.toString(maker.getLongitude()));
 			}
@@ -73,15 +73,15 @@ public class CreateXML {
 
 			while (rs.next()) {
 				StoreVO store = new StoreVO();
-				store.setStoreId(rs.getString("store_id"));
-				store.setStoreName(rs.getString("store_name"));
-				store.setStoreAddr(rs.getString("store_addr"));
-				store.setStoreTel(rs.getString("store_tel"));
-				store.setStoreOpenDt(rs.getString("store_open_dt"));
-				store.setStoreCloseDt(rs.getString("store_close_dt"));
-				store.setStoreCardYn(rs.getInt("store_card_yn"));
-				store.setStoreStatus(rs.getInt("store_status"));
-				store.setStoreCate(rs.getString("store_cate"));
+				store.setStore_Id(rs.getString("store_id"));
+				store.setStore_Name(rs.getString("store_name"));
+				store.setStore_Addr(rs.getString("store_addr"));
+				store.setStore_Tel(rs.getString("store_tel"));
+				store.setStore_Open_Dt(rs.getString("store_open_dt"));
+				store.setStore_Close_Dt(rs.getString("store_close_dt"));
+				store.setStore_Card_Yn(rs.getInt("store_card_yn"));
+				store.setStore_Status(rs.getInt("store_status"));
+				store.setStore_Cate(rs.getString("store_cate"));
 				store.setLatitude(rs.getDouble("latitude"));
 				store.setLongitude(rs.getDouble("longitude"));
 				storeList.add(store);

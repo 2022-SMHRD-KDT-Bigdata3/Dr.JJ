@@ -2,141 +2,171 @@ package com.smhrd.model1;
 
 public class StoreVO {
 
-	private String storeId;
+	private String store_Id;
 
-    private String storeName;
+    private String store_Name;
 
-    private String storeAddr;
+    private String store_Addr;
 
-    private String storeTel;
+    private String store_Tel;
 
-    private String storeOpenDt;
+    private String store_Open_Dt;
 
-    private String storeCloseDt;
+    private String store_Close_Dt;
 
-    private Integer storeCardYn;
+    private Integer store_Card_Yn;
 
-    private Integer storeStatus;
+    private Integer store_Status;
 
-    private String userId;
+    private String user_Id;
 
-    private String storeCate;
+    private String store_Cate;
+    
     private Double Latitude;
-    private Double Longitude;   
+    
+    
+    
     public StoreVO() {
     }
     
-	public StoreVO(String storeId, String storeName, String storeAddr, String storeTel, String storeOpenDt,
-			String storeCloseDt, Integer storeCardYn, Integer storeStatus, String userId, String storeCate,
+    
+    public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
+			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate,
 			Double latitude, Double longitude) {
-	
-		this.storeId = storeId;
-		this.storeName = storeName;
-		this.storeAddr = storeAddr;
-		this.storeTel = storeTel;
-		this.storeOpenDt = storeOpenDt;
-		this.storeCloseDt = storeCloseDt;
-		this.storeCardYn = storeCardYn;
-		this.storeStatus = storeStatus;
-		this.userId = userId;
-		this.storeCate = storeCate;
+		super();
+		this.store_Id = store_Id;
+		this.store_Name = store_Name;
+		this.store_Addr = store_Addr;
+		this.store_Tel = store_Tel;
+		this.store_Open_Dt = store_Open_Dt;
+		this.store_Close_Dt = store_Close_Dt;
+		this.store_Card_Yn = store_Card_Yn;
+		this.store_Status = store_Status;
+		this.user_Id = user_Id;
+		this.store_Cate = store_Cate;
 		Latitude = latitude;
 		Longitude = longitude;
 	}
-		public StoreVO(String storeId, String storeName, String storeAddr, String storeTel, String storeOpenDt,
-			String storeCloseDt, Integer storeCardYn, Integer storeStatus, String userId, String storeCate) {
+
+
+
+
+	public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
+			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate) {
 		super();
-		this.storeId = storeId;
-		this.storeName = storeName;
-		this.storeAddr = storeAddr;
-		this.storeTel = storeTel;
-		this.storeOpenDt = storeOpenDt;
-		this.storeCloseDt = storeCloseDt;
-		this.storeCardYn = storeCardYn;
-		this.storeStatus = storeStatus;
-		this.userId = userId;
-		this.storeCate = storeCate;
+		this.store_Id = store_Id;
+		this.store_Name = store_Name;
+		this.store_Addr = store_Addr;
+		this.store_Tel = store_Tel;
+		this.store_Open_Dt = store_Open_Dt;
+		this.store_Close_Dt = store_Close_Dt;
+		this.store_Card_Yn = store_Card_Yn;
+		this.store_Status = store_Status;
+		this.user_Id = user_Id;
+		this.store_Cate = store_Cate;
 	}
-		
-		public String getStoreId() {
-			return storeId;
-		}
-		public void setStoreId(String storeId) {
-			this.storeId = storeId;
-		}
-		public String getStoreName() {
-			return storeName;
-		}
-		public void setStoreName(String storeName) {
-			this.storeName = storeName;
-		}
-		public String getStoreAddr() {
-			return storeAddr;
-		}
-		public void setStoreAddr(String storeAddr) {
-			this.storeAddr = storeAddr;
-		}
-		public String getStoreTel() {
-			return storeTel;
-		}
-		public void setStoreTel(String storeTel) {
-			this.storeTel = storeTel;
-		}
-		public String getStoreOpenDt() {
-			return storeOpenDt;
-		}
-		public void setStoreOpenDt(String storeOpenDt) {
-			this.storeOpenDt = storeOpenDt;
-		}
-		public String getStoreCloseDt() {
-			return storeCloseDt;
-		}
-		public void setStoreCloseDt(String storeCloseDt) {
-			this.storeCloseDt = storeCloseDt;
-		}
-		public Integer getStoreCardYn() {
-			return storeCardYn;
-		}
-		public void setStoreCardYn(Integer storeCardYn) {
-			this.storeCardYn = storeCardYn;
-		}
-		public Integer getStoreStatus() {
-			return storeStatus;
-		}
-		public void setStoreStatus(Integer storeStatus) {
-			this.storeStatus = storeStatus;
-		}
-		public String getUserId() {
-			return userId;
-		}
-		public void setUserId(String userId) {
-			this.userId = userId;
-		}
-		public String getStoreCate() {
-			return storeCate;
-		}
-		public void setStoreCate(String storeCate) {
-			this.storeCate = storeCate;
-		}
-		public Double getLatitude() {
-			return Latitude;
-		}
-		public void setLatitude(Double latitude) {
-			Latitude = latitude;
-		}
-		public Double getLongitude() {
-			return Longitude;
-		}
-		public void setLongitude(Double longitude) {
-			Longitude = longitude;
-		}
-		@Override
-		public String toString() {
-			return "StoreVO [storeId=" + storeId + ", storeName=" + storeName + ", storeAddr=" + storeAddr
-					+ ", storeTel=" + storeTel + ", storeOpenDt=" + storeOpenDt + ", storeCloseDt=" + storeCloseDt
-					+ ", storeCardYn=" + storeCardYn + ", storeStatus=" + storeStatus + ", userId=" + userId
-					+ ", storeCate=" + storeCate + ", Latitude=" + Latitude + ", Longitude=" + Longitude + "]";
-		}
+
+
+	public String getStore_Id() {
+		return store_Id;
+	}
+
+	public String getStore_Name() {
+		return store_Name;
+	}
+
+	public String getStore_Addr() {
+		return store_Addr;
+	}
+
+	public String getStore_Tel() {
+		return store_Tel;
+	}
+
+	public String getStore_Open_Dt() {
+		return store_Open_Dt;
+	}
+
+	public String getStore_Close_Dt() {
+		return store_Close_Dt;
+	}
+
+	public Integer getStore_Card_Yn() {
+		return store_Card_Yn;
+	}
+
+	public Integer getStore_Status() {
+		return store_Status;
+	}
+
+	public String getUser_Id() {
+		return user_Id;
+	}
+
+	public String getStore_Cate() {
+		return store_Cate;
+	}
+
+	public Double getLatitude() {
+		return Latitude;
+	}
+
+	public Double getLongitude() {
+		return Longitude;
+	}
+
+	public void setStore_Id(String store_Id) {
+		this.store_Id = store_Id;
+	}
+
+	public void setStore_Name(String store_Name) {
+		this.store_Name = store_Name;
+	}
+
+	public void setStore_Addr(String store_Addr) {
+		this.store_Addr = store_Addr;
+	}
+
+	public void setStore_Tel(String store_Tel) {
+		this.store_Tel = store_Tel;
+	}
+
+	public void setStore_Open_Dt(String store_Open_Dt) {
+		this.store_Open_Dt = store_Open_Dt;
+	}
+
+	public void setStore_Close_Dt(String store_Close_Dt) {
+		this.store_Close_Dt = store_Close_Dt;
+	}
+
+	public void setStore_Card_Yn(Integer store_Card_Yn) {
+		this.store_Card_Yn = store_Card_Yn;
+	}
+
+	public void setStore_Status(Integer store_Status) {
+		this.store_Status = store_Status;
+	}
+
+	public void setUser_Id(String user_Id) {
+		this.user_Id = user_Id;
+	}
+
+	public void setStore_Cate(String store_Cate) {
+		this.store_Cate = store_Cate;
+	}
+
+	public void setLatitude(Double latitude) {
+		Latitude = latitude;
+	}
+
+	public void setLongitude(Double longitude) {
+		Longitude = longitude;
+	}
+
+	private Double Longitude;   
+    
+ 
+    
 
 	    
 }

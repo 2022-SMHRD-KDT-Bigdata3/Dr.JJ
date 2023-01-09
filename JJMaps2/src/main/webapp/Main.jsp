@@ -12,7 +12,7 @@
     <meta name="format-detection" content="telephone-no">
     <link rel="stylesheet" type="text/css" href="assets/css/default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jjmain.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <title>main</title>
     
 </head>
@@ -49,10 +49,10 @@
                     <span id="main_st" >당신의 맛있는 지도</span><br>
             </header>
             
-        <form action="Search.jsp">
-        <div id="serch">
-            <input type="text" placeholder="검색어 입력">
-            <input type="submit" value="검색">
+        <form action="Search">
+        <div id="search">
+            <input  name="searchWord" type="text" placeholder="검색어 입력">
+            <input  type="submit" value="검색">
         </div>
         </form>
        </div>

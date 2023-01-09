@@ -18,10 +18,13 @@
 
 #allwidth{  
     max-width : 1200px; 
+    max-height: 1000px;
     min-width: 400px; 
-    height:100vh;
-    margin-left: auto; 
+    height:calc(100vh-75px);
+
+    margin-left: auto;  /*정렬*/
     margin-right: auto;
+
     background-color: rgb(224, 224, 224);
     z-index: 0;
 
@@ -30,13 +33,35 @@
     white-space:nowrap;
 }
 
+#store_name{ width: auto; height: auto;}
+#store_score{width: auto; height: auto;  margin-top: -20px}
 
-.list_wrap{ display: inline-block; 
-    width: 350px; height:calc(100% - 63px);  
+.list_store{
+    display: inline-block;
+}
+#store_img{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-right: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15%; 
+   }
+
+
+@media(min-width: 800px){
+.list_wrap{
+    position:absolute; 
+    display: inline; 
+    width: 350px; height:calc(100% - 80px);  
+
     border: 2px solid; 
     border-color: rgb(212, 212, 212); z-index: 1; 
-    overflow:auto;
+
+    overflow:auto; /* 스크롤*/
     display: flex;
+
     flex-wrap: wrap;
     flex-direction: row; /*수평 정렬*/
     align-items: center;
@@ -45,26 +70,71 @@
     
 }
 
-.list_one{
-    width: 95%; 
+.list_one{ 
+    white-space:normal;
+    width: 330px; 
     margin-left: 10px;
     margin-top: 10px;
-    height:200px;
+    height:150px;
     background-color: aliceblue; 
     z-index: 1;}
 
 .map_wrap{  
-    position: relative;
-    margin: 365px;
-    margin-top: -780px;
-    width: 830px; height:calc(100% - 63px); 
+    position:absolute;
+    padding-left: 360px;
+    width: 100vw;
+    max-width: 832px;
+    margin-right: 10px;
+    height:calc(100% - 80px); 
     min-width: 100px;
     border: 2px solid; 
     border-color: rgb(212, 212, 212);   }
 
-#map{width: 98%; height: 96%;
+#map1{
+    width: calc(100%); height: 100%;
+    /* box-sizing: border-box; */
     min-width: 100px;
-    margin-right: 10px;
-     margin-top: 15px;
-    background-image: url(../images/map.JPG);
+    background-image: url(images/map.jpg);
     z-index: 2;}
+
+    #map2{width: 0; height: 0;}
+}
+
+@media(max-width: 800px){
+    #map2{ width: calc(100%); height: 60vh;
+        /* box-sizing: border-box; */
+        min-width: 100px;
+        background-image: url(../../images/map.jpg);
+    z-index: 3;}
+        
+
+    .list_wrap{
+        
+      
+        width: 100%; height:calc(30vh);  
+    
+        border: 2px solid; 
+        border-color: rgb(212, 212, 212); z-index: 1; 
+    
+        overflow:auto; /* 스크롤*/
+        display: flex;
+    
+        flex-wrap: wrap;
+        flex-direction: row; /*수평 정렬*/
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .list_one{
+        white-space:normal;
+        width: 350px; 
+        margin-left: 10px;
+        margin-top: 10px;
+        height:150px;
+        background-color: aliceblue; 
+        z-index: 1;}
+    
+
+}
