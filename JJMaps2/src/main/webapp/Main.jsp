@@ -36,11 +36,11 @@
                }
             
             }else{ 
-               out.print("<a id='login' href='login.jsp'>로그인</a>");
-                out.print("<a id='join' href='join.jsp'>회원가입</a>");
+               out.print("<a id='login' href='Login.jsp'>로그인</a>");
+                out.print("<a id='join' href='Join.jsp'>회원가입</a>");
               }
              %>
-             
+
                  </div>
                     <span id="main_st" >당신의 맛있는 지도</span><br>
             </header>

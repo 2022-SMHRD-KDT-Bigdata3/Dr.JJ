@@ -4,19 +4,26 @@ public class MemberVO {
 
     private String userId;
 
-    public MemberVO(String userId, String userPw) {
-		super();
-		this.userId = userId;
-		this.userPw = userPw;
-	}
-
 	private String userPw;
 
     private String userNick;
 
     private String userCode;
+    public MemberVO(String userId, String userPw) {
+  		super();
+  		this.userId = userId;
+  		this.userPw = userPw;
+  	}
+    
+    public MemberVO(String userId, String userPw, String userNick, String userCode) {
+		super();
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userNick = userNick;
+		this.userCode = userCode;
+	}
 
-    public String getUserId() {
+	public String getUserId() {
         return userId;
     }
 
