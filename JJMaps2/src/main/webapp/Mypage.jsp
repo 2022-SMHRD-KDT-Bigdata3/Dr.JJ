@@ -1,6 +1,7 @@
 <%@page import="com.smhrd.model1.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,8 @@
 </head>
 <body>
     <!-- 헤더 -->
-      <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
-   
+    <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
+ 
       
         <header>
             <div class="leftbox">
@@ -38,10 +39,10 @@
                 <img class="profile">
             </div>
             <strong class = "name">
-                <span class="name">닉네임
+                <span class="name"><%=info.getUser_Nick()%>
                 <span>님</span>
                 </span>
-                <a id = "id">(아이디)</a>
+                <a id = "id"><%=info.getUser_Id() %></a>
             </strong>
             <br><br>
             <a id = "pass" href="#">비밀번호 변경</a>
