@@ -1,4 +1,4 @@
-package WebSocket;
+package Ws;
 
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
