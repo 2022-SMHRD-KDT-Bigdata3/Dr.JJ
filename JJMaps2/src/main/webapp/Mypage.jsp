@@ -38,10 +38,10 @@
                 <img class="profile">
             </div>
             <strong class = "name">
-                <span class="name"><%=info.getUser_Nick() %>
+                <span class="name">닉네임
                 <span>님</span>
                 </span>
-                <a id = "id">(<%=info.getUser_Id() %>)</a>
+                <a id = "id">(아이디)</a>
             </strong>
             <br><br>
             <a id = "pass" href="#">비밀번호 변경</a>
