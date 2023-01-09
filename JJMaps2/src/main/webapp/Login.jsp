@@ -19,9 +19,9 @@
 
             <div id="login_input">
             
-               <form action="Login" >
-                <input name="userId" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br>
-                <input name="userPw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br>
+               <form action="Login" method="post">
+                <input name="user_Id" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br>
+                <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br>
                 <input class="login_contents"align="center" type="submit" value="로그인"><br>
                 </form>
  

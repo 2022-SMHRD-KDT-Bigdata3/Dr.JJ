@@ -5,8 +5,12 @@
 <mapper namespace="MemberMapper">
 
    <select id="login" parameterType="MemberVO" resultType="MemberVO">
-      select * from members where user_Id=#{userId} and user_Pw=#{userPw}
+      select * from members where user_Id=#{user_Id} and user_Pw=#{user_Pw}
    </select>
    
+    <insert id="join" parameterType="MemberVO" >
+      insert into members values (#{user_Id},#{user_Pw},#{user_Nick},#{user_Code})
+    </insert>
+  
   
 </mapper>

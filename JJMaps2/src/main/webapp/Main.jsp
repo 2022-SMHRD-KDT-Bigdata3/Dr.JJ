@@ -1,6 +1,7 @@
-<%@page import="com.smhrd.model1.MemberVO"%>
+<%@ page import="com.smhrd.model1.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE HTML>
 
 <html>
@@ -25,27 +26,30 @@
             <header>
                 <a href="#a"></a>
                 <div>
-                
-                 <% if(info!=null){
-                    out.print("<a id='mypage' href='mypage.jsp'>마이페이지</a>");
-               
-               //관리자만 볼 수 있는 a태그 
-               //id가 프라이머리키인것을 활용한 방법 
-               if(info.getUserCode().equals("1")){//info.getEmail().equals("admin")
-               out.print("<a href='today.do'>오늘영업</a>");
-               }
-            
-            }else{ 
-               out.print("<a id='login' href='login.jsp'>로그인</a>");
-                out.print("<a id='join' href='join.jsp'>회원가입</a>");
-              }
-             %>
-             
-                 </div>
+
+
+					<%
+					if(info!=null){
+						        if(info.getUser_Code().equals("1")) {
+									out.print("<a href='today.do'>오늘영업</a>");
+								}
+								out.print("<a id='mypage' href='Mypage.jsp'>마이페이지</a>");
+								out.print("<a id='logout' href='LogoutService'>로그아웃</a>");
+
+								// smart 1234 -> usercode 0(일반이용자)
+								// ssss 1234 -> usercode 1(점포이용자)
+
+							} else {
+								out.print("<a id='login' href='Login.jsp'>로그인</a>");
+								out.print("<a id='join' href='Join.jsp'>회원가입</a>");
+							}
+					%>
+
+				</div>
                     <span id="main_st" >당신의 맛있는 지도</span><br>
             </header>
             
-        <form action="#">
+        <form action="Search.jsp">
         <div id="serch">
             <input type="text" placeholder="검색어 입력">
             <input type="submit" value="검색">

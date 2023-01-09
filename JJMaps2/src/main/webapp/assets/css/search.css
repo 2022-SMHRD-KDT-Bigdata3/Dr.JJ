@@ -1,0 +1,70 @@
+@charset "UTF-8";
+#headerdiv{
+    max-width : 1200px; 
+    min-width: 400px; 
+    height: 60px;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: gray;
+    text-align: center;
+    position: relative;
+}
+
+.header_emt{position:relative; display: inline-block; padding: 10px; }
+.search{    margin-left: auto;   margin-right: auto;}
+#main_Logo{float: left; margin-left: 20px; margin-top: 5px;}
+#main_form{margin-left: -25px;}
+
+
+#allwidth{  
+    max-width : 1200px; 
+    min-width: 400px; 
+    height:100vh;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: rgb(224, 224, 224);
+    z-index: 0;
+
+    /* ㅎ ㅏ... div 개행 안되게 하는것.. 부모요소에 걸기 ㅠ  */
+    overflow: hidden; 
+    white-space:nowrap;
+}
+
+
+.list_wrap{ display: inline-block; 
+    width: 350px; height:calc(100% - 63px);  
+    border: 2px solid; 
+    border-color: rgb(212, 212, 212); z-index: 1; 
+    overflow:auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /*수평 정렬*/
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.list_one{
+    width: 95%; 
+    margin-left: 10px;
+    margin-top: 10px;
+    height:200px;
+    background-color: aliceblue; 
+    z-index: 1;}
+
+.map_wrap{  
+    position: relative;
+    margin: 365px;
+    margin-top: -780px;
+    width: 830px; height:calc(100% - 63px); 
+    min-width: 100px;
+    border: 2px solid; 
+    border-color: rgb(212, 212, 212);   }
+
+#map{width: 98%; height: 96%;
+    min-width: 100px;
+    margin-right: 10px;
+     margin-top: 15px;
+    background-image: url(../images/map.JPG);
+    z-index: 2;}

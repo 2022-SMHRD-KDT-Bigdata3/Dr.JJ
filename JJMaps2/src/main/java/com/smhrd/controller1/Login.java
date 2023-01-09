@@ -18,17 +18,18 @@ public class Login extends HttpServlet {
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-
-         String userId = request.getParameter("userId");
-         String userPw = request.getParameter("userPw");
+	   request.setCharacterEncoding("UTF-8");
+         String user_Id = request.getParameter("user_Id");
+         String user_Pw = request.getParameter("user_Pw");
          
-         MemberVO vo =new MemberVO(userId,userPw);
+         System.out.println(user_Id);
+         MemberVO vo =new MemberVO(user_Id,user_Pw);
          MemberDAO dao = new MemberDAO();
       
 
          // 로그인 성공시에 개인정보를 받아와야 하니까 Vo 객체에 담아줌
          MemberVO info = dao.login(vo);
-
+         
          if (info != null) {
             System.out.println("로그인 성공");
             System.out.println(info.toString());
@@ -42,7 +43,7 @@ public class Login extends HttpServlet {
             System.out.println("로그인 실패...");
          }
          
-         response.sendRedirect("login.jsp");
+         response.sendRedirect("Main.jsp");
       }
 
 
