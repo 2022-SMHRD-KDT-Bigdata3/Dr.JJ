@@ -62,7 +62,7 @@ a#poke{
     display: block;
     
     margin-left: auto;
-     margin-right: auto;
+    margin-right: auto;
     background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
   }
 
@@ -84,3 +84,27 @@ a#poke{
     height: 100%;
     object-fit: cover;
   }
+  
+   /* My reivew CSS */
+
+  h1,h3,h5{
+    margin: 30px;
+    
+  }
+  
+    /* 프로그래스 바 */
+
+  progress{
+    width: 95%;
+    height: 50px;
+    margin-left: 30px;
+    margin-right: auto;
+  }
+
+  p{
+    text-align: right;
+    margin-right: 30px;
+  }
+  
+
+  
