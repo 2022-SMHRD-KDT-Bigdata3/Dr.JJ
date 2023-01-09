@@ -5,7 +5,7 @@
 <mapper namespace="MemberMapper">
 
    <select id="login" parameterType="MemberVO" resultType="MemberVO">
-      select * from members where user_id=#{userId} and user_pw=#{userPw}
+      select * from members where user_Id=#{userId} and user_Pw=#{userPw}
    </select>
    
   
