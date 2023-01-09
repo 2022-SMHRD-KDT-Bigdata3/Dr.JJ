@@ -29,6 +29,8 @@ a#poke{
     font-size: 40px;
 }
 
+
+
 /*버튼 css*/
 .button{
   margin: 150px 500px 0 0;
@@ -88,8 +90,18 @@ a#poke{
    /* My reivew CSS */
 
   h1,h3,h5{
-    margin: 30px;
+    margin: 40px;
     
+  }
+  
+   /* 예약 css */
+
+  #conteiner{
+    height:250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   
     /* 프로그래스 바 */
