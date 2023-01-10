@@ -24,13 +24,43 @@ public class StoreVO {
     
     private Double Latitude;
     
+    private Double Longitude;
+    
     
     
     public StoreVO() {
     }
     
     
-    public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
+
+
+
+
+
+
+	public StoreVO(String store_Name, String store_Addr, String store_Tel, String store_Open_Dt, String store_Close_Dt,
+			Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate, Double latitude,Double longitude) {
+		this.store_Name = store_Name;
+		this.store_Addr = store_Addr;
+		this.store_Tel = store_Tel;
+		this.store_Open_Dt = store_Open_Dt;
+		this.store_Close_Dt = store_Close_Dt;
+		this.store_Card_Yn = store_Card_Yn;
+		this.store_Status = store_Status;
+		this.user_Id = user_Id;
+		this.store_Cate = store_Cate;
+		this.Latitude = latitude;
+		this.Longitude = longitude;
+	}
+
+
+
+
+
+
+
+
+	public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
 			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate,
 			Double latitude, Double longitude) {
 		super();
@@ -44,8 +74,8 @@ public class StoreVO {
 		this.store_Status = store_Status;
 		this.user_Id = user_Id;
 		this.store_Cate = store_Cate;
-		Latitude = latitude;
-		Longitude = longitude;
+		this.Latitude = latitude;
+		this.Longitude = longitude;
 	}
 
 
@@ -163,7 +193,7 @@ public class StoreVO {
 		Longitude = longitude;
 	}
 
-	private Double Longitude;   
+	  
     
  
     
