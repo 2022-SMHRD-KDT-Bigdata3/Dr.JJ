@@ -13,10 +13,10 @@ public class KakaGeoCode {
     public static void main(String[] args) {
 		
         URL obj;
-	
+        String store_addr="광주 동구 예술길 33";
         try{
             //인코딩한 String을 넘겨야 원하는 데이터를 받을 수 있다.
-            String address = URLEncoder.encode("대구광역시 중구 동성로2가 동성로2길 81", "UTF-8");
+            String address = URLEncoder.encode(store_addr, "UTF-8");
             
             obj = new URL(GEOCODE_URL+address);
 			
