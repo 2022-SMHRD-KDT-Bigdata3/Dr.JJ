@@ -1,4 +1,31 @@
-@charset "UTF-8";
+input[type=text]{ 
+    border: 1px solid orange; 
+}
+
+button{
+     color:whitesmoke; border: 1px solid orange;
+border-radius: 5px; 
+background-color: orangered;
+}
+
+input[type=submit]{ 
+    color:whitesmoke; border: 1px solid orange;
+    border-radius: 5px; 
+    background-color: orangered;
+}
+
+/* 폰트 및 로고작업 */
+
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+
 /* 바디영역 */
 
 body{
@@ -14,6 +41,7 @@ header{
     width:100%;
     height: 100px;
     cursor: pointer;
+    background-color: #FD6F22;
 
     
 }
@@ -24,11 +52,20 @@ header{
     padding: 30px;
     font-size: 30px;
 }
+
+/* join 헤더 */
+div#logo{
+    font-family : 'RixInooAriDuriR';
+    color: #FD6F22;
+}
+
+
 /* 나브영역 */
 nav{
     
     width: 100%;
     height: 90px;
+    background-color: aqua;
 }
 
 h1{
@@ -67,6 +104,13 @@ a:hover#review{
     height: 700px;
     background-color: #dee2e6;
 }
+
+/* 메인/join */
+
+.form{
+    text-align: center;
+}
+
 /* 푸터영역 */
 #footer{
     padding-bottom: 10em;
