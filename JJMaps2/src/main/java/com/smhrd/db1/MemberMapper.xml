@@ -11,6 +11,13 @@
     <insert id="join" parameterType="MemberVO" >
       insert into members values (#{user_Id},#{user_Pw},#{user_Nick},#{user_Code})
     </insert>
-  
+    <update id="usercodeUpdate" >
+    update members set user_code = '1' where user_Id=#{user_Id}
+    </update>
+    
+    <select id="reLogin" resultType="MemberVO">
+      select * from members where user_Id=#{user_Id}
+    </select>
+    
   
 </mapper>

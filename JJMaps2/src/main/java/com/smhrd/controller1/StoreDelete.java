@@ -6,36 +6,40 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
+import com.smhrd.model1.MemberDAO;
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
-import com.smhrd.model1.StoreVO;
 
 
-public class StoreSelectService extends HttpServlet {
+public class StoreDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//내 점포 조회에 사용하는 서블릿
+		
 		HttpSession session = request.getSession();
 		MemberVO memberVOs = (MemberVO)session.getAttribute("info");
-		String memberID= memberVOs.getUser_Id();
-		
 		StoreDAO dao = new StoreDAO();
-		StoreVO vo= dao.storeselect(memberID);
+		int res = dao.StoreDelete(memberVOs.getUser_Id());
 		
-		if(vo!=null) {
-			System.out.println("점포 조회 성공");
-            session.setAttribute("Storeinfo", vo);
+		MemberDAO MemberDAOs=new MemberDAO();
+		//memberVOs=MemberDAOs.usercodeDelete(user_Id);
+		
+		
+		if(res>0) {
+			System.out.println("점포 삭제 성공!");
+            //session.setAttribute("Storeinfo", vo);
+			session.setAttribute("info", memberVOs);
+            response.sendRedirect("Mypage.jsp");
 			
 		}else {
-			System.out.println("점포 조회 실패..");
-			
+			System.out.println("점포 삭제 실패..");
 		}
 		
 		
-		 
+	
 	}
 
 }

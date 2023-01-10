@@ -27,4 +27,14 @@ public class MemberDAO {
 		return res;
 	}
 
+	public MemberVO usercodeUpdate(String user_Id) {
+		session = sqlSessionFactory.openSession(true);
+		int res = session.update("usercodeUpdate", user_Id);
+		if(res>0) {System.out.println("코드 업데이트 성공");}
+		MemberVO vo=session.selectOne("reLogin", user_Id);
+		session.close();
+		return vo;
+		
+	}
+
 }

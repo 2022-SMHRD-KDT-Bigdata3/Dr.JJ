@@ -13,5 +13,9 @@
 	<insert id="storejoin" parameterType="com.smhrd.model1.StoreVO">
 	insert into stores values (stores_seq.nextVAL,#{store_Name},#{store_Addr},#{store_Tel},#{store_Open_Dt},#{store_Close_Dt},#{store_Card_Yn},#{store_Status},#{user_Id},#{store_Cate},#{Latitude},#{Longitude})
 	</insert> 
+	
+	<select id="storeselect" resultType="com.smhrd.model1.StoreVO">
+	select * from stores where  user_id=#{memberID}
+	</select>
 
 </mapper>

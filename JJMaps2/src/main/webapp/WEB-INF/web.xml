@@ -47,6 +47,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.StoreJoin</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>StoreUpdate</servlet-name>
+  	<display-name>StoreUpdate</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreUpdate</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StoreDelete</servlet-name>
+  	<display-name>StoreDelete</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreDelete</servlet-class>
+  </servlet>
 
   
   <servlet-mapping>
@@ -76,6 +88,14 @@
   <servlet-mapping>
   	<servlet-name>StoreJoin</servlet-name>
   	<url-pattern>/StoreJoin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreUpdate</servlet-name>
+  	<url-pattern>/StoreUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreDelete</servlet-name>
+  	<url-pattern>/StoreDelete</url-pattern>
   </servlet-mapping>
 
  

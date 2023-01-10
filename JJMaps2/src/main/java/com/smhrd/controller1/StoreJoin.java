@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.smhrd.model1.MemberDAO;
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
@@ -37,13 +38,20 @@ public class StoreJoin extends HttpServlet {
 		Double latitude = (double)geo.findGeoPoint(store_Addr)[0];
 		Double Longitude = (double)geo.findGeoPoint(store_Addr)[1];
 		
-		StoreVO vo = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,latitude,Longitude);
-		StoreDAO dao = new StoreDAO();
-		int res = dao.StoreJoin(vo);
+		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,latitude,Longitude);
+		StoreDAO storeDAOs = new StoreDAO();
+		int res = storeDAOs.StoreJoin(StoreVOs);
 		
-		if (res>0) {
-			System.out.println("점포등록 성공!");
+		if(res>0) {System.out.println("점포 등록 성공");}else {{System.out.println("점포 등록 실패");}
+		
+		MemberDAO MemberDAOs=new MemberDAO();
+		memberVOs=MemberDAOs.usercodeUpdate(user_Id);
+		
+		
+		if (memberVOs!=null) {
+			session.setAttribute("info", memberVOs);
 			response.sendRedirect("Mystore.jsp");
+			
 			
 		}else {
 			System.out.println("점포등록 실패..");
@@ -51,6 +59,7 @@ public class StoreJoin extends HttpServlet {
 		}
 		
 		
-	}
+		}
+		}
 
 }
