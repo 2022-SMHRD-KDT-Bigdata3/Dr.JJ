@@ -35,34 +35,7 @@ body {
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script type="text/javascript">
-	var myLatLng=pos
-	$(document).ready(function(){
-		$('button').on('click',function(){
-			window.navigator.geolocation.getCurrentPosition(success, error);//()를 붙여 자동호출하는것 x
-		})
-	})
 	
-	function success(position){
-		$('div').text("내 위치 위도 = " + position.coords.latitude
-				+" 내 위치 경도 = " + position.coords.longitude);
-		myLatLng =(position.coords.latitude, position.coords.longitude);
-	}
-	function error(err){
-		$('div').text("조회 실패 ==>" + err.code);
-	}
-	$(document).ready(function(){
-		$('#start').on('click',function(){
-			id = window.navigator.geolocation.watchPosition(success, error, {
-				enableHighAccuracy : true,
-				maximumAge : 0
-			});
-		})	
-		$('#stop').on('click',function(){
-			window.navigator.geolocation.clearWatch(id);
-			$('div').text("위치추적 중단합니다.");
-		})
-	})
-     
 	
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
