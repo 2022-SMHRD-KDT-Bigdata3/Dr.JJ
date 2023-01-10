@@ -33,7 +33,7 @@ import com.google.gson.GsonBuilder;
 
 
 public class Geocoder {
-	public static Float[] findGeoPoint(String location) {
+	public Float[] findGeoPoint(String location) {
 		  
 		if (location == null)
 		      return null;

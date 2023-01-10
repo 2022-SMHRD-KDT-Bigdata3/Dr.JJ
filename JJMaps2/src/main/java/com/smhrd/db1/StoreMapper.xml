@@ -9,5 +9,9 @@
 	<select id="search" resultType="com.smhrd.model1.StoreVO">
 	SELECT * FROM stores WHERE store_name LIKE '%'||#{keyword}||'%' or store_addr LIKE '%'||#{keyword}||'%' or store_cate LIKE '%'||#{keyword}||'%'
 	</select>
+	
+	<insert id="storejoin" parameterType="com.smhrd.model1.StoreVO">
+	insert into stores values (stores_seq.nextVAL,#{store_Name},#{store_Addr},#{store_Tel},#{store_Open_Dt},#{store_Close_Dt},#{store_Card_Yn},#{store_Status},#{user_Id},#{store_Cate},#{Latitude},#{Longitude})
+	</insert> 
 
 </mapper>
