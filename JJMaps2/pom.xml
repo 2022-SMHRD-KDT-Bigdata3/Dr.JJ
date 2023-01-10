@@ -20,6 +20,12 @@
   </properties>
 
   <dependencies>
+  <dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-simple</artifactId>
+   <version>1.7.25</version>
+</dependency>
+  
   <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 <dependency>
     <groupId>com.google.code.gson</groupId>
@@ -29,10 +35,21 @@
  <!-- https://mvnrepository.com/artifact/com.googlecode.libphonenumber/geocoder -->
 
 <dependency>
-  <groupId>com.google.code.geocoder-java</groupId>
-  <artifactId>geocoder-java</artifactId>
-  <version>0.16</version>
+
+<groupId>com.google.code.geocoder-java</groupId>
+
+<artifactId>geocoder-java</artifactId>
+
+<version>0.16</version>
+
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.webjars.npm/node-fetch -->
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>node-fetch</artifactId>
+    <version>1.7.3</version>
+</dependency>
+
   <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 <dependency>
     <groupId>dom4j</groupId>
