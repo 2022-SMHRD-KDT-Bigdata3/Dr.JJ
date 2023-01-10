@@ -30,15 +30,16 @@ body {
 	>	
 	</script>
 	<script type="text/javascript">
-
+		
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center : new google.maps.LatLng(35.15, 126.8),
 				zoom : 11
 			});
 			var infoWindow = new google.maps.InfoWindow;
-
-			downloadUrl('http://localhost:8081/JJMap/output.xml', function(data) {
+			
+//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
+			downloadUrl('http://localhost:14510/JJMap/output.xml', function(data) {
 						var xml = data.responseXML;
 						var markers = xml.documentElement.getElementsByTagName('marker');
 						Array.prototype.forEach.call(markers, function(markerElem) {
@@ -67,7 +68,22 @@ body {
 									marker.addListener('mouseover',function(){
 										infoWindow.setContent(infowincontent);
 										infoWindow.open(map,marker);
+									});	
+									marker.addListener('click', function() {
+					                        
+					                        //중심 위치를 클릭된 마커의 위치로 변경
+					                        map.setCenter(this.getPosition());
+					 
+					                        //마커 클릭 시의 줌 변화
+					                        map.setZoom(14);
+					                        if(marker.getAnimation()==null){
+					                            marker.setAnimation(google.maps.Animation.BOUNCE);
+					                        }else{
+					                            marker.setAnimation(null);
+					                        }
 									});			
+								
+					                   
 						});
 					});
 		}

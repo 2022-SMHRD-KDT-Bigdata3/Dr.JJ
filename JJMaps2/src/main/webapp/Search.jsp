@@ -13,6 +13,13 @@
     
     <link rel="stylesheet" type="text/css" href="assets/css/search.css">
     <title>Document</title>
+    <style>
+
+#map, #map2 {
+	width : 1000px;
+	height : 700px;
+}
+</style>
 </head>
 <body>
 	<%	 ArrayList<StoreVO> list=(ArrayList<StoreVO> )request.getAttribute("searchWord");%>
@@ -61,11 +68,75 @@
         </div>
 
         <div class="map_wrap"> <a></a> 
-            <div id="map1"></div>
+            <div id="map"></div>
         </div>
         
 
 
     </div>
+    <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c&callback=initMap"
+	>	
+	</script>
+	<script type="text/javascript">
+
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center : new google.maps.LatLng(35.15, 126.8),
+				zoom : 11
+			});
+			var infoWindow = new google.maps.InfoWindow;
+//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
+			downloadUrl('http://localhost:14510/JJMap/output.xml', function(data) {
+						var xml = data.responseXML;
+						var markers = xml.documentElement.getElementsByTagName('marker');
+						Array.prototype.forEach.call(markers, function(markerElem) {
+									var name = markerElem.getAttribute('store_name');
+									var address = markerElem.getAttribute('store_addr');
+									var cate = markerElem.getAttribute('store_cate');
+									var point = new google.maps.LatLng(
+											parseFloat(markerElem.getAttribute('latitude')),
+											parseFloat(markerElem.getAttribute('longitude')));
+									
+									var infowincontent = document.createElement('div');
+									var strong = document.createElement('storng');
+									strong.textContent = name;
+									infowincontent.appendChild(strong);
+									infowincontent.appendChild(document.createElement('br'));
+									
+									var text = document.createElement('text');
+									text.textContent = address+" , "+cate;
+									infowincontent.appendChild(text);
+									
+									
+									var marker = new google.maps.Marker({
+										map:map,
+										position : point,
+									});
+									marker.addListener('mouseover',function(){
+										infoWindow.setContent(infowincontent);
+										infoWindow.open(map,marker);
+									});			
+						});
+					});
+		}
+		function downloadUrl(url,callback){
+			var request = window.ActiveXObject ?
+					new ActiveXObject('Microsoft.XMLHTTP'):
+					new XMLHttpRequest;
+					
+			request.onreadystatechange = function(){
+				if(request.readyState == 4){
+					
+					callback(request, request.status);
+				}
+			};
+			request.open('GET',url, true);
+			request.send(null);
+		}
+		
+		
+
+	</script>
 </body>
 </html>
