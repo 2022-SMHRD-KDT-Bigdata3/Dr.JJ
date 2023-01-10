@@ -42,11 +42,11 @@ public class StoreDAO {
 		return res;
 	}
 
-	public StoreVO storeselect(String user_Id) {
+	public StoreVO mystoreselect(String user_Id) {
 		session = sqlSessionFactory.openSession(true);
-		StoreVO vo = session.selectOne("storeselect",user_Id); 
+		StoreVO vo = session.selectOne("mystoreselect",user_Id); 
 		session.close();
-		return null;
+		return vo;
 	}
 
 	public int StoreDelete(String user_Id) {

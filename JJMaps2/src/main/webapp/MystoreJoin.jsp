@@ -20,7 +20,7 @@
 <body class="map">
 
 	<form action="StoreJoin" method="post">
-	s
+	
 
 		<div class="store_BasicInfo">
 			<h4>점포 기본 정보</h4>
@@ -58,7 +58,7 @@
 			<br>
 		</div>
 
-			<button>점포 등록 및 수정</button>
+			<button>점포 등록</button>
 
 	</form>
 	
@@ -112,6 +112,9 @@
             }
         }).open();
     }
+
+
+    
 </script>
 </body>
 </html>

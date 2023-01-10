@@ -31,7 +31,7 @@
 					<%
 					if(info!=null){
 						        if(info.getUser_Code().equals("1")) {
-									out.print("<a href='today.do'>오늘영업</a>");
+									out.print("<a href='Mystore.jsp'>오늘영업</a>");
 								}
 								out.print("<a id='mypage' href='Mypage.jsp'>마이페이지</a>");
 								out.print("<a id='logout' href='LogoutService'>로그아웃</a>");

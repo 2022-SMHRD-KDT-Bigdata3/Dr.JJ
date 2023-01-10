@@ -10,8 +10,8 @@
 <body>
    <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
    
-<a href="StoreInfo"><button> 내 점포 상세 페이지 </button></a>
-<a href="StoreUpdate"><button> 영업정보 </button></a>
+<a href="Storedtail.jsp"><button> 내 점포 상세 페이지 </button></a>
+<a href="StoreSelectService"><button> 영업정보 </button></a>
 <a href="MenuSelect"><button> 메뉴정보 </button></a>
 <br><br><br>
 
