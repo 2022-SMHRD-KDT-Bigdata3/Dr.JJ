@@ -11,7 +11,8 @@
     <insert id="join" parameterType="MemberVO" >
       insert into members values (#{user_Id},#{user_Pw},#{user_Nick},#{user_Code})
     </insert>
-    <update id="usercodeUpdate" >
+    
+    <update id="usercode_to_One" >
     update members set user_code = '1' where user_Id=#{user_Id}
     </update>
     
@@ -19,5 +20,8 @@
       select * from members where user_Id=#{user_Id}
     </select>
     
+    <update id="usercode_to_zero" >
+    update members set user_code = '0' where user_Id=#{user_Id}
+    </update>
   
 </mapper>

@@ -21,16 +21,16 @@ public class StoreDelete extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		MemberVO memberVOs = (MemberVO)session.getAttribute("info");
-		StoreDAO dao = new StoreDAO();
-		int res = dao.StoreDelete(memberVOs.getUser_Id());
+		String user_Id = memberVOs.getUser_Id();
+		StoreDAO StoreDAOs = new StoreDAO();
+		int res = StoreDAOs.StoreDelete(user_Id);
 		
 		MemberDAO MemberDAOs=new MemberDAO();
-		//memberVOs=MemberDAOs.usercodeDelete(user_Id);
+		memberVOs=MemberDAOs.usercode_to_zero(user_Id);
 		
 		
 		if(res>0) {
 			System.out.println("점포 삭제 성공!");
-            //session.setAttribute("Storeinfo", vo);
 			session.setAttribute("info", memberVOs);
             response.sendRedirect("Mypage.jsp");
 			

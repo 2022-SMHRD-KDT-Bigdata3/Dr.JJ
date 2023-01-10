@@ -42,16 +42,19 @@ public class StoreDAO {
 		return res;
 	}
 
-	public StoreVO storeselect(String memberID) {
+	public StoreVO storeselect(String user_Id) {
 		session = sqlSessionFactory.openSession(true);
-		StoreVO vo = session.selectOne("storeselect",memberID); 
+		StoreVO vo = session.selectOne("storeselect",user_Id); 
 		session.close();
 		return null;
 	}
 
 	public int StoreDelete(String user_Id) {
-		// TODO Auto-generated method stub
-		return 0;
+		session = sqlSessionFactory.openSession(true);
+		int res = session.delete("storeDelete",user_Id); 
+		session.close();
+		return res;
+		
 	}
 	
 }

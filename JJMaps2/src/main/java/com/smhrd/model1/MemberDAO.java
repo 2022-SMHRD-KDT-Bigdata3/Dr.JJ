@@ -27,14 +27,23 @@ public class MemberDAO {
 		return res;
 	}
 
-	public MemberVO usercodeUpdate(String user_Id) {
+	public MemberVO usercode_to_One(String user_Id) {
 		session = sqlSessionFactory.openSession(true);
-		int res = session.update("usercodeUpdate", user_Id);
+		int res = session.update("usercode_to_One", user_Id);
 		if(res>0) {System.out.println("코드 업데이트 성공");}
 		MemberVO vo=session.selectOne("reLogin", user_Id);
 		session.close();
 		return vo;
 		
+	}
+
+	public MemberVO usercode_to_zero(String user_Id) {
+		session = sqlSessionFactory.openSession(true);
+		int res = session.update("usercode_to_zero", user_Id);
+		if(res>0) {System.out.println("코드 업데이트 성공");}
+		MemberVO vo=session.selectOne("reLogin", user_Id);
+		session.close();
+		return vo;
 	}
 
 }

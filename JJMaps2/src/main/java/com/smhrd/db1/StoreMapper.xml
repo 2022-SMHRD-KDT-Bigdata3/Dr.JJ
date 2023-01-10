@@ -15,7 +15,11 @@
 	</insert> 
 	
 	<select id="storeselect" resultType="com.smhrd.model1.StoreVO">
-	select * from stores where  user_id=#{memberID}
+	select * from stores where  user_id=#{user_Id}
 	</select>
+	
+	<delete id="storeDelete">
+	delete from Stores where  user_id=#{user_Id}
+	</delete>
 
 </mapper>
