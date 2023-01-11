@@ -7,22 +7,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>myStoreJoin</title>
-    <link rel="stylesheet" href="assets/css/mystorejoin.css" />
-    <style type="text/css">
-       input[type=text]{ border: 1px solid orange; }
-       button{ color:whitesmoke; border: 1px solid orange;
-           border-radius: 5px; background-color: orangered;}
-       #sample6_detailAddress{display : none; }
-       #sample6_extraAddress{display : none;}
-       #sample6_postcode{display : none;}
-   </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 </head>
 
-
-<body class="map">
-
-	<form action="StoreJoin" method="post">
+        <div id="login_Body">
+			<div id="logo">
+			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+			</div>
+   
+   
+   	<header class="h2">
+				<div class="pagename">
+				   <h1 class="title1" >점포 페이지</h>
+				</div>
+	</header>
+   
+   
+	<form class ="form" action="StoreJoin" method="post">
 	
 
 		<div class="store_BasicInfo">
@@ -68,9 +71,8 @@
 				(카드결제 안될 시 본 사이트의 주문예약 서비스를 이용하실 수 없습니다)
 			</div>
 			<br>
-		</div>
-
-			<button>점포 등록</button>
+		</div >
+			<button onclick='location.href="#"' class="btjp">점포 등록</button>
 
 	</form>
 	

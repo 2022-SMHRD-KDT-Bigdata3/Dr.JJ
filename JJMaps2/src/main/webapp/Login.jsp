@@ -32,8 +32,6 @@
 				<div class="pw">비밀번호</div>
                 <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
                 <input class="login_contents"align="center" type="submit" value="로그인" ><br><br>
-                <input name="user_Pw" class="login_contents" align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
-                <input class="login_contents" align="center" type="submit" value="로그인"><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </form>
             </div>
