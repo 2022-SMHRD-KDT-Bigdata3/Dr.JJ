@@ -34,8 +34,20 @@ public class MenuDAO {
 	public int MenuInsert(MenuVO vo) {
 		session = sqlSessionFactory.openSession(true);
 		int res = session.insert("MenuInsert",vo);
+		session.close();
 		return res;
 	}
+
+
+	public int MenuDeleteAll(String user_id) {
+		session = sqlSessionFactory.openSession(true);
+		int res = session.delete("MenuDeleteAll",user_id);
+		session.close();
+		return res;
+	}
+
+
+	
 
 		
 }
