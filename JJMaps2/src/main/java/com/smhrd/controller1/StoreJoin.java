@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,8 +12,6 @@ import com.smhrd.model1.MemberDAO;
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
-
-import Geocoder.Geocoder;
 
 public class StoreJoin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,16 +28,21 @@ public class StoreJoin extends HttpServlet {
 		String store_Tel = request.getParameter("store_Tel");
 		String store_Open_Dt = request.getParameter("store_Open_Dt");
 		String store_Close_Dt = request.getParameter("store_Close_Dt");
-		int store_Card_Yn = Integer.parseInt(request.getParameter("store_Card_Yn"));
+		int store_Card_Yn=0;
+		try{
+			store_Card_Yn = Integer.parseInt(request.getParameter("store_Card_Yn"));}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		int store_Status = 0;
 		String user_Id = memberVOs.getUser_Id();
 		String store_Cate = request.getParameter("store_Cate");
 		
-		Geocoder geo = new Geocoder();
-		Double latitude = (double)geo.findGeoPoint(store_Addr)[0];
-		Double Longitude = (double)geo.findGeoPoint(store_Addr)[1];
 		
-		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,latitude,Longitude);
+		Double Longitude = Double.parseDouble(request.getParameter("x"));
+		Double Latitude = Double.parseDouble(request.getParameter("y"));
+		
+		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,Latitude,Longitude);
 		StoreDAO storeDAOs = new StoreDAO();
 		int res = storeDAOs.StoreJoin(StoreVOs);
 		
