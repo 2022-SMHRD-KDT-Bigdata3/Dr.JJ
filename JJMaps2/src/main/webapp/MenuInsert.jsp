@@ -19,8 +19,9 @@
 		 상위 4개 메뉴가 검색시 노출됩니다
 		<table border="1px solid" class="addInput">
 			<tr>
-				<th>메뉴명</th>
+				<th>메뉴이름</th>
 				<th>가격</th>
+				<th>메뉴 설명</th>
 				<th>삭제</th>
 			</tr>
 
@@ -28,6 +29,7 @@
 			<tr>
 				<td><input id="menu0" name="menu0" type="text"></td>
 				<td><input id="menu0_price" name="menu0_price" type="text"></td>
+				<td><textarea id="menudetail0" name="menu0" cols="50" rows="2"></textarea></td>
 				<td></td>
 			</tr>
 		</table>
