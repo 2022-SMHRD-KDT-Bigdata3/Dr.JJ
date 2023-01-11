@@ -28,16 +28,21 @@ public class StoreJoin extends HttpServlet {
 		String store_Tel = request.getParameter("store_Tel");
 		String store_Open_Dt = request.getParameter("store_Open_Dt");
 		String store_Close_Dt = request.getParameter("store_Close_Dt");
-		int store_Card_Yn = Integer.parseInt(request.getParameter("store_Card_Yn"));
+		int store_Card_Yn=0;
+		try{
+			store_Card_Yn = Integer.parseInt(request.getParameter("store_Card_Yn"));}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		int store_Status = 0;
 		String user_Id = memberVOs.getUser_Id();
 		String store_Cate = request.getParameter("store_Cate");
 		
 		
-		Double latitude = Double.parseDouble(request.getParameter("x"));
+		Double Latitude = Double.parseDouble(request.getParameter("x"));
 		Double Longitude = Double.parseDouble(request.getParameter("y"));
 		
-		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,latitude,Longitude);
+		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,Latitude,Longitude);
 		StoreDAO storeDAOs = new StoreDAO();
 		int res = storeDAOs.StoreJoin(StoreVOs);
 		

@@ -2,7 +2,7 @@ package com.smhrd.model1;
 
 public class StoreVO {
 
-	private String store_Id;
+	private Integer store_Id;
 
     private String store_Name;
 
@@ -60,9 +60,9 @@ public class StoreVO {
 
 
 
-	public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
+	public StoreVO(String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
 			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate,
-			Double latitude, Double longitude) {
+			Double latitude, Double longitude,Integer store_Id) {
 		super();
 		this.store_Id = store_Id;
 		this.store_Name = store_Name;
@@ -81,7 +81,7 @@ public class StoreVO {
 
 
 
-	public StoreVO(String store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
+	public StoreVO(Integer store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
 			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate) {
 		super();
 		this.store_Id = store_Id;
@@ -97,7 +97,7 @@ public class StoreVO {
 	}
 
 
-	public String getStore_Id() {
+	public Integer getStore_Id() {
 		return store_Id;
 	}
 
@@ -145,7 +145,7 @@ public class StoreVO {
 		return Longitude;
 	}
 
-	public void setStore_Id(String store_Id) {
+	public void setStore_Id(Integer store_Id) {
 		this.store_Id = store_Id;
 	}
 
