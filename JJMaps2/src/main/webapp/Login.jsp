@@ -25,7 +25,7 @@
 
             <div id="login_input">
             
-               <form style="margin-top: 80px; margin-bottom: 20px;action="Login" method="post">
+               <form style="margin-top: 80px; margin-bottom: 20px;"action="Login" method="post">
 				<div class="id">아이디</div>
                 <input name="user_Id" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br><br>
 

@@ -11,7 +11,7 @@
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone-no">
-<link rel="stylesheet" type="text/css" href="assets/css/jjmain.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/jjmain.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>main</title>
