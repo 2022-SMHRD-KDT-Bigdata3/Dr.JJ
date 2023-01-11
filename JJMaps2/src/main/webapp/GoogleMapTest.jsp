@@ -33,7 +33,29 @@ body {
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script type="text/javascript">
-	
+		var customLabel= {
+				붕어빵 :{
+					label:'B'
+				},
+				타코야끼:{
+					label:'T'
+				},
+				분식:{
+					label:'V'
+				},
+				분식류:{
+					label:'V'
+				},
+				타꼬야끼:{
+					label:'T'
+				},
+				호떡:{
+					label:'H'
+				},
+				기타:{
+					label:'G'
+				}
+		};
 	
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
@@ -76,10 +98,11 @@ body {
 					var text = document.createElement('text');
 					text.textContent = address + " , " + cate;
 					infowincontent.appendChild(text);
-
+					var icon = customLabel[cate]||{};
 					var marker = new google.maps.Marker({
 						map : map,
 						position : point,
+						label : icon.label
 					});
 					marker.addListener('mouseover', function() {
 						infoWindow.setContent(infowincontent);

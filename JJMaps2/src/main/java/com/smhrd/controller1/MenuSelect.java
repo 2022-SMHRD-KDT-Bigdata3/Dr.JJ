@@ -34,5 +34,6 @@ public class MenuSelect extends HttpServlet {
 		String result = gson.toJson(list);
 		System.out.println(result);
 		out.print(result);
+		response.sendRedirect("Mystore.jsp");
 	}
 }
