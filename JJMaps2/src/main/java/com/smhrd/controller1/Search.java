@@ -38,6 +38,7 @@ public class Search extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			
 		}
+		
 
 		
 	}

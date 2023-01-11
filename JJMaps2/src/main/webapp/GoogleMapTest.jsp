@@ -33,7 +33,29 @@ body {
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script type="text/javascript">
-	
+		var customLabel= {
+				붕어빵 :{
+					label:'B'
+				},
+				타코야끼:{
+					label:'T'
+				},
+				분식:{
+					label:'V'
+				},
+				분식류:{
+					label:'V'
+				},
+				타꼬야끼:{
+					label:'T'
+				},
+				호떡:{
+					label:'H'
+				},
+				기타:{
+					label:'G'
+				}
+		};
 	
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
@@ -53,9 +75,12 @@ body {
 			//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
 			downloadUrl('http://localhost:14510/JJMap/output.xml', function(
 					data) {
+				console.log(data);
 				var xml = data.responseXML;
+				console.log(xml);
 				var markers = xml.documentElement
 						.getElementsByTagName('stores');
+				console.log(markers);
 				Array.prototype.forEach.call(markers, function(markerElem) {
 					var name = markerElem.getAttribute('store_name');
 					var address = markerElem.getAttribute('store_addr');
@@ -63,7 +88,7 @@ body {
 					var point = new google.maps.LatLng(parseFloat(markerElem
 							.getAttribute('latitude')), parseFloat(markerElem
 							.getAttribute('longitude')));
-
+					console.log(name, point);
 					var infowincontent = document.createElement('div');
 					var strong = document.createElement('storng');
 					strong.textContent = name;
@@ -73,10 +98,11 @@ body {
 					var text = document.createElement('text');
 					text.textContent = address + " , " + cate;
 					infowincontent.appendChild(text);
-
+					var icon = customLabel[cate]||{};
 					var marker = new google.maps.Marker({
 						map : map,
 						position : point,
+						label : icon.label
 					});
 					marker.addListener('mouseover', function() {
 						infoWindow.setContent(infowincontent);
