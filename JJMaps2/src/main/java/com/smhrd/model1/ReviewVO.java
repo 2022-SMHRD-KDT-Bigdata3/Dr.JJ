@@ -9,7 +9,7 @@ public class ReviewVO {
  private Double reviewId;
 
  // 가게 아이디
- private String storeId;
+ private Integer store_id;
 
  // 리뷰 내용
  private String reviewContewnt;
@@ -34,12 +34,12 @@ public class ReviewVO {
      this.reviewId = reviewId;
  }
 
- public String getStoreId() {
-     return storeId;
+ public Integer getstore_id() {
+     return store_id;
  }
 
- public void setStoreId(String storeId) {
-     this.storeId = storeId;
+ public void setstore_id(Integer store_id) {
+     this.store_id = store_id;
  }
 
  public String getReviewContewnt() {
@@ -86,7 +86,7 @@ public class ReviewVO {
  public void CopyData(ReviewVO param)
  {
      this.reviewId = param.getReviewId();
-     this.storeId = param.getStoreId();
+     this.store_id = param.getstore_id();
      this.reviewContewnt = param.getReviewContewnt();
      this.reviewScore = param.getReviewScore();
      this.reviewPic = param.getReviewPic();
