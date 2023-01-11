@@ -5,11 +5,20 @@ import java.sql.Date;
 //예약
 public class ReservationVO {
 
- // 예약 번호
+ public ReservationVO(Integer storeId, String userId, String storeMenu, String storePrice, Date pTime) {
+		super();
+		this.storeId = storeId;
+		this.userId = userId;
+		this.storeMenu = storeMenu;
+		this.storePrice = storePrice;
+		this.pTime = pTime;
+	}
+
+// 예약 번호
  private Long rNumber;
 
  // 가게 아이디
- private String storeId;
+ private Integer storeId;
 
  // 예약자 아이디
  private String userId;
@@ -34,11 +43,11 @@ public class ReservationVO {
      this.rNumber = rNumber;
  }
 
- public String getStoreId() {
+ public Integer getStoreId() {
      return storeId;
  }
 
- public void setStoreId(String storeId) {
+ public void setStoreId(Integer storeId) {
      this.storeId = storeId;
  }
 

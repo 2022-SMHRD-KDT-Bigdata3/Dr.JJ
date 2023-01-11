@@ -7,7 +7,7 @@ public class MenuVO {
  private Double menuId;
 
  // 가게 아이디
- private String storeId;
+ private Integer store_id;
 
  // 메뉴 명
  private String menuName;
@@ -32,12 +32,12 @@ public class MenuVO {
      this.menuId = menuId;
  }
 
- public String getStoreId() {
-     return storeId;
+ public Integer getstore_id() {
+     return store_id;
  }
 
- public void setStoreId(String storeId) {
-     this.storeId = storeId;
+ public void setstore_id(Integer store_id) {
+     this.store_id = store_id;
  }
 
  public String getMenuName() {
@@ -84,7 +84,7 @@ public class MenuVO {
  public void CopyData(MenuVO param)
  {
      this.menuId = param.getMenuId();
-     this.storeId = param.getStoreId();
+     this.store_id = param.getstore_id();
      this.menuName = param.getMenuName();
      this.menuPrice = param.getMenuPrice();
      this.menuPic1 = param.getMenuPic1();
