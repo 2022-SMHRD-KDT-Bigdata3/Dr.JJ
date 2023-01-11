@@ -35,6 +35,7 @@
 					out.print("<a href='Mystore.jsp'>오늘영업</a>");
 				}
 				out.print("<a id='mypage' href='Mypage.jsp'>마이페이지</a>");
+				out.print("<a id='review' href='writeReview.jsp'>리뷰(테스트중 잘못건드리면 톰캣날아감)</a>");
 				out.print("<a id='logout' href='LogoutService'>로그아웃</a>");
 
 				// smart 1234 -> usercode 0(일반이용자)
