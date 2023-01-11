@@ -20,8 +20,7 @@
 <a href="Menucheck"><button> 메뉴정보 </button></a>
 <br><br><br>
 
-<body>
-   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %> 
+
          <div id="login_Body">
 			<div id="logo">
 			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
@@ -45,6 +44,8 @@
 
 <a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
 	</form>
+	</div>
+	</body>
 	<script>
 	
 	
