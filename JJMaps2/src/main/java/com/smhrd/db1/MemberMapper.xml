@@ -16,7 +16,7 @@
     update members set user_code = '1' where user_Id=#{user_Id}
     </update>
     
-    <select id="reLogin" resultType="MemberVO">
+    <select id="reLogin"  resultType="MemberVO">
       select * from members where user_Id=#{user_Id}
     </select>
     
