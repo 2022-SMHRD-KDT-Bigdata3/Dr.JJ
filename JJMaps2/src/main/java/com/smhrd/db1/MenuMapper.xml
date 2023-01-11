@@ -13,7 +13,7 @@
 	</select>
 	
 	<insert id="MenuInsert" parameterType="com.smhrd.model1.MenuVO" >
-		insert into menus values (menus_SEQ.NEXTVAL,#{store_id},#{menu_name},#{menu_price},'','','',#{user_id},#{menu_Detail})
+		insert into menus(menu_Id,store_id,menu_name,menu_price,User_id,menu_details) values (menus_SEQ.NEXTVAL,#{store_id},#{menu_name},#{menu_price},#{User_id},#{menu_details})
 	</insert>
 
 </mapper>

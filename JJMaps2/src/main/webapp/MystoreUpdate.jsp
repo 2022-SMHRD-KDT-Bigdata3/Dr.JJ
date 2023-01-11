@@ -84,7 +84,7 @@
 			<br>
 		</div>
 
-			<button>점포 등록</button>
+			<button>수정하기</button>
 
 	</form>
 	
