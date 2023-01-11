@@ -31,7 +31,6 @@
 
         
          
-   
 
         <div class = "info">
 
