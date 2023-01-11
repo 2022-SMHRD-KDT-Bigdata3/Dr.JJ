@@ -89,6 +89,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.MenuInsert</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Menucheck</servlet-name>
+  	<display-name>Menucheck</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Menucheck</servlet-class>
+  </servlet>
 
   
   <servlet-mapping>
@@ -146,6 +152,10 @@
   <servlet-mapping>
   	<servlet-name>MenuInsert</servlet-name>
   	<url-pattern>/MenuInsert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Menucheck</servlet-name>
+  	<url-pattern>/Menucheck</url-pattern>
   </servlet-mapping>
 
  

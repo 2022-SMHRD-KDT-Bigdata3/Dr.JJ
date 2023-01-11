@@ -27,9 +27,9 @@
 
 
 			<tr>
-				<td><input id="menu0" name="menu0" type="text"></td>
-				<td><input id="menu0_price" name="menu0_price" type="text"></td>
-				<td><textarea id="menudetail0" name="menu0" cols="50" rows="2"></textarea></td>
+				<td><input id="menu_Name0" name="menu_Name" type="text"></td>
+				<td><input id="menu_Price0" name="menu_Price" type="text"></td>
+				<td><textarea id="menu_Detail0" name="menu_Detail" cols="50" rows="2"></textarea></td>
 				<td></td>
 			</tr>
 		</table>
@@ -48,9 +48,9 @@
 	$('#btnAdd').click(function(){
 	    $('.addInput').append(
 	    		'<tr id="add_tr'+i+'">'+
-	    	'<td><input id="menu'+i+'" name="menu'+i+'" type = "text" > </td>'+
-	        '<td><input id="menu_price'+i+'" name="menu_price'+i+'" type = "text" ></td>'+
-	        '<td><textarea id="menudetail'+i+'" name="menu0" cols="50" rows="2"></textarea></td>'+
+	    	'<td><input id="menu_Name'+i+'" name="menu_Name" type = "text" > </td>'+
+	        '<td><input id="menu_Price'+i+'" name="menu_Price" type = "text" ></td>'+
+	        '<td><textarea id="menu_Detail'+i+'" name="menu_Detail" cols="50" rows="2"></textarea></td>'+
 	        '<td><button type="button" id="btnRemove'+i+'" onclick="goDel('+i+')">삭제</button><br><br></td></tr>'
 	    );
 	    i++;

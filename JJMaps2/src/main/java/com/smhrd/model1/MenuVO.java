@@ -6,97 +6,170 @@ public class MenuVO {
 
 
 // 메뉴 아이디
- private Double menuId;
+ private int menu_Id;
 
  // 가게 아이디
- private Integer store_id;
+ private int store_id;
 
  // 메뉴 명
- private String menuName;
+ private String menu_Name;
 
  // 메뉴 가격
- private String menuPrice;
+ private String menu_Price;
 
  // 메뉴 사진1
- private String menuPic1;
+ private String menu_Pic1;
 
  // 메뉴 사진2
- private String menuPic2;
+ private String menu_Pic2;
 
  // 메뉴 사진3
- private String menuPic3;
- public MenuVO(Integer store_id, String menuName, String menuPrice) {
-		super();
-		this.store_id = store_id;
-		this.menuName = menuName;
-		this.menuPrice = menuPrice;
-	}
+ private String menu_Pic3;
+ 
+ 
+ private String user_Id;
+ 
+ 
+ private String menu_details;
 
- public Double getMenuId() {
-     return menuId;
- }
+ 
+ 
+ 
+ 
+ 
 
- public void setMenuId(Double menuId) {
-     this.menuId = menuId;
- }
+public MenuVO() {
 
- public Integer getstore_id() {
-     return store_id;
- }
+}
 
- public void setstore_id(Integer store_id) {
-     this.store_id = store_id;
- }
 
- public String getMenuName() {
-     return menuName;
- }
 
- public void setMenuName(String menuName) {
-     this.menuName = menuName;
- }
+public MenuVO(int store_id, String user_Id, String menu_Name, String menu_Price, String menu_details) {
+	super();
+	this.store_id = store_id;
+	this.user_Id = user_Id;
+	this.menu_Name = menu_Name;
+	this.menu_Price = menu_Price;
+	this.menu_details = menu_details;
+}
 
- public String getMenuPrice() {
-     return menuPrice;
- }
 
- public void setMenuPrice(String menuPrice) {
-     this.menuPrice = menuPrice;
- }
 
- public String getMenuPic1() {
-     return menuPic1;
- }
 
- public void setMenuPic1(String menuPic1) {
-     this.menuPic1 = menuPic1;
- }
+public MenuVO(int menu_Id, int store_id, String menu_Name, String menu_Price, String menu_Pic1, String menu_Pic2,
+		String menu_Pic3, String user_Id, String menu_details) {
+	super();
+	this.menu_Id = menu_Id;
+	this.store_id = store_id;
+	this.menu_Name = menu_Name;
+	this.menu_Price = menu_Price;
+	this.menu_Pic1 = menu_Pic1;
+	this.menu_Pic2 = menu_Pic2;
+	this.menu_Pic3 = menu_Pic3;
+	this.user_Id = user_Id;
+	this.menu_details = menu_details;
+}
 
- public String getMenuPic2() {
-     return menuPic2;
- }
 
- public void setMenuPic2(String menuPic2) {
-     this.menuPic2 = menuPic2;
- }
+public int getMenu_Id() {
+	return menu_Id;
+}
 
- public String getMenuPic3() {
-     return menuPic3;
- }
 
- public void setMenuPic3(String menuPic3) {
-     this.menuPic3 = menuPic3;
- }
+public int getStore_id() {
+	return store_id;
+}
 
- // Menus 모델 복사
- public void CopyData(MenuVO param)
- {
-     this.menuId = param.getMenuId();
-     this.store_id = param.getstore_id();
-     this.menuName = param.getMenuName();
-     this.menuPrice = param.getMenuPrice();
-     this.menuPic1 = param.getMenuPic1();
-     this.menuPic2 = param.getMenuPic2();
-     this.menuPic3 = param.getMenuPic3();
- }
+
+public String getMenu_Name() {
+	return menu_Name;
+}
+
+
+public String getMenu_Price() {
+	return menu_Price;
+}
+
+
+public String getMenu_Pic1() {
+	return menu_Pic1;
+}
+
+
+public String getMenu_Pic2() {
+	return menu_Pic2;
+}
+
+
+public String getMenu_Pic3() {
+	return menu_Pic3;
+}
+
+
+public String getUser_Id() {
+	return user_Id;
+}
+
+
+public String getMenu_details() {
+	return menu_details;
+}
+
+
+public void setMenu_Id(int menu_Id) {
+	this.menu_Id = menu_Id;
+}
+
+
+public void setStore_id(int store_id) {
+	this.store_id = store_id;
+}
+
+
+public void setMenu_Name(String menu_Name) {
+	this.menu_Name = menu_Name;
+}
+
+
+public void setMenu_Price(String menu_Price) {
+	this.menu_Price = menu_Price;
+}
+
+
+public void setMenu_Pic1(String menu_Pic1) {
+	this.menu_Pic1 = menu_Pic1;
+}
+
+
+public void setMenu_Pic2(String menu_Pic2) {
+	this.menu_Pic2 = menu_Pic2;
+}
+
+
+public void setMenu_Pic3(String menu_Pic3) {
+	this.menu_Pic3 = menu_Pic3;
+}
+
+
+public void setUser_Id(String user_Id) {
+	this.user_Id = user_Id;
+}
+
+
+public void setMenu_details(String menu_details) {
+	this.menu_details = menu_details;
+}
+
+
+@Override
+public String toString() {
+	return "MenuVO [menu_Id=" + menu_Id + ", store_id=" + store_id + ", menu_Name=" + menu_Name + ", menu_Price="
+			+ menu_Price + ", menu_Pic1=" + menu_Pic1 + ", menu_Pic2=" + menu_Pic2 + ", menu_Pic3=" + menu_Pic3
+			+ ", user_Id=" + user_Id + ", menu_details=" + menu_details + "]";
+}
+ 
+ 
+ 
+ 
+ 
 }

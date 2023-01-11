@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-	<%	 ArrayList<StoreVO> list=(ArrayList<StoreVO> )request.getAttribute("searchWord");%>
+	<%	 ArrayList<StoreVO> list=(ArrayList<StoreVO>)request.getAttribute("searchWord");%>
 					
 						
 					
