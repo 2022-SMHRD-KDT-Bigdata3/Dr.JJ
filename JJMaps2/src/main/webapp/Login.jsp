@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,30 +7,35 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
        <meta name="format-detection" content="telephone-no">
-      <link rel="stylesheet" href="assets/css/login.css"/>
+     	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
    </head>
+
    <body>
       <div id="login_Body">
-            <header>
-                <a id="main_Logo" href="Main.jsp">로고</a>
-            </header>
 
-            <a id="login_logo">로그인</a>
+			<div id="logo">
+			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+			</div>
+
+			<header class="bar">
+				<div class="pagename">
+				   <h1 class="title" >로그인</h1>
+				</div>
+		  </header>
 
             <div id="login_input">
             
-               <form action="Login" method="post">
-                <input name="user_Id" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br>
-                <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br>
-                <input class="login_contents"align="center" type="submit" value="로그인"><br>
-                </form>
- 
-         <br> <a href="#" class="login_contents"><button>네이버로 간편 로그인</button></a><br> 
-             <a href="#" class="login_contents"><button>카카오로 간편 로그인</button></a><br>
-            </div>
+               <form style="margin-top: 80px; margin-bottom: 20px;action="Login" method="post">
+				<div class="id">아이디</div>
+                <input name="user_Id" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br><br>
 
+				<div class="pw">비밀번호</div>
+                <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
+                <input class="login_contents"align="center" type="submit" value="로그인"><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </form>
+            </div>
       </div>
-     
-  
+	  <footer id = "footer">@JJUPJJUPBAKSA</footer>  
    </body>
 </html>
