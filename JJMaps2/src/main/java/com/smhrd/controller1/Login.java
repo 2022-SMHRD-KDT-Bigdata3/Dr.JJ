@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +19,7 @@ public class Login extends HttpServlet {
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-	   request.setCharacterEncoding("UTF-8");
+	   	request.setCharacterEncoding("UTF-8");
          String user_Id = request.getParameter("user_Id");
          String user_Pw = request.getParameter("user_Pw");
          

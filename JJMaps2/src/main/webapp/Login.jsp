@@ -25,13 +25,14 @@
 
             <div id="login_input">
             
-               <form style="margin-top: 80px; margin-bottom: 20px;"action="Login" method="post">
+
+               <form style="margin-top: 80px; margin-bottom: 20px;" action="Login" method="post">
 				<div class="id">아이디</div>
-                <input name="user_Id" class="login_contents"align="center" type="text" placeholder="아이디를 입력하세요"><br><br>
+                <input name="user_Id" class="login_contents" align="center" type="text" placeholder="아이디를 입력하세요"><br><br>
 
 				<div class="pw">비밀번호</div>
-                <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
-                <input class="login_contents"align="center" type="submit" value="로그인"><br><br>
+                <input name="user_Pw" class="login_contents" align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
+                <input class="login_contents" align="center" type="submit" value="로그인"><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </form>
             </div>

@@ -47,13 +47,13 @@ public class StoreJoin extends HttpServlet {
 		int res = storeDAOs.StoreJoin(StoreVOs);
 		
 		if(res>0) {System.out.println("점포 등록 성공");}else {{System.out.println("점포 등록 실패");}
-		
+		}
 		MemberDAO MemberDAOs=new MemberDAO();
-		MemberVO memberVOs1=MemberDAOs.usercode_to_One(user_Id);
+		memberVOs=MemberDAOs.usercode_to_One(user_Id);
 		
 		
 		if (memberVOs!=null) {
-			session.setAttribute("info", memberVOs1);
+			session.setAttribute("info", memberVOs);
 			response.sendRedirect("Mystore.jsp");
 			
 			
@@ -63,7 +63,7 @@ public class StoreJoin extends HttpServlet {
 		}
 		
 		
-		}
-		}
+		
+	}
 
 }
