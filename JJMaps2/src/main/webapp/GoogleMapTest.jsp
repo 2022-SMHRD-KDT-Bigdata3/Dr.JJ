@@ -22,9 +22,7 @@ body {
 </head>
 <body>
 	<h1>DB좌표 받아오기</h1>
-	<button> 현재위치 조회 </button>
-<button id="start"> 위치추적시작버튼 </button> 
-<button id="stop"> 위치추적중단버튼 </button> 
+
 <div></div>
 	<div id="map"></div>
 	<hr>
@@ -39,7 +37,7 @@ body {
 	
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
-				center : myLatLng,
+				center : new google.maps.LatLng(35.15, 126.8),
 				zoom : 11,
 				mapTypeControl: true,
 		          panControl: true,
@@ -57,7 +55,7 @@ body {
 					data) {
 				var xml = data.responseXML;
 				var markers = xml.documentElement
-						.getElementsByTagName('marker');
+						.getElementsByTagName('stores');
 				Array.prototype.forEach.call(markers, function(markerElem) {
 					var name = markerElem.getAttribute('store_name');
 					var address = markerElem.getAttribute('store_addr');

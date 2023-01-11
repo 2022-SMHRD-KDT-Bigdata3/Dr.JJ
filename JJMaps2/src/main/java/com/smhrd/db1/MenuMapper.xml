@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.db1.MenuMapper">
+<select id="menuSelect"  resultType="com.smhrd.model1.MenuVO">
+	select * from menus where  store_id=#{store_Id}
+	</select>
+<insert id="menuInsert" parameterType="com.smhrd.model1.MenuVO" >
+	insert into menus values (menus_SEQ.NEXTVAL,store_id=#{store_id},menu_name=#{menu_name},menu_price=#{menu_price})
+</insert>
+	</mapper>

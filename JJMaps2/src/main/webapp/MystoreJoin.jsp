@@ -31,11 +31,11 @@
 			<span>점포연락처</span><input name = "store_Tel"  type="text" class="store_"><br>
 			<span>카테고리</span><br>
 			<input type="radio" name="store_Cate" value="붕어빵">붕어빵
-			<input type="radio" name="store_Cate" value="붕어빵">타코야끼
-			<input type="radio" name="store_Cate" value="붕어빵">호떡<br>
-			<input type="radio" name="store_Cate" value="붕어빵">순대
-			<input type="radio" name="store_Cate" value="붕어빵">분식류
-			<input type="radio" name="store_Cate" value="붕어빵">기타
+			<input type="radio" name="store_Cate" value="타코야끼">타코야끼
+			<input type="radio" name="store_Cate" value="호떡">호떡<br>
+			<input type="radio" name="store_Cate" value="순대">순대
+			<input type="radio" name="store_Cate" value="분식류">분식류
+			<input type="radio" name="store_Cate" value="기타">기타
 		</div>
 
 		<div class="store_openInfo">
@@ -53,7 +53,8 @@
 			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소">
 			<input type="button" onclick="sample6_execDaumPostcode()" value="찾기"><br><br>
 			<input type="button" onclick="geo()" value ="지도에 위치 등록"><br><br>
-			
+			<input name="x" type="text" readonly="readonly" id="sample6_latitude"  placeholder="x좌표">
+			<input name="y" type="text" readonly="readonly" id="sample6_longitude"  placeholder="y좌표">
 			
 			<input type="text" readonly="readonly" id="sample6_detailAddress"  placeholder="상세주소">
 			<input type="text" readonly="readonly" id="sample6_extraAddress" placeholder="참고항목">
@@ -89,6 +90,8 @@
 				console.log(x);
 				console.log(y);
 	     		 alert("지도에 위치를 등록하였습니다.");	
+	     		document.getElementById('sample6_latitude').value = x;
+                document.getElementById("sample6_longitude").value = y;
 			},
 			error: function(){alert("error");}		
 			
