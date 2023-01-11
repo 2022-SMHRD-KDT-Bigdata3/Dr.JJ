@@ -65,6 +65,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.MenuSelect</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Geocode</servlet-name>
+  	<display-name>Geocode</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Geocode</servlet-class>
+  </servlet>
 
   
   <servlet-mapping>
@@ -106,6 +112,10 @@
   <servlet-mapping>
   	<servlet-name>MenuSelect</servlet-name>
   	<url-pattern>/MenuSelect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Geocode</servlet-name>
+  	<url-pattern>/Geocode</url-pattern>
   </servlet-mapping>
 
  
