@@ -53,9 +53,12 @@ body {
 			//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
 			downloadUrl('http://localhost:14510/JJMap/output.xml', function(
 					data) {
+				console.log(data);
 				var xml = data.responseXML;
+				console.log(xml);
 				var markers = xml.documentElement
 						.getElementsByTagName('stores');
+				console.log(markers);
 				Array.prototype.forEach.call(markers, function(markerElem) {
 					var name = markerElem.getAttribute('store_name');
 					var address = markerElem.getAttribute('store_addr');
@@ -63,7 +66,7 @@ body {
 					var point = new google.maps.LatLng(parseFloat(markerElem
 							.getAttribute('latitude')), parseFloat(markerElem
 							.getAttribute('longitude')));
-
+					console.log(name, point);
 					var infowincontent = document.createElement('div');
 					var strong = document.createElement('storng');
 					strong.textContent = name;
