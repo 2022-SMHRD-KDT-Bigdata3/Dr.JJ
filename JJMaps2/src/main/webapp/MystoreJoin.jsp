@@ -31,11 +31,11 @@
 			<span>점포연락처</span><input name = "store_Tel"  type="text" class="store_"><br>
 			<span>카테고리</span><br>
 			<input type="radio" name="store_Cate" value="붕어빵">붕어빵
-			<input type="radio" name="store_Cate" value="붕어빵">타코야끼
-			<input type="radio" name="store_Cate" value="붕어빵">호떡<br>
-			<input type="radio" name="store_Cate" value="붕어빵">순대
-			<input type="radio" name="store_Cate" value="붕어빵">분식류
-			<input type="radio" name="store_Cate" value="붕어빵">기타
+			<input type="radio" name="store_Cate" value="타코야끼">타코야끼
+			<input type="radio" name="store_Cate" value="호떡">호떡<br>
+			<input type="radio" name="store_Cate" value="순대">순대
+			<input type="radio" name="store_Cate" value="분식류">분식류
+			<input type="radio" name="store_Cate" value="기타">기타
 		</div>
 
 		<div class="store_openInfo">

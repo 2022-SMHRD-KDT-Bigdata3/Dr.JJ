@@ -71,6 +71,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.Geocode</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CreateXml</servlet-name>
+  	<display-name>CreateXml</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.CreateXml</servlet-class>
+  </servlet>
 
   
   <servlet-mapping>
@@ -116,6 +122,10 @@
   <servlet-mapping>
   	<servlet-name>Geocode</servlet-name>
   	<url-pattern>/Geocode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateXml</servlet-name>
+  	<url-pattern>/CreateXml</url-pattern>
   </servlet-mapping>
 
  
