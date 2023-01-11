@@ -39,8 +39,8 @@ public class StoreJoin extends HttpServlet {
 		String store_Cate = request.getParameter("store_Cate");
 		
 		
-		Double Latitude = Double.parseDouble(request.getParameter("x"));
-		Double Longitude = Double.parseDouble(request.getParameter("y"));
+		Double Longitude = Double.parseDouble(request.getParameter("x"));
+		Double Latitude = Double.parseDouble(request.getParameter("y"));
 		
 		StoreVO StoreVOs = new StoreVO(store_Name,store_Addr,store_Tel,store_Open_Dt,store_Close_Dt,store_Card_Yn,store_Status,user_Id,store_Cate,Latitude,Longitude);
 		StoreDAO storeDAOs = new StoreDAO();
