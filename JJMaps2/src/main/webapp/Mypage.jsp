@@ -45,9 +45,7 @@
                 <p class="btn btn-1" name="1" onClick='location.href="Mystore.jsp"'>내 점포 </p>
                 <%} %>            
             </div>                                 
-        </div>
-        
- </strong>
+       
 
 	<div class="info">
 

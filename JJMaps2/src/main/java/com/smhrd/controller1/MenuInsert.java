@@ -24,8 +24,12 @@ public class MenuInsert extends HttpServlet {
 		String[] menu_Name = request.getParameterValues("menu_Name");
 		String[] menu_Price = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
-		System.out.println(menu_Detail.length);
+		String[] menu_Pic = request.getParameterValues("menu_Pic");
+		//  메뉴 사진
 		
+		
+		System.out.println(menu_Detail.length);
+		System.out.println(menu_Pic[0]);
 		//로그인계정
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
@@ -45,7 +49,7 @@ public class MenuInsert extends HttpServlet {
 		
 		if(res>0) {System.out.println("메뉴"+i+" 등록 성공!");
 		}else {System.out.println("메뉴등록실패..");
-		};
+		}
 		
 		}
 		

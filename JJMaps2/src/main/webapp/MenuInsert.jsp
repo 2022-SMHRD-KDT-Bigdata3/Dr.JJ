@@ -14,7 +14,7 @@
 
 	<h3>점포 메뉴 등록</h3>
 
-	<form action="MenuInsert">
+	<form action="MenuInsert" method="post" enctype="multipart/form-data">
 		<button id="btnAdd" type="button">메뉴 추가</button>
 		 상위 4개 메뉴가 검색시 노출됩니다
 		<table border="1px solid" class="addInput">
@@ -29,7 +29,9 @@
 			<tr>
 				<td><input id="menu_Name0" name="menu_Name" type="text"></td>
 				<td><input id="menu_Price0" name="menu_Price" type="text"></td>
+				<td><input type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
 				<td><textarea id="menu_Detail0" name="menu_Detail" cols="50" rows="2"></textarea></td>
+				<td><button type="button" id="btnRemove'+i+'" onclick="goDel">삭제</button><br><br></td></tr>
 				<td></td>
 			</tr>
 		</table>
