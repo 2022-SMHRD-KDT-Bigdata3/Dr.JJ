@@ -26,7 +26,7 @@
 	
 	
 	<form action="StoreJoin" method="post">
-	
+	<h1>점포 정보 수정</h1>
 
 		<div class="store_BasicInfo">
 			<h4>점포 기본 정보</h4>
