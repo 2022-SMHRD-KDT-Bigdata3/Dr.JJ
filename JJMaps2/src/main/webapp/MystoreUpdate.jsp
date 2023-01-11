@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 
     <link rel="stylesheet" href="assets/css/mystorejoin.css" />
+    
+        
     <style type="text/css">
        input[type=text]{ border: 1px solid orange; }
        button{ color:whitesmoke; border: 1px solid orange;
