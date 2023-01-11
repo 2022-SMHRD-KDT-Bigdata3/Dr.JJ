@@ -13,6 +13,9 @@
        input[type=text]{ border: 1px solid orange; }
        button{ color:whitesmoke; border: 1px solid orange;
            border-radius: 5px; background-color: orangered;}
+       #sample6_detailAddress{display : none; }
+       #sample6_extraAddress{display : none;}
+       #sample6_postcode{display : none;}
    </style>
 </head>
 
@@ -37,21 +40,28 @@
 
 		<div class="store_openInfo">
 			<h4>점포 영업 정보</h4>
-			<span>영업장소</span><br>
-			<input type="button" onclick="sample6_execDaumPostcode()" value="주소 찾기"><br>
-			<input type="text" readonly="readonly" id="sample6_postcode" placeholder="우편번호">
-			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소"><br><input type="button" onclick="geo()" value ="위도경도">
 			
-			<input type="text" readonly="readonly" id="sample6_detailAddress" placeholder="상세주소">
-			<input type="text" readonly="readonly" id="sample6_extraAddress" placeholder="참고항목">
-			<br>
 			<span>영업 오픈 시간</span><input name = "store_Open_Dt" type="text" class="store_runtime"><br>
 			<span>영업 종료 시간</span><input name = "store_Close_Dt" type="text" class="store_runtime"><br>
 
 			<br>
+			
+			<!-- 주소관련 input창 삭제 금지! 삭제하면 주소찾기 기능이 안되용~ -->
+			
+			<span>영업장소</span>
+			<input type="text" readonly="readonly" id="sample6_postcode" placeholder="우편번호">
+			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소">
+			<input type="button" onclick="sample6_execDaumPostcode()" value="찾기"><br><br>
+			<input type="button" onclick="geo()" value ="지도에 위치 등록"><br><br>
+			
+			
+			<input type="text" readonly="readonly" id="sample6_detailAddress"  placeholder="상세주소">
+			<input type="text" readonly="readonly" id="sample6_extraAddress" placeholder="참고항목">
+			<br>
+			
 
 			<div class="store_payment">
-				카드 결제 서비스<br> 
+				카드 결제 서비스 
 				<span><input name="store_Card_Yn" type="radio" value=1>가능</span>
 				<span><input name="store_Card_Yn" type="radio" value=0>불가능</span> <br>
 				(카드결제 안될 시 본 사이트의 주문예약 서비스를 이용하실 수 없습니다)
@@ -78,11 +88,16 @@
 				 var y=data.documents[0].y; // 위도
 				console.log(x);
 				console.log(y);
+	     		 alert("지도에 위치를 등록하였습니다.");	
 			},
 			error: function(){alert("error");}		
 			
 		});
 	}
+	
+	
+	
+	
     function sample6_execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function(data) {

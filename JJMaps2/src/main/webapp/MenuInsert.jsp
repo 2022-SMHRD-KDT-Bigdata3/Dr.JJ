@@ -14,7 +14,7 @@
   			<h3>점포 메뉴 등록</h3>
   			
   			<form action = "MenuInsert">
-  			<table text-align="center"> 
+  			<table text-align="center" class="addInput"> 
 	  			<tr>
 	  				<th>메뉴명</th>
 	  				<th>가격</th>
@@ -40,7 +40,7 @@
 					<td><input name="menu3_price" type = "text" ></td>
 					<td><input onclick="CheckedMax(this)" name="SIGNATURE" type="checkbox" ></td>
 	  			</tr>
-	  			<button id="AddMenu" onclick="AddMenu()" type="button"> 메뉴 추가 </button>
+	  			<button id="btnAdd" type="button"> 메뉴 추가 </button>
   			
   			</table>
 <script type="text/javascript">
@@ -63,16 +63,7 @@ function CheckedMax(field){ 					// field객체를 인자로 하는 CountChecked
 }
 
 
-function AddMenu() {                                        
-    $('.buttons').append (                        
-        '<input type="text" name="txt"> <input type="button" class="btnRemove" value="Remove"><br>'                    
-    ); // end append                            
-    $('.btnRemove').on('click', function () { 
-        $(this).prev().remove (); // remove the textbox
-        $(this).next ().remove (); // remove the <br>
-        $(this).remove (); // remove the button
-    });
-}); // end click      
+
 
 </script>
   
