@@ -40,7 +40,8 @@
 			<span>영업장소</span><br>
 			<input type="button" onclick="sample6_execDaumPostcode()" value="주소 찾기"><br>
 			<input type="text" readonly="readonly" id="sample6_postcode" placeholder="우편번호">
-			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소"><br>
+			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소"><br><input type="button" onclick="geo()" value ="위도경도">
+			
 			<input type="text" readonly="readonly" id="sample6_detailAddress" placeholder="상세주소">
 			<input type="text" readonly="readonly" id="sample6_extraAddress" placeholder="참고항목">
 			<br>
@@ -62,9 +63,26 @@
 
 	</form>
 	
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+	function geo(){
+		var address=$("#sample6_address").val();
+		$.ajax({
+			url:"Geocode",
+			type: "POST",
+			data:{"address":address},
+			dataType:"json",
+			success:function(data){
+				 var x=data.documents[0].x; // 경도
+				 var y=data.documents[0].y; // 위도
+				console.log(x);
+				console.log(y);
+			},
+			error: function(){alert("error");}		
+			
+		});
+	}
     function sample6_execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function(data) {
