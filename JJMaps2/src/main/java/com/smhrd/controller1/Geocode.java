@@ -26,6 +26,7 @@ public class Geocode extends HttpServlet {
 	    String GEOCODE_USER_INFO="KakaoAK 1154e936cf7c28a1cc798a7f1a46351f";  
 		URL obj;
 	        String store_addr=request.getParameter("address");
+	        System.out.println(store_addr);
 	        try{
 	            //인코딩한 String을 넘겨야 원하는 데이터를 받을 수 있다.
 	            String address = URLEncoder.encode(store_addr, "UTF-8");
