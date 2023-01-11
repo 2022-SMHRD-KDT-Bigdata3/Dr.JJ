@@ -6,166 +6,176 @@
   <display-name>MapJJ</display-name>
   
   <servlet>
-  	<servlet-name>Login</servlet-name>
-  	<display-name>Login</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.Login</servlet-class>
+     <servlet-name>Login</servlet-name>
+     <display-name>Login</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.Login</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>JoinService</servlet-name>
-  	<display-name>JoinService</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.JoinService</servlet-class>
+     <servlet-name>JoinService</servlet-name>
+     <display-name>JoinService</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.JoinService</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>LogoutService</servlet-name>
-  	<display-name>LogoutService</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.LogoutService</servlet-class>
+     <servlet-name>LogoutService</servlet-name>
+     <display-name>LogoutService</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.LogoutService</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>WebSocket</servlet-name>
-  	<display-name>WebSocket</display-name>
-  	<description></description>
-  	<servlet-class>WebSocket.WebSocket</servlet-class>
+     <servlet-name>WebSocket</servlet-name>
+     <display-name>WebSocket</display-name>
+     <description></description>
+     <servlet-class>WebSocket.WebSocket</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Search</servlet-name>
-  	<display-name>Search</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.Search</servlet-class>
+     <servlet-name>Search</servlet-name>
+     <display-name>Search</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.Search</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StoreSelectService</servlet-name>
-  	<display-name>StoreSelectService</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreSelectService</servlet-class>
+     <servlet-name>StoreSelectService</servlet-name>
+     <display-name>StoreSelectService</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.StoreSelectService</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StoreJoin</servlet-name>
-  	<display-name>StoreJoin</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreJoin</servlet-class>
+     <servlet-name>StoreJoin</servlet-name>
+     <display-name>StoreJoin</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.StoreJoin</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StoreUpdate</servlet-name>
-  	<display-name>StoreUpdate</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreUpdate</servlet-class>
+     <servlet-name>StoreUpdate</servlet-name>
+     <display-name>StoreUpdate</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.StoreUpdate</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StoreDelete</servlet-name>
-  	<display-name>StoreDelete</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreDelete</servlet-class>
+     <servlet-name>StoreDelete</servlet-name>
+     <display-name>StoreDelete</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.StoreDelete</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>MenuSelect</servlet-name>
-  	<display-name>MenuSelect</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.MenuSelect</servlet-class>
+     <servlet-name>MenuSelect</servlet-name>
+     <display-name>MenuSelect</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.MenuSelect</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Geocode</servlet-name>
-  	<display-name>Geocode</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.Geocode</servlet-class>
+     <servlet-name>Geocode</servlet-name>
+     <display-name>Geocode</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.Geocode</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>CreateXml</servlet-name>
-  	<display-name>CreateXml</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.CreateXml</servlet-class>
+     <servlet-name>CreateXml</servlet-name>
+     <display-name>CreateXml</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.CreateXml</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>reserveInsert</servlet-name>
-  	<display-name>reserveInsert</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.reserveInsert</servlet-class>
+     <servlet-name>reserveInsert</servlet-name>
+     <display-name>reserveInsert</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.reserveInsert</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>MenuInsert</servlet-name>
-  	<display-name>MenuInsert</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.MenuInsert</servlet-class>
+     <servlet-name>MenuInsert</servlet-name>
+     <display-name>MenuInsert</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.MenuInsert</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Menucheck</servlet-name>
-  	<display-name>Menucheck</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.Menucheck</servlet-class>
+     <servlet-name>Menucheck</servlet-name>
+     <display-name>Menucheck</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.Menucheck</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>MenuUpdate</servlet-name>
-  	<display-name>MenuUpdate</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.MenuUpdate</servlet-class>
+     <servlet-name>MultipartRequest</servlet-name>
+     <display-name>MultipartRequest</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.MultipartRequest</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>UploadServlet</servlet-name>
+     <display-name>UploadServlet</display-name>
+     <description></description>
+     <servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
   </servlet>
 
   
   <servlet-mapping>
-  	<servlet-name>Login</servlet-name>
-  	<url-pattern>/Login</url-pattern>
+     <servlet-name>Login</servlet-name>
+     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>JoinService</servlet-name>
-  	<url-pattern>/JoinService</url-pattern>
+     <servlet-name>JoinService</servlet-name>
+     <url-pattern>/JoinService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>LogoutService</servlet-name>
-  	<url-pattern>/LogoutService</url-pattern>
+     <servlet-name>LogoutService</servlet-name>
+     <url-pattern>/LogoutService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>WebSocket</servlet-name>
-  	<url-pattern>/WebSocket</url-pattern>
+     <servlet-name>WebSocket</servlet-name>
+     <url-pattern>/WebSocket</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Search</servlet-name>
-  	<url-pattern>/Search</url-pattern>
+     <servlet-name>Search</servlet-name>
+     <url-pattern>/Search</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreSelectService</servlet-name>
-  	<url-pattern>/StoreSelectService</url-pattern>
+     <servlet-name>StoreSelectService</servlet-name>
+     <url-pattern>/StoreSelectService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreJoin</servlet-name>
-  	<url-pattern>/StoreJoin</url-pattern>
+     <servlet-name>StoreJoin</servlet-name>
+     <url-pattern>/StoreJoin</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreUpdate</servlet-name>
-  	<url-pattern>/StoreUpdate</url-pattern>
+     <servlet-name>StoreUpdate</servlet-name>
+     <url-pattern>/StoreUpdate</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreDelete</servlet-name>
-  	<url-pattern>/StoreDelete</url-pattern>
+     <servlet-name>StoreDelete</servlet-name>
+     <url-pattern>/StoreDelete</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>MenuSelect</servlet-name>
-  	<url-pattern>/MenuSelect</url-pattern>
+     <servlet-name>MenuSelect</servlet-name>
+     <url-pattern>/MenuSelect</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Geocode</servlet-name>
-  	<url-pattern>/Geocode</url-pattern>
+     <servlet-name>Geocode</servlet-name>
+     <url-pattern>/Geocode</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>CreateXml</servlet-name>
-  	<url-pattern>/CreateXml</url-pattern>
+     <servlet-name>CreateXml</servlet-name>
+     <url-pattern>/CreateXml</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>reserveInsert</servlet-name>
-  	<url-pattern>/reserveInsert</url-pattern>
+     <servlet-name>reserveInsert</servlet-name>
+     <url-pattern>/reserveInsert</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>MenuInsert</servlet-name>
-  	<url-pattern>/MenuInsert</url-pattern>
+     <servlet-name>MenuInsert</servlet-name>
+     <url-pattern>/MenuInsert</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Menucheck</servlet-name>
-  	<url-pattern>/Menucheck</url-pattern>
+     <servlet-name>Menucheck</servlet-name>
+     <url-pattern>/Menucheck</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>MenuUpdate</servlet-name>
-  	<url-pattern>/MenuUpdate</url-pattern>
+     <servlet-name>MultipartRequest</servlet-name>
+     <url-pattern>/MultipartRequest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+     <servlet-name>UploadServlet</servlet-name>
+     <url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
 
  

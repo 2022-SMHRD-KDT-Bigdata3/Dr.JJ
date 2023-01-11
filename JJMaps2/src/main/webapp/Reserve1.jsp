@@ -5,23 +5,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/mypage.css" />
-<title>Document</title>
-</head>
-<body>
-	<header>
-		<h1>현재예약</h1>
-		<hr width="95%" color="black">
-	</header>
+		<title>현재 예약</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
+		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
+	   </head>
+
+
+   <body class="is-preload">
+		  <div id="logo">
+			 <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		  </div>
+	   
+		  <header class="bar">
+				<div class="pagename">
+				   <h1 class="title" >현재 예약</h1>
+				</div>
+		  </header>
 
 
 	<br>
 	<br>
 	<br>
-
 
 	<%
 	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
@@ -34,10 +39,10 @@
 			<div>😢</div>
 			<div>현재 예약된 주문이 없습니다</div>
 		</div>
-	</div>
-	<div class="button">
-		<p class="btn btn-1" onClick='location.href="#"'>주문하러 가기</p>
-	</div>
+	</div><br><br><br><br><br><br><br>
+	<form class="form">
+		<button type="button" onClick='location.href="Renovation.jsp"'>주문하러 가기</button>
+	</form>
 	<%
 	} else {
 	%>
@@ -52,15 +57,6 @@
 		<p>사장님이 열심히 조리중💦💦</p>
 
 
-
-
-
-
-
-
-
-
-
 		<div id="conteiner">
 			<div id="innerconteiner">
 				<div>조리가 시작된 메뉴는 주문 수정 및 취소가 어렵습니다.</div>
@@ -70,6 +66,10 @@
 		<%
 		}
 		%>
+		
+		
+	
+		<footer id = "footer">@JJUPJJUPBAKSA</footer>  
 	
 </body>
 </html>

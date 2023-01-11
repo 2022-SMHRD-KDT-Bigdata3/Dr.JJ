@@ -11,51 +11,34 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
 </head>
-
-<body>
-   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
-   
-<a href="Storedtail.jsp"><button> 내 점포 상세 페이지 </button></a>
-<a href="StoreSelectService"><button> 영업정보 </button></a>
-<a href="Menucheck"><button> 메뉴정보 </button></a>
-<br><br><br>
-
-
-         <div id="login_Body">
-			<div id="logo">
-			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
-			</div>
-   
-   
+	<body class="is-preload">
+	   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
+				<div id="logo">
+				   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+				</div>
+	   
    	<header class="h2">
 				<div class="pagename">
-				   <h1 class="title1" >점포 페이지</h>
+				   <h1 class="title">점포 페이지</h1>
 				</div>
-	</header>
-   
+	</header> 
    
    
    <form class="form">
-   <div class="box1"></div>
-<a onclick='location.href="Storedtail.jsp"'></a><button class="click"> 내 점포 상세 페이지 </button><br><br>
-<a onclick='location.href="StoreSelectService"' ><button  class="click"> 영업정보 </button></a><br><br>
-<a onclick='location.href="MenuSelect"'><button  class="click"> 메뉴정보 </button></><br>
-<br>
-
-<a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
+		 <div class="box1"></div>
+		<button type="button" onclick="location.href='Storedtail.jsp'" class="click"> 내 점포 상세 페이지 </button></a><br><br>
+		<button type="button" onclick="location.href='StoreSelectService'" class="click"> 영업정보 </button></a><br><br>
+		<a><button type="button" onclick='location.href="MenuSelect"' class="click"> 메뉴정보 </button></a><br><br>
+		<a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
 	</form>
-	</div>
-	</body>
 	<script>
-	
 	
 		function next() {
 			if (confirm("점포 삭제시 되돌릴 수 없습니다. \n 정말로 삭제하시겠습니까?")) {
 				location.href = "StoreDelete";
 			} 
 		}
-		
-		
+
 	</script>
 	
 	
