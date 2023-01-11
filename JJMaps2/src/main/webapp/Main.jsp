@@ -6,15 +6,13 @@
 
 <html>
 <head>
+<title>main</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone-no">
-<link rel="stylesheet" type="text/css" href="./assets/css/jjmain.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<title>main</title>
+<link rel="stylesheet" type="text/css" href="assets/css/jjmain.css">
 
 </head>
 <body>
@@ -24,12 +22,11 @@
 
 	<header>
 		<div id="logo">
-			<a>쩝쩝여지도</a>
-			<span id="main_st">당신의 맛있는 지도</span>
-			
+			<a>쩝쩝여지도</a> <span id="main_st">당신의 맛있는 지도</span>
+
 		</div>
 		<!-- 로그인 여부 판별-->
-		<div class ="menu">
+		<div class="menu">
 
 
 			<%
@@ -51,19 +48,19 @@
 
 		</div>
 	</header>
-			<br>
-		<div class="Header_Init_Section">
-			<div id="header_img">
-				<form action="Search">
-				
-					<div>
-						<input class="search" type="text" placeholder="검색어 입력">
-						
-					</div>
-				</form>
-			</div>
+	<br>
+	<div class="Header_Init_Section">
+		<div id="header_img">
+			<form action="Search">
 
+				<div>
+					<input class="search" type="text" placeholder="검색어 입력">
+
+				</div>
+			</form>
 		</div>
+
+	</div>
 
 
 
@@ -87,14 +84,14 @@
 		<div class="map"></div>
 	</div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer id = "footer">@JJUPJJUPBAKSA</footer>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer id="footer">@JJUPJJUPBAKSA</footer>
 </body>
 </html>

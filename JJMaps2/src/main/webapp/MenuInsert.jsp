@@ -50,6 +50,7 @@
 	    		'<tr id="add_tr'+i+'">'+
 	    	'<td><input id="menu'+i+'" name="menu'+i+'" type = "text" > </td>'+
 	        '<td><input id="menu_price'+i+'" name="menu_price'+i+'" type = "text" ></td>'+
+	        '<td><textarea id="menudetail'+i+'" name="menu0" cols="50" rows="2"></textarea></td>'+
 	        '<td><button type="button" id="btnRemove'+i+'" onclick="goDel('+i+')">삭제</button><br><br></td></tr>'
 	    );
 	    i++;

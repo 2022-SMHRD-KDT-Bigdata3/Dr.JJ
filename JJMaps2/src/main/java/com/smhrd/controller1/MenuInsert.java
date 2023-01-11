@@ -12,9 +12,7 @@ import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.MenuVO;
 import com.smhrd.model1.StoreDAO;
 
-/**
- * Servlet implementation class MenuInsert
- */
+
 public class MenuInsert extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
