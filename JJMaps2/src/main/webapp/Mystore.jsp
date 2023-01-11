@@ -13,6 +13,14 @@
 </head>
 
 <body>
+   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
+   
+<a href="Storedtail.jsp"><button> 내 점포 상세 페이지 </button></a>
+<a href="StoreSelectService"><button> 영업정보 </button></a>
+<a href="Menucheck"><button> 메뉴정보 </button></a>
+<br><br><br>
+
+<body>
    <% MemberVO info = (MemberVO)(session.getAttribute("info")); %> 
          <div id="login_Body">
 			<div id="logo">

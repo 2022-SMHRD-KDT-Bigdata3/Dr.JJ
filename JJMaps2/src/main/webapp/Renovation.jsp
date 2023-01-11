@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.smhrd.model1.MemberVO"%>
+<%@ page import="com.smhrd.model1.StoreVO"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -16,9 +18,11 @@
         </style>
 
 	</head>
-
+	<%MemberVO info = (MemberVO) (session.getAttribute("info"));
+	 StoreVO st_info = (StoreVO)(session.getAttribute("st_info"));
+	 %>
 	<body class="menu_count">
-		
+		<form action = "reserveInsert">
 		<header class="bar">
 			<nav class="navbar">
 				<div class="pagename">
@@ -126,8 +130,8 @@
             
 
             <div class="reno_bnt">
-                <button><a  href="Reserve1.jsp">예약하기</a></button>
+                <input type= submit value="예약하기">
             </div>
-
+	</form>
 	</body>
 </html>
