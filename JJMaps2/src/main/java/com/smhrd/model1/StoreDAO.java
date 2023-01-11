@@ -124,5 +124,13 @@ public class StoreDAO {
 		}
 		return storeList;
 	}
+
+	public Integer getStoreId(String user_id) {
+		session = sqlSessionFactory.openSession(true);
+		StoreVO vo = session.selectOne("mystoreselect",user_id); 
+		session.close();
+		Integer store_id =  vo.getStore_Id();
+		return store_id;
+	}
 	
 }

@@ -4,4 +4,7 @@
 <select id="menuSelect"  resultType="com.smhrd.model1.MenuVO">
 	select * from menus where  store_id=#{store_Id}
 	</select>
+<insert id="menuInsert" parameterType="com.smhrd.model1.MenuVO" >
+	insert into menus values (menus_SEQ.NEXTVAL,store_id=#{store_id},menu_name=#{menu_name},menu_price=#{menu_price})
+</insert>
 	</mapper>

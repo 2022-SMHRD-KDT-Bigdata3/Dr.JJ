@@ -3,7 +3,9 @@ package com.smhrd.model1;
 //메뉴
 public class MenuVO {
 
- // 메뉴 아이디
+
+
+// 메뉴 아이디
  private Double menuId;
 
  // 가게 아이디
@@ -23,6 +25,12 @@ public class MenuVO {
 
  // 메뉴 사진3
  private String menuPic3;
+ public MenuVO(Integer store_id, String menuName, String menuPrice) {
+		super();
+		this.store_id = store_id;
+		this.menuName = menuName;
+		this.menuPrice = menuPrice;
+	}
 
  public Double getMenuId() {
      return menuId;

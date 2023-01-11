@@ -28,6 +28,7 @@
      <mapper resource="com/smhrd/db1/MemberMapper.xml"/>
      <mapper resource="com/smhrd/db1/StoreMapper.xml"/>
      <mapper resource="com/smhrd/db1/MenuMapper.xml"/>
+      <mapper resource="com/smhrd/db1/ReservationMapper.xml"/>
   </mappers>
   
 </configuration>
