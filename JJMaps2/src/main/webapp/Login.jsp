@@ -8,6 +8,11 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
        <meta name="format-detection" content="telephone-no">
      	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
+     	 <style type="text/css">
+     	 .idcheck:invalid {
+  border: 2px solid red;
+}
+</style>
    </head>
 
    <body>
@@ -28,7 +33,7 @@
 
                <form style="margin-top: 80px; margin-bottom: 20px;" action="Login" method="post">
 				<div class="id">아이디</div>
-                <input name="user_Id" class="login_contents" align="center" type="text" placeholder="아이디를 입력하세요"><br><br>
+                <input name="user_Id" class="login_contents idcheck" align="center" type="text"  placeholder="아이디를 입력하세요"><br><br>
 
 				<div class="pw">비밀번호</div>
                 <input name="user_Pw" class="login_contents"align="center" type="password" placeholder="비밀번호를 입력하세요"><br><br>
