@@ -6,7 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<style type="text/css">
+.price:invalid {
+  border: 2px solid red;
+}</style>
 </head>
 <body>
 
@@ -19,6 +22,7 @@
 		 상위 4개 메뉴가 검색시 노출됩니다
 		<table border="1px solid" class="addInput">
 			<tr>
+				<th>번호</th>
 				<th>메뉴이름</th>
 				<th>가격</th>
 				<th>메뉴 설명</th>
@@ -27,9 +31,10 @@
 
 
 			<tr>
-				<td><input id="menu_Name0" name="menu_Name" type="text"></td>
-				<td><input id="menu_Price0" name="menu_Price" type="text"></td>
-				<td><textarea id="menu_Detail0" name="menu_Detail" cols="50" rows="2"></textarea></td>
+			<td>1</td>
+				<td><textarea id="menu_Name0" name="menu_Name" cols="20" rows="2"></textarea></td>
+				<td><input id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
+				<td><textarea id="menu_Detail0" name="menu_Detail" cols="30" rows="2"></textarea></td>
 				<td></td>
 			</tr>
 		</table>
@@ -48,10 +53,11 @@
 	$('#btnAdd').click(function(){
 	    $('.addInput').append(
 	    		'<tr id="add_tr'+i+'">'+
-	    	'<td><input id="menu_Name'+i+'" name="menu_Name" type = "text" > </td>'+
-	        '<td><input id="menu_Price'+i+'" name="menu_Price" type = "text" ></td>'+
-	        '<td><textarea id="menu_Detail'+i+'" name="menu_Detail" cols="50" rows="2"></textarea></td>'+
-	        '<td><button type="button" id="btnRemove'+i+'" onclick="goDel('+i+')">삭제</button><br><br></td></tr>'
+				'<td>'+(i+1)+'</td>'+
+	    	'<td><textarea id="menu_Name+i+" name="menu_Name" cols="20" rows="2"></textarea> </td>'+
+	        '<td><input id="menu_Price'+i+'" name="menu_Price" type = "text" class="price" type="text" pattern="[0-9]+"></td>'+
+	        '<td><textarea id="menu_Detail'+i+'" name="menu_Detail" cols="30" rows="2"></textarea></td>'+
+	        '<td><button type="button" id="btnRemove'+i+'" onclick="goDel('+i+')">×</button><br><br></td></tr>'
 	    );
 	    i++;
 	});

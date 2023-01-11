@@ -1,6 +1,8 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.Arrays;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +24,9 @@ public class MenuUpdate extends HttpServlet {
 		String[] menu_Name = request.getParameterValues("menu_Name");
 		String[] menu_Price = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
-		System.out.println(menu_Detail.length);
+		System.out.println(Arrays.toString(menu_Name));
+		System.out.println(Arrays.toString(menu_Price));
+		System.out.println(Arrays.toString(menu_Detail));
 		
 		//로그인계정
 		HttpSession session = request.getSession();

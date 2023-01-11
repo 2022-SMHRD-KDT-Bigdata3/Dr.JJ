@@ -5,11 +5,11 @@
 
 
 	<select id="menuSelect"  resultType="com.smhrd.model1.MenuVO">
-	select * from menus where  store_id=#{store_Id}
+	select * from menus where  store_id=#{store_Id}  
 	</select>
 	
 	<select id="menu_Select_user_id"  resultType="com.smhrd.model1.MenuVO">
-	select * from menus where  user_id=#{user_Id}
+	select * from menus where  user_id=#{user_Id} order by menu_Id
 	</select>
 	
 	<insert id="MenuInsert" parameterType="com.smhrd.model1.MenuVO" >
