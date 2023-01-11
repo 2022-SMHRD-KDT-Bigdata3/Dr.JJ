@@ -3,8 +3,12 @@
 
 /* 바디태그 마진 */
 html, body {
-	overflow-x:hidden; 
-	overflow-y:auto;
+	overflow:hidden; 
+	scroll:no;
+	overflow:auto;
+	width:100%; 
+	overflow-x:hidden;  
+	overflow-y:hidden;
 }
 
 /* 폰트 및 로고작업 */
