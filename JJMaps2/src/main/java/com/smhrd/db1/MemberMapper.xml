@@ -9,7 +9,7 @@
    </select>
    
     <insert id="join" parameterType="MemberVO" >
-      insert into members values (#{user_Id},#{user_Pw},#{user_Nick},#{user_Code})
+      insert into members values (#{user_Id},#{user_Pw},#{user_Nick},'0')
     </insert>
     
     <update id="usercode_to_One" >
