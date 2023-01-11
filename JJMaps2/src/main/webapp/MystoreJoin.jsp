@@ -53,7 +53,8 @@
 			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소">
 			<input type="button" onclick="sample6_execDaumPostcode()" value="찾기"><br><br>
 			<input type="button" onclick="geo()" value ="지도에 위치 등록"><br><br>
-			
+			<input name="x" type="text" readonly="readonly" id="sample6_latitude"  placeholder="x좌표">
+			<input name="y" type="text" readonly="readonly" id="sample6_longitude"  placeholder="y좌표">
 			
 			<input type="text" readonly="readonly" id="sample6_detailAddress"  placeholder="상세주소">
 			<input type="text" readonly="readonly" id="sample6_extraAddress" placeholder="참고항목">
@@ -89,6 +90,8 @@
 				console.log(x);
 				console.log(y);
 	     		 alert("지도에 위치를 등록하였습니다.");	
+	     		document.getElementById('sample6_latitude').value = x;
+                document.getElementById("sample6_longitude").value = y;
 			},
 			error: function(){alert("error");}		
 			
