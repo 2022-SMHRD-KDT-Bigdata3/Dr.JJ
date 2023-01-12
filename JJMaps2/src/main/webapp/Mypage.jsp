@@ -25,21 +25,7 @@
 
 	<header> <div id = "Title">마이페이지</div> </header>
 
-	<br>
-	<br>
-	<br>
-
-		  <div class="button">
-                <p class="btn btn-1" onClick='location.href="Reserve1.jsp"'>현재 예약 보기</p>
-                <p class="btn btn-1">내 주문내역 보기</p>
-                <p class="btn btn-1" onClick='location.href="Myreview.jsp"'>내 리뷰 보기</p>
-                <% if(info.getUser_Code().equals("0")){%>
-                <p class="btn btn-1" name="0" onclick="next()" >내 점포</p>
-                <%}else{ %>
-                <p class="btn btn-1" name="1" onClick='location.href="Mystore.jsp"'>내 점포 </p>
-                <%} %>            
-            </div>                                 
-       
+<br><br>
 
 	<div class="info">
 
@@ -79,7 +65,7 @@
 	</div>
 
 	</strong>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
+
 	<script>
 		function next() {
 			if (confirm("점포이용자가 아닙니다. \n점포등록 페이지로 이동할까요?")) {

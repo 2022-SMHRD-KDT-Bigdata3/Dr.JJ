@@ -123,14 +123,17 @@ header {
 	display: block;
 	height: 20px;
 	width: 1000px;
-	text-align: center; margin-left : auto;
+	text-align: center; 
+	margin-left : auto;
 	margin-right: auto;
 	background-color: #0E5049;
 	margin-left: auto;
+	
 }
 
-div#cate>a {
+div.cate>a {
 	margin: 0 5px 0 5px;
+	color: #f8f9fa;
 }
 
 /* 지도영역 */
