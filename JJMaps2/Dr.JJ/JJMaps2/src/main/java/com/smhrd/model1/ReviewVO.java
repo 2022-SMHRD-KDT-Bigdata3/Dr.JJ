@@ -6,7 +6,7 @@ import java.sql.Date;
 public class ReviewVO {
 
 
-public ReviewVO(String review_title, String reviewContent, Double reviewScore, String reviewPic, String user_id) {
+public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic, String user_id) {
 		super();
 		this.review_title = review_title;
 		this.reviewContent = reviewContent;
@@ -27,7 +27,7 @@ public ReviewVO(String review_title, String reviewContent, Double reviewScore, S
  private String reviewContent;
 
  // 평점
- private Double reviewScore;
+ private int reviewScore;
 
  // 리뷰 사진
  private String reviewPic;
@@ -38,7 +38,7 @@ public ReviewVO(String review_title, String reviewContent, Double reviewScore, S
  // 리뷰 작성시간
  private Date reviewDt;
 
- public ReviewVO(Integer store_id, String review_title, String reviewContent, Double reviewScore, String reviewPic,
+ public ReviewVO(Integer store_id, String review_title, String reviewContent, int reviewScore, String reviewPic,
 			String user_id) {
 		super();
 		this.store_id = store_id;
@@ -81,11 +81,11 @@ public void setReviewContent(String reviewContent) {
 	this.reviewContent = reviewContent;
 }
 
-public Double getReviewScore() {
+public int getReviewScore() {
 	return reviewScore;
 }
 
-public void setReviewScore(Double reviewScore) {
+public void setReviewScore(int reviewScore) {
 	this.reviewScore = reviewScore;
 }
 
@@ -112,7 +112,7 @@ public Date getReviewDt() {
 public void setReviewDt(Date reviewDt) {
 	this.reviewDt = reviewDt;
 }
-public ReviewVO(Integer store_id, String review_title, String reviewContent, Double reviewScore, String user_id) {
+public ReviewVO(Integer store_id, String review_title, String reviewContent, int reviewScore, String user_id) {
 	super();
 	this.store_id = store_id;
 	this.review_title = review_title;
