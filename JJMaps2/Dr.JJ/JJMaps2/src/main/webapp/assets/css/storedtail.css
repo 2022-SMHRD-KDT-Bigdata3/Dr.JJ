@@ -1,0 +1,433 @@
+@charset "utf-8";
+@import "reset.css";
+
+/* 버튼효과 */
+input[type=text]{ 
+    border: 1px solid gainsboro;
+    background-color: white;
+    font-size: medium;
+    height: 25px;
+    width: 300px; 
+    }
+    
+input[type=password]{ 
+    border: 1px solid gainsboro;
+    background-color: white;
+    font-size: medium;
+    height: 25px;
+    width: 300px; 
+    }
+
+
+input[type=button]{
+	font-size: medium;
+    font-weight:bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+button{
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  orangered;
+    background-color: orangered;
+    height: 40px;
+    width: 180px; 
+
+}
+
+input[type=submit]{ 
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    margin-top: 15px;
+    border-radius: 5px; 
+    border: 1px solid  orangered;
+    background-color: orangered;
+    height: 40px; 
+    width: 180px; 
+} 
+
+
+.click{
+	font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+
+.btjp{
+	diplay: block;
+ 	text-align: center;
+	font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+.button{
+  margin: 150px 500px 0 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+    flex: 1 1 auto;
+    
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    max-width: 400px;
+    min-width: 200px;
+   }
+   
+   .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+  
+  .btn-1 {
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
+  }
+
+/* 폰트 및 로고작업 */
+
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+.name{
+    font-size: 40px;
+}
+
+
+/* 바디영역 */
+
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+     -ms-overflow-style: none;
+ }
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* 헤더영역 */
+
+header{    
+    width:100%;
+    height: 100px;
+    cursor: pointer;
+    background-color: #FD6F22;   
+}
+
+
+.h2{
+	width:100%;
+    height: 100px;
+    cursor: pointer;
+    background-color: #0E5049;  
+}
+
+
+#jup{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+
+
+/*마이페이지 헤더*/
+
+#Title{
+	font-size: large;
+    font-weight:bold;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+ a#id{
+    font-size: 20px;
+    color: gray;
+  }
+  
+  a#pass{
+    display: inline-block;
+    color: black;
+    font-size: small;
+}
+
+ /* My reivew CSS 
+
+  h1,h3,h5{
+    margin: 40px;
+    
+  }
+   */
+  
+   /* 예약 css */
+
+  #conteiner{
+    height:250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+    /* 프로그래스 바 */
+
+  progress{
+    width: 95%;
+    height: 50px;
+    margin-left: 30px;
+    margin-right: auto;
+  }
+
+  p{
+    text-align: right;
+    margin-right: 30px;
+  }
+  
+  /* 마이페이지 프로필 사진*/
+
+  .box{
+    width:150px;
+    height: 150px;
+    border-radius: 30%;
+    overflow: hidden;
+  }
+  .profile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/* join 헤더 */
+div#logo{
+    font-family : 'RixInooAriDuriR';
+    font-size:larger;
+    color: #FD6F22;
+}
+
+
+.pagename{
+    padding-top: 10px;
+    color: white;
+}
+
+
+/* 나브영역 */
+nav{
+    
+    width: 100%;
+    height: 90px;
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+}
+
+#sdtail{
+    color: black;
+    text-align: center;
+}
+
+
+/* join 메인영역 */
+
+.id{
+    padding-right: 240px;
+    color:black;
+    font-weight:bold;
+}
+
+.little{
+    padding-right: 200px;
+    color: red;
+    font-size: small;
+}
+
+.pw{
+    padding-right: 240px;
+    color:black;
+    font-weight:bold;
+}
+
+.pwCheck{
+    padding-right: 190px;
+    color:black;
+    font-weight:bold;
+}
+
+
+.nick{
+    padding-right: 250px;
+    color:black;
+    font-weight:bold;
+}
+
+.id{
+    padding-right: 250px;
+    color:black;
+    font-weight:bold;
+}
+
+
+.form{
+
+    text-align: center;
+}
+
+
+
+
+/*login 메인영역*/
+
+#login_logo{
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+
+}
+
+        
+#login_input{
+    text-align: center;
+}
+
+
+
+
+/* 메인영역 */
+div#review{
+    text-align: center;
+    cursor: pointer;
+}
+a:hover#review{
+    background-color: orange;
+    color: white;
+}
+
+#main{
+    width: 100%;
+    height: 250px;
+    background-color: #dee2e6;
+}
+
+#main2{
+    width: 100%;
+    height: 700px;
+    background-color: #dee2e6;
+}
+
+
+/*MYstore 메인*/
+.box1{
+	width: 100%;
+    height: 80px;
+    background-color: white;    
+}
+
+/*MYstoreJoin 메인*/
+
+h4{
+	background-color: #0E5049;  
+	opacity: 0.7;   
+}
+
+
+/*Renovaition메인*/
+
+img{
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin : auto;
+}
+
+.menu{
+ 	width:100%;
+    height: 30px;
+    cursor: pointer;
+    color:white;
+    background-color: orange; 
+    opacity: 0.7;
+}
+
+
+
+
+/* 푸터영역 */
+#footer{
+    padding-bottom: 10em;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #ced4da;
+    height: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    
+    
+}
+#fix {
+    position: fixed;
+    background-color:#FD6F22;   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    cursor: pointer;
+    
+  }
+
+#myr{
+  	font-size: large;
+    font-weight:bold;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    
+}
+
