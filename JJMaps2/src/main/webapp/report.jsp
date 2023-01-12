@@ -26,18 +26,35 @@
 		</div>
 	</header>
 	<br>
-	<br>
-	<div class="content">오늘! 나의 맛집을 제보해주세요!</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<br><br>		
 	<div class="form">
-		<button onclick="location.href='reportService.jsp'">제보하기</button>
+		<form action="upload" method="post" enctype="multipart/form-data">
+			<table>
+				<tr bgcolor="orange" height="50px">
+					<div style="color: orange" id="null"> 지금 나의 맛집을 제보해주세요!!</div>
+				</tr>
+				<tr height="35px">
+					<td><textarea placeholder="제목을 입력하세요" name="title" cols="40"
+							rows="1"></textarea></td>
+				<tr height="35px">
+					<td><textarea placeholder="내용을 입력하세요" cols="40"" name="content"
+							rows="20"></textarea></td>
+				</tr>
+				
+				<!-- 사진선택 등록-->
+				<tr height="35px" border-radius: 5px; rbgcolor="orange">
+					<td align="Right"><input type="file" name="uploadFile id="
+						real-input" class="image_inputType_file" onchange="readURL(this);"
+						accept="img/*" required multiple> 
+						<div class="sb"><input type="submit"value="제보하기"></td></div>
+					<br>
+					<br>
+				</tr>
+			</table>
+		</form>
 	</div>
-
-
+	
+	
 	<footer id="footer">@JJUPJJUPBAKSA</footer>
 
 </body>

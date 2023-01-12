@@ -13,22 +13,21 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 </head>
 
-<script>	
-			const browseBtn = document.querySelector('.browse-btn');
+<script>
+	const browseBtn = document.querySelector('.browse-btn');
 
-			
-			function readURL(input) {
-			if (input.files && input.files[0]) {
-			  var reader = new FileReader();
-			  reader.onload = function(e) {
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
 				document.getElementById('preview').src = e.target.result;
-			  };
-			  reader.readAsDataURL(input.files[0]);
-			} else {
-			  document.getElementById('preview').src = "";
-			}
-		  }
-		</script>
+			};
+			reader.readAsDataURL(input.files[0]);
+		} else {
+			document.getElementById('preview').src = "";
+		}
+	}
+</script>
 </head>
 
 <body class="is-preload">
@@ -43,7 +42,7 @@
 
 	<header class="bar">
 		<div id="Title">
-			<h1>로그인</h1>
+			<h1>마이-리뷰쓰기</h1>
 		</div>
 	</header>
 
@@ -65,6 +64,7 @@
 					<div style="color: orange" id="null">리뷰합니다!</div>
 				</tr>
 
+			
 				<tr height="35px">
 					<td><textarea placeholder="제목을 입력하세요" name="title" cols="50"
 							rows="1"></textarea></td>
@@ -72,19 +72,25 @@
 					<td><textarea placeholder="내용을 입력하세요" cols="50" name="content"
 							rows="20"></textarea></td>
 				</tr>
-				
+		
 				<!-- 사진선택 등록-->
 
 				<tr height="35px" border-radius: 5px; rbgcolor="orange">
 					<td align="Right"><input type="file" name="uploadFile id="
 						real-input" class="image_inputType_file" onchange="readURL(this);"
-						accept="img/*" required multiple> <input type="submit"
-						value="등록"></td>
+						accept="img/*" required multiple><br>
+					<br>
+						<div class="sb">
+							<input type="submit" value="등록"></td>
+					</div>
+					<br>
 					<br>
 					<br>
 				</tr>
 			</table>
 		</form>
 	</div>
+	<br>
+	<br>
 </body>
 </html>
