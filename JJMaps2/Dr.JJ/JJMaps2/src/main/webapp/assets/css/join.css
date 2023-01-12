@@ -1,0 +1,44 @@
+@charset "utf-8";
+body{margin: 0;
+}
+
+.title{
+    color: antiquewhite;
+    margin-bottom: 50px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #ff7300;
+
+}
+
+
+#navbar_logo{
+   
+    color: antiquewhite;
+    margin:-100px 0 0 0;
+    float:left;
+    text-decoration:none;
+}
+ 
+.pagename{
+    text-decoration: antiquewhite;
+    position:relative ;  
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 40px;
+}
+
+.form{
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 80px;
+    align-items: center;
+    min-width: 320px; 
+    max-width: 640px; 
+    min-height: 320px; 
+    max-height: 640px; 
+    margin-left: auto; margin-right: auto;
+}
