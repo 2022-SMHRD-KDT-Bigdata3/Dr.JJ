@@ -24,18 +24,24 @@
     </header>
     <!-- 가게소개 영역 -->
     <nav>
-        <h1>(가게이름)</h1>
+        <h1>(가게이름)<%=Storeinfo.getStore_Name() %></h1>
         <div id="sdtail">
-            <a>(카테고리)</a>
+            <a>(카테고리)<%=Storeinfo.getStore_Cate() %></a>
             <a>(평점)</a>
         </div>
         
     </nav>
+<% String status;
+if(Storeinfo.getStore_Status()==0){
+	status = "영업중";
+}else{
+	status = "영업중이 아닙니다";
+}	%>
 
     <main id="main">메인 (가게설명)
-        <div>(위치)</div>
-        <div>(영업상태) 및 정보</div>
-        <div>전화번호</div>
+        <div>(주소)<%=Storeinfo.getStore_Addr() %></div>
+        <div>영업상태 : <%=status %></div>
+        <div>연락처<%=Storeinfo.getStore_Tel() %></div>
     </main>
 
 
@@ -48,8 +54,7 @@
             <p>(맛있는 메뉴)</p>
             <!-- 메뉴 DB에 있는 것 주르륵 내려야함 -->
         </div>
-        <div>(영업상태) 및 정보</div>
-        <div>(전화번호)</div>
+
     </main>
 
     <footer id = "fix"  onClick='location.href="Renovation.jsp"'>

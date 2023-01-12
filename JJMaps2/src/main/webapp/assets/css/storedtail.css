@@ -143,6 +143,14 @@ input[type=submit].click{
     margin-right: auto;
     background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
   }
+  
+  .btn-2 {
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, #f6d365 0%, #0E5049, #f6d365 100%);
+  }
 
 #btnAdd{
 	diplay: block;
@@ -189,7 +197,7 @@ input[type=submit].click{
 body{
     margin-left: 10%;
     margin-right: 10%;
-     -ms-overflow-style: none;
+    -ms-overflow-style: none;
  }
  
 ::-webkit-scrollbar {
@@ -394,7 +402,6 @@ h1{
 
 
 .form{
-
     text-align: center;
 }
 
@@ -447,8 +454,6 @@ a:hover#review{
     height: 80px;
     background-color: white;    
 }
-
-
 
 /*Renovaition메인*/
 
@@ -512,6 +517,9 @@ div>h4{
 	 text-align: center;
 }
 
+.sb{
+	 text-align: center;
+}
 
 
 

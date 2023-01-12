@@ -29,7 +29,7 @@
 	<br>
 
 	<%
-	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
+	ReservationVO rNumber = (ReservationVO) request.getAttribute("rNumber");
 	StoreVO storeName = (StoreVO) session.getAttribute("storeName");
 	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");
 	if (rNumber == null) {
