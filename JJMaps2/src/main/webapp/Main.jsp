@@ -67,7 +67,7 @@
 
 	<!-- 여기까지 헤더 -->
 
-	<div id="cate">
+	<div id="cate" class ="cate">
 		<a onclick='location.href="#"'>붕어빵</a> <a onclick='location.href="#"'>붕어빵</a>
 		<a onclick='location.href="#"'>붕어빵</a> <a onclick='location.href="#"'>붕어빵</a>
 		<a onclick='location.href="#"'>붕어빵</a> <a onclick='location.href="#"'>붕어빵</a>
