@@ -19,24 +19,21 @@ import com.smhrd.model1.ReviewVO;
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
-		String name = info.getUser_Nick();
-		
-		PrintWriter out = response.getWriter();
-		// 여기를 바꿔주면 다운받는 경로가 바뀜
+		String user_id = info.getUser_Id();
 		String savePath = "upload";
 		// 최대 업로드 파일 크기 5MB로 제한
 		int uploadFileSizeLimit = 5 * 1024 * 1024;
 		String encType = "UTF-8";
 		ServletContext context = getServletContext();
 		String uploadFilePath = context.getRealPath(savePath);
-		System.out.println("서버상의 실제 디렉토리 :");
-		System.out.println(uploadFilePath);
+		String review_pic = uploadFilePath;
 		try {
 			MultipartRequest multi = new MultipartRequest(request, // request 객체
 					uploadFilePath, // 서버상의 실제 디렉토리
@@ -49,35 +46,18 @@ public class UploadServlet extends HttpServlet {
 			if (fileName == null) { // 파일이 업로드 되지 않았을때
 				System.out.print("파일 업로드 되지 않았음");
 			} else { // 파일이 업로드 되었을때
-				out.println("<br> 글쓴이 : " + name);
-				out.println("<br> 제 &nbsp; 목 : " + multi.getParameter("title"));
-				out.println("<br> 파일명 : " + fileName);
-				out.println("<br> 내용 : " + multi.getParameter("content"));
+				int reviewScore = Integer.parseInt(multi.getParameter("reviewStar"));
+				String review_title =multi.getParameter("title");
+				String reviewContent =multi.getParameter("content");
+				ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewContent, user_id);
+				System.out.println(vo);
+				response.sendRedirect("Main.jsp");
 			}// else
 		} catch (Exception e) {
 			System.out.print("예외 발생 : " + e);
 		}// catch
-	}
 	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession();
-		MemberVO info = (MemberVO)session.getAttribute("info");
-		String user_id = info.getUser_Id();
-		String savePath = "upload";
-		// 최대 업로드 파일 크기 5MB로 제한
-		int uploadFileSizeLimit = 5 * 1024 * 1024;
-		String encType = "UTF-8";
-		ServletContext context = getServletContext();
-		String uploadFilePath = context.getRealPath(savePath);
-		String review_pic = uploadFilePath;
-		String review_title = request.getParameter("titile");
-		String reviewContent = request.getParameter("content");
-		Double reviewScore = Double.parseDouble(request.getParameter("reviewStar"));
-		ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewContent, user_id);
-		
-		
+	
 	}
 
 }
