@@ -7,7 +7,7 @@
 	</select>
 	
 	<select id="search" resultType="com.smhrd.model1.StoreVO">
-	SELECT * FROM stores WHERE store_name LIKE '%'||#{keyword}||'%' or store_addr LIKE '%'||#{keyword}||'%' or store_cate LIKE '%'||#{keyword}||'%'
+	SELECT * FROM stores WHERE store_name LIKE '%'||#{keyword}||'%' or store_addr LIKE '%'||#{keyword}||'%' or store_cate LIKE '%'||#{keyword}||'%' or STORE_ID in(select STORE_ID from MENUS where MENU_NAME LIKE '%'||#{keyword}||'%')
 	</select>
 	
 	<insert id="storejoin" parameterType="com.smhrd.model1.StoreVO">

@@ -5,7 +5,7 @@
 
 
 	<select id="menuSelect"  resultType="com.smhrd.model1.MenuVO">
-	select * from menus where  store_id=#{store_Id}  
+	select * from menus where  store_id=#{store_Id}  order by MENU_ID
 	</select>
 	
 	<select id="menu_Select_user_id"  resultType="com.smhrd.model1.MenuVO">
@@ -19,5 +19,7 @@
 	<delete id="MenuDeleteAll" >
 		delete menus where user_id=#{user_Id}
 	</delete>
+	
+	
 
 </mapper>
