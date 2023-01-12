@@ -39,7 +39,7 @@
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
 				최소 4자리에서 최대 16자리까지 숫자, 영문, 특수문자 가능 (공백불가)
 			<div class="pwCheck">비밀번호 재확인</div>
-	   			<input id="pwCheck" onfocusout="pwcheck()" name="user_Pw_check" type="password" 
+	   			<input id="pwCheck" onfocusout="check()" name="user_Pw_check" type="password" 
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
 	   			<span id = "checkPw"></span>
 	   			
@@ -56,24 +56,25 @@
 
   <footer id = "footer">@JJUPJJUPBAKSA</footer>
   
-  <script src = "js/jquery-3.6.0.min.js"></script>
-  <script>
-	function pwcheck(){
-    	let pw = $("#pw").val();
-        let pwCheck = $("#pwCheck").val();
-        
-        if (pw != "" || pwCheck != ""){
-        	if (pw == pwCheck){
-            	$("#checkPw").html('일치');
-            	$("#checkPw").attr('color','green');
-            } else {
-            	$("#checkPw").html('불일치');
-                $("#checkPw").attr('color','red');
-            }
-        }
-    
-    });
-  </script>
+  <script type="text/javascript">
+
+	function check() {
+
+		let password = document.getElementById('pw');					//비밀번호 
+		let passwordConfirm = document.getElementById('pwCheck');	//비밀번호 확인 값
+		let checkPw = document.getElementById('checkPw');				//확인 메세지
+		let correctColor = "#7DB249";	
+		let wrongColor ="#ff0000";	
+		
+		if(password.value == passwordConfirm.value){//password 변수의 값과 passwordConfirm 변수의 값과 동일하다.
+			checkPw.style.color = correctColor;/* span 태그의 ID(confirmMsg) 사용  */
+			checkPw.innerHTML ="비밀번호 일치";/* innerHTML : HTML 내부에 추가적인 내용을 넣을 때 사용하는 것. */
+		}else{
+			checkPw.style.color = wrongColor;
+			checkPw.innerHTML ="비밀번호 불일치";
+		}
+	}
+</script>
 
 
 

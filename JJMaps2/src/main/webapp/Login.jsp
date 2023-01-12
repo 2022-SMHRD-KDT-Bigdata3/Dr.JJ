@@ -12,6 +12,11 @@
    </head>
 
    <body>
+    
+    <%String message = (String)request.getAttribute("message"); %>
+    <input id="joinMessage" type=hidden value="<%=message!=null?message:""%>">
+    
+   
       <div id="login_Body">
 
 			<div id="logo">
@@ -39,5 +44,17 @@
             </div>
       </div>
 	  <footer id = "footer">@JJUPJJUPBAKSA</footer>  
+	  
    </body>
+   <script src = "js/jquery-3.6.0.min.js"></script>
+	<script>
+    $(document).ready(function(){
+    	let joinMessage = $("#joinMessage").val();
+    	if(joinMessage.includes('가입')){
+    		alert(joinMessage);
+    	}
+        
+    });
+	</script>
+   
 </html>
