@@ -20,9 +20,18 @@ public class Search extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//검색어 추출
+		//검색어 추출 (검색어 입력 안할시 검색 실패 페이지 연결)
 		request.setCharacterEncoding("UTF-8");
-		String searchWord = request.getParameter("searchWord");
+		String searchWord= request.getParameter("searchWord");
+		searchWord=searchWord.trim();
+			System.out.println("검색단어:"+searchWord);
+			
+		if (searchWord==null || searchWord.equals("")) {
+			System.out.println("검색 실패..");
+			request.setAttribute("searchWord", "");
+			
+			RequestDispatcher rdi = request.getRequestDispatcher("SearchResultEmpty.jsp");
+			rdi.forward(request, response);}
 		
 		//dao 호출하여 점포 db에서 쿼리조회 및 점포 리스트 반환 
 		StoreDAO StoreDAOs = new StoreDAO();
@@ -49,7 +58,10 @@ public class Search extends HttpServlet {
 		}else {
 
 			System.out.println("검색 실패..");
-			response.sendRedirect("Main.jsp");
+			request.setAttribute("searchWord", searchWord);
+			
+			RequestDispatcher rdi = request.getRequestDispatcher("SearchResultEmpty.jsp");
+			rdi.forward(request, response);
 			
 		}
 		
