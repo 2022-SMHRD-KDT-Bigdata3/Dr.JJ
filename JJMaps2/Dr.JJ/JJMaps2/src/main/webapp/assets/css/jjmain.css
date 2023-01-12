@@ -87,7 +87,7 @@ header {
 
 	color: black;
 	text-align: center;
-	margin: 0 0 0 5px;
+	margin: 0 5px 0 5px;
 }
 
 #logout {
@@ -97,12 +97,20 @@ header {
 	margin: 0 5px 0 5px;
 }
 
+.menu>#review {
+	color: black;
+	text-align: center;
+	margin-left: 5px;
+}
+
 .menu {
 	margin-top: -55px;
 	margin-left: auto;
 	margin-right: auto;
 	float:right;
 }
+
+
 
 .Header_Init_Section {
 	text-align: center;
@@ -123,17 +131,18 @@ header {
 	display: block;
 	height: 20px;
 	width: 1000px;
-	text-align: center; 
 	margin-left : auto;
 	margin-right: auto;
 	background-color: #0E5049;
-	margin-left: auto;
+
 	
 }
 
-div.cate>a {
+#cate>a {
 	margin: 0 5px 0 5px;
 	color: #f8f9fa;
+	text-align: left; 
+	
 }
 
 /* 지도영역 */
