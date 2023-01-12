@@ -535,7 +535,7 @@ div>h4{
   }
   
   
-#fix2{
+.fix2{
     position: fixed;
     background-color: #0E5049;   
     left: 0;
