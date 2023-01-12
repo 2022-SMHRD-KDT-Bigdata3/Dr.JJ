@@ -52,6 +52,7 @@
 	<br>
 	<div class="Header_Init_Section">
 		<div id="header_img">
+		
 			<form action="Search">
 
 				<div>
@@ -71,20 +72,20 @@
 
 	<div id="cate" class ="cate">
 		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a> 
-		<a onclick='location.href="#"'>붕어빵</a> 
-		<a onclick='location.href="#"'>붕어빵</a> 
-		<a onclick='location.href="#"'>붕어빵</a> 
-		<a onclick='location.href="#"'>붕어빵</a> 
+		<a onclick='location.href="#"'>타코야끼</a> 
+		<a onclick='location.href="#"'>호떡</a> 
+		<a onclick='location.href="#"'>순대</a> 
+		<a onclick='location.href="#"'>분식류</a> 
+		<a onclick='location.href="#"'>기타</a> 
 		<a onclick='location.href="#"'>붕어빵</a>
+		<a onclick='location.href="#"'>타코야끼</a>
+		<a onclick='location.href="#"'>호떡</a>
+		<a onclick='location.href="#"'>순대</a>
+		<a onclick='location.href="#"'>분식류</a>
+		<a onclick='location.href="#"'>기타</a>
 		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>붕어빵</a>
+		<a onclick='location.href="#"'>타코야끼</a>
+		<a onclick='location.href="#"'>호떡</a>
 	
 
 	</div>
