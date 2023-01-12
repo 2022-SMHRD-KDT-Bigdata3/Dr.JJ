@@ -128,6 +128,13 @@ input[type=submit]{
     
 }
 
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .name{
     font-size: 40px;
 }
@@ -233,10 +240,14 @@ header{
     height: 100%;
     object-fit: cover;
   }
+  
+  div#info{
+  font-family : 'NanumSquareNeo-Variable';
+  }
 
 
 /* join 헤더 */
-div#logo{
+div#null{
     font-family : 'RixInooAriDuriR';
     font-size:larger;
     color: #FD6F22;
