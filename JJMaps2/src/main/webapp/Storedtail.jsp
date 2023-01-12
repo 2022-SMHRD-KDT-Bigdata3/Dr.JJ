@@ -1,20 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css">
-    <title>myStoredtail</title>
+<html>
+   <head>
+      <title>jj login</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+       <meta name="format-detection" content="telephone-no">
+     	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
 
-</head>
-<body>
+   </head>
+   <body >
     <!-- 헤더영역 -->
-    <header  onClick='location.href="Main.jsp"'>
-        <div id="jup">쩝쩝박사</div>
-    </header>
+    
+    <div id="login_Body">
+
+			<div id="logo">
+			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+	</div>
+	
+	<header onClick='location.href="Main.jsp"' class="bar">
+				<div id="Title">
+				   <h1>쩝쩝박사</h1>
+				</div>
+		  </header>
+    
+    
     <!-- 가게소개 영역 -->
     <nav>
         <h1>(가게이름)</h1>
