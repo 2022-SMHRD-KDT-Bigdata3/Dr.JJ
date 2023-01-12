@@ -20,13 +20,16 @@ public class MenuInsert extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//메뉴 받아오기
+
+		//메뉴 받아오기 + 사진
 		
 		request.setCharacterEncoding("UTF-8");
 		String[] menu_Name = request.getParameterValues("menu_Name");
 		String[] menu_Price = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
+		String[] menu_Pic = request.getParameterValues("menu_Pic");
 
+		System.out.println(menu_Pic[0]);
 		
 		//로그인계정
 		HttpSession session = request.getSession();
@@ -37,7 +40,7 @@ public class MenuInsert extends HttpServlet {
 		StoreDAO StoreDAOs = new StoreDAO();
 		Integer store_id = StoreDAOs.getStoreId(user_id); 
 		
-		//메뉴 dao 호출, 메뉴 객체 묶기, 매퍼로 보내기 
+		//메뉴 dao 호출, 메뉴 객체 묶기, 매퍼로 보내기 (아직 사진 x)
 		MenuDAO MenuDAOs = new MenuDAO();
 		int res=0;
 		
@@ -47,7 +50,7 @@ public class MenuInsert extends HttpServlet {
 		
 		if(res>0) {System.out.println("메뉴"+i+" 등록 성공!");
 		}else {System.out.println("메뉴등록실패..");
-		};
+		}
 		
 		}
 		

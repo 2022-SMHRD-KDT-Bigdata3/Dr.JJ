@@ -4,43 +4,41 @@
 <%@ page import="com.smhrd.model1.StoreVO"%>
 <!DOCTYPE HTML>
 
-<html>
-	<head>
-		<title>예약하기</title>
+<head>
+		<title>회원가입</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
-		 <link rel="stylesheet" href="assets/css/renovaition.css"/>
+		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
+	   </head>
 
-		 <style type="text/css">
-            input[type=text]{ border: 1px solid orange; }
-			button{ color:whitesmoke; border: 1px solid orange;
-				border-radius: 5px; background-color: orangered;}
-        </style>
+
+   <body class="is-preload">
+		  <div id="logo">
+			 <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		  </div>
+	   
+		  <header class="bar">
+				<div class="pagename">
+				   <h1 class="title" >예약하기</h1>
+				</div>
+		  </header>
+
 
 	</head>
 	<%MemberVO info = (MemberVO) (session.getAttribute("info"));
 	 StoreVO st_info = (StoreVO)(session.getAttribute("st_info"));
 	 %>
 	<body class="menu_count">
-		<form action = "reserveInsert">
-		<header class="bar">
-			<nav class="navbar">
-				<div class="pagename">
-					<h1 class="title" >예약하기</h1>
-				</div>
-			</nav>
-		</header>
-
+		<form class= "form" = "reserveInsert" method="post">
 
         <div class ="info" >
 			<div class="info">
                 <img src="images/profil_img.jpg">
-                
 				<h2>마싯는 트럭</h2>
 		    </div>
-        </div><br>
-
-            <h4 class = "menu">MENU</h4><br>
+        </div>
+          
+           <h4 class = "menu">MENU</h4>
 
         <!--메뉴수량 선택-->
         <div class="menu_select">
@@ -126,12 +124,11 @@
             <div class="total_price">
                 <h4>현재 주문 금액</h4>             
                 <h4>total 금액</h4>
+                
             </div>
-            
-
-            <div class="reno_bnt">
-                <input type= submit value="예약하기">
-            </div>
+            <form>
+                <input class="button" type= submit value="예약하기"><br><br>
+            </form>
 	</form>
 	</body>
 </html>

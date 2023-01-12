@@ -1,4 +1,4 @@
-
+<%@ page import="com.smhrd.model1.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -17,11 +17,7 @@
 		
 		<script>	
 			const browseBtn = document.querySelector('.browse-btn');
-			const realInput = document.querySelector('#real-input');
-			
-			browseBtn.addEventListener('click',()=>{
-				realInput.click();
-			});
+
 			
 			function readURL(input) {
 			if (input.files && input.files[0]) {
@@ -38,6 +34,10 @@
 	</head>
 
 	<body class="is-preload">
+	<%
+	MemberVO info = (MemberVO) (session.getAttribute("info"));
+	%>
+	
 		<header class="bar">
 			<nav class="navbar">		 
 				 <a href="Main.jsp">
@@ -56,10 +56,10 @@
 				<h2><a href="#">마싯는 트럭<a></h2>
 			</div>
 		</div><br>
-		</div>
+		
 
 		<div class="form">
-		<form action="#">
+		<form action="upload" method="post" enctype="multipart/form-data">
 			<table>
 				<tr bgcolor="orange" height="50px">
 					<th colspan="2">
@@ -68,26 +68,22 @@
 				</tr>
 				<tr height="35px" bgcolor="">
 					<td>
-						<textarea placeholder="제목을 입력하세요"  cols="50" rows="1"></textarea>
+						<textarea placeholder="제목을 입력하세요" name="title"  cols="50" rows="1"></textarea>
 					</td>
 				<tr height="35px" bgcolor="">
 					<td >
-						<textarea placeholder="내용을 입력하세요" cols="50" rows="20"></textarea>
+						<textarea placeholder="내용을 입력하세요" cols="50" name="content" rows="20"></textarea>
 					</td>
 				</tr>
 		
 				<!-- 사진등록/ 등록-->
 				<tr height="35px"  border-radius: 5px; rbgcolor="orange">
 					<td  align="Right">
-						<input type="file" id="real-input" class="image_inputType_file" onchange="readURL(this);" accept="img/*" required multiple>
+						<input type="file" name="uploadFile id="real-input" class="image_inputType_file" onchange="readURL(this);" accept="img/*" required multiple>
 						
-						
-						
-						<!--리뷰가 데이터베이스로-->
-						<button onClick="location.href='#'" >사진등록</botton> <!-- 주소변경 -->
-						<button onClick="location.href='Myreview.jsp'" class="submit">등록</button>
+						<input type="submit" value="등록" >
 					
-						</div>
+						
 					</td>
 				</tr>
 			</table>

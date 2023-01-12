@@ -29,13 +29,7 @@
 	<br>
 	<br>
 
-
-
-
-        
-         
-
-            <div class="button">
+		  <div class="button">
                 <p class="btn btn-1" onClick='location.href="Reserve1.jsp"'>현재 예약 보기</p>
                 <p class="btn btn-1">내 주문내역 보기</p>
                 <p class="btn btn-1" onClick='location.href="Myreview.jsp"'>내 리뷰 보기</p>
@@ -45,9 +39,7 @@
                 <p class="btn btn-1" name="1" onClick='location.href="Mystore.jsp"'>내 점포 </p>
                 <%} %>            
             </div>                                 
-        </div>
-        
- </strong>
+       
 
 	<div class="info">
 
