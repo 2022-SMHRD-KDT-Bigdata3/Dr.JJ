@@ -180,7 +180,7 @@ header{
     font-weight:bold;
     text-align: center;
     color: white;
-    padding: 40px;
+    padding: 30px;
 }
 
  a#id{
@@ -275,6 +275,7 @@ h1{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .little1{
@@ -298,12 +299,14 @@ h1{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .pwCheck{
     padding-right: 190px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
@@ -311,12 +314,14 @@ h1{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .id{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
@@ -411,7 +416,7 @@ img{
     background-color: #f8f9fa;
     text-align: center;
     color: #ced4da;
-    height: 100px;
+    height: 200px;
     left: 0;
     right: 0;
     bottom: 0;

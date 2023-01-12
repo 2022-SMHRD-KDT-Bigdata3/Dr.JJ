@@ -21,8 +21,8 @@
 			</div>
 
 			<header class="bar">
-				<div class="pagename">
-				   <h1 class="title" >로그인</h1>
+				<div id="Title">
+				   <h1>로그인</h1>
 				</div>
 		  </header>
 
