@@ -51,6 +51,7 @@ public class UploadServlet extends HttpServlet {
 				String reviewContent =multi.getParameter("content");
 				ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewContent, user_id);
 				System.out.println(vo);
+				System.out.println(uploadFilePath);
 				response.sendRedirect("Main.jsp");
 			}// else
 		} catch (Exception e) {
