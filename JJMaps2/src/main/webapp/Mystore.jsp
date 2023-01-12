@@ -33,7 +33,7 @@
 			<br>
 			<p class="btn btn-2" onclick='location.href="Menucheck"'>영업정보</p>
 			<br>
-			<p class="btn btn-2" onClick="next()">내 리뷰 보기</p>
+			<p class="btn btn-2" onClick="next()">점포 삭제</p>
 	
 	
 	</form>
