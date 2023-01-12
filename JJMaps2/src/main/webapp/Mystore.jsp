@@ -19,7 +19,7 @@
 	   
    	<header class="h2">
 				<div class="pagename">
-				   <h1 class="title">점포 페이지</h1>
+				   <h1 id="Title">점포 페이지</h1>
 				</div>
 	</header> 
    

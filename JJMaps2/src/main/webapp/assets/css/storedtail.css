@@ -249,9 +249,9 @@ div#logo{
 }
 
 
-.pagename{
-    padding-top: 10px;
+.pagename>h1{
     color: white;
+    text-align: center;
 }
 
 

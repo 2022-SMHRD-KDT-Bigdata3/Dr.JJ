@@ -15,8 +15,8 @@
 		  </div> 
     
 		<header class="bar">
-			<div class="pagename">
-		    	<h1 class="title">My 리뷰🍦</h1>
+			<div id="Title">
+		    	<h1>My 리뷰🍦</h1>
 			</div><br>
 		    	<h5>내가 작성한 리뷰😄</h5>
 		</header>
