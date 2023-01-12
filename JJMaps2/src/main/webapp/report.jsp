@@ -58,7 +58,7 @@
 	</div>
 	
 	
-	<footer id="footer">@JJUPJJUPBAKSA</footer>
+	<footer id = "footer">@JJUPJJUPBAKSA</footer>
 
 </body>
 </html>
