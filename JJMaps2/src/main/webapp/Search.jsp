@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -22,7 +23,8 @@
 </style>
 </head>
 <body>
-	<%	 ArrayList<StoreVO> list=(ArrayList<StoreVO>)request.getAttribute("searchWord");%>
+	<%	 ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
+	<%	 ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
 					
 						
 					
@@ -44,7 +46,7 @@
         
         
         
-        <% for(int i=0; i<list.size();i++){ %>
+        <% for(int i=0; i<store_list.size();i++){ %>
       
 								
                 <div class="list_one">
@@ -54,10 +56,21 @@
                             <img id="store_img<%=i%>" src="assets/css/images/samplefood.JPG">
                             </td>
                             <td>
-                                <h3 class ="list_store" id="store_name"><%=list.get(i).getStore_Name() %></h3>
+                                <a class ="list_store"> <%=store_list.get(i).getStore_Cate() %></a><br>
+                                <h3 class ="list_store" id="store_name"><%=store_list.get(i).getStore_Name() %></h3>
                                 <a class ="list_store"id="store_score"> ⭐ 3.5(2명) </a><br>
-                                <a class ="list_store"> <%=list.get(i).getStore_Cate() %></a><br>
-
+                                <a class ="list_store" id="store_Addr"><%=store_list.get(i).getStore_Addr() %></a><br>
+                                <% int store_menu_size = menu_List.get(i).size();
+                                if(store_menu_size>=4){
+	                                for(int j=0;j<4;j++ ){%>
+	                                	<a class ="list_store"><span>#<%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
+	                                <% } 
+                                }else{
+                                	for(int j=0;j<store_menu_size;j++ ){%>
+	                               <a class ="list_store"> <span>#<%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
+	                                <% }
+                                	}%>
+                            
                             </td>
                         </tr>
                     </table>
@@ -138,5 +151,6 @@
 		
 
 	</script>
+
 </body>
 </html>
