@@ -21,5 +21,9 @@
 	<delete id="storeDelete">
 	delete from Stores where  user_id=#{user_Id}
 	</delete>
+	
+	<select id="store_Select_Storeid" resultType="com.smhrd.model1.StoreVO">
+	select * from stores where store_Id =#{store_Id}
+	</select>
 
 </mapper>

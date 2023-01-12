@@ -133,6 +133,12 @@ public class StoreDAO {
 		return store_id;
 	}
 
+	public StoreVO store_Select_Storeid(int store_id) {
+		session = sqlSessionFactory.openSession(true);
+		StoreVO vo = session.selectOne("store_Select_Storeid", store_id);
+		return vo;
+	}
+
 	
 	
 }

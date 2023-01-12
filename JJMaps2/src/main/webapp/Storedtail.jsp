@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +12,7 @@
 
    </head>
    <body >
+   <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
     <!-- 헤더영역 -->
     
     <div id="login_Body">
@@ -28,10 +30,10 @@
     
     <!-- 가게소개 영역 -->
     <nav>
-        <h1>(가게이름)</h1>
+        <h1><%=store_info.getStore_Name() %></h1>
         <div id="sdtail">
-            <a>(카테고리)</a>
-            <a>(평점)</a>
+            <a><%=store_info.getStore_Cate() %></a>
+            <a>별점</a>
         </div>
         
     </nav>
