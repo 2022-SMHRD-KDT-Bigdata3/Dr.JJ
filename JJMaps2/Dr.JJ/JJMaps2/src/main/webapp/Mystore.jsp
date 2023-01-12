@@ -2,6 +2,7 @@
 <%@page import="java.net.*"%>
 <%@page import="java.io.*"%>
 <%@page import="java.nio.charset.Charset"%>
+<%@ page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +13,8 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
 </head>
 	<body class="is-preload">
-	   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
+	   <% MemberVO info = (MemberVO)(session.getAttribute("info"));
+	   	StoreVO Storeinfo =(StoreVO)(session.getAttribute("Storeinfo"));%>
 				<div id="logo">
 				   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 				</div>
