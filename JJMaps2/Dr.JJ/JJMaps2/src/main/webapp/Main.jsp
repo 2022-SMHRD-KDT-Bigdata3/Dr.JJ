@@ -56,7 +56,7 @@
 
 				<div>
 					<input class="search" type="text" placeholder="검색어 입력">
-
+					<input class="search" type="submit" value="검색">
 				</div>
 			</form>
 		</div>

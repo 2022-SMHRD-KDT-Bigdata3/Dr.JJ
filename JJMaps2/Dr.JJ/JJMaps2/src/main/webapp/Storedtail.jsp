@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="com.smhrd.model1.MemberVO"%>
+<%@ page import="com.smhrd.model1.StoreVO"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,10 @@
 
 </head>
 <body>
+	<%
+	MemberVO info = (MemberVO) (session.getAttribute("info"));
+	StoreVO st_info = (StoreVO)(session.getAtrribute("Storeinfo"));
+	%>
     <!-- 헤더영역 -->
     <header  onClick='location.href="Main.jsp"'>
         <div id="jup">쩝쩝박사</div>
