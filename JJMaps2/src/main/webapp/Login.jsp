@@ -8,11 +8,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
        <meta name="format-detection" content="telephone-no">
      	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
-     	 <style type="text/css">
-     	 .idcheck:invalid {
-  border: 2px solid red;
-}
-</style>
+
    </head>
 
    <body>

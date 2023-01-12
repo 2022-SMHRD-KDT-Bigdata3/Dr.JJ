@@ -39,7 +39,7 @@
 				<td><textarea id="menu_Detail0" name="menu_Detail" cols="30" rows="2"></textarea></td>
 
 				<td><input type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
-				<td><button type="button" id="btnRemove'+i+'" onclick="goDel">삭제</button><br><br></td></tr>
+				<td><br><br></td></tr>
 
 			</tr>
 		</table>
