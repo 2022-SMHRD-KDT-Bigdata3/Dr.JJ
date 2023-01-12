@@ -11,9 +11,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no " />
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
-
+<style>
+		table {width: 100%;}
+		th { text-align: left; }
+		td { text-align: center; }
+</style>
 </head>
-
 
 <body class="is-preload">
 	<div id="logo">

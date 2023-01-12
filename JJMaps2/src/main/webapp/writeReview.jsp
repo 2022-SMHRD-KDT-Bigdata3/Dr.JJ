@@ -11,6 +11,12 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone-no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+
+<style>
+		table {width: 100%;}
+		th { text-align: left; }
+		td { text-align: center; }
+</style>
 </head>
 
 <script>
