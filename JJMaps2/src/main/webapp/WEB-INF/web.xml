@@ -96,13 +96,7 @@
   	<servlet-class>com.smhrd.controller1.Menucheck</servlet-class>
   </servlet>
   
-  <servlet>
-  	<servlet-name>Upload</servlet-name>
-  	<display-name>Upload</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.Upload</servlet-class>
-  </servlet>
-
+  
   
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
@@ -164,14 +158,8 @@
   	<servlet-name>Menucheck</servlet-name>
   	<url-pattern>/Menucheck</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>MultipartRequest</servlet-name>
-  	<url-pattern>/MultipartRequest</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>UploadServlet</servlet-name>
-  	<url-pattern>/UploadServlet</url-pattern>
-  </servlet-mapping>
+  
+
 
  
 </web-app>
