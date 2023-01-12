@@ -286,8 +286,17 @@ h1{
 }
 
 .little2{
+	color:black;
+    font-size: small; 
+    text-align: center;
+}
+
+
+
+
+
+.little2{
 	margin-top:5px;
-	
     color:glay;
     font-size: small;
     text-align: center;
@@ -380,12 +389,6 @@ a:hover#review{
     background-color: white;    
 }
 
-/*MYstoreJoin 메인*/
-
-h4{
-	background-color: #0E5049;  
-	opacity: 0.7;   
-}
 
 
 /*Renovaition메인*/
@@ -406,7 +409,30 @@ img{
     opacity: 0.7;
 }
 
-/* writeReview메인 */
+/* report영역 */
+.content{
+	  text-align: center;
+}
+
+.bt1{
+	 text-align: center;
+}
+
+/* reportService영역 */
+.repoet{
+	margin-top:40px;
+	width:99%;
+    height: 150px;
+    background-color:#FAFA96
+    
+}
+
+/*Mystore영역*/
+
+div>h4{
+	  font-weight:bold;
+}
+
 
 
 
@@ -420,9 +446,7 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    
-    
-    
+
 }
 #fix {
     position: fixed;

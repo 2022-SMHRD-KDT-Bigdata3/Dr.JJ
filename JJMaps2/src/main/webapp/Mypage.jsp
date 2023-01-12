@@ -23,9 +23,12 @@
 	%>
 
 
-	<header> <div id = "Title">마이페이지</div> </header>
+	<header>
+		<div id="Title">마이페이지</div>
+	</header>
 
-<br><br>
+	<br>
+	<br>
 
 	<div class="info">
 
@@ -44,21 +47,23 @@
 		<div class="button">
 			<p class="btn btn-1" onClick='location.href="Reserve1.jsp"'>현재 예약
 				보기</p>
-				<br>
+			<br>
 			<p class="btn btn-1">내 주문내역 보기</p>
 			<br>
 			<p class="btn btn-1" onClick='location.href="Myreview.jsp"'>내 리뷰
 				보기</p>
-				<br>
+			<br>
 			<%
 			if (info.getUser_Code().equals("0")) {
 			%>
-			<p class="btn btn-1" name="0" onclick="next()">내 점포</p><br>
+			<p class="btn btn-1" name="0" onclick="next()">내 점포</p>
+			<br>
 			<%
 			} else {
 			%>
 			<p class="btn btn-1" name="1" onClick='location.href="Mystore.jsp"'>내
-				점포</p><br>
+				점포</p>
+			<br>
 			<%
 			}
 			%>
