@@ -41,7 +41,7 @@
 				님</span> </span> <a id="id">(<%=info.getUser_Id()%>)</a>
 		</strong> <br> <br> <a id="pass" href="#">비밀번호 변경</a> <a id="pass"
 			href="#">프로필 사진수정</a> <br> <br></div>
-		<hr width="90%" color="black">
+		<hr width="100%" color="black">
 
 
 
@@ -85,7 +85,7 @@
 	</script>
 
 
-	<footer id="fix" onClick='location.href="#"'>
+	<footer id="fix" onClick='location.href="Basket.jsp"'>
 		<div id="myr">장바구니</div>
 	</footer>
 	<br>
