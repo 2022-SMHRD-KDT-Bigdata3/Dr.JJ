@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
 </head>
 	<body class="is-preload">
-	   <% MemberVO info = (MemberVO)(session.getAttribute("info")); %>
+	   <% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
 				<div id="logo">
 				   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 				</div>
@@ -27,7 +27,7 @@
    <form class="form">
 	
 		<div class="button">
-			<p class="btn btn-2" onclick="location.href='Storedtail.jsp'">내 점포 상세 페이지</p>
+			<p class="btn btn-2" onclick="location.href='StoreDetail?user_id=<%=info.getUser_Id()%>'">내 점포 상세 페이지</p>
 			<br>
 			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">점포 정리 수정</p>
 			<br>

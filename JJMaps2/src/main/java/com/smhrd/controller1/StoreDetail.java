@@ -25,11 +25,11 @@ public class StoreDetail extends HttpServlet {
 		String user_Id="";
 		try {
 			store_id= Integer.parseInt(request.getParameter("storeId"));
-			System.out.println(store_id);
 		} catch (Exception e) {
 			user_Id = request.getParameter("user_id");
-			System.out.println(user_Id);
 		}
+		System.out.println(store_id);
+		System.out.println(user_Id);
 		
 		
 		
