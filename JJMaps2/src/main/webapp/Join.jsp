@@ -20,8 +20,8 @@
 		  </div>
 	   
 		  <header class="bar">
-				<div class="pagename">
-				   <h1 class="title" >회원가입</h1>
+				<div id="Title">
+				   <h1>회원가입</h1>
 				</div>
 		  </header>
 		  
