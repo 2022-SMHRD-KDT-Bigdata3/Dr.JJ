@@ -286,13 +286,15 @@ header{
     object-fit: cover;
   }
   
-  div#info{
+  div#null{
   font-family : 'NanumSquareNeo-Variable';
   }
+  
+
 
 
 /* join 헤더 */
-div#null{
+div#info{
     font-family : 'RixInooAriDuriR';
     font-size:larger;
     color: #FD6F22;
