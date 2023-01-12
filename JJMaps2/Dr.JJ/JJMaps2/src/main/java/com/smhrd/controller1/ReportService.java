@@ -31,7 +31,7 @@ public class ReportService extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
 		String user_id = info.getUser_Id();
-		String savePath = "upload";
+		String savePath = "upload1";
 		// 최대 업로드 파일 크기 5MB로 제한
 		int uploadFileSizeLimit = 5 * 1024 * 1024;
 		String encType = "UTF-8";

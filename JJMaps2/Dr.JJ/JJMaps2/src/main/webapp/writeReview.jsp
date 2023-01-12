@@ -69,7 +69,7 @@ button {
 <body class="is-preload">
 	<%
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
-	StoreVO st_info = (StoreVO) (session.getAtrribute("Storeinfo"));
+// 	StoreVO st_info = (StoreVO) (session.getAtrribute("Storeinfo"));
 	%>
 
 	<header class="bar">
