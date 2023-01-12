@@ -52,6 +52,7 @@
 	<br>
 	<div class="Header_Init_Section">
 		<div id="header_img">
+		
 			<form action="Search">
 
 				<div>
