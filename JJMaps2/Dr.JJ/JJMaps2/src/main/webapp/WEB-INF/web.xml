@@ -102,6 +102,8 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
   </servlet>
+  
+  
  
   
  
@@ -111,7 +113,12 @@
   
 
   
-  <servlet-mapping>
+ <servlet>
+ 	<servlet-name>storedetail</servlet-name>
+ 	<display-name>storedetail</display-name>
+ 	<description></description>
+ 	<servlet-class>com.smhrd.controller1.storedetail</servlet-class>
+  </servlet><servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
@@ -176,6 +183,11 @@
   	<servlet-name>UploadServlet</servlet-name>
   	<url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>storedetail</servlet-name>
+  	<url-pattern>/storedetail</url-pattern>
+  </servlet-mapping>
+
 
 
  

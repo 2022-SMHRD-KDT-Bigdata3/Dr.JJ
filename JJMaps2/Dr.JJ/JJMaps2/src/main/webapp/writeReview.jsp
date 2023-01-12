@@ -1,4 +1,5 @@
 <%@ page import="com.smhrd.model1.MemberVO"%>
+<%@ page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -68,6 +69,7 @@ button {
 <body class="is-preload">
 	<%
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
+	StoreVO st_info = (StoreVO) (session.getAtrribute("Storeinfo"));
 	%>
 
 	<header class="bar">
