@@ -197,7 +197,7 @@ input[type=submit].click{
 body{
     margin-left: 10%;
     margin-right: 10%;
-     -ms-overflow-style: none;
+    -ms-overflow-style: none;
  }
  
 ::-webkit-scrollbar {
