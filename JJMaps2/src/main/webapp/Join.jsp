@@ -29,25 +29,25 @@
 		
 		<form action="JoinService" method="post">
 	   		<div class="id">아이디</div>
-	   			<input id="id" name="user_Id" type="text" class="patternCheck" pattern="^[a-z0-9_-]{2,10}$" required><br>
-	   			영문자, 소문자, 숫자, "-","_" 로만 구성된 길이 2~10자리 사이의 문자열(공백불가)
+	   			<input id="id" name="user_Id" type="text" placeholder='2~10 자리의 영어,숫자,"-","_"로 생성' class="patternCheck" pattern="^[a-z0-9_-]{2,10}$" required><br>
+	   			
 			<div class="little">필수정보입니다</div><br>
 			<button id="idCheck" onclick="id_Check()">중복확인</button><br>
-
+			<br>
 	   		<div class="pw">비밀번호</div>
-	   			<input id="pw" name="user_Pw" type="password"  class="patternCheck"
+	   			<input id="pw" name="user_Pw" type="password" placeholder='4~16자리의 영어,숫자,특수문자'  class="patternCheck"
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
-				최소 4자리에서 최대 16자리까지 숫자, 영문, 특수문자 가능 (공백불가)
+				
 			<div class="pwCheck">비밀번호 재확인</div>
 	   			<input id="pwCheck" onfocusout="pw_Check()" name="user_Pw_check" type="password" 
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
 	   			<span id = "checkPw"></span>
 	   			
 	   		<div class="nick">닉네임</div>
-	   			<input name="user_Nick" type="text" pattern="^[ㄱ-ㅎ가-힣a-zA-Z0-9]{2,8}$" required ><br><br>
-	   			한글,영문,숫자 2~8글자(공백불가)
+	   			<input name="user_Nick" type="text" placeholder="한글,영문,숫자 2~8글자(공백불가)" pattern="^[ㄱ-ㅎ가-힣a-zA-Z0-9]{2,8}$" required ><br><br>
 	   			
 	   			
+	   			<br>
 	   			<a><input type="submit" value="회원가입"><br>
 	   </form>
 	   <br>   	
