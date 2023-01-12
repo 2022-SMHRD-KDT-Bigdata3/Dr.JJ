@@ -28,7 +28,7 @@
 	<br>
 	<br><br>		
 	<div class="form">
-		<form action="upload" method="post" enctype="multipart/form-data">
+		<form action="ReportService" method="post" enctype="multipart/form-data">
 			<table>
 				<tr bgcolor="orange" height="50px">
 					<div style="color: orange" id="null"> 지금 나의 맛집을 제보해주세요!!</div>
