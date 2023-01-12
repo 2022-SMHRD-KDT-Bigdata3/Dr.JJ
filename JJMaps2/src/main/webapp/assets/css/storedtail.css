@@ -176,7 +176,7 @@ header{
 /*마이페이지 헤더*/
 
 #Title{
-	font-size: large;
+	font-size: 30px;
     font-weight:bold;
     text-align: center;
     color: white;
@@ -277,11 +277,22 @@ h1{
     font-weight:bold;
 }
 
-.little{
-    padding-right: 200px;
+.little1{
+    padding-right: 210px;
     color: red;
-    font-size: small;
+    font-size: small; 
+    text-align: center;
 }
+
+.little2{
+	margin-top:5px;
+	
+    color:glay;
+    font-size: small;
+    text-align: center;
+}
+
+
 
 .pw{
     padding-right: 240px;
