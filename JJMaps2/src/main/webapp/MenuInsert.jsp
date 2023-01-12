@@ -50,20 +50,19 @@
 			<br>
 	</div>
 <tr>
-				<td>1</td>
-				<td><textarea id="menu_Name0" name="menu_Name" cols="20"
-						rows="2"></textarea></td>
-				<td><input id="menu_Price0" name="menu_Price" type="text"
-					class="price" type="text" pattern="[0-9]+"></td>
-				<td><textarea id="menu_Detail0" name="menu_Detail" cols="30"
-						rows="2"></textarea></td>
+   <td>1</td>
+            <td><textarea id="menu_Name0" name="menu_Name" cols="20" rows="2"></textarea></td>
+            <td><input id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
+            <td><textarea id="menu_Detail0" name="menu_Detail" cols="30" rows="2"></textarea></td>
 
-				<td><input type="file" name="menu_Pic"></td>
-					<td><accept= "image/png, image/gif, image/jpeg"></td>
-				<td><br> <br></td>
-			</tr>
+            <td><input type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
+            <td><br><br></td></tr>
 
-		</table>
+         </tr>
+      </table>
+
+
+   </form>
 
 	<input type="submit" value="메뉴 등록" class="click">
 
