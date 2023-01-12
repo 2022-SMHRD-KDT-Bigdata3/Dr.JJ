@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 
 <head>
-		<title>회원가입</title>
+		<title>예약하기</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
 		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
@@ -18,8 +18,8 @@
 		  </div>
 	   
 		  <header class="bar">
-				<div class="pagename">
-				   <h1 class="title" >예약하기</h1>
+				<div id="Title">
+				   <h1>예약하기</h1>
 				</div>
 		  </header>
 
@@ -34,7 +34,11 @@
         <div class ="info" >
 			<div class="info">
                 <img src="images/profil_img.jpg">
+                <br>
+   
 				<h2>마싯는 트럭</h2>
+			
+				<br>
 		    </div>
         </div>
           

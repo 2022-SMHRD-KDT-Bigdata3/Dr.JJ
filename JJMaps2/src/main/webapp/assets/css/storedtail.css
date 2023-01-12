@@ -194,13 +194,7 @@ header{
     font-size: small;
 }
 
- /* My reivew CSS 
 
-  h1,h3,h5{
-    margin: 40px;
-    
-  }
-   */
   
    /* 예약 css */
 
@@ -246,11 +240,14 @@ div#logo{
     font-family : 'RixInooAriDuriR';
     font-size:larger;
     color: #FD6F22;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
-.pagename{
+.pagename>h1{
     color: white;
+    text-align: center;
 }
 
 

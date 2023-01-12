@@ -29,17 +29,17 @@
 		
 		<form action="JoinService" method="post">
 	   		<div class="id">아이디</div>
-	   			<input name="user_Id" type="text" class="patternCheck" pattern="^[a-z0-9_-]{2,10}$" required><br>
+	   			<input id="id" name="user_Id" type="text" class="patternCheck" pattern="^[a-z0-9_-]{2,10}$" required><br>
 	   			영문자, 소문자, 숫자, "-","_" 로만 구성된 길이 2~10자리 사이의 문자열(공백불가)
 			<div class="little">필수정보입니다</div><br>
-			<button>중복확인</button><br>
+			<button id="idCheck" onclick="id_Check()">중복확인</button><br>
 
 	   		<div class="pw">비밀번호</div>
 	   			<input id="pw" name="user_Pw" type="password"  class="patternCheck"
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
 				최소 4자리에서 최대 16자리까지 숫자, 영문, 특수문자 가능 (공백불가)
 			<div class="pwCheck">비밀번호 재확인</div>
-	   			<input id="pwCheck" onfocusout="check()" name="user_Pw_check" type="password" 
+	   			<input id="pwCheck" onfocusout="pw_Check()" name="user_Pw_check" type="password" 
 	   			pattern="^[A-Za-z\d$@$!%*#?&]{4,16}$" required><br><br>
 	   			<span id = "checkPw"></span>
 	   			
@@ -58,7 +58,7 @@
   
   <script type="text/javascript">
 
-	function check() {
+	function pw_Check() {
 
 		let password = document.getElementById('pw');					//비밀번호 
 		let passwordConfirm = document.getElementById('pwCheck');	//비밀번호 확인 값
@@ -75,9 +75,32 @@
 		}
 	}
 </script>
+ <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+	function id_Check() {
+		var user_Id = $('#id').val(); // input_id에 입력되는 값
+		console.log(user_Id);
+		
+		$.ajax({
+			url : "IdCheckService",
+			type : "post",
+			data : {"user_Id": user_Id},
+			dataType : "json",
+			success : function(data){
+				if(data.idCheck == "OK"){
+					alert("사용 가능한 아이디입니다.");
+				} else{
+					alert("이미 사용중인 아이디입니다.");
+				} 
+			},
+			error : function(){
+				 console.log("통신실패");
+			}
+		})
+		 
+	}
 
-
-
+</script>
  </body>
 </html>
 
