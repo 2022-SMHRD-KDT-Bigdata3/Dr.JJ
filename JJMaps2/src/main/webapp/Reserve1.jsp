@@ -18,8 +18,8 @@
 		  </div>
 	   
 		  <header class="bar">
-				<div class="pagename">
-				   <h1 class="title" >현재 예약</h1>
+				<div id="Title">
+				   <h1>현재 예약</h1>
 				</div>
 		  </header>
 

@@ -249,8 +249,9 @@ div#logo{
 }
 
 
-.pagename{
+.pagename>h1{
     color: white;
+    text-align: center;
 }
 
 

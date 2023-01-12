@@ -19,8 +19,8 @@
    
    
    	<header class="h2">
-				<div class="pagename">
-				   <h1 class="title1" >점포 정보 수정</h>
+				<div id="Title">
+				   <h1>점포 정보 수정</h>
 				</div>
 	</header>
    
