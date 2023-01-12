@@ -30,6 +30,19 @@ input[type=button]{
     width: 180px; 
 }
 
+input[type=submit]{
+	font-size: medium;
+    font-weight:bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+
+
 button{
     font-size: medium;
     font-weight: bold;
@@ -50,6 +63,20 @@ input[type=submit]{
     border-radius: 5px; 
     border: 1px solid  orangered;
     background-color: orangered;
+    height: 40px; 
+    width: 180px; 
+} 
+
+
+
+input[type=submit].click{ 
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    margin-top: 15px;
+    border-radius: 5px; 
+     border: 1px solid  #0E5049;
+    background-color: #0E5049;
     height: 40px; 
     width: 180px; 
 } 
@@ -117,6 +144,24 @@ input[type=submit]{
     margin-right: auto;
     background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
   }
+
+#btnAdd{
+	diplay: block;
+ 	text-align: center;
+	font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; }
+
+
+
+
+
+
 
 /* 폰트 및 로고작업 */
 
@@ -409,6 +454,8 @@ img{
     opacity: 0.7;
 }
 
+
+
 /* report영역 */
 .content{
 	  text-align: center;
@@ -417,6 +464,18 @@ img{
 .bt1{
 	 text-align: center;
 }
+
+
+
+/* Menuinsert영역 */
+.tr{
+	 font-weight:bold;
+}
+
+.price:invalid {
+	border: 2px solid red;
+}
+
 
 /* reportService영역 */
 .repoet{
@@ -458,6 +517,20 @@ div>h4{
     cursor: pointer;
     
   }
+  
+  
+#fix2{
+    position: fixed;
+    background-color: #0E5049;   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    cursor: pointer;
+    
+  }  
+  
+  
 
 #myr{
   	font-size: large;
