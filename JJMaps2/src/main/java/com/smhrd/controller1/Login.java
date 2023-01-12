@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
             System.out.println("로그인 실패...");
          }
          
-         response.sendRedirect("Main.jsp");
+         response.sendRedirect("Login.jsp");
       }
 
 
