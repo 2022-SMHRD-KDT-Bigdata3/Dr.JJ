@@ -13,15 +13,17 @@ import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
 
-
-public class StoreSelectService extends HttpServlet {
+/**
+ * Servlet implementation class storedetail
+ */
+public class storedetail extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//내 점포 조회에 사용하는 서블릿
 		HttpSession session = request.getSession();
 		MemberVO memberVOs = (MemberVO)session.getAttribute("info");
+		System.out.println(memberVOs);
 		String User_Id= memberVOs.getUser_Id();
 		System.out.println("User_Id");
 		StoreDAO dao = new StoreDAO();
@@ -32,7 +34,7 @@ public class StoreSelectService extends HttpServlet {
     		session.setAttribute("Storeinfo", vo);
     		
     		
-    		RequestDispatcher rdi = request.getRequestDispatcher("MystoreUpdate.jsp");
+    		RequestDispatcher rdi = request.getRequestDispatcher("Storedtail.jsp");
     		rdi.forward(request, response);
 		}else {
 			System.out.println("점포 조회 실패..");
@@ -40,8 +42,6 @@ public class StoreSelectService extends HttpServlet {
 			
 		}
 		
-		
-		 
 	}
 
 }

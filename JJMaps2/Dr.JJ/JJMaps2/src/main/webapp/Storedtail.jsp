@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="com.smhrd.model1.MemberVO"%>
@@ -15,7 +16,7 @@
 <body>
 	<%
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
-	StoreVO st_info = (StoreVO)(session.getAtrribute("Storeinfo"));
+	StoreVO Storeinfo= (StoreVO)(session.getAttribute("Storeinfo"));
 	%>
     <!-- 헤더영역 -->
     <header  onClick='location.href="Main.jsp"'>
@@ -57,5 +58,8 @@
 
 
     <footer id = "footer">@JJUPJJUPBAKSA</footer>
+    <script>
+    console.log(Storeinfo);
+    </script>
 </body>
 </html>
