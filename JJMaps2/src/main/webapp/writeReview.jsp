@@ -5,15 +5,12 @@
 
 <html>
 	<head>
-		<title>리뷰쓰기</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
-		 <link rel="stylesheet" href=" ./assets/css/writeReview.css" />
-		 <style type="text/css">
-            input[type=text]{ border: 1px solid orange; }
-			button{ color:whitesmoke; border: 1px solid orange;
-				border-radius: 5px; background-color: orangered;}
-        </style>
+       <title>jj login</title>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+       <meta name="format-detection" content="telephone-no">
+       <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
+ 	 </head>
 		
 		<script>	
 			const browseBtn = document.querySelector('.browse-btn');
@@ -38,22 +35,22 @@
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
 	%>
 	
-		<header class="bar">
-			<nav class="navbar">		 
-				 <a href="Main.jsp">
-				 <img herf=""> <!-- 로고이미지 넣기 -->
-				 </a>
-							<div class="pagename">
-					<h1 class="title" >리뷰하기</h1>
-				</div>
+		 <div id="login_Body">
 
-			</nav>
-		</header>
+			<div id="logo">
+			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+			</div>
+
+			<header class="bar">
+				<div class="pagename">
+				   <h1 class="title" >로그인</h1>
+				</div>
+		  </header>
 
 		<div class ="info" >
 			<div class="info">
 				<img src="images/profil_img.jpg"">
-				<h2><a href="#">마싯는 트럭<a></h2>
+				<h2><a class="store_name" href="Storedtail.jsp">마싯는 트럭</a></h2>
 			</div>
 		</div><br>
 		
@@ -82,8 +79,7 @@
 						<input type="file" name="uploadFile id="real-input" class="image_inputType_file" onchange="readURL(this);" accept="img/*" required multiple>
 						
 						<input type="submit" value="등록" >
-					
-						
+
 					</td>
 				</tr>
 			</table>

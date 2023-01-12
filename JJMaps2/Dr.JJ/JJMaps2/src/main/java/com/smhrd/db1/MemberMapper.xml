@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="MemberMapper">
+
+   <select id="login" parameterType="MemberVO" resultType="MemberVO">
+      select * from members where user_Id=#{user_Id} and user_Pw=#{user_Pw}
+   </select>
+   
+    <insert id="join" parameterType="MemberVO" >
+      insert into members values (#{user_Id},#{user_Pw},#{user_Nick},'0')
+    </insert>
+    
+    <update id="usercode_to_One" >
+    update members set user_code = '1' where user_Id=#{user_Id}
+    </update>
+    
+    <select id="reLogin"  resultType="MemberVO">
+      select * from members where user_Id=#{user_Id}
+    </select>
+    
+    <update id="usercode_to_zero" >
+    update members set user_code = '0' where user_Id=#{user_Id}
+    </update>
+  
+</mapper>
