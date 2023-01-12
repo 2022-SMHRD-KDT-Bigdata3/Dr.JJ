@@ -45,7 +45,7 @@
 				out.print("<a id='login' href='Login.jsp'>로그인</a>");
 				out.print("<a id='join' href='Join.jsp'>회원가입</a>");
 			}
-			%>
+			%> 
 
 		</div>
 	</header>
