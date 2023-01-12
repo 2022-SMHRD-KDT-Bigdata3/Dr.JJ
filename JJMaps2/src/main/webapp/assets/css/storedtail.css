@@ -41,6 +41,17 @@ input[type=submit]{
     width: 180px; 
 }
 
+input[type=submit]{ 
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    margin-top: 15px;
+    border-radius: 5px; 
+    border: 1px solid  orangered;
+    background-color: orangered;
+    height: 40px; 
+    width: 180px; 
+} 
 
 
 button{
@@ -54,19 +65,6 @@ button{
     width: 180px; 
 
 }
-
-input[type=submit]{ 
-    font-size: medium;
-    font-weight: bold;
-    color:whitesmoke; 
-    margin-top: 15px;
-    border-radius: 5px; 
-    border: 1px solid  orangered;
-    background-color: orangered;
-    height: 40px; 
-    width: 180px; 
-} 
-
 
 
 input[type=submit].click{ 
@@ -509,6 +507,13 @@ div>h4{
 }
 
 
+/*writeReview영역*/
+.store_name{
+	 text-align: center;
+}
+
+
+
 
 
 /* 푸터영역 */
@@ -574,11 +579,29 @@ div>h4{
 	text-align: center;
 }
 
-.badal>p{
+.basket{
+	font-family:'NanumSquareNeo-Variable';
 	margin: 50px 0;
     text-align: center;
     font-weight: bold;
     color: #707070;
    	margin-left:auto;
    	margin-right: auto;
+}
+
+.basket-item{
+	position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.del{
+	text-align: right;
 }
