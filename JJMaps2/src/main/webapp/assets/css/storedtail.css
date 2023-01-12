@@ -574,11 +574,29 @@ div>h4{
 	text-align: center;
 }
 
-.badal>p{
+.basket{
+	font-family:'NanumSquareNeo-Variable';
 	margin: 50px 0;
     text-align: center;
     font-weight: bold;
     color: #707070;
    	margin-left:auto;
    	margin-right: auto;
+}
+
+.basket-item{
+	position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.del{
+	text-align: right;
 }
