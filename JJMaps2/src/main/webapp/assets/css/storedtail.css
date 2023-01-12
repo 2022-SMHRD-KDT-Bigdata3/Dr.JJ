@@ -19,6 +19,17 @@ input[type=password]{
     }
 
 
+input[type=button]{
+	font-size: medium;
+    font-weight:bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
 button{
     font-size: medium;
     font-weight: bold;
@@ -357,7 +368,12 @@ a:hover#review{
     background-color: white;    
 }
 
+/*MYstoreJoin 메인*/
 
+h4{
+	background-color: #0E5049;  
+	opacity: 0.7;   
+}
 
 
 /*Renovaition메인*/
@@ -377,7 +393,6 @@ img{
     background-color: orange; 
     opacity: 0.7;
 }
-
 
 
 

@@ -20,7 +20,7 @@
    
    	<header class="h2">
 				<div class="pagename">
-				   <h1 class="title1" >점포 페이지</h>
+				   <h1 class="title1" >점포 정보 수정</h>
 				</div>
 	</header>
    
@@ -31,8 +31,8 @@
 		<div class="store_BasicInfo">
 			<h4>점포 기본 정보</h4>
 			<span>점포이름</span> <input name = "store_Name" type="text" class="store_name"><br>
-			<span>점포연락처</span><input name = "store_Tel"  type="text" class="store_"><br>
-			<span>카테고리</span><br>
+			<span>점포연락처</span><input name = "store_Tel"  type="text" class="store_"><br><br>
+			<span style="font-weight:bold;">카테고리</span><br>
 			<input type="radio" name="store_Cate" value="붕어빵">붕어빵
 			<input type="radio" name="store_Cate" value="타코야끼">타코야끼
 			<input type="radio" name="store_Cate" value="호떡">호떡<br>
@@ -53,9 +53,9 @@
 			
 			<span>영업장소</span>
 			<input type="text" readonly="readonly" id="sample6_postcode" placeholder="우편번호">
-			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소">
-			<input type="button" onclick="sample6_execDaumPostcode()" value="찾기"><br><br>
-			<input type="button" onclick="geo()" value ="지도에 위치 등록"><br><br>
+			<input name="store_Addr" type="text" readonly="readonly" id="sample6_address"  placeholder="주소"><br>
+			<input type="button" class="click" onclick="sample6_execDaumPostcode()" value="찾기"><br><br>
+			<input type="button" class="click" onclick="geo()" value ="지도에 위치 등록"><br><br>
 			<input name="x" type="text" readonly="readonly" id="sample6_latitude"  placeholder="x좌표">
 			<input name="y" type="text" readonly="readonly" id="sample6_longitude"  placeholder="y좌표">
 			
@@ -64,8 +64,8 @@
 			<br>
 			
 
-			<div class="store_payment">
-				카드 결제 서비스 
+			<div class="store_payment"><br>
+				<span style="font-weight:bold;">카드 결제 서비스</span><br>
 				<span><input name="store_Card_Yn" type="radio" value=1>가능</span>
 				<span><input name="store_Card_Yn" type="radio" value=0>불가능</span> <br>
 				(카드결제 안될 시 본 사이트의 주문예약 서비스를 이용하실 수 없습니다)
