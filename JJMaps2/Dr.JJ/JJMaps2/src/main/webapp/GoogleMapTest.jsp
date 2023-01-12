@@ -21,19 +21,39 @@ body {
 </style>
 </head>
 <body>
-	<h1>DB좌표 받아오기</h1>
+	<h1></h1>
 
 	<div></div>
 	<div id="map"></div>
+	<button  onclick="" >현재위치</button>
 	<hr>
 
 	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c">
 		
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script type="text/javascript">
+
+	 function success({ coords, timestamp }) {
+		 console.log('coords', coords);
+         latitude = coords.latitude;   // 위도
+         longitude = coords.longitude; // 경도
+		       
+   		initMap(latitude,longitude);
+     }
+
+     function getUserLocation() {
+         if (!navigator.geolocation) {
+             throw "위치 정보가 지원되지 않습니다.";
+         }
+         navigator.geolocation.watchPosition(success);
+     }
+     getUserLocation()
+
+     
 		
+	
 		var customLabel = {
 			붕어빵 : {
 				label : 'B'
@@ -58,9 +78,10 @@ body {
 			}
 		};
 
-		function initMap() {
+		function initMap(latitude,longitude) {
+			console.log('initmap', latitude, longitude);
 			var map = new google.maps.Map(document.getElementById('map'), {
-				center : new google.maps.LatLng(35.15, 126.8),
+				center : new google.maps.LatLng(latitude, longitude),
 				zoom : 11,
 				mapTypeControl : true,
 				panControl : true,
@@ -72,14 +93,11 @@ body {
 			});
 
 			//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
-			downloadUrl('http://localhost:14510/JJMap/output.xml', function(
-					data) {
-				console.log(data);
+			downloadUrl('http://localhost:8084/JJMap/output.xml', function(
+					data) {	
 				var xml = data.responseXML;
-				console.log(xml);
 				var markers = xml.documentElement
 						.getElementsByTagName('stores');
-				console.log(markers);
 				Array.prototype.forEach.call(markers, function(markerElem) {
 					var name = markerElem.getAttribute('store_name');
 					var address = markerElem.getAttribute('store_addr');
@@ -87,7 +105,6 @@ body {
 					var point = new google.maps.LatLng(parseFloat(markerElem
 							.getAttribute('latitude')), parseFloat(markerElem
 							.getAttribute('longitude')));
-					console.log(name, point);
 					var infowincontent = document.createElement('div');
 					var strong = document.createElement('storng');
 					strong.textContent = name;

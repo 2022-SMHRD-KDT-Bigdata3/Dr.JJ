@@ -30,6 +30,19 @@ input[type=button]{
     width: 180px; 
 }
 
+input[type=submit]{
+	font-size: medium;
+    font-weight:bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+
+
 button{
     font-size: medium;
     font-weight: bold;
@@ -50,6 +63,20 @@ input[type=submit]{
     border-radius: 5px; 
     border: 1px solid  orangered;
     background-color: orangered;
+    height: 40px; 
+    width: 180px; 
+} 
+
+
+
+input[type=submit].click{ 
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    margin-top: 15px;
+    border-radius: 5px; 
+     border: 1px solid  #0E5049;
+    background-color: #0E5049;
     height: 40px; 
     width: 180px; 
 } 
@@ -81,6 +108,7 @@ input[type=submit]{
 }
 
 .button{
+  font-family : 'NanumSquareNeo-Variable';
   margin: 150px 500px 0 0;
   justify-content: center;
   align-items: center;
@@ -118,6 +146,24 @@ input[type=submit]{
     background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
   }
 
+#btnAdd{
+	diplay: block;
+ 	text-align: center;
+	font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; }
+
+
+
+
+
+
+
 /* 폰트 및 로고작업 */
 
 @font-face {
@@ -126,6 +172,13 @@ input[type=submit]{
     font-weight: normal;
     font-style: normal;
     
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .name{
@@ -176,11 +229,12 @@ header{
 /*마이페이지 헤더*/
 
 #Title{
-	font-size: large;
+	font-family: 'NanumSquareNeo-Variable';
+	font-size: 30px;
     font-weight:bold;
     text-align: center;
     color: white;
-    padding: 40px;
+    padding: 30px;
 }
 
  a#id{
@@ -233,6 +287,13 @@ header{
     height: 100%;
     object-fit: cover;
   }
+  
+  div#null{
+  font-family : 'NanumSquareNeo-Variable';
+  font-size: 20px;
+  }
+  
+
 
 
 /* join 헤더 */
@@ -275,24 +336,47 @@ h1{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .little{
-    padding-right: 200px;
+    padding-right: 210px;
     color: red;
-    font-size: small;
+    font-size: small; 
+    text-align: center;
 }
+
+.little2{
+	color:black;
+    font-size: small; 
+    text-align: center;
+}
+
+
+
+
+
+.little2{
+	margin-top:5px;
+    color:glay;
+    font-size: small;
+    text-align: center;
+}
+
+
 
 .pw{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .pwCheck{
     padding-right: 190px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
@@ -300,12 +384,14 @@ h1{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .id{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
@@ -364,12 +450,6 @@ a:hover#review{
     background-color: white;    
 }
 
-/*MYstoreJoin 메인*/
-
-h4{
-	background-color: #0E5049;  
-	opacity: 0.7;   
-}
 
 
 /*Renovaition메인*/
@@ -390,7 +470,44 @@ img{
     opacity: 0.7;
 }
 
-/* writeReview메인 */
+
+
+/* report영역 */
+.content{
+	  text-align: center;
+}
+
+.bt1{
+	 text-align: center;
+}
+
+
+
+/* Menuinsert영역 */
+.tr{
+	 font-weight:bold;
+}
+
+.price:invalid {
+	border: 2px solid red;
+}
+
+
+/* reportService영역 */
+.repoet{
+	margin-top:40px;
+	width:99%;
+    height: 150px;
+    background-color:#FAFA96
+    
+}
+
+/*Mystore영역*/
+
+div>h4{
+	  font-weight:bold;
+}
+
 
 
 
@@ -400,13 +517,11 @@ img{
     background-color: #f8f9fa;
     text-align: center;
     color: #ced4da;
-    height: 100px;
+    height: 200px;
     left: 0;
     right: 0;
     bottom: 0;
-    
-    
-    
+
 }
 #fix {
     position: fixed;
@@ -418,13 +533,52 @@ img{
     cursor: pointer;
     
   }
+  
+  
+.fix2{
+    position: fixed;
+    background-color: #0E5049;   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    cursor: pointer;
+    
+  }  
+  
+  
 
 #myr{
-  	font-size: large;
-    font-weight:bold;
+	font-family : 'NanumSquareNeo-Variable';
+  	font-size: 25px;
+    font-weight: lighter;
     text-align: center;
     color: white;
     padding: 40px;
     
 }
 
+/* basket영역 */
+
+.box_dashed {
+    border: 2px dashed #EA2129;
+    padding: 22px 0;
+    position: relative;
+    margin: 40px 0 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.alram{
+	text-align: center;
+}
+
+.badal>p{
+	margin: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #707070;
+   	margin-left:auto;
+   	margin-right: auto;
+}

@@ -102,6 +102,7 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
   </servlet>
+  
  
   
  
@@ -111,7 +112,7 @@
   
 
   
-  <servlet-mapping>
+ <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
@@ -176,6 +177,7 @@
   	<servlet-name>UploadServlet</servlet-name>
   	<url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
+
 
 
  
