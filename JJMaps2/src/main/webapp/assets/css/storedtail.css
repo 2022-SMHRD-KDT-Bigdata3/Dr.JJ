@@ -558,3 +558,27 @@ div>h4{
     
 }
 
+/* basket영역 */
+
+.box_dashed {
+    border: 2px dashed #EA2129;
+    padding: 22px 0;
+    position: relative;
+    margin: 40px 0 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.alram{
+	text-align: center;
+}
+
+.badal>p{
+	margin: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #707070;
+   	margin-left:auto;
+   	margin-right: auto;
+}
