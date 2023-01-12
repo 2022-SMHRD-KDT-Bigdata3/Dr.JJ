@@ -294,7 +294,7 @@ header{
 
 
 /* join 헤더 */
-div#info{
+div#logo{
     font-family : 'RixInooAriDuriR';
     font-size:larger;
     color: #FD6F22;
@@ -532,7 +532,7 @@ div>h4{
   }
   
   
-#fix2{
+.fix2{
     position: fixed;
     background-color: #0E5049;   
     left: 0;

@@ -31,12 +31,13 @@
 		</div>
 	</header>
 
-	<br>
+	<br><br><br>
 	<form class="form" action="MenuInsert" method="post" enctype="multipart/form-data">
 		<button id="btnAdd" type="button">메뉴 추가</button>
 		<br> <span class="little2">상위 4개 메뉴가 검색시 노출됩니다</span><br>
 		<br><br>
-		<div id="null">
+	
+	<div id="null">
 		<table border="1px solid" class="addInput">
 			<tr>
 				<th class="tr">번호</th>
@@ -47,10 +48,8 @@
 				<th class="tr">삭제</th>
 			</tr>
 			<br>
-
-
-			<tr>
-
+	</div>
+<tr>
 				<td>1</td>
 				<td><textarea id="menu_Name0" name="menu_Name" cols="20"
 						rows="2"></textarea></td>
@@ -59,15 +58,14 @@
 				<td><textarea id="menu_Detail0" name="menu_Detail" cols="30"
 						rows="2"></textarea></td>
 
-				<td><input type="file" name="menu_Pic">
-					accept="image/png, image/gif, image/jpeg"></td>
+				<td><input type="file" name="menu_Pic"></td>
+					<td><accept= "image/png, image/gif, image/jpeg"></td>
 				<td><br> <br></td>
 			</tr>
 
-			</tr>
 		</table>
-	</div>
-		<input type="submit" value="메뉴 등록">
+
+	<input type="submit" value="메뉴 등록" class="click">
 
 
 	</form>
@@ -92,7 +90,7 @@
 													+ '<td><input id="menu_Price'+i+'" name="menu_Price" type = "text" class="price" type="text" pattern="[0-9]+"></td>'
 													+ '<td><textarea id="menu_Detail'+i+'" name="menu_Detail" cols="30" rows="2"></textarea></td>'
 													+ '<td></td>'
-													+ '<td><button type="button" id="btnRemove'
+													+ '<td><button class="click" type="button" id="btnRemove'
 													+ i
 													+ '" onclick="goDel('
 													+ i
@@ -106,7 +104,7 @@
 	</script>
 	
 	
-	<footer id="fix2" onClick='location.href="#"'>
+	<footer class="fix2" onClick='location.href="#"'>
 		<div id="myr">이동하기</div>
 	</footer>
 	<br>
