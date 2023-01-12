@@ -24,4 +24,9 @@
     update members set user_code = '0' where user_Id=#{user_Id}
     </update>
   
+    <select id="idCheck"  resultType="MemberVO">
+      select * from members where user_Id=#{user_Id}
+    </select>
+    
+    
 </mapper>
