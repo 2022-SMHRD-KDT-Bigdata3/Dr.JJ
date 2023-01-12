@@ -27,7 +27,7 @@
    <form class="form">
 		 <div class="box1"></div>
 		<button type="button" onclick="location.href='Storedtail.jsp'" class="click"> 내 점포 상세 페이지 </button></a><br><br>
-		<button type="button" onclick="location.href='StoreSelectService'" class="click"> 영업정보 </button></a><br><br>
+		<button type="button" onclick="location.href='MystoreJoin.jsp'" class="click"> 영업정보 </button></a><br><br>
 		<a><button type="button" onclick='location.href="MenuSelect"' class="click"> 메뉴정보 </button></a><br><br>
 		<a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
 	</form>
