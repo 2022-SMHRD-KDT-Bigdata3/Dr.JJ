@@ -30,13 +30,12 @@ public class JoinService extends HttpServlet {
 	          
 	          if (res>0) {
 	             System.out.println("회원가입 성공!");
-	     		request.setAttribute("message", user_Id+"님 가입을 환영합니다 \n로그인 페이지로 전환합니다");
-	    		RequestDispatcher rdi = request.getRequestDispatcher("Login.jsp");
-	    		rdi.forward(request, response);
+	     		response.sendRedirect("Login.jsp");
 	         
 		      }else {
 		    	 
 		         System.out.println("회원가입 실패..");
+		         response.sendRedirect("Join.jsp");
 	         
 	      }
 	      
