@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.smhrd.model1.MemberVO;
+import com.smhrd.model1.ReviewVO;
 
 
 public class UploadServlet extends HttpServlet {
@@ -56,6 +57,27 @@ public class UploadServlet extends HttpServlet {
 		} catch (Exception e) {
 			System.out.print("예외 발생 : " + e);
 		}// catch
+	}
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		HttpSession session = request.getSession();
+		MemberVO info = (MemberVO)session.getAttribute("info");
+		String user_id = info.getUser_Id();
+		String savePath = "upload";
+		// 최대 업로드 파일 크기 5MB로 제한
+		int uploadFileSizeLimit = 5 * 1024 * 1024;
+		String encType = "UTF-8";
+		ServletContext context = getServletContext();
+		String uploadFilePath = context.getRealPath(savePath);
+		String review_pic = uploadFilePath;
+		String review_title = request.getParameter("titile");
+		String reviewContent = request.getParameter("content");
+		Double reviewScore = Double.parseDouble(request.getParameter("reviewStar"));
+		ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewContent, user_id);
+		
+		
 	}
 
 }
