@@ -25,12 +25,27 @@
    
    
    <form class="form">
-		 <div class="box1"></div>
-		<button type="button" onclick="location.href='Storedtail.jsp'" class="click"> 내 점포 상세 페이지 </button></a><br><br>
-		<button type="button" onclick="location.href='MystoreJoin.jsp'" class="click"> 영업정보 </button></a><br><br>
-		<a><button type="button" onclick='location.href="Menucheck"' class="click"> 메뉴정보 </button></a><br><br>
-		<a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
+	
+		<div class="button">
+			<p class="btn btn-2" onclick="location.href='Storedtail.jsp'">내 점포 상세 페이지</p>
+			<br>
+			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">점포 정리 수정</p>
+			<br>
+			<p class="btn btn-2" onclick='location.href="Menucheck"'>영업정보</p>
+			<br>
+			<p class="btn btn-2" onClick="next()">내 리뷰 보기</p>
+	
+	
 	</form>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 	<script>
 	
 		function next() {

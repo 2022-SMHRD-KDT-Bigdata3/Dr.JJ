@@ -30,11 +30,8 @@ public class StoreSelectService extends HttpServlet {
 		System.out.println(vo.toString());
 		if(vo!=null) {
 			System.out.println("점포 조회 성공");
-    		request.setAttribute("Storeinfo", vo);
-    		
-    		
-    		RequestDispatcher rdi = request.getRequestDispatcher("MystoreUpdate.jsp");
-    		rdi.forward(request, response);
+    		session.setAttribute("Storeinfo", vo);
+    		response.sendRedirect("MystoreUpdate.jsp");
 		}else {
 			System.out.println("점포 조회 실패..");
 			response.sendRedirect("Mystore.jsp");
