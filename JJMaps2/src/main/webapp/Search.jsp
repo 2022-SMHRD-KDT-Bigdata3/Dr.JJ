@@ -23,8 +23,8 @@
 </style>
 </head>
 <body>
-	<%	 ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
-	<%	 ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
+	<% ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
+	<% ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
 					
 					
         <div id="headerdiv">
