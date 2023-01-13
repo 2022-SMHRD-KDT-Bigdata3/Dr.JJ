@@ -6,13 +6,17 @@ import java.sql.Date;
 public class ReviewVO {
 
  // 리뷰 아이디
- private Double reviewId;
+ private Integer reviewId;
 
  // 가게 아이디
  private Integer store_id;
+//리뷰 제목
+private String review_title;
 
- // 리뷰 내용
- private String reviewContewnt;
+
+
+// 리뷰 내용
+ private String reviewContent;
 
  // 평점
  private Integer reviewScore;
@@ -25,16 +29,28 @@ public class ReviewVO {
 
  // 리뷰 작성시간
  private Date reviewDt;
+ 
 
- public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic2, String user_id) {
+ public ReviewVO(Integer store_id,String review_title ,String reviewContent, Integer reviewScore, String reviewPic, String userId) {
+	super();
+	
+	this.store_id = store_id;
+	this.review_title = review_title;
+	this.reviewContent = reviewContent;
+	this.reviewScore = reviewScore;
+	this.reviewPic = reviewPic;
+	this.userId = userId;
+}
+
+public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic2, String user_id) {
 	// TODO Auto-generated constructor stub
 }
 
-public Double getReviewId() {
+public Integer getReviewId() {
      return reviewId;
  }
 
- public void setReviewId(Double reviewId) {
+ public void setReviewId(Integer reviewId) {
      this.reviewId = reviewId;
  }
 
@@ -46,12 +62,12 @@ public Double getReviewId() {
      this.store_id = store_id;
  }
 
- public String getReviewContewnt() {
-     return reviewContewnt;
+ public String getreviewContent() {
+     return reviewContent;
  }
 
- public void setReviewContewnt(String reviewContewnt) {
-     this.reviewContewnt = reviewContewnt;
+ public void setreviewContent(String reviewContent) {
+     this.reviewContent = reviewContent;
  }
 
  public Integer getReviewScore() {
@@ -85,13 +101,27 @@ public Double getReviewId() {
  public void setReviewDt(Date reviewDt) {
      this.reviewDt = reviewDt;
  }
+ public String getReview_title() {
+	return review_title;
+}
 
+public void setReview_title(String review_title) {
+	this.review_title = review_title;
+}
+
+public String getReviewContent() {
+	return reviewContent;
+}
+
+public void setReviewContent(String reviewContent) {
+	this.reviewContent = reviewContent;
+}
  // Reviews 모델 복사
  public void CopyData(ReviewVO param)
  {
      this.reviewId = param.getReviewId();
      this.store_id = param.getstore_id();
-     this.reviewContewnt = param.getReviewContewnt();
+     this.reviewContent = param.getreviewContent();
      this.reviewScore = param.getReviewScore();
      this.reviewPic = param.getReviewPic();
      this.userId = param.getUserId();

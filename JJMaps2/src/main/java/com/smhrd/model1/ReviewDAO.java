@@ -29,4 +29,10 @@ public class ReviewDAO {
 		session.close();
 		return (ArrayList<ReviewVO>) list;
 	}
+	public int insert(ReviewVO vo) {
+		session = sqlSessionFactory.openSession(true);
+		int res = session.insert("writereview",vo);
+		session.close();
+		return res;
+	}
 }

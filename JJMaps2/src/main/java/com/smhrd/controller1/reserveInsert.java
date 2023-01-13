@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -15,19 +16,32 @@ public class reserveInsert extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String userId = request.getParameter("user_id");
-		Integer storeId = Integer.parseInt(request.getParameter("store_id"));
-		String storeMenu = request.getParameter("store_menu");
-		String storePrice = request.getParameter("store_price");
-		java.sql.Date pTime = null;
-		try {
-			Date pTime_1 = new Date(Date.parse(request.getParameter("pTime")));
-			long timeInMilliSeconds = pTime_1.getTime();
-			pTime = new java.sql.Date(timeInMilliSeconds);//java.util.Date 자료형을 java.sql.Date 형으로 변환하는 구문
-		} catch (Exception e) {
-			e.printStackTrace();
+		
+		
+		String user_Id = request.getParameter("user_Id");
+		Integer store_Id = Integer.parseInt(request.getParameter("store_Id"));
+		//메뉴아이디
+		String[] reserve_list = request.getParameterValues("reserve_list");
+		String[] food_count = request.getParameterValues("food_count");
+		int[] count= {};
+		for(int i=0; i<food_count.length;i++) {
+			if(Integer.parseInt(food_count[i])!=0) {
+				count[i]=Integer.parseInt(food_count[i]) ;		
+			}
 		}
-		ReservationVO vo = new ReservationVO(storeId, userId, storeMenu, storePrice, pTime);
+		System.out.println(Arrays.toString(count));
+		
+		
+		
+//		java.sql.Date pTime = null;
+//		try {
+//			Date pTime_1 = new Date(Date.parse(request.getParameter("pTime")));
+//			long timeInMilliSeconds = pTime_1.getTime();
+//			pTime = new java.sql.Date(timeInMilliSeconds);//java.util.Date 자료형을 java.sql.Date 형으로 변환하는 구문
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		ReservationVO vo = new ReservationVO(store_Id, user_Id, storeMenu, storePrice, pTime);
 	}
 
 	
