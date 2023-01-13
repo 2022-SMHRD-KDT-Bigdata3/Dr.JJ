@@ -26,7 +26,7 @@
 
 	</head>
 	<%MemberVO info = (MemberVO) (session.getAttribute("info"));
-	 StoreVO st_info = (StoreVO)(session.getAttribute("st_info"));
+	 StoreVO st_info = (StoreVO)(request.getAttribute("st_info"));
 	 %>
 	<body class="menu_count">
 		<form class= "form" = "reserveInsert" method="post">
