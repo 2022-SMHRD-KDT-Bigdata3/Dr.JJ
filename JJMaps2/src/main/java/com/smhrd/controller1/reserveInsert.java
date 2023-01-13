@@ -9,9 +9,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.smhrd.model1.ReservationDAO;
 import com.smhrd.model1.ReservationVO;
+import com.smhrd.model1.ReserveDetailsDAO;
 import com.smhrd.model1.ReserveDetailsVO;
 
 public class reserveInsert extends HttpServlet {
@@ -30,16 +32,16 @@ public class reserveInsert extends HttpServlet {
 		// insert 하고 예약 번호 받아오기
 		ReservationVO rVo = new ReservationVO(store_Id,user_Id,r_time,p_time);
 		ReservationDAO reservationDAOs=new ReservationDAO();
-		Long r_number= reservationDAOs.create_r_num(rVo);
-		System.out.println("예약번호 발급 :"+r_number);
+		Long r_Number= reservationDAOs.create_r_num(rVo);
+		System.out.println("예약번호 발급 :"+r_Number);
 		
 		
 		//메뉴 아이디 배열 추출
 		String[] reserve_list = request.getParameterValues("reserve_list");
-		ArrayList<Long> menu_Id = new ArrayList<Long>();
+		ArrayList<Long> menu_Id_list = new ArrayList<Long>();
 		for(int i=0; i<reserve_list.length;i++) {
 			Long menu= Long.parseLong(reserve_list[i]);
-			menu_Id.add(menu);		
+			menu_Id_list.add(menu);		
 			
 		}
 		
@@ -47,21 +49,40 @@ public class reserveInsert extends HttpServlet {
 		String[] food_count = request.getParameterValues("food_count");
 		System.out.println(Arrays.toString(food_count));
 		//구매할 메뉴 수량만 추출
-		ArrayList<Long> menu_Cnt= new ArrayList<Long>();
+		ArrayList<Long> menu_Cnt_list = new ArrayList<Long>();
 		for(int i=0; i<food_count.length;i++) {
 			if(Integer.parseInt(food_count[i])!=0) {
 				Long food_num= Long.parseLong(food_count[i]);
-				menu_Cnt.add(food_num);		
+				menu_Cnt_list.add(food_num);		
 			}
 		}
-		System.out.println(menu_Cnt.toString());
+		System.out.println(menu_Cnt_list.toString());
 		
-		for(int i=0; i<menu_Cnt.size();i++) {
 		
-		ReserveDetailsVO r_d_dao=new ReserveDetailsVO();
-			
+		//받아온 예약번호 포함한 디테일 객체생성 디테일db insert 
+		ReserveDetailsDAO r_d_Dao = new ReserveDetailsDAO();
+		int res=0;
+		for(int i=0; i<menu_Cnt_list.size();i++) {
+			long menu_Id=menu_Id_list.get(i);
+			long menu_Cnt=menu_Cnt_list.get(i);
+		ReserveDetailsVO r_d_VO=new ReserveDetailsVO(menu_Id, r_Number, menu_Cnt);
+		res= r_d_Dao.reserve_menu_insert(r_d_VO);
+		
 			}
 		
+		
+		//
+		if (res>0) {
+			System.out.println("메뉴 예약 등록 성공");
+			HttpSession session = request.getSession();
+			session.setAttribute("reserve_store_id",store_Id );
+            session.setAttribute("reserve_menu_id",reserve_list );
+            session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
+            session.setAttribute("reserve_Num",r_Number );
+			response.sendRedirect("");//현재 예약 페이지로
+		}else {
+			
+		}
 		
 		
 //		java.sql.Date pTime = null;
