@@ -31,7 +31,22 @@ private String review_title;
  private Date reviewDt;
  
 
- public ReviewVO(Integer store_id,String review_title ,String reviewContent, Integer reviewScore, String reviewPic, String user_Id) {
+ public ReviewVO(Integer reviewId, Integer store_id, String reviewContent, Integer reviewScore,
+		String reviewPic, String user_Id, Date reviewDt,String review_title) {
+	super();
+	this.reviewId = reviewId;
+	this.store_id = store_id;
+	this.reviewContent = reviewContent;
+	this.reviewScore = reviewScore;
+	this.reviewPic = reviewPic;
+	this.user_Id = user_Id;
+	this.reviewDt = reviewDt;
+	this.review_title = review_title;
+}
+
+
+
+public ReviewVO(Integer store_id,String review_title ,String reviewContent, Integer reviewScore, String reviewPic, String user_Id) {
 	super();
 	
 	this.store_id = store_id;
@@ -42,9 +57,7 @@ private String review_title;
 	this.user_Id = user_Id;
 }
 
-public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic2, String user_id) {
-	// TODO Auto-generated constructor stub
-}
+
 
 public Integer getReviewId() {
      return reviewId;
