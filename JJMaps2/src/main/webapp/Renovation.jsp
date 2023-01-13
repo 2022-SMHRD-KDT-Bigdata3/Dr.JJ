@@ -27,9 +27,18 @@
 	<%	ArrayList<MenuVO> menu_info = (ArrayList<MenuVO>) request.getAttribute("menu_info");	%>
 
 
+<<<<<<< HEAD
+	</head>
+	<%MemberVO info = (MemberVO) (session.getAttribute("info"));
+	 StoreVO st_info = (StoreVO)(request.getAttribute("st_info"));
+	 %>
+	<body class="menu_count">
+		<form class= "form" = "reserveInsert" method="post">
+=======
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
 
 	<header class="bar">
 		<div id="Title">
