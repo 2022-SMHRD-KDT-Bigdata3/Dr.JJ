@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.smhrd.model1.MemberVO"%>
+<%@ page import="com.smhrd.model1.ReviewVO"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,8 @@
     <title>Review</title>
 </head>
       <body class="is-preload">
+      <%MemberVO info = (MemberVO)session.getAttribute("info"); 
+      ReviewVO review = (ReviewVO)request.getAttribute(review);%>
 		  <div id="logo">
 			 <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 		  </div> 

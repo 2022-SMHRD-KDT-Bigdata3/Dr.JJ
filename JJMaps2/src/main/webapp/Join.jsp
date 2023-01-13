@@ -9,8 +9,9 @@
       <title>회원가입</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
-       <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />    
-
+       <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" /> 
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+          
    </head>
    
    
@@ -88,9 +89,19 @@
          dataType : "json",
          success : function(data){
             if(data.idCheck == "OK"){
-               alert("사용 가능한 아이디입니다.");
+            	Swal.fire({
+                    icon: 'success',
+                    title: '',
+                    text: '사용 가능한 아이디입니다.',
+                    confirmButtonColor: '#FD6F22'
+                });
             } else{
-               alert("이미 사용중인 아이디입니다.");
+            	Swal.fire({
+                    icon: 'error',
+                    title: '',
+                    text: '이미 사용중인 아이디입니다.',
+                    confirmButtonColor: '#FD6F22'
+                });
             } 
          },
          error : function(){
