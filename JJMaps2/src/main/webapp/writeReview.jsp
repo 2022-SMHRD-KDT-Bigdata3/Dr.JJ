@@ -100,12 +100,11 @@ td {
 
 
 	<div class="form">
-		<form id="myform" action="UploadServlet" method="post"
-			enctype="multipart/form-data">
+		<form id="myform" action="UploadServlet" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="store_id"  value= "<%=store_id%>">
 			<table>
 				<tr bgcolor="orange" height="50px">
-					<div style="color: orange" id="null">리뷰합니다!</div>
+					<div style="color: orange" id="head">리뷰합니다!</div>
 				</tr>
 
 
