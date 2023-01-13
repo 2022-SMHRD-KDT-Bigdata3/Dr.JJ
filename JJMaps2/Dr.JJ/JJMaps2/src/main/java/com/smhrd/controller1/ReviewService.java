@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
+import com.smhrd.model1.StoreVO;
 
 /**
  * Servlet implementation class ReviewService
@@ -24,7 +25,8 @@ public class ReviewService extends HttpServlet {
 		String User_Id= memberVOs.getUser_Id();
 		System.out.println("User_Id");
 		StoreDAO dao = new StoreDAO();
-		String store_name = (String) request.getAttribute("Store_info");
+		StoreVO Svo = (StoreVO) request.getAttribute("Store_info");
+		System.out.println(Svo);
 		
 	}
 
