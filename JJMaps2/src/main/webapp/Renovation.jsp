@@ -1,3 +1,5 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -87,8 +89,54 @@
 
 		<hr style="border: solid 1px gray;">
 		<div class="total_price">
-			<h4>현재 주문 금액 : <span id="total">0</span></h4>
+			<h4>현재 주문 금액 : <span id="total">0</span></h4><br>
 		</div>
+		
+		<!--시간 계산 -->
+		<% 
+		   //현재 시간 계산
+		   Date nowTime = new Date(); 
+		   SimpleDateFormat sf = new SimpleDateFormat("hh:mm");
+		   String time=sf.format(nowTime).toString();
+		   int now_h = Integer.parseInt(time.substring(0, 2));
+		   int now_m = Integer.parseInt(time.substring(3)); 
+		   int now=((now_h*60)+now_m);
+		   
+		   //개점 시간 계산
+		   int opne_h = Integer.parseInt(store_info.getStore_Open_Dt().substring(0, 2));
+		   int opne_m = Integer.parseInt(store_info.getStore_Open_Dt().substring(3));
+		   int opne=((opne_h*60)+opne_m);
+		   // 폐점 시간 계산
+		   int close_h = Integer.parseInt(store_info.getStore_Close_Dt().substring(0, 2));
+		   int close_m = Integer.parseInt(store_info.getStore_Close_Dt().substring(3));%>
+
+		
+		<input id="r_time"  type = "hidden" name="r_time" value="<%= sf.format(nowTime) %>"> 
+
+		<%if(now<opne) {
+			opne=opne + store_info.getCook_time();
+			opne_m = opne % 60;
+			opne_h = (opne - opne_m)/60; %>
+			<input id="pic_OK_opne" type="hidden" value="<%=opne%>" >
+			<input id="pic_OK_close" type="hidden" value="<%=((close_h*60)+close_m)%>" >
+			<h4>픽업 가능 시간 : <span ><%=opne_h%>:<%=opne_m%> 부터  <%=close_h%>:<%=close_m==0?"00":close_m%> 까지!</span></h4><br>
+			<input id="p_time" name="p_time" type = "time" 
+			min="<%=opne_h%>:<%=opne_m%>" 
+			max="<%=close_h%>:<%=close_m%>" name="p_time">에 가지러 갈게요
+		<%}else{
+			now=now + store_info.getCook_time();
+			now_m = now % 60;
+			now_h = (now - now_m)/60;%>
+			<input id="pic_OK_opne" type="hidden" value="<%=now%>" >
+			<input id="pic_OK_close" type="hidden" value="<%=((close_h*60)+close_m)%>" >
+		<h4>픽업 가능 시간 : <span ><%=now_h%>:<%=now_m%> 부터 <%=close_h%>:<%=close_m==0?"00":close_m%> 까지!</span></h4><br>
+			<input id="p_time" name="p_time" type = "time" 
+			min="<%=now_h%>:<%=now_m%>" 
+			max="<%=close_h%>:<%=close_m%>" name="p_time">에 가지러 갈게요
+		
+		<%}%>
+		
+		<br><br><br>
 		<button class="button" onclick="submit_check()" >예약하기</button>
 		<!-- 예약하기 버튼으로 살려주세요.. -->
 		<br> <br>
@@ -137,6 +185,13 @@
 		
 	   $(document).ready(function() {
 	        $('.form').submit(function() {
+	        	 let ptime =$('#p_time').val();
+	        	 ptime_h=ptime.substring(0,2);
+	        	 ptime_m=ptime.substring(3);
+	        	 ptime=(ptime_h*60)+ptime_m;
+	        	 let pic_OK_opne = $('#pic_OK_opne').val();
+	        	 let pic_OK_close = $('#pic_OK_close').val();
+	        	 
 	            if ($('#total').text() === '0') {
 	            	 Swal.fire({
 	                     icon: '',
@@ -145,9 +200,21 @@
 	                     confirmButtonColor: '#FD6F22'
 	                 });
 	                return false;
-	            }
+	            }else if(ptime<pic_OK_opne||pic_OK_close<ptime){
+
+	            	 Swal.fire({
+	                     icon: '',
+	                     title: '',
+	                     text: '픽업 시간을 확인해주세요📌',
+	                     confirmButtonColor: '#FD6F22'
+	                 });
+
+		                return false;
+	            };
 	        }); // end submit()
 	    }); // end ready()
+	    
+	    
 	    
         
     </script>

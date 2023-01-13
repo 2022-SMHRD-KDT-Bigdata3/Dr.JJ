@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.model1.ReservationDAO;
 import com.smhrd.model1.ReservationVO;
 
 public class reserveInsert extends HttpServlet {
@@ -19,13 +20,26 @@ public class reserveInsert extends HttpServlet {
 			throws ServletException, IOException {
 		
 		
-		String user_Id = request.getParameter("user_Id");
+		//RESERVATIONS 테이블에 인서트 할 요소 vo 묶기
 		Integer store_Id = Integer.parseInt(request.getParameter("store_Id"));
-		//메뉴아이디
+		String user_Id = request.getParameter("user_Id");
+		String r_time = request.getParameter("r_time");
+		String p_time = request.getParameter("p_time");
+		
+		// insert 하고 예약 번호 받아오기
+		ReservationVO rVo = new ReservationVO(store_Id,user_Id,r_time,p_time);
+		ReservationDAO reservationDAOs=new ReservationDAO();
+		Long r_number= reservationDAOs.create_r_num(rVo);
+		System.out.println("예약번호 발급 :"+r_number);
+		
+		
+		//메뉴 아이디 배열 추출
 		String[] reserve_list = request.getParameterValues("reserve_list");
+		
+		//메뉴 전체 수량 
 		String[] food_count = request.getParameterValues("food_count");
 		System.out.println(Arrays.toString(food_count));
-		
+		//구매할 메뉴 수량만 추출
 		ArrayList<Integer> count= new ArrayList<Integer>();
 		for(int i=0; i<food_count.length;i++) {
 			if(Integer.parseInt(food_count[i])!=0) {
@@ -33,6 +47,11 @@ public class reserveInsert extends HttpServlet {
 			}
 		}
 		System.out.println(count.toString());
+		
+		
+		//RESERV_DETAILS VO 객체 만들고 DB등록
+		
+		
 		
 		
 		

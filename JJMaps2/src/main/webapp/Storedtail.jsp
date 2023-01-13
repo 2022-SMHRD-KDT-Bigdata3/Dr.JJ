@@ -15,11 +15,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
    </head>
-   <body >
+   <body > 
    
 
    <%	MemberVO info = (MemberVO)session.getAttribute("info");	%>
-
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
     <!-- 헤더영역 -->
