@@ -7,13 +7,13 @@ public class ReserveDetailsVO {
  private Long rd_Id;
 
  // 메뉴 아이디
- private Double menu_Id;
+ private Long menu_Id;
 
  // 예약 번호
  private Long r_Number;
 
  // 주문 수량
- private String menu_Cnt;
+ private Long menu_Cnt;
 
  
  
@@ -29,7 +29,7 @@ public Long getRd_Id() {
 
 
 
-public Double getMenu_Id() {
+public Long getMenu_Id() {
 	return menu_Id;
 }
 
@@ -47,7 +47,7 @@ public Long getR_Number() {
 
 
 
-public String getMenu_Cnt() {
+public Long getMenu_Cnt() {
 	return menu_Cnt;
 }
 
@@ -65,7 +65,7 @@ public void setRd_Id(Long rd_Id) {
 
 
 
-public void setMenu_Id(Double menu_Id) {
+public void setMenu_Id(Long menu_Id) {
 	this.menu_Id = menu_Id;
 }
 
@@ -83,7 +83,7 @@ public void setR_Number(Long r_Number) {
 
 
 
-public void setMenu_Cnt(String menu_Cnt) {
+public void setMenu_Cnt(Long menu_Cnt) {
 	this.menu_Cnt = menu_Cnt;
 }
 
@@ -103,7 +103,7 @@ public String toString() {
 
 
 
-public ReserveDetailsVO(Long rd_Id, Double menu_Id, Long r_Number, String menu_Cnt) {
+public ReserveDetailsVO(Long rd_Id, Long menu_Id, Long r_Number, Long menu_Cnt) {
 	super();
 	this.rd_Id = rd_Id;
 	this.menu_Id = menu_Id;
@@ -118,6 +118,18 @@ public ReserveDetailsVO(Long rd_Id, Double menu_Id, Long r_Number, String menu_C
 
 public ReserveDetailsVO() {
 	super();
+}
+
+
+
+
+
+
+public ReserveDetailsVO(Long menu_Id, Long r_Number, Long menu_Cnt) {
+	super();
+	this.menu_Id = menu_Id;
+	this.r_Number = r_Number;
+	this.menu_Cnt = menu_Cnt;
 }
 
  

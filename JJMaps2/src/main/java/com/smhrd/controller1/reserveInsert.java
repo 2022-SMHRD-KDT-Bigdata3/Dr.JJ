@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model1.ReservationDAO;
 import com.smhrd.model1.ReservationVO;
+import com.smhrd.model1.ReserveDetailsVO;
 
 public class reserveInsert extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,23 +36,31 @@ public class reserveInsert extends HttpServlet {
 		
 		//메뉴 아이디 배열 추출
 		String[] reserve_list = request.getParameterValues("reserve_list");
+		ArrayList<Long> menu_Id = new ArrayList<Long>();
+		for(int i=0; i<reserve_list.length;i++) {
+			Long menu= Long.parseLong(reserve_list[i]);
+			menu_Id.add(menu);		
+			
+		}
 		
 		//메뉴 전체 수량 
 		String[] food_count = request.getParameterValues("food_count");
 		System.out.println(Arrays.toString(food_count));
 		//구매할 메뉴 수량만 추출
-		ArrayList<Integer> count= new ArrayList<Integer>();
+		ArrayList<Long> menu_Cnt= new ArrayList<Long>();
 		for(int i=0; i<food_count.length;i++) {
 			if(Integer.parseInt(food_count[i])!=0) {
-				count.add(Integer.parseInt(food_count[i]));		
+				Long food_num= Long.parseLong(food_count[i]);
+				menu_Cnt.add(food_num);		
 			}
 		}
-		System.out.println(count.toString());
+		System.out.println(menu_Cnt.toString());
 		
+		for(int i=0; i<menu_Cnt.size();i++) {
 		
-		//RESERV_DETAILS VO 객체 만들고 DB등록
-		
-		
+		ReserveDetailsVO r_d_dao=new ReserveDetailsVO();
+			
+			}
 		
 		
 		
