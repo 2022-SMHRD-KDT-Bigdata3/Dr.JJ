@@ -50,8 +50,6 @@
         <div class="list_wrap">
         
         
-        
-        
         <% for(int i=0; i<store_list.size();i++){ %>
      		 <%int storeId =store_list.get(i).getStore_Id(); %>
 								
