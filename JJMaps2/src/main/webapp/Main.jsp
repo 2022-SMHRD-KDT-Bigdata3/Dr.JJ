@@ -51,7 +51,48 @@
 </div>
 		</div>
 	</header>
-	<br>
+	<div id="cate" class ="cate">
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a> 
+		<a>붕어빵</a>
+		<a>타코야키</a>
+		<a>호떡</a>
+		<a>순대</a>
+		<a>분식류</a>
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a>
+		<a>호떡</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+
+	</div>
 	<div class="Header_Init_Section">
 		<div id="header_img">
 		
@@ -73,30 +114,69 @@
 	<!-- 여기까지 헤더 -->
 
 	<div id="cate" class ="cate">
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>타코야끼</a> 
-		<a onclick='location.href="#"'>호떡</a> 
-		<a onclick='location.href="#"'>순대</a> 
-		<a onclick='location.href="#"'>분식류</a> 
-		<a onclick='location.href="#"'>기타</a> 
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>타코야끼</a>
-		<a onclick='location.href="#"'>호떡</a>
-		<a onclick='location.href="#"'>순대</a>
-		<a onclick='location.href="#"'>분식류</a>
-		<a onclick='location.href="#"'>기타</a>
-		<a onclick='location.href="#"'>붕어빵</a>
-		<a onclick='location.href="#"'>타코야끼</a>
-		<a onclick='location.href="#"'>호떡</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a> 
+		<a>붕어빵</a>
+		<a>타코야키</a>
+		<a>호떡</a>
+		<a>순대</a>
+		<a>분식류</a>
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a>
+		<a>호떡</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
+		<a>붕어빵</a>
+		<a>타코야키</a> 
+		<a>호떡</a> 
+		<a>순대</a> 
+		<a>분식류</a> 
+		<a>기타</a>
 	
 
 	</div>
+	
 	<br>
-
-	<div class="map_wrap">
-		<div class="map"></div>
-	</div>
-
+	<main>
+	<header class="like">
+		<div class="love">
+			<h2>카테고리</h2>
+			
+		</div>
+	</header>
+	<div class="button">
+			<p class="btn btn-1">붕어빵</p>
+			<br>
+			<p class="btn btn-1">타코야키</p>
+			<br>
+			<p class="btn btn-1">호떡</p>
+			<br>
+			<p class="btn btn-1">순대</p>
+			<br>
+			<p class="btn btn-1">분식류</p>
+			<br>
+			<p class="btn btn-1">기타</p>
 	<br>
 	<br>
 	<br>
@@ -105,6 +185,7 @@
 	<br>
 	<br>
 	<br>
+	</main>
 	<footer id="footer">@JJUPJJUPBAKSA</footer>
 	
 	
