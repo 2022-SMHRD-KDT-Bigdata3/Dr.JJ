@@ -107,6 +107,30 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>StoreReservation</servlet-name>
+  	<display-name>StoreReservation</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreReservation</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Myreview</servlet-name>
+  	<display-name>Myreview</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Myreview</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<display-name>UploadServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReviewService</servlet-name>
+  	<display-name>ReviewService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
+  </servlet>
   
   
   
@@ -177,6 +201,22 @@
   <servlet-mapping>
   	<servlet-name>StoreDetail</servlet-name>
   	<url-pattern>/StoreDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreReservation</servlet-name>
+  	<url-pattern>/StoreReservation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Myreview</servlet-name>
+  	<url-pattern>/Myreview</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReviewService</servlet-name>
+  	<url-pattern>/ReviewService</url-pattern>
   </servlet-mapping>
   
 

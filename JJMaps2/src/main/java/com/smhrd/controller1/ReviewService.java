@@ -2,6 +2,7 @@ package com.smhrd.controller1;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,9 +26,15 @@ public class ReviewService extends HttpServlet {
 		String User_Id= memberVOs.getUser_Id();
 		System.out.println("User_Id");
 		StoreDAO dao = new StoreDAO();
-		StoreVO Svo = (StoreVO) request.getAttribute("Store_info");
-		System.out.println(Svo);
+		StoreVO storeVOs = (StoreVO)request.getAttribute("Storeinfo");
 		
+		if(storeVOs !=null) {
+			request.setAttribute("Storeinfo", storeVOs);
+			RequestDispatcher rdi = request.getRequestDispatcher("writeReview.jsp");
+    		rdi.forward(request, response);
+		}else {
+			System.out.println("가게정보 가져오기 실패!");
+		}
 	}
 
 }
