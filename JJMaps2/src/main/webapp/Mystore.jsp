@@ -29,9 +29,9 @@
 		<div class="button">
 			<p class="btn btn-2" onclick="location.href='StoreDetail?user_id=<%=info.getUser_Id()%>'">내 점포 상세 페이지</p>
 			<br>
-			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">점포 정리 수정</p>
+			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">내 점포 정보 수정</p>
 			<br>
-			<p class="btn btn-2" onclick='location.href="Menucheck"'>영업정보</p>
+			<p class="btn btn-2" onclick='location.href="Menucheck"'>점포 메뉴 등록</p>
 			<br>
 			<p class="btn btn-2" onClick="next()">점포 삭제</p>
 	
