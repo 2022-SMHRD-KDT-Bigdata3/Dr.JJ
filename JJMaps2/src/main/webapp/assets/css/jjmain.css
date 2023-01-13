@@ -3,12 +3,9 @@
 
 /* 바디태그 마진 */
 html, body {
-	overflow:hidden; 
-	scroll:no;
-	overflow:auto;
-	width:100%; 
-	overflow-x:hidden;  
-	overflow-y:hidden;
+	margin-left: 10%;
+    margin-right: 10%;
+    -ms-overflow-style: none;
 }
 
 /* 폰트 및 로고작업 */
@@ -127,11 +124,15 @@ a{
 	font-family: 'NanumSquareNeo-Variable';
 	display: block;
 	height: 20px;
-	width: 1000px;
+	width: 100px;
+	min-width: 100%;
 	text-align: center; 
 	margin-left : auto;
 	margin-right: auto;
 	background-color: #0E5049;
+	white-space : nowrap;
+	overflow: hidden;
+	
 
 	
 }
@@ -139,6 +140,8 @@ a{
 div.cate>a {
 	margin: 0 5px 0 5px;
 	color: #f8f9fa;
+	
+	
 }
 
 /* 지도영역 */
