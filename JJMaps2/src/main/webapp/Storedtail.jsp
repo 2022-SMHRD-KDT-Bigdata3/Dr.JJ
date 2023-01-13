@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model1.MemberVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="com.smhrd.model1.StoreVO"%>
@@ -11,22 +12,23 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
        <meta name="format-detection" content="telephone-no">
      	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
    </head>
    <body >
    
+<<<<<<< HEAD
+=======
+   <%	MemberVO info = (MemberVO)session.getAttribute("info");	%>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
     <!-- 헤더영역 -->
     <div id="login_Body">
-
 			<div id="logo">
 			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
-	
-	
-    
-    
+
     <!-- 가게소개 영역 -->
     <nav>
         <h1><%=store_info.getStore_Name() %></h1>
@@ -84,7 +86,9 @@
         <div>(전화번호)</div>
     </main>
     <footer id = "fix"  >
-    	<form action="StoreDetail">
+    
+    	<form action="StoreDetail" class="form">
+    	<input type="hidden" id="login_check" value="<%=info!=null?info.getUser_Id():""%>">
         <input type="hidden" name="storeId" value="<%=store_info.getStore_Id()%>">
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
@@ -94,7 +98,22 @@
 
 
     <footer id = "footer">@JJUPJJUPBAKSA</footer>
-    
+    	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.form').submit(function() {
+        if ($('#login_check').val()==="") {
+        	 Swal.fire({
+                 icon: '',
+                 title: '',
+                 text: '로그인을 해주세요.',
+                 confirmButtonColor: '#FD6F22'
+             });
+            return false;
+        }
+    }); // end submit()
+}); // end ready()
 
+</script>
 </body>
 </html>
