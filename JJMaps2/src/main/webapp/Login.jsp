@@ -42,7 +42,7 @@
 				<div>
 					<div class="box_login">
 						<ul>
-							<li id="null" style="color: #FD6F22;">아직 쩝쩝여지도 회원이 아니신가요?</li>
+							<li id="null" style="color: #FD6F22; font-weight: bold;">아직 쩝쩝여지도 회원이 아니신가요?</li>
 							<li class="little2">회원가입을 하시면 더 많은 정보와 혜택을 받으실 수 있습니다</li>
 						</ul>
 					</div>

@@ -18,14 +18,10 @@
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
     <!-- 헤더영역 -->
     <div id="login_Body">
-
 			<div id="logo">
 			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
-	
-	
-    
-    
+
     <!-- 가게소개 영역 -->
     <nav>
         <h1><%=store_info.getStore_Name() %></h1>
