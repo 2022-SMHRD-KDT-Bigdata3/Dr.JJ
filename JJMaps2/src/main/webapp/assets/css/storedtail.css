@@ -56,6 +56,7 @@ input[type=submit]{
 
 
 button{
+	font-family: 'NanumSquareNeo-Variable';
     font-size: medium;
     font-weight: bold;
     color:whitesmoke; 
@@ -321,18 +322,20 @@ div#logo{
 
 /* 나브영역 */
 nav{
-    
+	font-family : 'NanumSquareNeo-Variable';
     width: 100%;
-    height: 90px;
-    background-color: aqua;
+    height: 50px;
+    background-color: #FD6F22;
 }
 
 h1{
+	color:white;
     text-align: center;
 }
 
+
 #sdtail{
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -406,7 +409,10 @@ h1{
     text-align: center;
 }
 
-
+.font1{
+	font-family: 'NanumSquareNeo-Variable';
+	text-align: left;
+}
 
 
 /*login 메인영역*/
