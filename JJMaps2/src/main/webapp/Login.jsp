@@ -27,7 +27,7 @@
 		</header>
 
 		<div id="login_input">
-			<form class="form" style="margin-top: 80px; margin-bottom: 20px;" action="Login"
+			<form action="Login" class="form" style="margin-top: 80px; margin-bottom: 20px;" 
 				method="post">
 				<div class="id">아이디</div>
 				<input id="userId" name="user_Id" class="login_contents idcheck" align="center"
