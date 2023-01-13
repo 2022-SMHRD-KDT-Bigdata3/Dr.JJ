@@ -55,6 +55,7 @@ input[type=submit]{
 
 
 button{
+	font-family: 'NanumSquareNeo-Variable';
     font-size: medium;
     font-weight: bold;
     color:whitesmoke; 
@@ -405,7 +406,10 @@ h1{
     text-align: center;
 }
 
-
+.font1{
+	font-family: 'NanumSquareNeo-Variable';
+	text-align: left;
+}
 
 
 /*login 메인영역*/
