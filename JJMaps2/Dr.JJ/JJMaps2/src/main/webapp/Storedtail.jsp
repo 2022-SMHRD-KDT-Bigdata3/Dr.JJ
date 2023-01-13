@@ -16,7 +16,7 @@
 <body>
 	<%
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
-	StoreVO Storeinfo= (StoreVO)(session.getAttribute("Storeinfo"));
+	StoreVO Storeinfo= (StoreVO)(request.getAttribute("Storeinfo"));
 	%>
     <!-- 헤더영역 -->
     <header  onClick='location.href="Main.jsp"'>
@@ -45,7 +45,7 @@ if(Storeinfo.getStore_Status()==0){
     </main>
 
 
-    <div id="review"><a id="review" onClick='location.href="#"'>(리뷰)</a></div>
+    <div id="review"><a id="review" onClick='location.href="ReviewService"'>(리뷰)</a></div>
     
     
     <main id="main2">메인2 (메뉴 및 사진)

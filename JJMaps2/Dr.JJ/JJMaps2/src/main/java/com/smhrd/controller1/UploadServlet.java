@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.smhrd.model1.MemberVO;
+import com.smhrd.model1.ReviewDAO;
 import com.smhrd.model1.ReviewVO;
 
 
@@ -33,7 +34,7 @@ public class UploadServlet extends HttpServlet {
 		String encType = "UTF-8";
 		ServletContext context = getServletContext();
 		String uploadFilePath = context.getRealPath(savePath);
-		String review_pic = uploadFilePath;
+		String reviewPic = uploadFilePath;
 		try {
 			MultipartRequest multi = new MultipartRequest(request, // request 객체
 					uploadFilePath, // 서버상의 실제 디렉토리
@@ -49,15 +50,16 @@ public class UploadServlet extends HttpServlet {
 				int reviewScore = Integer.parseInt(multi.getParameter("reviewStar"));
 				String review_title =multi.getParameter("title");
 				String reviewContent =multi.getParameter("content");
-				ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewContent, user_id);
+				ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewPic, user_id);
 				System.out.println(vo);
 				System.out.println(uploadFilePath);
+				ReviewDAO dao = new ReviewDAO();
 				response.sendRedirect("Main.jsp");
 			}// else
 		} catch (Exception e) {
 			System.out.print("예외 발생 : " + e);
 		}// catch
-	
+		
 	
 	}
 
