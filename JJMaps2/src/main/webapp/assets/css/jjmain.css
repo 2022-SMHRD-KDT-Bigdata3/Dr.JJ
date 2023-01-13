@@ -41,6 +41,11 @@ input {
 	font-size: 14px;
 }
 
+input[type=submit]{
+	width:50px;
+	
+}
+
 
 
 header>div#logo>a {
