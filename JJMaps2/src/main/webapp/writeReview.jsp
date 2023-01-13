@@ -70,7 +70,7 @@
 					<div style="color: orange" id="null">리뷰합니다!</div>
 				</tr>
 
-			
+		
 				<tr height="35px">
 					<td><textarea placeholder="제목을 입력하세요" name="title" cols="50"
 							rows="1"></textarea></td>

@@ -23,22 +23,20 @@
 			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
 	
-	<header onClick='location.href="Main.jsp"' class="bar">
-				<div id="Title">
-				   <h1>쩝쩝박사</h1>
-				</div>
-		  </header>
+	
     
     
     <!-- 가게소개 영역 -->
     <nav>
         <h1><%=store_info.getStore_Name() %></h1>
         <div id="sdtail">
-            <a><%=store_info.getStore_Cate() %></a>
+            <a><%=store_info.getStore_Cate() %></a><br>
             <a>별점</a>
         </div>
         
     </nav>
+    
+    <br>
 
     <main id="main">메인 (가게설명)
         <div>(위치)</div>
@@ -90,7 +88,7 @@
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
         </form>
-    </footer>
+
 
 
     <footer id = "footer">@JJUPJJUPBAKSA</footer>

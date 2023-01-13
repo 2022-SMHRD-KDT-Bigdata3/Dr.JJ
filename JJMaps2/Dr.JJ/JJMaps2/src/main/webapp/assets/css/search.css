@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 #headerdiv{
     max-width : 1200px; 
     min-width: 400px; 
@@ -9,11 +10,6 @@
     text-align: center;
     position: relative;
 }
-
-.header_emt{position:relative; display: inline-block; padding: 10px; }
-.search{    margin-left: auto;   margin-right: auto;}
-#main_Logo{float: left; margin-left: 20px; margin-top: 5px;}
-#main_form{margin-left: -25px;}
 
 
 #allwidth{  

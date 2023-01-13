@@ -33,7 +33,7 @@
 				<br> &nbsp;<span>점포이름</span>&nbsp; <input name="store_Name"
 					type="text" class="store_name"><br> <br> <span>점포연락처</span>&nbsp;<input
 					name="store_Tel" type="text" class="store_"><br> <br>
-				<br> <span style="font-weight: bold;">카테고리</span><br> <input
+				<br> <span style="font-weight: bold;">카테고리</span><br><br> <input
 					type="radio" name="store_Cate" value="붕어빵">붕어빵 <input
 					type="radio" name="store_Cate" value="타코야끼">타코야끼 <input
 					type="radio" name="store_Cate" value="호떡">호떡<br> <input
@@ -53,23 +53,29 @@
 
 				<h4>영업장소</h4>
 				<br> <input type="text" readonly="readonly"
-					id="sample6_postcode" placeholder="우편번호"> <input
-					name="store_Addr" type="text" readonly="readonly"
-					id="sample6_address" placeholder="주소"><br> <br> <input
+					id="sample6_postcode" placeholder="우편번호"> <br> <br> 
+					<input
 					type="button" class="click" onclick="sample6_execDaumPostcode()"
-					value="찾기"><br> <br> <input type="button"
-					class="click" onclick="geo()" value="지도에 위치 등록"><br> <br>
-				<br> <input name="x" type="text" readonly="readonly"
-					id="sample6_latitude" placeholder="x좌표"> <input name="y"
+					value="찾기"><br><br><br>  
+					
+					<input name="store_Addr" type="text" readonly="readonly"
+					id="sample6_address" placeholder="주소"><br> <br> 
+			
+					<input type="button" class="click" onclick="geo()" value="지도에 위치 등록"><br> <br>
+				<br> 
+				<input name="x" type="text" readonly="readonly"
+					id="sample6_latitude" placeholder="x좌표"> 
+					
+					<input name="y"
 					type="text" readonly="readonly" id="sample6_longitude"
 					placeholder="y좌표"> <br><input type="text" readonly="readonly"
 					id="sample6_detailAddress" placeholder="상세주소"> <input
 					type="text" readonly="readonly" id="sample6_extraAddress"
-					placeholder="참고항목"> <br>
+					placeholder="참고항목"> <br><br>
 
 
 				<div class="store_payment">
-					<br> <span style="font-weight: bold;">카드 결제 서비스</span><br>
+					<br> <span style="font-weight: bold;">카드 결제 서비스</span><br><br>
 					<span><input name="store_Card_Yn" type="radio" value=1>가능</span>
 					<span><input name="store_Card_Yn" type="radio" value=0>불가능</span>
 					<br> <span class="little2">(카드결제 불가능시 주문예약 서비스를 이용하실 수

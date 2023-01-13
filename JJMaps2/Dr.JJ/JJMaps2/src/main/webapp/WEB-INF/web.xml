@@ -113,6 +113,12 @@
  	<display-name>ReportService</display-name>
  	<description></description>
  	<servlet-class>com.smhrd.controller1.ReportService</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>ReviewService</servlet-name>
+ 	<display-name>ReviewService</display-name>
+ 	<description></description>
+ 	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
  </servlet><servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
@@ -185,6 +191,10 @@
   <servlet-mapping>
   	<servlet-name>ReportService</servlet-name>
   	<url-pattern>/ReportService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReviewService</servlet-name>
+  	<url-pattern>/ReviewService</url-pattern>
   </servlet-mapping>
 
 
