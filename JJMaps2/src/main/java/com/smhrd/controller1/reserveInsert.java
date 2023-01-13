@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -23,13 +24,15 @@ public class reserveInsert extends HttpServlet {
 		//메뉴아이디
 		String[] reserve_list = request.getParameterValues("reserve_list");
 		String[] food_count = request.getParameterValues("food_count");
-		int[] count= {};
+		System.out.println(Arrays.toString(food_count));
+		
+		ArrayList<Integer> count= new ArrayList<Integer>();
 		for(int i=0; i<food_count.length;i++) {
 			if(Integer.parseInt(food_count[i])!=0) {
-				count[i]=Integer.parseInt(food_count[i]) ;		
+				count.add(Integer.parseInt(food_count[i]));		
 			}
 		}
-		System.out.println(Arrays.toString(count));
+		System.out.println(count.toString());
 		
 		
 		

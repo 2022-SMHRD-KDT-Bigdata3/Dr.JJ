@@ -9,33 +9,49 @@
 <style type="text/css">
 span{color:gray;}
 </style>
+<link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 </head>
 
-<body>
+
+<body class="is-preload">
 <%MemberVO info = (MemberVO) (session.getAttribute("info"));%>
 	<% String searchWord=(String)request.getAttribute("searchWord");%>
 	
 	
 	
-<a href="Main.jsp">쩝쩝 로고</a>	
+<div id="logo">
+		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+	</div>	
+	
+	<div class="emote">
+		<div id="logme" class="menus">
+		<ul>
 	
 			<%
 			if (info != null) {
 				if (info.getUser_Code().equals("1")) {
 					out.print("<a href='Mystore.jsp'>오늘영업</a>");
 				}
-				out.print("<a id='mypage' href='Mypage.jsp'>마이페이지</a>");
-				out.print("<a id='review' href='writeReview.jsp'>리뷰(테스트중 잘못건드리면 톰캣날아감)</a>");
-				out.print("<a id='logout' href='LogoutService'>로그아웃</a>");
+				out.print("<li><a id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<li><a id='logout' href='LogoutService'>로그아웃</a></li>");
 
 				// smart 1234 -> usercode 0(일반이용자)
 				// ssss 1234 -> usercode 1(점포이용자)
 
 			} else {
-				out.print("<a id='login' href='Login.jsp'>로그인</a>");
-				out.print("<a id='join' href='Join.jsp'>회원가입</a>");
+				out.print("<li><a id='login' href='Login.jsp'>로그인</a></li>");
+				out.print("<li><a id='join' href='Join.jsp'>회원가입</a></li>");
 			}
-			%>
+			%> 
+	
+		</ul>
+</div>
+	<header class="bar">
+		<div id="Title">
+			<h1>검색 결과</h1>
+		</div>
+	</header>
+	
 	
 	
 	<br>
