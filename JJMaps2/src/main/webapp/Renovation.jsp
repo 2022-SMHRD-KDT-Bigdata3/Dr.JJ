@@ -143,7 +143,7 @@
 		<%}%>
 		
 		<br><br><br>
-		<button class="button" onclick='return submit2(this.form);' >장바구니 담기</button>
+		<button class="button" onclick="location.href='reserveInsert?Basket=Basket'" >장바구니 담기</button>
 		<button class="button" >바로 예약하기</button>
 		<!-- 예약하기 버튼으로 살려주세요.. -->
 		<br> <br>
@@ -227,7 +227,7 @@
 	        }); // end submit()
 	    }); // end ready()
 
-	    function submit2(frm) { 
+	/*    function submit2(frm) { 
 	    	 let ptime =$('#p_time').val();
         	 console.log('ptime 원본:'+ptime);
         	 ptime_h=Number(ptime.substring(0,2));
@@ -263,9 +263,9 @@
           frm.action='Basket.jsp'; 
 	      frm.submit(); 
 	      return true;
-	      };
+	      }; 
 	       
-	    } 
+	    } */
 	    
 	    
         

@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.model1.ReservationVO"%>
+<%@page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,8 +11,13 @@
 <title>Basket.html</title>
 </head>
 <body>
-	<!-- 헤더 -->
-
+	<!-- 헤더 -->session.setAttribute("reserve_store_id",store_Id );
+			session.setAttribute("reserve_menu_id",reserve_list );
+			session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
+			
+	<%ReservationVO Storeinfo = (ReservationVO)session.getAttribute("ReservationVO"); %>
+	<%ArrayList<Long> reserve_menu_id = (ArrayList<Long>)session.getAttribute("reserve_menu_id"); %>
+	<%ArrayList<Long> reserve_menu_cnt = (ArrayList<Long>)session.getAttribute("reserve_menu_cnt"); %>
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
