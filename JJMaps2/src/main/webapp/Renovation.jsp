@@ -18,7 +18,7 @@
 <style type="text/css">
 .btnCalc {width: 15px; height:20px;}
 .hidden{display:none}
-
+.numOut{width: 15px;}
 
 </style>
 </head>
@@ -76,7 +76,7 @@
 				</td>
 				<td>
 					<button id="btnPlus<%=i%>" class="btnPlus btnCalc" type="button" onclick="up1('<%=i%>')">+</button>
-					<a id="numOut<%=i%>" name="food_count">0</a>
+					<input id="numOut<%=i%>" class="numOut" name="food_count" value="0" >
 					<button id="btnMinus<%=i%>" class="btnMinus btnCalc" type="button" onclick="down1(<%=i%>)">-</button>
 				</td>
 			</tr>
@@ -97,9 +97,9 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script>
 	function up1(i){
-		let num = $('#numOut'+i).text();
+		let num = $('#numOut'+i).val();
 		num=Number(num)+1;
-		$('#numOut'+i).text(num);
+		$('#numOut'+i).val(num);
 		
 		let menuPrice=$('#menuPrice'+i).text();
 		menuPrice=Number(menuPrice);
@@ -113,10 +113,10 @@
 	
 	
 	function down1(i){
-		let num = $('#numOut'+i).text();
+		let num = $('#numOut'+i).val();
 		if(Number(num)>0){
 			num=Number(num)-1;
-			$('#numOut'+i).text(num);
+			$('#numOut'+i).val(num);
 			
 			let menuPrice=$('#menuPrice'+i).text();
 			menuPrice=Number(menuPrice);
@@ -126,7 +126,7 @@
 			
 			$('#total').text(total-menuPrice);
 		}
-		num = $('#numOut'+i).text();
+		num = $('#numOut'+i).val();
 		if(Number(num)==0){
 			$('#reserve_Check'+i).prop("checked",false);
 		}
