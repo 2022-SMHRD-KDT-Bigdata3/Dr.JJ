@@ -5,6 +5,6 @@
 		select * reviews where user_id= #{user_id}
 	</select>
 	<insert id="writereview"  parameterType="com.smhrd.model1.ReviewVO">
-	insert into reviews values (reviews_seq.nextval,#{store_id},#{reviewContent},#{reviewScore},#{reviewPic},#{user_id},#{review_dt},sysdate,#{review_title})
+	insert into reviews values (reviews_seq.nextval,#{store_id},#{reviewContent},#{reviewScore},#{reviewPic},#{userId},sysdate,#{review_title})
 </insert>
 </mapper>

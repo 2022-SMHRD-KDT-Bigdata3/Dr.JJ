@@ -27,12 +27,7 @@
 		<mapper resource="com/smhrd/db1/StoreMapper.xml" />
 		<mapper resource="com/smhrd/db1/MenuMapper.xml" />
 		<mapper resource="com/smhrd/db1/ReviewMapper.xml" />
-<<<<<<< HEAD
 		<mapper resource="com/smhrd/db1/ReservationMapper.xml" />
-
-=======
-		<mapper resource="com/smhrd/db1/ReservationMapper.xml" />
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
 	</mappers>
 
 </configuration>

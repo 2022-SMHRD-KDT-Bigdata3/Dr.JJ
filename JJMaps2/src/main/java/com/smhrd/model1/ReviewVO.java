@@ -109,13 +109,7 @@ public void setReview_title(String review_title) {
 	this.review_title = review_title;
 }
 
-public String getReviewContent() {
-	return reviewContent;
-}
 
-public void setReviewContent(String reviewContent) {
-	this.reviewContent = reviewContent;
-}
  // Reviews 모델 복사
  public void CopyData(ReviewVO param)
  {
