@@ -10,6 +10,11 @@
 
 <title>myStoreJoin</title>
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+<style type="text/css">
+#sample6_detailAddress{display:none;}
+#sample6_extraAddress{display:none;}
+#sample6_postcode{display:none;}
+</style>
 </head>
 <body>
 
@@ -31,8 +36,8 @@
 				<br>
 				<h4>점포 기본 정보</h4>
 				<br> &nbsp;<span>점포이름</span>&nbsp; <input name="store_Name"
-					type="text" class="store_name"><br><br> <span>점포연락처</span>&nbsp;<input
-					name="store_Tel" type="text" class="store_"><br> <br>
+					type="text" class="store_name" required><br><br> <span>점포연락처</span>&nbsp;<input
+					name="store_Tel" type="text" class="store_" required><br> <br>
 				<br> <span style="font-weight: bold;">카테고리</span><br><br> <input
 					type="radio" name="store_Cate" value="붕어빵">붕어빵 <input
 					type="radio" name="store_Cate" value="타코야끼">타코야끼 <input
@@ -45,9 +50,9 @@
 			<div class="store_openInfo">
 				<h4>점포 영업 정보</h4>
 				<br> <span>영업 오픈 시간&nbsp;</span><input name="store_Open_Dt"
-					type="text" class="store_runtime"><br> <br> <span>영업
-					종료 시간&nbsp;</span><input name="store_Close_Dt" type="text"
-					class="store_runtime"><br> <br> <br>
+					type="time" class="store_runtime"   required><br> <br> <span>영업
+					종료 시간&nbsp;</span><input name="store_Close_Dt" type="time"
+					class="store_runtime"  required><br> <br> <br>
 
 				<!-- 주소관련 input창 삭제 금지! 삭제하면 주소찾기 기능이 안되용~ -->
 
@@ -64,7 +69,7 @@
 					<input type="button" class="click" onclick="geo()" value="지도에 위치 등록"><br> <br>
 				<br> 
 				<input name="x" type="text" readonly="readonly"
-					id="sample6_latitude" placeholder="x좌표"> 
+					id="sample6_latitude" placeholder="x좌표"> <br>
 					
 					<input name="y"
 					type="text" readonly="readonly" id="sample6_longitude"

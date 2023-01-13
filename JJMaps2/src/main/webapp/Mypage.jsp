@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="assets/css/storedtail.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <title>Mypage</title>
 </head>
 <body>
@@ -76,14 +77,6 @@
 
 	</strong>
 
-	<script>
-		function next() {
-			if (confirm("점포이용자가 아닙니다. \n점포등록 페이지로 이동할까요?")) {
-				location.href = "MystoreJoin.jsp";
-			}
-		}
-	</script>
-
 
 	<footer id="fix" onClick='location.href="Basket.jsp"'>
 		<div id="myr">장바구니</div>
@@ -97,5 +90,32 @@
 	<br>
 
 	<footer id="footer">@JJUPJJUPBAKSA</footer>
+	
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		function next() {
+		
+			Swal.fire({
+				   title: '점포이용자가 아닙니다.',
+				   text: '점포등록 페이지로 이동할까요?',
+				   icon: '',
+				   
+				   showCancelButton: true, // cancel버튼 보이기. 기본은 원래 없음
+				   confirmButtonColor: '#FD6F22', // confrim 버튼 색깔 지정
+				   cancelButtonColor: '#0E5049', // cancel 버튼 색깔 지정
+				   confirmButtonText: '네', // confirm 버튼 텍스트 지정
+				   cancelButtonText: '아뇨', // cancel 버튼 텍스트 지정
+				   
+				}).then(result => {
+				    if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
+				    	location.href = "MystoreJoin.jsp";
+				    } else if (result.isDismissed) { // 만약 모달창에서 cancel 버튼을 눌렀다면
+				    	 location.href = "Mypage.jsp";
+				    }
+				});
+			}
+	
+	</script>
+	
 </body>
 </html>
