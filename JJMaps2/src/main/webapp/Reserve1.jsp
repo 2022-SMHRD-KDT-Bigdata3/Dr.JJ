@@ -36,13 +36,13 @@
 	%>
 	<div id="conteiner">
 		<div id="innerconteiner">
-			<div>😢</div>
+			<div>😢</div><br>
 			<div>현재 예약된 주문이 없습니다</div>
 		</div>
-	</div><br><br><br><br><br><br><br>
+	</div><br><br><br><br><br>
 	<form class="form">
 		<button type="button" onClick='location.href="Renovation.jsp"'>주문하러 가기</button>
-	</form>
+	</form><br><br><br><br><br><br><br>
 	<%
 	} else {
 	%>
