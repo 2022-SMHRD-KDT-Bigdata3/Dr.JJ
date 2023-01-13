@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "reset.css";
 
+
 /* 버튼효과 */
 input[type=text]{ 
     border: 1px solid gainsboro;
@@ -321,18 +322,20 @@ div#logo{
 
 /* 나브영역 */
 nav{
-    
+	font-family : 'NanumSquareNeo-Variable';
     width: 100%;
-    height: 90px;
-    background-color: aqua;
+    height: 50px;
+    background-color: #FD6F22;
 }
 
 h1{
+	color:white;
     text-align: center;
 }
 
+
 #sdtail{
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -533,9 +536,6 @@ div>h4{
 .sb{
 	 text-align: center;
 }
-
-
-
 
 /* 푸터영역 */
 #footer{

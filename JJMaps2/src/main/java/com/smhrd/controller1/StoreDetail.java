@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.smhrd.model1.MenuDAO;
+import com.smhrd.model1.MenuVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
 
@@ -35,26 +38,55 @@ public class StoreDetail extends HttpServlet {
 		
 		
 		//스토어 객체 받아오기
-		StoreDAO dao =  new StoreDAO();
-		StoreVO vo=null;
+		StoreDAO storeDAOs= new StoreDAO();
+		StoreVO storeVOs=null;
 
 		if(store_id!=0) {
-		vo =  dao.store_Select_Storeid(store_id);
+		storeVOs =  storeDAOs.store_Select_Storeid(store_id);
 		}else {
-		vo =  dao.mystoreselect(user_Id);	
+		storeVOs =  storeDAOs.mystoreselect(user_Id);	
 		}
-					
 		
-		if(vo!=null) {
-			HttpSession session = request.getSession();
-			request.setAttribute("store_info", vo);
-			RequestDispatcher rdi = request.getRequestDispatcher("Storedtail.jsp");
-    		rdi.forward(request, response);
-            
-			
-		}else{
-			response.sendRedirect("Main.jsp");
+		
+		//menu 객체 받아오기 
+		MenuDAO menuDAOs=new MenuDAO();
+		ArrayList<MenuVO> menulist=new ArrayList<MenuVO>();
+		
+		if(store_id!=0) {
+			menulist =  menuDAOs.menuSelect(store_id);
+		}else {
+			menulist =  menuDAOs.menu_Select_user_id(user_Id);	
 		}
+		
+		
+			
+
+			try {//예약하기 페이지로 재활용
+				String send = request.getParameter("send");
+				System.out.println("예약하기"+send);
+				HttpSession session = request.getSession();
+				request.setAttribute("store_info", storeVOs);
+				request.setAttribute("menu_info", menulist);
+				RequestDispatcher rdi = request.getRequestDispatcher(send);
+	    		rdi.forward(request, response);
+			} catch (Exception e) {
+				
+				if(storeVOs!=null) {
+					HttpSession session = request.getSession();
+					request.setAttribute("store_info", storeVOs);
+					request.setAttribute("menu_info", menulist);
+					RequestDispatcher rdi = request.getRequestDispatcher("Storedtail.jsp");
+					rdi.forward(request, response);
+					
+					
+				}else{
+					response.sendRedirect("Main.jsp");
+				}
+				
+			}
+		
+		
+		
 		
 		
 	}

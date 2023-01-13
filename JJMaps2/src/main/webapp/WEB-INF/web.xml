@@ -27,7 +27,7 @@
   	<servlet-name>WebSocket</servlet-name>
   	<display-name>WebSocket</display-name>
   	<description></description>
-  	<servlet-class>WebSocket.WebSocket</servlet-class>
+  	<servlet-class>Ws.WebSocket</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Search</servlet-name>

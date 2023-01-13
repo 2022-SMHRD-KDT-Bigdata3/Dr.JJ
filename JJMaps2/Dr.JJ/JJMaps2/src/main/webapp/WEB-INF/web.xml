@@ -102,18 +102,7 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
   </servlet>
-  
-  
- 
-  
- 
-
-=======
-  
-  
-
-  
- <servlet>
+  <servlet>
  	<servlet-name>storedetail</servlet-name>
  	<display-name>storedetail</display-name>
  	<description></description>
