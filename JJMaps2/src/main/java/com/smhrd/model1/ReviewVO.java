@@ -25,13 +25,13 @@ private String review_title;
  private String reviewPic;
 
  // 리뷰 작성자
- private String userId;
+ private String user_Id;
 
  // 리뷰 작성시간
  private Date reviewDt;
  
 
- public ReviewVO(Integer store_id,String review_title ,String reviewContent, Integer reviewScore, String reviewPic, String userId) {
+ public ReviewVO(Integer store_id,String review_title ,String reviewContent, Integer reviewScore, String reviewPic, String user_Id) {
 	super();
 	
 	this.store_id = store_id;
@@ -39,7 +39,7 @@ private String review_title;
 	this.reviewContent = reviewContent;
 	this.reviewScore = reviewScore;
 	this.reviewPic = reviewPic;
-	this.userId = userId;
+	this.user_Id = user_Id;
 }
 
 public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic2, String user_id) {
@@ -86,15 +86,17 @@ public Integer getReviewId() {
      this.reviewPic = reviewPic;
  }
 
- public String getUserId() {
-     return userId;
- }
 
- public void setUserId(String userId) {
-     this.userId = userId;
- }
 
- public Date getReviewDt() {
+ public String getUser_Id() {
+	return user_Id;
+}
+
+public void setUser_Id(String user_Id) {
+	this.user_Id = user_Id;
+}
+
+public Date getReviewDt() {
      return reviewDt;
  }
 
@@ -109,22 +111,6 @@ public void setReview_title(String review_title) {
 	this.review_title = review_title;
 }
 
-public String getReviewContent() {
-	return reviewContent;
-}
 
-public void setReviewContent(String reviewContent) {
-	this.reviewContent = reviewContent;
-}
- // Reviews 모델 복사
- public void CopyData(ReviewVO param)
- {
-     this.reviewId = param.getReviewId();
-     this.store_id = param.getstore_id();
-     this.reviewContent = param.getreviewContent();
-     this.reviewScore = param.getReviewScore();
-     this.reviewPic = param.getReviewPic();
-     this.userId = param.getUserId();
-     this.reviewDt = param.getReviewDt();
- }
+
 }
