@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
-import com.smhrd.model1.StoreVO;
 
 /**
  * Servlet implementation class ReviewService
@@ -24,12 +23,13 @@ public class ReviewService extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO memberVOs = (MemberVO)session.getAttribute("info");
 		String User_Id= memberVOs.getUser_Id();
-		System.out.println("User_Id");
+		System.out.println(User_Id);
 		StoreDAO dao = new StoreDAO();
-		StoreVO storeVOs = (StoreVO)request.getAttribute("Storeinfo");
+		Integer store_id = Integer.parseInt(request.getParameter("store_id"));
+		System.out.println(store_id.toString());
 		
-		if(storeVOs !=null) {
-			request.setAttribute("Storeinfo", storeVOs);
+		if(store_id !=null) {
+			request.setAttribute("store_id", store_id);
 			RequestDispatcher rdi = request.getRequestDispatcher("writeReview.jsp");
     		rdi.forward(request, response);
 		}else {
