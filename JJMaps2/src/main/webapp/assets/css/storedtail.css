@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "reset.css";
 
+
 /* 버튼효과 */
 input[type=text]{ 
     border: 1px solid gainsboro;
@@ -535,9 +536,6 @@ div>h4{
 .sb{
 	 text-align: center;
 }
-
-
-
 
 /* 푸터영역 */
 #footer{
