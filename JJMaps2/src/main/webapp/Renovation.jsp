@@ -17,6 +17,9 @@
 
 <style type="text/css">
 .btnCalc {width: 15px; height:20px;}
+.hidden{display:none}
+
+
 </style>
 </head>
 
@@ -41,7 +44,8 @@
 
 
 	<form class="form" action="reserveInsert" method="post">
-
+		<input class="hidden" name="store_Id" value="<%=store_info.getStore_Id()%>" type="text" >
+		<input class="hidden" name="user_Id" value="<%=info.getUser_Id()%>" type="text">
 		<div class="info">
 			<div class="info">
 				<img src="images/profil_img.jpg"> <br>
@@ -58,6 +62,8 @@
 
 			<%for (int i = 0; i < menu_info.size(); i++) {%>
 			<tr>
+			
+				<input id="reserve_Check<%=i%>" class="hidden" name="reserve_list" type="checkbox" readonly="readonly" value="<%=menu_info.get(i).getMenu_Id()%>">
 				<td rowspan="3"><%=(i + 1)%></td>
 				<td rowspan="3">사진</td>
 				<td><H3 class="menu_name"><%=menu_info.get(i).getMenu_Name()%></H3></td>
@@ -70,7 +76,7 @@
 				</td>
 				<td>
 					<button id="btnPlus<%=i%>" class="btnPlus btnCalc" type="button" onclick="up1('<%=i%>')">+</button>
-					<span id="numOut<%=i%>">0</span>
+					<a id="numOut<%=i%>" name="food_count">0</a>
 					<button id="btnMinus<%=i%>" class="btnMinus btnCalc" type="button" onclick="down1(<%=i%>)">-</button>
 				</td>
 			</tr>
@@ -102,7 +108,7 @@
 		total= Number(total);
 		
 		$('#total').text(total+menuPrice);
-	
+		$('#reserve_Check'+i).prop("checked",true);
 	}
 	
 	
@@ -119,6 +125,10 @@
 			total= Number(total);
 			
 			$('#total').text(total-menuPrice);
+		}
+		num = $('#numOut'+i).text();
+		if(Number(num)==0){
+			$('#reserve_Check'+i).prop("checked",false);
 		}
 
 	}
