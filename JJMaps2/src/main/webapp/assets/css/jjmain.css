@@ -75,41 +75,37 @@ header {
 	border-bottom: 1px solid rgb(234, 234, 234);
 }
 
-#login {
-		
-	color: black;
-	text-align: center;
-	margin: 0 0 0 5px;
-}
 
-#join {
+
+
+a{ 
+	text-decoration: none;
+	} 
 	
-	color: black;
-	text-align: center;
-	margin: 0 5px 0 5px;
 	
-}
 
-#mypage {
-
-	color: black;
-	text-align: center;
-	margin: 0 0 0 5px;
-}
-
-#logout {
-
-	color: black;
-	text-align: center;
-	margin: 0 5px 0 5px;
-}
-
-.menu {
+#logme.menus>ul{
 	font-family: 'NanumSquareNeo-Variable';
-	margin-top: -55px;
-	margin-left: auto;
-	margin-right: auto;
-	float:right;
+	width: 100%;
+	text-align:right;
+	margin-top:-60px;
+}
+
+#logme.menus>li{
+	display: inline-block;
+	height:12px;
+	line-height: 12px;
+}
+#logme.menus>li:last-child{
+	border-left: 1px solid #333;
+	padding-left: 10px;
+	margin-left: 4px;
+}
+#logme.menus>a{
+	color: #333;
+	font-size: 12px;
+	position: relative;
+	top: 2px;
 }
 
 .Header_Init_Section {
@@ -136,7 +132,7 @@ header {
 	margin-left : auto;
 	margin-right: auto;
 	background-color: #0E5049;
-	margin-left: auto;
+
 	
 }
 
