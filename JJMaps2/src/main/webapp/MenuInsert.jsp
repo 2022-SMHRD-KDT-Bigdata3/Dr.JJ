@@ -51,10 +51,11 @@
 	</div>
 <tr>
    <td>1</td>
-            <td><textarea class="menu_insert" id="menu_Name0" name="menu_Name" cols="15" rows="2"></textarea></td>
-            <td><input class="menu_insert" id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
-            <td><textarea class="menu_insert"  id="menu_Detail0" name="menu_Detail" cols="30" rows="2"></textarea></td>
-
+   			<div class="menuinsert">
+            <td><input id="menu_Name0" name="menu_Name" type="text"></input></td>
+            <td><input id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
+            <td><input id="menu_Detail0" name="menu_Detail" type="text"></input></td>
+</div>
             <td><input type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
             <td><br><br></td></tr>
 
@@ -79,9 +80,9 @@
 													+ '<td>'
 													+ (i + 1)
 													+ '</td>'
-													+ '<td><textarea id="menu_Name+i+" name="menu_Name" cols="20" rows="2"></textarea> </td>'
+													+ '<td><input id="menu_Name0" name="menu_Name" type="text"></input></td>'
 													+ '<td><input id="menu_Price'+i+'" name="menu_Price" type = "text" class="price" type="text" pattern="[0-9]+"></td>'
-													+ '<td><textarea id="menu_Detail'+i+'" name="menu_Detail" cols="30" rows="2"></textarea></td>'
+													+ '<td><input id="menu_Detail0" name="menu_Detail" type="text"></input></td>'
 													+ '<td></td>'
 													+ '<td><button class="click" type="button" id="btnRemove'
 													+ i
