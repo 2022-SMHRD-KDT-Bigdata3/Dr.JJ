@@ -13,6 +13,8 @@
     <meta name="format-detection" content="telephone-no">
     
     <link rel="stylesheet" type="text/css" href="assets/css/search.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+    
     <title>Document</title>
     <style>
 
@@ -23,13 +25,19 @@
 </style>
 </head>
 <body>
+
+		<div id="logo">
+			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		</div>
+
+
 	<% ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
 	<% ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
 					
 					
         <div id="headerdiv">
             <header>
-                <a class="header_emt" id="main_Logo" href="Main.jsp">로고</a>
+               <!-- <a class="header_emt" id="main_Logo" href="Main.jsp">로고</a> --> 
                 <form class="header_emt " id="main_form" action="Search" >
                         <input name="searchWord" class="header_emt search" type="text" placeholder="검색어 입력">
                         <input class="header_emt search" type="submit" value="검색">
