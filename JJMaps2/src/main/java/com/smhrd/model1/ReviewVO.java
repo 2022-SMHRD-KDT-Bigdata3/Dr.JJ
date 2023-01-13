@@ -15,7 +15,7 @@ public class ReviewVO {
  private String reviewContewnt;
 
  // 평점
- private Double reviewScore;
+ private Integer reviewScore;
 
  // 리뷰 사진
  private String reviewPic;
@@ -26,7 +26,11 @@ public class ReviewVO {
  // 리뷰 작성시간
  private Date reviewDt;
 
- public Double getReviewId() {
+ public ReviewVO(String review_title, String reviewContent, int reviewScore, String reviewPic2, String user_id) {
+	// TODO Auto-generated constructor stub
+}
+
+public Double getReviewId() {
      return reviewId;
  }
 
@@ -50,11 +54,11 @@ public class ReviewVO {
      this.reviewContewnt = reviewContewnt;
  }
 
- public Double getReviewScore() {
+ public Integer getReviewScore() {
      return reviewScore;
  }
 
- public void setReviewScore(Double reviewScore) {
+ public void setReviewScore(Integer reviewScore) {
      this.reviewScore = reviewScore;
  }
 
