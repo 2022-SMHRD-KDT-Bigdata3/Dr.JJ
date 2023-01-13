@@ -5,14 +5,7 @@ import java.sql.Date;
 //예약
 public class ReservationVO {
 
- public ReservationVO(Integer storeId, String userId, String storeMenu, String storePrice, Date pTime) {
-		super();
-		this.storeId = storeId;
-		this.userId = userId;
-		this.storeMenu = storeMenu;
-		this.storePrice = storePrice;
-		this.pTime = pTime;
-	}
+
 
 // 예약 번호
  private Long rNumber;
@@ -90,8 +83,27 @@ public class ReservationVO {
  public void setPTime(Date pTime) {
      this.pTime = pTime;
  }
+ public ReservationVO(Integer storeId, String userId, String storeMenu, String storePrice, Date pTime) {
+		super();
+		this.storeId = storeId;
+		this.userId = userId;
+		this.storeMenu = storeMenu;
+		this.storePrice = storePrice;
+		this.pTime = pTime;
+	}
 
- // Reservations 모델 복사
+public ReservationVO(Integer storeId, String userId) {
+	super();
+	this.storeId = storeId;
+	this.userId = userId;
+}
+
+ public ReservationVO(Integer storeId) {
+	super();
+	this.storeId = storeId;
+}
+
+// Reservations 모델 복사
  public void CopyData(ReservationVO param)
  {
      this.rNumber = param.getRNumber();
