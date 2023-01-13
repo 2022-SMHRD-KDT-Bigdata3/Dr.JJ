@@ -163,6 +163,7 @@
 		<div class="love">
 			<h2>카테고리</h2>
 			
+			
 		</div>
 	</header>
 	<div class="button">

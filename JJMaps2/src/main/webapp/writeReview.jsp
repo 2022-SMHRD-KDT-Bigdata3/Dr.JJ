@@ -14,9 +14,43 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 
 <style>
-		table {width: 100%;}
-		th { text-align: left; }
-		td { text-align: center; }
+table {
+	width: 100%;
+}
+
+th {
+	text-align: left;
+}
+
+td {
+	text-align: center;
+}
+
+#myform fieldset{
+    display: inline-block;
+    direction: rtl;
+    border:0;
+}
+#myform fieldset legend{
+    text-align: right;
+}
+#myform input[type=radio]{
+    display: none;
+}
+#myform label{
+    font-size: 3em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+#myform label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
 </style>
 </head>
 
@@ -40,7 +74,7 @@
 <body class="is-preload">
 	<%
 	MemberVO info = (MemberVO) (session.getAttribute("info"));
-	StoreVO st_info = (StoreVO) (request.getAtrribute("Storeinfo"));
+	Integer store_id = Integer.parseInt(request.getParameter("store_id"));
 	%>
 
 
@@ -66,13 +100,15 @@
 
 
 	<div class="form">
-		<form action="upload" method="post" enctype="multipart/form-data">
+		<form id="myform" action="UploadServlet" method="post"
+			enctype="multipart/form-data">
+			<input type="hidden" name="store_id"  value= "<%=store_id%>">
 			<table>
 				<tr bgcolor="orange" height="50px">
 					<div style="color: orange" id="null">리뷰합니다!</div>
 				</tr>
 
-		
+
 				<tr height="35px">
 					<td><textarea placeholder="제목을 입력하세요" name="title" cols="50"
 							rows="1"></textarea></td>
@@ -80,20 +116,39 @@
 					<td><textarea placeholder="내용을 입력하세요" cols="50" name="content"
 							rows="20"></textarea></td>
 				</tr>
-		
+
 				<!-- 사진선택 등록-->
 
 				<tr height="35px" border-radius: 5px; rbgcolor="orange">
-					<td align="Right"><input type="file" name="uploadFile id="
-						real-input" class="image_inputType_file" onchange="readURL(this);"
-						accept="img/*" required multiple><br>
-					<br>
-						<div class="sb">
-							<input type="submit" value="등록"></td>
+					<td align="Right"><input type="file" name="uploadFile" id=
+						"real-input" class="image_inputType_file" onchange="readURL(this);"
+						accept="img/*" required multiple></td></tr><br> <br>
+				<tr>
+					<td>
+					<div class= "starScore">
+						<fieldset>
+							<span class="text-bold">별점을 선택해주세요</span> 
+							<input type="radio" name="reviewStar" value="5" id="rate1">
+								<label for="rate1">★</label> 
+							<input type="radio" name="reviewStar" value="4" id="rate2">
+								<label for="rate2">★</label> 
+							<input type="radio" name="reviewStar" value="3" id="rate3">
+								<label for="rate3">★</label> 
+							<input type="radio" name="reviewStar" value="2" id="rate4">
+								<label for="rate4">★</label> 
+							<input type="radio" name="reviewStar" value="1" id="rate5">
+								<label for="rate5">★</label>
+						</fieldset>
+						</div>
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<div class="sb">
+						<td><input type="submit" value="등록"></td>
 					</div>
 					<br>
-					<br>
-					<br>
+					
 				</tr>
 			</table>
 		</form>

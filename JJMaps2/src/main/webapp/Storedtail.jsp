@@ -17,7 +17,10 @@
    </head>
    <body >
    
+<<<<<<< HEAD
+=======
    <%	MemberVO info = (MemberVO)session.getAttribute("info");	%>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
     <!-- 헤더영역 -->
@@ -44,8 +47,8 @@
         <div>전화번호</div>
     </main>
 
-
-    <div id="review"><a id="review" onClick='location.href="#"'>(리뷰)</a></div>
+	<% Integer store_id = store_info.getStore_Id(); %>
+    <div id="review"><a id="review" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>(리뷰)</a></div>
     
     
     <main id="main2">메인2 (메뉴 및 사진)
@@ -89,7 +92,7 @@
         <input type="hidden" name="storeId" value="<%=store_info.getStore_Id()%>">
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
-       <li><a id='review' href='ReviewService'>리뷰</a></li>");
+       <li><a id='review' href=''>리뷰</a></li>");
         </form>
  
 

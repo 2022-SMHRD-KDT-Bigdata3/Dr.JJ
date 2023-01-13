@@ -26,6 +26,7 @@ public class UploadServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
+		Integer store_id = Integer.parseInt(request.getParameter("store_id"));
 		String user_id = info.getUser_Id();
 		String savePath = "upload";
 		// 최대 업로드 파일 크기 5MB로 제한
@@ -49,7 +50,7 @@ public class UploadServlet extends HttpServlet {
 				int reviewScore = Integer.parseInt(multi.getParameter("reviewStar"));
 				String review_title =multi.getParameter("title");
 				String reviewContent =multi.getParameter("content");
-				ReviewVO vo = new ReviewVO(review_title, reviewContent, reviewScore, reviewPic, user_id);
+				ReviewVO vo = new ReviewVO(store_id, review_title, reviewContent, reviewScore, reviewPic, user_id);
 				System.out.println(vo);
 				System.out.println(uploadFilePath);
 				ReviewDAO dao = new ReviewDAO();
@@ -61,4 +62,5 @@ public class UploadServlet extends HttpServlet {
 		
 	
 	}
+
 }

@@ -9,15 +9,23 @@
 <style type="text/css">
 span{color:gray;}
 </style>
+<link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 </head>
 
-<body>
+
+<body class="is-preload">
 <%MemberVO info = (MemberVO) (session.getAttribute("info"));%>
 	<% String searchWord=(String)request.getAttribute("searchWord");%>
 	
 	
 	
-<a href="Main.jsp">쩝쩝 로고</a>	
+<div id="logo">
+		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+	</div>	
+	
+	<div class="menu">
+		<div id="logme" class="menus">
+		<ul>
 	
 			<%
 			if (info != null) {
@@ -36,6 +44,15 @@ span{color:gray;}
 				out.print("<a id='join' href='Join.jsp'>회원가입</a>");
 			}
 			%>
+	
+		</ul>
+</div>
+	<header class="bar">
+		<div id="Title">
+			<h1>검색 결과</h1>
+		</div>
+	</header>
+	
 	
 	
 	<br>

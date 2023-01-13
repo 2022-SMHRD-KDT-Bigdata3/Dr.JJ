@@ -105,7 +105,7 @@
 			}); 
 			var infoWindow = new google.maps.InfoWindow;
 //Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
-			downloadUrl('http://localhost:14510/JJMap/output.xml', function(data) {
+			downloadUrl('http://localhost:8084/JJMap/output.xml', function(data) {
 						var xml = data.responseXML;
 						var markers = xml.documentElement.getElementsByTagName('marker');
 						Array.prototype.forEach.call(markers, function(markerElem) {
