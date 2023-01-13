@@ -22,10 +22,10 @@ public class ReviewDAO {
 		session.close();
 		return res;
 	}
-	public ArrayList<ReviewVO> myReview(String user_id){
+	public ArrayList<ReviewVO> myReview(String user_Id){
 		session = sqlSessionFactory.openSession(true);
 		List<ReviewVO> list = null;
-		list = session.selectList("myReview", user_id);
+		list = session.selectList("myReview", user_Id);
 		session.close();
 		return (ArrayList<ReviewVO>) list;
 	}

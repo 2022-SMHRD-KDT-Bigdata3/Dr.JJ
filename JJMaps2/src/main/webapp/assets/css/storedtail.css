@@ -259,23 +259,35 @@ header{
 
    /* searchResultEmpty 로그인영역 */
 
-.like {
+#logme.menus>ul{
+	font-family: 'NanumSquareNeo-Variable';
+	width: 100%;
+	text-align:right;
+	margin-top:-20px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 100px;
-	max-height: 74px;
-	border-top: 1px solid rgb(234, 234, 234);
-	border-bottom: 1px solid rgb(234, 234, 234);
 }
-
-.love{
-	font-family: 'RixInooAriDuriR';
-	font-style:light;
-	font-size:35px;
-	text-align:center;
-	margin-top:20px;
+ /*메인처럼 띄우고 싶을 때 긁어서 가져가시오.(로그인)*/
+#logme.menus>li{
+	display: inline-block;
+	height:12px;
+	line-height: 12px;
+}
+#logme.menus>li:last-child{
+	border-left: 1px solid #333;
+	padding-left: 10px;
+	margin-left: 4px;
+}
+#logme.menus>a{
+	color: #333;
+	font-size: 12px;
+	position: relative;
+	top: 2px;
+}
+a{ 
+	text-decoration: none;
+	} 
 	
-}
 
 
 
@@ -508,7 +520,7 @@ img{
     height: 30px;
     cursor: pointer;
     color:white;
-   
+   	bagcolor:orange;
     opacity: 0.7;
 }
 
