@@ -16,6 +16,7 @@
 
 	<header>
 		<div id="Title">장바구니</div>
+		
 	</header>
 
 	<div class="box_dashed">
