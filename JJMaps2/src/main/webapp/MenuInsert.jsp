@@ -33,7 +33,7 @@
 
 	<br><br><br>
 	<form class="form" action="MenuInsert" method="post" enctype="multipart/form-data">
-		<button id="btnAdd" type="button">메뉴 추가</button>
+		<button id="btnAdd" type="button">메뉴 추가</button><br>
 		<br> <span class="little2">상위 4개 메뉴가 검색시 노출됩니다</span><br>
 		<br><br>
 	
@@ -47,11 +47,11 @@
 				<th class="tr">사진</th>
 				<th class="tr">삭제</th>
 			</tr>
-			<br>
+			<br><br>
 	</div>
 <tr>
    <td>1</td>
-            <td><textarea id="menu_Name0" name="menu_Name" cols="20" rows="2"></textarea></td>
+            <td><textarea id="menu_Name0" name="menu_Name" cols="15" rows="2"></textarea></td>
             <td><input id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
             <td><textarea id="menu_Detail0" name="menu_Detail" cols="30" rows="2"></textarea></td>
 
@@ -66,13 +66,7 @@
 
 	<input type="submit" value="메뉴 등록" class="click">
 
-
-	</form>
-
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-
-
 
 	<script>
 		let i = 1;

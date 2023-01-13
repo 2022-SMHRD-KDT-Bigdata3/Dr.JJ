@@ -31,7 +31,7 @@
 				<br>
 				<h4>점포 기본 정보</h4>
 				<br> &nbsp;<span>점포이름</span>&nbsp; <input name="store_Name"
-					type="text" class="store_name"><br> <br> <span>점포연락처</span>&nbsp;<input
+					type="text" class="store_name"><br><br> <span>점포연락처</span>&nbsp;<input
 					name="store_Tel" type="text" class="store_"><br> <br>
 				<br> <span style="font-weight: bold;">카테고리</span><br><br> <input
 					type="radio" name="store_Cate" value="붕어빵">붕어빵 <input
