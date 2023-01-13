@@ -13,6 +13,8 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 <style type="text/css">
 .btnCalc {width: 15px; height:20px;}
 </style>
@@ -80,11 +82,10 @@
 		<hr style="border: solid 1px gray;">
 		<div class="total_price">
 			<h4>현재 주문 금액 : <span id="total">0</span></h4>
-		
-
 		</div>
-
-		<input class="button" type=submit value="예약하기"><br> <br>
+		<button class="button" onclick="submit_check()" >예약하기</button>
+		<!-- 예약하기 버튼으로 살려주세요.. -->
+		<br> <br>
 	</form>
 	
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -101,9 +102,10 @@
 		total= Number(total);
 		
 		$('#total').text(total+menuPrice);
-		
-		
+	
 	}
+	
+	
 	function down1(i){
 		let num = $('#numOut'+i).text();
 		if(Number(num)>0){
@@ -118,12 +120,25 @@
 			
 			$('#total').text(total-menuPrice);
 		}
-		
-		
-		
+
 	}
 	
-        
+	
+		
+	   $(document).ready(function() {
+	        $('.form').submit(function() {
+	            if ($('#total').text() === '0') {
+	            	 Swal.fire({
+	                     icon: '',
+	                     title: '',
+	                     text: '주문할 메뉴를 골라주세요📌',
+	                     confirmButtonColor: '#FD6F22'
+	                 });
+	                return false;
+	            }
+	        }); // end submit()
+	    }); // end ready()
+	   
         
     </script>
 </body>

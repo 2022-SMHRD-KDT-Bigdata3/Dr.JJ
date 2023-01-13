@@ -9,6 +9,7 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone-no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
 <body>
@@ -26,15 +27,15 @@
 		</header>
 
 		<div id="login_input">
-			<form style="margin-top: 80px; margin-bottom: 20px;" action="Login"
+			<form class="form" style="margin-top: 80px; margin-bottom: 20px;" action="Login"
 				method="post">
 				<div class="id">아이디</div>
-				<input name="user_Id" class="login_contents idcheck" align="center"
-					type="text" placeholder="아이디를 입력하세요"><br> <br>
+				<input id="userId" name="user_Id" class="login_contents idcheck" align="center"
+					type="text" placeholder="아이디를 입력하세요" ><br> <br>
 
 				<div class="pw">비밀번호</div>
-				<input name="user_Pw" class="login_contents" align="center"
-					type="password" placeholder="비밀번호를 입력하세요"><br> <br>
+				<input id="userPw" name="user_Pw" class="login_contents" align="center"
+					type="password" placeholder="비밀번호를 입력하세요" ><br> <br>
 				<input class="login_contents" align="center" type="submit"
 					value="로그인"><br> <br> <br> <br>
 
@@ -51,6 +52,35 @@
 		</div>
 	</div>
 	<footer id="footer">@JJUPJJUPBAKSA</footer>
+	
+	
+	
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+	 $(document).ready(function() {
+	        $('.form').submit(function() {
+	        	let id=$('#userId').val();
+	        	let pw=$('#userPw').val();
+	            if (id=="") {
+	            	 Swal.fire({
+	                     icon: '',
+	                     title: '',
+	                     text: '아이디를 입력해주세요',
+	                     confirmButtonColor: '#FD6F22'
+	                 });
+	                return false;
+	            }else if(pw==""){
+	            	 Swal.fire({
+	                     icon: '',
+	                     title: '',
+	                     text: '비밀번호를 입력해주세요',
+	                     confirmButtonColor: '#FD6F22'
+	                 });
+	            	 return false;
+	            }
+	        }); // end submit()
+	    }); // end ready()
+	    </script>
 
 </body>
 </html>

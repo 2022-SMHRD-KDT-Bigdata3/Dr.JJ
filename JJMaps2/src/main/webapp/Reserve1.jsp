@@ -13,6 +13,10 @@
 
 
    <body class="is-preload">
+	<%
+	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
+	StoreVO storeName = (StoreVO) session.getAttribute("storeName");
+	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");%>
 		  <div id="logo">
 			 <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 		  </div>
@@ -28,24 +32,7 @@
 	<br>
 	<br>
 
-	<%
-	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
-	StoreVO storeName = (StoreVO) session.getAttribute("storeName");
-	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");
-	if (rNumber == null) {
-	%>
-	<div id="conteiner">
-		<div id="innerconteiner">
-			<div>😢</div><br>
-			<div>현재 예약된 주문이 없습니다</div>
-		</div>
-	</div><br><br><br><br><br>
-	<form class="form">
-		<button type="button" onClick='location.href="Renovation.jsp"'>주문하러 가기</button>
-	</form><br><br><br><br><br><br><br>
-	<%
-	} else {
-	%>
+
 	<h1><%=storeName%></h1>
 	<h3><%=storeAddr%></h>
 
@@ -63,9 +50,7 @@
 				<div>부득이한 상황시 점포와 직접 통화하시기 바랍니다.</div>
 			</div>
 		</div>
-		<%
-		}
-		%>
+	
 		
 		
 	
