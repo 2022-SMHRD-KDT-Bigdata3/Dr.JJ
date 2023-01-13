@@ -88,7 +88,7 @@
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
         </form>
-
+ 
 
 
     <footer id = "footer">@JJUPJJUPBAKSA</footer>
