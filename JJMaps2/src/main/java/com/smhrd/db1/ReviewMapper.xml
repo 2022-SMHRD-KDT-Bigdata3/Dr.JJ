@@ -7,4 +7,7 @@
 	<insert id="writereview"  parameterType="com.smhrd.model1.ReviewVO">
 	insert into reviews values (reviews_seq.nextval,#{store_id},#{reviewContent},#{reviewScore},#{reviewPic},#{user_Id},sysdate,#{review_title})
 </insert>
+<select id="scores" resultType="com.smhrd.model1.ReviewVO">
+	select * from reviews where store_id = #{store_id}
+</select>
 </mapper>

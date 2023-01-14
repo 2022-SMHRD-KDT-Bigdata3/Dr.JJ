@@ -31,9 +31,10 @@
 
 	<main>
 		<div class="font1">
-			<a>내가 작성한 리뷰😄</a>
+			<a >내가 작성한 리뷰😄</a>
 		</div>
-		<table border="1px solid" class="Myreviews">
+		<div>
+		<table align="center" border='1' class="Myreviews">
 			<tr>
 				<th>번호</th>
 				<th>리뷰제목</th>
@@ -58,10 +59,11 @@
 				<td><%=review.get(i).getReviewDt()%></td>
 
 			</tr>
-
+		</table>
 			<%
 			}
 			%>
+			</div>
 			</main>
 
 

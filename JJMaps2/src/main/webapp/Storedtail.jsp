@@ -2,6 +2,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="com.smhrd.model1.StoreVO"%>
+<%@page import="com.smhrd.model1.ReviewDAO"%>
+<%@page import="com.smhrd.model1.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +29,7 @@
 			<div id="logo">
 			   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
-
+	</div>
     <!-- 가게소개 영역 -->
     <nav>
         <h1><%=store_info.getStore_Name() %></h1>
@@ -47,6 +49,11 @@
     </main>
 
 	<% Integer store_id = store_info.getStore_Id(); %>
+	<% ReviewDAO dao = new ReviewDAO(); %>
+	<% Double score=  dao.avgScores(store_id); 
+	if(score==null){
+		score = 0.0;
+	}%>
     <div id="review"><a id="review" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>(리뷰)</a></div>
     
     
@@ -57,7 +64,7 @@
             
             
             
-            <table border="1px solid" class="addInput">
+            <table border="1" class="addInput">
 			<tr>
 				<th>번호</th>
 				<th>메뉴이름</th>
@@ -77,12 +84,15 @@
 				
 			<% } %>
             
-            
+            </table>
+        
+           
             
             
         </div>
         <div>(영업상태) 및 정보</div>
         <div>(전화번호)</div>
+        <div>평점 ⭐ : <%=score %></div>
     </main>
     <footer id = "fix"  >
     
@@ -91,8 +101,8 @@
         <input type="hidden" name="storeId" value="<%=store_info.getStore_Id()%>">
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
-       <li><a id='review' href=''>리뷰</a></li>");
-        </form>
+   </form>
+        </footer>
  
 
 
