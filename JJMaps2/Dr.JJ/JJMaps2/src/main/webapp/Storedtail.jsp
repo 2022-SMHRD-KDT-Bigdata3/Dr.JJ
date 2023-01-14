@@ -77,33 +77,34 @@
 	<br>
 	<br>
 
-	<div id="null">
+	<div id="null"></div>
 		<main id="main2"><br><br>
-			<div class=menu_pic>메인2 (메뉴 및 사진)</div>
+			<div class=menu_pic>메뉴</div>
 			<br>
 			<div>
 				<h3>메뉴판</h3>
 				<br> <span>(맛있는 메뉴)</span><br>
-
-				<table border="1px solid" class="addInput">
-<br><br><br><br>
+</div>
+</main>
+				<table border="1" class="addInput">
 					<main id="main2" >
 						메인2 (메뉴 및 사진)
 						<div><br>
 							<h3>메뉴판</h3><br>
 							<span>(맛있는 메뉴)</span><br>
-
-
+							</div>
+</table>
+				
 
 							<table border="1" class="addInput">
-
+<div>
 								<tr>
-									<th>번호</th>
-									<th>메뉴이름</th>
-									<th>가격</th>
-									<th>메뉴 설명</th>
+									<td>번호</td>
+									<td>메뉴이름</td>
+									<td>가격</td>
+									<td>메뉴 설명</td>
 								</tr>
-								</div>
+								
 								<% int i =1;
 			for(i=0;i<menu_info.size();i++){  int index =i+1;%>
 
@@ -117,7 +118,7 @@
 								<% } %>
 
 							</table>
-
+</div>
 					</main>
 
 						<br>
