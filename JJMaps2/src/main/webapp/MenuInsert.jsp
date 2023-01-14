@@ -56,7 +56,7 @@
             <td><input id="menu_Price0" name="menu_Price" type="text"class="price" type="text" pattern="[0-9]+"></td>
             <td><input id="menu_Detail0" name="menu_Detail" type="text"></input></td>
 </div>
-            <td><input type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
+            <td><input  class=type="file" name="menu_Pic" accept="image/png, image/gif, image/jpeg"></td>
             <td><br><br></td></tr>
 
          </tr>

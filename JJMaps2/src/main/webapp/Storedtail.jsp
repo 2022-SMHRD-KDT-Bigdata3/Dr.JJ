@@ -2,8 +2,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="com.smhrd.model1.StoreVO"%>
-<%@page import="com.smhrd.model1.ReviewDAO"%>
-<%@page import="com.smhrd.model1.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -57,17 +57,21 @@ span{color:gray;}
 	<br>
 	<br>
 	
-	
+		<form class="form">
 	<%if(searchWord==null||searchWord.equals("")){ %>
-	<span>입력한 검색어가 없습니다..</span>
+	<br><br><br>
+		<h2>아쉽지만 검색 결과가 없습니다..😢</h2>
 	<%}else{ %>
+	<br><br><br><br>
 	입력한 검색어 : "<%=searchWord%>"
 	<%} %>
-	<br>
-	<h2>아쉽지만 검색 결과가 없습니다..😢</h2>
-	
-	
-	<a href="Main.jsp"> 메인으로 돌아가기 (혹은 돌아가기 아이콘)</a>
-
+	<br><br>	
+	<br><br>
+	<h2>아쉽지만 검색 결과가 없습니다..😢</h2><br><br><br>
+	<div id="logo">
+		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+	</div>	
+	<button type="button" class="navyBtn" onClick="location.href='Main.jsp'">메인으로 돌아가기</button>
+</form>
 </body>
 </html>
