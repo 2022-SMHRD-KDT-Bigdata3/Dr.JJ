@@ -132,19 +132,13 @@ public class StoreDAO {
 		Integer store_id =  vo.getStore_Id();
 		return store_id;
 	}
-	public Integer selectId(String store_name) {
-		session = sqlSessionFactory.openSession();
-		StoreVO vo = session.selectOne("getId",store_name);
-		session.close();
-		Integer store_id = vo.getStore_Id();
-		return store_id;
-	}
-	public StoreVO storeselect(String store_id) {
+
+	public StoreVO store_Select_Storeid(int store_id) {
 		session = sqlSessionFactory.openSession(true);
-		StoreVO vo = session.selectOne("storeselect",store_id); 
-		session.close();
+		StoreVO vo = session.selectOne("store_Select_Storeid", store_id);
 		return vo;
 	}
+
 	
 	
 }

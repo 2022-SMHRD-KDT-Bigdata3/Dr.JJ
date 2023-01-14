@@ -13,7 +13,7 @@ public class MenuDAO {
 	private SqlSession session;
 	
 
-	public ArrayList<MenuVO> menuSelect(String store_id){
+	public ArrayList<MenuVO> menuSelect(Integer store_id){
 		session = sqlSessionFactory.openSession(true);
 		List<MenuVO> list = null;
 		list = session.selectList("menuSelect", store_id);
@@ -45,6 +45,13 @@ public class MenuDAO {
 		session.close();
 		return res;
 	}
+	
+
+
+
+
+	
+	
 
 
 	

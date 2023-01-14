@@ -27,7 +27,7 @@
   	<servlet-name>WebSocket</servlet-name>
   	<display-name>WebSocket</display-name>
   	<description></description>
-  	<servlet-class>WebSocket.WebSocket</servlet-class>
+  	<servlet-class>Ws.WebSocket</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Search</servlet-name>
@@ -95,7 +95,25 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.Menucheck</servlet-class>
   </servlet>
-
+  <servlet>
+  	<servlet-name>IdCheckService</servlet-name>
+  	<display-name>IdCheckService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.IdCheckService</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>StoreReservation</servlet-name>
+  	<display-name>StoreReservation</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreReservation</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Myreview</servlet-name>
+  	<display-name>Myreview</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Myreview</servlet-class>
+  </servlet>
   <servlet>
   	<servlet-name>UploadServlet</servlet-name>
   	<display-name>UploadServlet</display-name>
@@ -103,23 +121,21 @@
   	<servlet-class>com.smhrd.controller1.UploadServlet</servlet-class>
   </servlet>
   <servlet>
- 	<servlet-name>storedetail</servlet-name>
- 	<display-name>storedetail</display-name>
- 	<description></description>
- 	<servlet-class>com.smhrd.controller1.storedetail</servlet-class>
+  	<servlet-name>ReviewService</servlet-name>
+  	<display-name>ReviewService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
   </servlet>
- <servlet>
- 	<servlet-name>ReportService</servlet-name>
- 	<display-name>ReportService</display-name>
- 	<description></description>
- 	<servlet-class>com.smhrd.controller1.ReportService</servlet-class>
- </servlet>
- <servlet>
- 	<servlet-name>ReviewService</servlet-name>
- 	<display-name>ReviewService</display-name>
- 	<description></description>
- 	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
- </servlet><servlet-mapping>
+  <servlet>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<display-name>StoreDetail</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
+  </servlet>
+  
+  
+  
+  <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
@@ -179,24 +195,31 @@
   	<servlet-name>Menucheck</servlet-name>
   	<url-pattern>/Menucheck</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+  	<servlet-name>IdCheckService</servlet-name>
+  	<url-pattern>/IdCheckService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreReservation</servlet-name>
+  	<url-pattern>/StoreReservation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Myreview</servlet-name>
+  	<url-pattern>/Myreview</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>UploadServlet</servlet-name>
   	<url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>storedetail</servlet-name>
-  	<url-pattern>/storedetail</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>ReportService</servlet-name>
-  	<url-pattern>/ReportService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>ReviewService</servlet-name>
   	<url-pattern>/ReviewService</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<url-pattern>/StoreDetail</url-pattern>
+  </servlet-mapping>
+  
 
 
  

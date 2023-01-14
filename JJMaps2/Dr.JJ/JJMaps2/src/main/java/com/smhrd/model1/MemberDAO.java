@@ -46,4 +46,11 @@ public class MemberDAO {
 		return vo;
 	}
 
+	public MemberVO idCheck(String user_Id) {
+		session=sqlSessionFactory.openSession(true);
+		MemberVO check = session.selectOne("idCheck",user_Id); 
+		session.close();
+		return check;
+	}
+
 }

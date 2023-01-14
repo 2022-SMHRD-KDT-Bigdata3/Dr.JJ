@@ -67,7 +67,7 @@
 	Long cnt= now_reserve_menu.get(i).getMenu_Cnt();
 	total += (price*cnt);%>
 	
-	<span>주문 메뉴 : <%=menu_name%> (<%=price%> 원) -- <%=cnt%>개 </span>
+	<div id="null">주문 메뉴 : <%=menu_name%> (<%=price%> 원) -- <%=cnt%>개 </div>
 	
 	<%}%>
 

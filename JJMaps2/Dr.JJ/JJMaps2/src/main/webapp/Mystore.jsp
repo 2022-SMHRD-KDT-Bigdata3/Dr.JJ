@@ -2,7 +2,6 @@
 <%@page import="java.net.*"%>
 <%@page import="java.io.*"%>
 <%@page import="java.nio.charset.Charset"%>
-<%@ page import="com.smhrd.model1.StoreVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,26 +12,40 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
 </head>
 	<body class="is-preload">
-	   <% MemberVO info = (MemberVO)(session.getAttribute("info"));
-	   	StoreVO Storeinfo =(StoreVO)(session.getAttribute("Storeinfo"));%>
+	   <% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
 				<div id="logo">
 				   <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 				</div>
 	   
    	<header class="h2">
 				<div class="pagename">
-				   <h1 class="title">점포 페이지</h1>
+				   <h1 id="Title">점포 페이지</h1>
 				</div>
 	</header> 
    
    
    <form class="form">
-		 <div class="box1"></div>
-		<button type="button" onclick="location.href='storedetail'" class="click"> 내 점포 상세 페이지 </button></a><br><br>
-		<button type="button" onclick="location.href='MystoreJoin.jsp'" class="click"> 영업정보 </button></a><br><br>
-		<a><button type="button" onclick='location.href="MenuSelect"' class="click"> 메뉴정보 </button></a><br><br>
-		<a onclick="next()"><button class="click"> 점포 삭제 </button></a><br><br><br>
+	
+		<div class="button">
+			<p class="btn btn-2" onclick="location.href='StoreDetail?user_id=<%=info.getUser_Id()%>'">내 점포 상세 페이지</p>
+			<br>
+			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">내 점포 정보 수정</p>
+			<br>
+			<p class="btn btn-2" onclick='location.href="Menucheck"'>점포 메뉴 등록</p>
+			<br>
+			<p class="btn btn-2" onClick="next()">점포 삭제</p>
+	
+	
 	</form>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 	<script>
 	
 		function next() {

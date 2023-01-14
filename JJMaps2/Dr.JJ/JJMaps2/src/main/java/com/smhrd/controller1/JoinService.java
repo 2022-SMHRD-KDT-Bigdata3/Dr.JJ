@@ -1,6 +1,8 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,10 +30,12 @@ public class JoinService extends HttpServlet {
 	          
 	          if (res>0) {
 	             System.out.println("회원가입 성공!");
-	             response.sendRedirect("Login.jsp");
+	     		response.sendRedirect("Login.jsp");
 	         
 		      }else {
+		    	 
 		         System.out.println("회원가입 실패..");
+		         response.sendRedirect("Join.jsp");
 	         
 	      }
 	      

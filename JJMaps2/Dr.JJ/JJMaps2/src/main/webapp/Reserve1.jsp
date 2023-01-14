@@ -5,71 +5,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<title>현재 예약</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
-		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
-	   </head>
+<title>현재 예약</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no " />
+<link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+</head>
 
 
-   <body class="is-preload">
-		  <div id="logo">
-			 <a  onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
-		  </div>
-	   
-		  <header class="bar">
-				<div class="pagename">
-				   <h1 class="title" >현재 예약</h1>
-				</div>
-		  </header>
-
-
-	<br>
-	<br>
-	<br>
-
+<body class="is-preload">
 	<%
-	ReservationVO rNumber = (ReservationVO) request.getAttribute("rNumber");
+	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
 	StoreVO storeName = (StoreVO) session.getAttribute("storeName");
-	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");
-	if (rNumber == null) {
-	%>
-	<div id="conteiner">
-		<div id="innerconteiner">
-			<div>😢</div>
-			<div>현재 예약된 주문이 없습니다</div>
+	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");%>
+	<div id="logo">
+		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+	</div>
+
+	<header class="bar">
+		<div id="Title">
+			<h1>현재 예약</h1>
 		</div>
-	</div><br><br><br><br><br><br><br>
-	<form class="form">
-		<button type="button" onClick='location.href="Renovation.jsp"'>주문하러 가기</button>
-	</form>
-	<%
-	} else {
-	%>
+	</header>
+
+
+	<br>
+	<br>
+	<br>
+
+
 	<h1><%=storeName%></h1>
 	<h3><%=storeAddr%></h>
 
-		<div>
+		<div >
 			<!-- value 값이 시간에 따라 증가하는 형식으로 코드를 짜봐야할 것 같습니당 -->
 			<progress value="0" max="100"></progress>
 		</div>
 
-		<p>사장님이 열심히 조리중💦💦</p>
+		<p>사장님이 열심히 조리중💦💦</p><br><br>
 
-
-		<div id="conteiner">
-			<div id="innerconteiner">
-				<div>조리가 시작된 메뉴는 주문 수정 및 취소가 어렵습니다.</div>
-				<div>부득이한 상황시 점포와 직접 통화하시기 바랍니다.</div>
+<form class="form">
+		<div>
+			<div class="box_login">
+				<ul>
+					<li id="null" style="color: #FD6F22; font-weight: bold;">
+					조리가 시작된 메뉴는 주문 수정 및 취소가 어렵습니다.</li>
+					<li class="little2">부득이한 상황시 점포와 직접 통화하시기 바랍니다.</li>
+				</ul>
 			</div>
 		</div>
-		<%
-		}
-		%>
+</form>
+
+
+		<footer id="footer">@JJUPJJUPBAKSA</footer>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
 		
-		
-	
-		<footer id = "footer">@JJUPJJUPBAKSA</footer>  
-	
+	</script>
 </body>
 </html>

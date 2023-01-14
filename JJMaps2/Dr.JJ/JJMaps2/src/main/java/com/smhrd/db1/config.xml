@@ -27,7 +27,11 @@
 		<mapper resource="com/smhrd/db1/StoreMapper.xml" />
 		<mapper resource="com/smhrd/db1/MenuMapper.xml" />
 		<mapper resource="com/smhrd/db1/ReviewMapper.xml" />
+
 		<mapper resource="com/smhrd/db1/ReservationMapper.xml" />
+
+		<mapper resource="com/smhrd/db1/ReserveDetailsMapper.xml" />
+
 	</mappers>
 
 </configuration>

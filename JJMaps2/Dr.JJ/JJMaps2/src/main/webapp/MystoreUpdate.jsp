@@ -22,7 +22,7 @@
 
 <body align="center">
 
-	<%StoreVO Storeinfo = (StoreVO)request.getAttribute("Storeinfo"); %>
+	<%StoreVO Storeinfo = (StoreVO)session.getAttribute("Storeinfo"); %>
 	
 	<% 
 	String store_Name = Storeinfo.getStore_Name();

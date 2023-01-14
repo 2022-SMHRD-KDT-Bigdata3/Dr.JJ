@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
@@ -30,10 +31,7 @@ public class StoreSelectService extends HttpServlet {
 		if(vo!=null) {
 			System.out.println("점포 조회 성공");
     		session.setAttribute("Storeinfo", vo);
-    		
-    		
-    		RequestDispatcher rdi = request.getRequestDispatcher("MystoreUpdate.jsp");
-    		rdi.forward(request, response);
+    		response.sendRedirect("MystoreUpdate.jsp");
 		}else {
 			System.out.println("점포 조회 실패..");
 			response.sendRedirect("Mystore.jsp");
