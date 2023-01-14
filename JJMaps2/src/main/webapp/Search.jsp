@@ -33,6 +33,7 @@
 
 	<% ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
 	<% ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
+	<% ArrayList<Double> Scores = (ArrayList<Double>)request.getAttribute("Scores"); %>
 					
 					
         <div id="headerdiv">
@@ -52,7 +53,10 @@
         
         <% for(int i=0; i<store_list.size();i++){ %>
      		 <%int storeId =store_list.get(i).getStore_Id(); %>
-								
+					<% Double score = 0.0;
+					if(Scores.get(i) !=null){
+						score= Scores.get(i);
+					}	%>		
                 <div class="list_one">
                     <table>
                         <tr>
@@ -61,9 +65,10 @@
                             </td>
                             
                             <td>
+                            
                                 <a class ="list_store"> <%=store_list.get(i).getStore_Cate() %></a><br>
                                 <a class ="list_store" id="store_name" href="StoreDetail?storeId=<%=storeId%>"><h3><%=store_list.get(i).getStore_Name() %></h3></a>
-                                <a class ="list_store"id="store_score"> ⭐ 3.5(2명) </a><br>
+                                <a class ="list_store"id="store_score"> ⭐ <%=score %> </a><br>
                                 <a class ="list_store" id="store_Addr" href="StoreDetail?storeId=<%=storeId%>"><%=store_list.get(i).getStore_Addr() %></a><br>
                                 <% int store_menu_size = menu_List.get(i).size();
                                 if(store_menu_size>=4){
