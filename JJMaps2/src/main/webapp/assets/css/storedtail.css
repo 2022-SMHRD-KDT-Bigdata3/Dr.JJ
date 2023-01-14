@@ -491,7 +491,7 @@ a:hover#review{
 
 #main2{
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-color: #dee2e6;
 }
 
@@ -555,12 +555,22 @@ img{
     
 }
 
+
+
 /*Mystore영역*/
 
 div>h4{
 	  font-weight:bold;
 }
 
+
+
+
+/*storedtail영역*/
+
+.boxx1{
+	padding-left:30px;
+}
 
 /*writeReview영역*/
 .store_name{
