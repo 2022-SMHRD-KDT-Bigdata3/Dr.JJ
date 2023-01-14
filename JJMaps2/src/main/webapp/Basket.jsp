@@ -11,20 +11,27 @@
 <title>Basket.html</title>
 </head>
 <body>
-	<!-- 헤더 -->session.setAttribute("reserve_store_id",store_Id );
-			session.setAttribute("reserve_menu_id",reserve_list );
-			session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
-			
-	<%ReservationVO Storeinfo = (ReservationVO)session.getAttribute("ReservationVO"); %>
-	<%ArrayList<Long> reserve_menu_id = (ArrayList<Long>)session.getAttribute("reserve_menu_id"); %>
-	<%ArrayList<Long> reserve_menu_cnt = (ArrayList<Long>)session.getAttribute("reserve_menu_cnt"); %>
+	<!-- 헤더 -->
+	session.setAttribute("reserve_store_id",store_Id );
+	session.setAttribute("reserve_menu_id",reserve_list );
+	session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
+
+	<%
+	ReservationVO Storeinfo = (ReservationVO) session.getAttribute("ReservationVO");
+	%>
+	<%
+	ArrayList<Long> reserve_menu_id = (ArrayList<Long>) session.getAttribute("reserve_menu_id");
+	%>
+	<%
+	ArrayList<Long> reserve_menu_cnt = (ArrayList<Long>) session.getAttribute("reserve_menu_cnt");
+	%>
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
 
 	<header>
 		<div id="Title">장바구니</div>
-		
+
 	</header>
 
 	<div class="box_dashed">
@@ -57,13 +64,11 @@
 
 	<div class="basket">
 		<ul class="basket-list">
-			<li class="basket-item">
-				<input type="checkbox"></input>
+			<li class="basket-item"><input type="checkbox"></input>
 				<div class="item">주문</div>
 				<div class="item-dtail">주문 상세설명</div>
-				<div class="item-price">주문 가격</div>
-			</li>
-			
+				<div class="item-price">주문 가격</div></li>
+
 		</ul>
 
 	</div>
