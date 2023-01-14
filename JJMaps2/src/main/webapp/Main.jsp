@@ -76,7 +76,7 @@
 		<a>호떡</a> 
 		<a>순대</a> 
 		<a>분식류</a> 
-		<a>기타</a>
+		<a>기타</a>http://localhost:8081/JJMap/Mystore.jsp
 		<a>붕어빵</a>
 		<a>타코야키</a> 
 		<a>호떡</a> 

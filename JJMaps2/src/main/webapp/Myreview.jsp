@@ -11,6 +11,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 <title>Review</title>
+
+
+<style>
+teble {
+	text boder: 2px solid;
+	border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+th {
+	background-color: #FFC314;
+	margin:auto; 
+}
+</style>
+
+
+
 </head>
 <body class="is-preload">
 	<%
@@ -28,13 +47,17 @@
 		<br>
 	</header>
 	<br>
+	<br>
 
-	<main>
+
+	<div>
+		<br>
 		<div class="font1">
-			<a >내가 작성한 리뷰😄</a>
+			<a>내가 작성한 리뷰😄</a>
 		</div>
-		<div>
-		<table align="center" border='1' class="Myreviews">
+		<br>
+
+		<table style="align: center; border: 1Px;" class="Myreviews">
 			<tr>
 				<th>번호</th>
 				<th>리뷰제목</th>
@@ -60,16 +83,12 @@
 
 			</tr>
 		</table>
-			<%
-			}
-			%>
-			</div>
-			</main>
+		
+		<%
+		}
+		%>
+	</div>
 
 
-			<div>
-				<a></a>
-
-			</div>
 </body>
 </html>
