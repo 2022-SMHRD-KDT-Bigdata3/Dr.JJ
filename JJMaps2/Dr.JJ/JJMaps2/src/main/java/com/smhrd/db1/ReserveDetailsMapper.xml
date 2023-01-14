@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.db1.ReserveDetailsMapper">
+
+	<insert id="reserve_menu_insert"  parameterType="com.smhrd.model1.ReserveDetailsVO">
+	insert into ReserveDetails values (ReserveDetails_seq.nextval,#{menu_Id},#{r_Number},#{menu_Cnt})
+    </insert>
+    
+</mapper>

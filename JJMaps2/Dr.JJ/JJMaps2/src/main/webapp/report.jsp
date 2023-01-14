@@ -11,9 +11,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no " />
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
-
+<style>
+		table {width: 100%;}
+		th { text-align: left; }
+		td { text-align: center; }
+</style>
 </head>
-
 
 <body class="is-preload">
 	<div id="logo">
@@ -28,7 +31,7 @@
 	<br>
 	<br><br>		
 	<div class="form">
-		<form action="ReportService" method="post" enctype="multipart/form-data">
+		<form action="upload" method="post" enctype="multipart/form-data">
 			<table>
 				<tr bgcolor="orange" height="50px">
 					<div style="color: orange" id="null"> 지금 나의 맛집을 제보해주세요!!</div>
@@ -55,7 +58,7 @@
 	</div>
 	
 	
-	<footer id="footer">@JJUPJJUPBAKSA</footer>
+	<footer id = "footer">@JJUPJJUPBAKSA</footer>
 
 </body>
 </html>

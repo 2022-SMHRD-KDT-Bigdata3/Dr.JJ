@@ -26,6 +26,8 @@ public class StoreVO {
     
     private Double Longitude;
     
+    private int Cook_time;
+    
     
     
     public StoreVO() {
@@ -39,7 +41,7 @@ public class StoreVO {
 
 
 	public StoreVO(String store_Name, String store_Addr, String store_Tel, String store_Open_Dt, String store_Close_Dt,
-			Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate, Double latitude,Double longitude) {
+			Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate, Double latitude,Double longitude,int Cook_time) {
 		this.store_Name = store_Name;
 		this.store_Addr = store_Addr;
 		this.store_Tel = store_Tel;
@@ -51,6 +53,7 @@ public class StoreVO {
 		this.store_Cate = store_Cate;
 		this.Latitude = latitude;
 		this.Longitude = longitude;
+		this.Cook_time = Cook_time;
 	}
 
 
@@ -62,7 +65,7 @@ public class StoreVO {
 
 	public StoreVO(String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
 			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate,
-			Double latitude, Double longitude,Integer store_Id) {
+			Double latitude, Double longitude,Integer store_Id,int Cook_time) {
 		super();
 		this.store_Id = store_Id;
 		this.store_Name = store_Name;
@@ -76,13 +79,14 @@ public class StoreVO {
 		this.store_Cate = store_Cate;
 		this.Latitude = latitude;
 		this.Longitude = longitude;
+		this.Cook_time = Cook_time;
 	}
 
 
 
 
 	public StoreVO(Integer store_Id, String store_Name, String store_Addr, String store_Tel, String store_Open_Dt,
-			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate) {
+			String store_Close_Dt, Integer store_Card_Yn, Integer store_Status, String user_Id, String store_Cate,int Cook_time) {
 		super();
 		this.store_Id = store_Id;
 		this.store_Name = store_Name;
@@ -94,6 +98,7 @@ public class StoreVO {
 		this.store_Status = store_Status;
 		this.user_Id = user_Id;
 		this.store_Cate = store_Cate;
+		this.Cook_time = Cook_time;
 	}
 
 
@@ -144,6 +149,28 @@ public class StoreVO {
 	public Double getLongitude() {
 		return Longitude;
 	}
+
+	public int getCook_time() {
+		return Cook_time;
+	}
+
+
+
+
+
+
+
+
+	public void setCook_time(int cook_time) {
+		Cook_time = cook_time;
+	}
+
+
+
+
+
+
+
 
 	public void setStore_Id(Integer store_Id) {
 		this.store_Id = store_Id;

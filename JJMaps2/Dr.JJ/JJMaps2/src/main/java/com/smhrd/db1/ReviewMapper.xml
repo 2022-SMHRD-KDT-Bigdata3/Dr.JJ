@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db1.ReviewMapper">
-<insert id="writereview"  parameterType="com.smhrd.model1.ReviewVO">
-	insert into reviews values (reviews_seq.nextval,#{store_id},#{reviewContent},#{reviewScore},#{reviewPic},#{user_id},#{review_dt},sysdate,#{review_title})
+	<select id="myReview" resultType="com.smhrd.model1.ReviewVO">
+		select * from reviews where user_id= #{user_Id}
+	</select>
+	<insert id="writereview"  parameterType="com.smhrd.model1.ReviewVO">
+	insert into reviews values (reviews_seq.nextval,#{store_id},#{reviewContent},#{reviewScore},#{reviewPic},#{user_Id},sysdate,#{review_title})
 </insert>
+<select id="scores" resultType="com.smhrd.model1.ReviewVO">
+	select * from reviews where store_id = #{store_id}
+</select>
 </mapper>
