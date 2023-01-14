@@ -12,7 +12,7 @@
 	</select>
 	
 	<select id="select_reseve_by_rnum"  parameterType="Long" resultType="com.smhrd.model1.ReservationVO">
-	 select * from RESERVATIONS where store_Id = #{store_Id} and user_Id = #{user_Id} and r_time = #{r_time} and p_time = #{p_time} and isCooking= #{isCooking}
+	 select * from RESERVATIONS where r_Number=#{r_Number}
 	</select>
 	
 	

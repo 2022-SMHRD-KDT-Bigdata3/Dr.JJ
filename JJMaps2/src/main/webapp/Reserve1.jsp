@@ -19,8 +19,9 @@
 	<%
 	ReservationVO now_reserve = (ReservationVO) session.getAttribute("now_reserve");
 	ArrayList<ReserveDetailsVO> now_reserve_menu = (ArrayList<ReserveDetailsVO>) session.getAttribute("now_reserve_menu");
+	ArrayList<String> now_menu_Name_list = (ArrayList<String>) session.getAttribute("now_menu_Name_list");
 	StoreVO now_reserve_store = (StoreVO) session.getAttribute("now_reserve_store");%>
-	
+	<%= now_reserve.getStore_Id()%>
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
@@ -30,24 +31,48 @@
 			<h1>현재 예약</h1>
 		</div>
 	</header>
-
-
 	<br>
 	<br>
 	<br>
 
+<%if(now_reserve==null || now_reserve.getIsCooking()==0 ){ %>
 
+현재 주문한 예약이 없습니다😓<br>
+<a href="Main.jsp">주문하러 가기</a>
+<%}else{ %>
 	<h1><%=now_reserve_store.getStore_Name()%></h1>
 	<h3><%=now_reserve_store.getStore_Addr()%></h>
 
+<input type="hidden" id="p_Time" value="<%=now_reserve.getP_time()%>" >
+<input type="hidden" id="r_Time" value="<%=now_reserve.getR_time()%>" >
+<input type="hidden" id="c_Time" value="<%=now_reserve_store.getCook_time()%>" >
 		<div >
 			<!-- value 값이 시간에 따라 증가하는 형식으로 코드를 짜봐야할 것 같습니당 -->
-			<progress value="0" max="100"></progress>
+			<progress id="progress" value="0" max="100"></progress>
 		</div>
-
-		<p>사장님이 열심히 조리중💦💦</p><br><br>
+		<p id=progress_text>사장님이 열심히 조리중💦💦</p><br><br>
 
 <form class="form">
+
+
+<h5>주문 메뉴와 수량</h5>
+	<%
+	int total=0;
+
+	for (int i=0; i<now_menu_Name_list.size();i++){ 
+		
+
+	String menu_name = now_menu_Name_list.get(i);
+	int price = now_reserve_menu.get(i).getMenu_Price();
+	Long cnt= now_reserve_menu.get(i).getMenu_Cnt();
+	total += (price*cnt);%>
+	
+	<span>주문 메뉴 : <%=menu_name%> (<%=price%> 원) -- <%=cnt%>개 </span>
+	
+	<%}%>
+
+<span>총 주문 금액: <%=total %></span>
+
 		<div>
 			<div class="box_login">
 				<ul>
@@ -57,14 +82,72 @@
 				</ul>
 			</div>
 		</div>
+		
+		
+		
+		
 </form>
 
-
-		<footer id="footer">@JJUPJJUPBAKSA</footer>
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script>
+<%}%>
+	<footer id="footer">@JJUPJJUPBAKSA</footer>
+	
+	
+	
+	
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
+	<script type="text/javascript">
+		$(function() {
+			 let ptime =$('#p_Time').val();
+        	 	console.log('ptime 원본:'+ptime);
+        	 let ptime_h=Number(ptime.substring(0,2));
+        		 console.log('ptime 시:'+ptime_h);
+        	 let ptime_m=Number(ptime.substring(3));
+        	 	console.log('ptime 분:'+ptime_m);
+        	 let ptime=(ptime_h*60)+ptime_m;
+        	 	console.log('ptime 총 분:'+ptime);
+        	 	
+   			 let rTime =$('#r_Time').val();
+     	 		console.log('rtime 원본:'+rTime);
+	     	 let rtime_h=Number(rTime.substring(0,2));
+	     		 console.log('rtime 시:'+rtime_h);
+	     	 let rtime_m=Number(rTime.substring(3));
+	     	 	console.log('rtime 분:'+rtime_m);
+	     	 let rtime=(rtime_h*60)+rtime_m;
+	     	 	console.log('rtime 총 분:'+rtime);
+				
+   			 let cTime =$('#c_Time').val();
+   			cTime=Number(cTime);
+			
+			
+			timer = setInterval(function() { 
+				$.ajax({
+					url : "Timer",
+					method : "POST",   //  데이터 전송 방식
+					data : {"ptime": ptime ,"rtime":rtime}, //데이터를 보냄
+					dataType : "JSON", // 결과 데이터를 받기
+					cache : false,
+					success : function(data) {
+						 $("#progress").val(data.prograss[0]);
+						 
+						let prograss_min= data.prograss[1];
+						if(prograss_min>=cTime){
+							
+					  $("#progress_text").text("예약 접수 완료! 픽업 잊지마세요😉");
+						}else if(prograss_min>0){
+					  $("#progress_text").text("사장님이 열심히 조리중💦💦");
+							
+						}else{
+					  $("#progress_text").text("픽업이 완료되었습니다😊");
+						}
+					}
+				});
+
+			}, 10000); //10000 ->10초 1000->1초
+
+		});
 	</script>
-</body>
+	</body>
 </html>

@@ -137,6 +137,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.Basket</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Timer</servlet-name>
+  	<display-name>Timer</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Timer</servlet-class>
+  </servlet>
   
   
   
@@ -227,6 +233,10 @@
   <servlet-mapping>
   	<servlet-name>Basket</servlet-name>
   	<url-pattern>/Basket</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Timer</servlet-name>
+  	<url-pattern>/Timer</url-pattern>
   </servlet-mapping>
   
 

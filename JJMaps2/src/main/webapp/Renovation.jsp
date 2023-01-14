@@ -45,7 +45,7 @@
 	</header>
 
 
-	<form class="form" name="form"  method="post">
+	<form class="form" action="reserveInsert"  method="post">
 		<input class="hidden" name="store_Id" value="<%=store_info.getStore_Id()%>" type="text" >
 		<input class="hidden" name="user_Id" value="<%=info.getUser_Id()%>" type="text">
 		<div class="info">
@@ -79,7 +79,7 @@
 				<td>
 					<button id="btnPlus<%=i%>" class="btnPlus btnCalc" type="button" onclick="up1('<%=i%>')">+</button>
 					<input id="numOut<%=i%>" class="numOut" name="food_count" value="0" >
-					<button id="btnMinus<%=i%>" class="btnMinus btnCalc" type="button" onclick="down1(<%=i%>)">-</button>
+					<button id="btnMinus<%=i%>" class="btnMinus btnCalc" type="button" onclick="down1('<%=i%>')">-</button>
 				</td>
 			</tr>
 			<%}%>
@@ -144,8 +144,7 @@
 		<%}%>
 		
 		<br><br><br>
-		<input type="submit" value="장바구니 담기" formaction="reserveInsert"/>
-		<input type="submit" value="바로 예약하기" formaction="reserveInsert"/>
+		<input type="submit" value="예약하기" >
 
 		<br> <br>
 	</form>
@@ -195,11 +194,11 @@
 	        $('.form').submit(function() {
 	        	 let ptime =$('#p_time').val();
 	        	 console.log('ptime 원본:'+ptime);
-	        	 ptime_h=Number(ptime.substring(0,2));
+	        	  ptime_h=Number(ptime.substring(0,2));
 	        	 console.log('ptime 시:'+ptime_h);
-	        	 ptime_m=Number(ptime.substring(3));
+	        	  ptime_m=Number(ptime.substring(3));
 	        	 console.log('ptime 분:'+ptime_m);
-	        	 ptime=(ptime_h*60)+ptime_m;
+	        	  ptime=(ptime_h*60)+ptime_m;
 	        	 console.log('ptime 계산:'+ptime);
 	        	 let pic_OK_opne = $('#pic_OK_opne').val();
 	        	 console.log('pic_OK_opne:'+pic_OK_opne);

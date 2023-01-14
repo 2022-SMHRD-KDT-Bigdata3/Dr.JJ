@@ -94,6 +94,24 @@ public void setMenu_Cnt(Long menu_Cnt) {
 
 
 
+public int getMenu_Price() {
+	return menu_Price;
+}
+
+
+
+
+
+
+public void setMenu_Price(int menu_Price) {
+	this.menu_Price = menu_Price;
+}
+
+
+
+
+
+
 @Override
 public String toString() {
 	return "ReserveDetailsVO [rd_Id=" + rd_Id + ", menu_Id=" + menu_Id + ", r_Number=" + r_Number + ", menu_Cnt="

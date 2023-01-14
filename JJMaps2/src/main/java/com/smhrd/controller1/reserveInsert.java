@@ -43,17 +43,21 @@ public class reserveInsert extends HttpServlet {
 
 		
 		
-		// input 받은 메뉴 아이디 배열과 가격 추출
+		// input 받은 메뉴 아이디 배열과 가격 추출 + 메뉴 이름도 
 		MenuDAO menuDAOs=new MenuDAO();
 		String[] menu_list = request.getParameterValues("reserve_list");//input받은 메뉴 형변환 필요
 		System.out.println(Arrays.toString(menu_list));
 		ArrayList<Long> menu_Id_list = new ArrayList<Long>();//메뉴 id 리스트
 		ArrayList<Integer> price_list = new ArrayList<Integer>();//메뉴 단가 리스트
+		ArrayList<String> menu_name = new ArrayList<String>();//메뉴 이름 
 		for(int i=0; i<menu_list.length;i++) {
 			Long menu= Long.parseLong(menu_list[i]);
 			menu_Id_list.add(menu);	
 			int price = menuDAOs.select_price(Integer.parseInt(menu_list[i]));
 			price_list.add(price);
+			String menuname = menuDAOs.select_name(Integer.parseInt(menu_list[i]));
+			menu_name.add(menuname);
+			
 		}
 		
 		
@@ -90,6 +94,9 @@ public class reserveInsert extends HttpServlet {
 		
 		ArrayList<ReserveDetailsVO> now_reserve_menu=r_d_Dao.reserve_detail_select(r_Number);
 		ReservationVO now_reserve =  reservationDAOs.select_reseve_by_rnum(r_Number);
+
+		
+		
 		
 		//예약한 집 
 		StoreDAO storeDAOs = new StoreDAO();
@@ -100,6 +107,7 @@ public class reserveInsert extends HttpServlet {
 			HttpSession session = request.getSession();
 			System.out.println("메뉴 예약 등록 성공");
 			session.setAttribute("now_reserve_menu",now_reserve_menu );
+			session.setAttribute("now_menu_Name_list",menu_name );
 			session.setAttribute("now_reserve",now_reserve );
 			session.setAttribute("now_reserve_store",now_reserve_store );
 			response.sendRedirect("Reserve1.jsp");

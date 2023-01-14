@@ -133,7 +133,7 @@
 									type="hidden" name="storeId"
 									value="<%=store_info.getStore_Id()%>"> <input
 									type="hidden" name="send" value="Renovation.jsp">
-									<div id="myr">예약하기</div>
+									<div id="myr"><input type="submit" value="예약하기"></div>
 							</form>
 						</footer>
 
