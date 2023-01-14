@@ -48,6 +48,15 @@ public class MenuDAO {
 	}
 
 
+	public int select_price(int menu_Id) {
+		session = sqlSessionFactory.openSession(true);
+		MenuVO menuVOs = session.selectOne("select_price",menu_Id);
+		int price = menuVOs.getMenu_Price();
+		session.close();
+		return price;
+	}
+
+
 
 
 	

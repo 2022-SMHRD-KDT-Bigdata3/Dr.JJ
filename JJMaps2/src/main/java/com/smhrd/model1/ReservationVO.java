@@ -22,6 +22,8 @@ public class ReservationVO {
  // 픽업 시간 
  private String p_time;
  
+ private int isCooking;
+ 
 
  
  
@@ -165,13 +167,14 @@ public String toString() {
 
 
 
-public ReservationVO(Long r_number, Integer store_Id, String user_Id, String r_time, String p_time) {
+public ReservationVO(Long r_number, Integer store_Id, String user_Id, String r_time, String p_time, int isCooking) {
 	super();
 	this.r_number = r_number;
 	this.store_Id = store_Id;
 	this.user_Id = user_Id;
 	this.r_time = r_time;
 	this.p_time = p_time;
+	this.isCooking = isCooking;
 }
 
 
@@ -187,6 +190,29 @@ public ReservationVO(Integer store_Id, String user_Id, String r_time, String p_t
 	this.user_Id = user_Id;
 	this.r_time = r_time;
 	this.p_time = p_time;
+	this.isCooking = 1; //1요리중 0픽업완료(완료된 예약)
+}
+
+
+
+
+
+
+
+
+public int getIsCooking() {
+	return isCooking;
+}
+
+
+
+
+
+
+
+
+public void setIsCooking(int isCooking) {
+	this.isCooking = isCooking;
 }
 
 

@@ -39,12 +39,13 @@ public class Login extends HttpServlet {
             // jsp 에서는 세션이 내장객체지만 서블릿에서는 객체호출하고, 임포트 해주어야 한다.
             HttpSession session = request.getSession();
             session.setAttribute("info", info);
+            response.sendRedirect("Main.jsp");
 
          } else {
             System.out.println("로그인 실패...");
+            response.sendRedirect("Login.jsp");
          }
          
-         response.sendRedirect("Main.jsp");
       }
 
 

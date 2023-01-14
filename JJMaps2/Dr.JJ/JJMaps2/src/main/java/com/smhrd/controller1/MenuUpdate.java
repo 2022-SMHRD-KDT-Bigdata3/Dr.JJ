@@ -51,15 +51,16 @@ public class MenuUpdate extends HttpServlet {
 		MenuVO vo = new MenuVO(store_id ,user_id,menu_Name[i],menu_Price[i],menu_Detail[i]);
 		I_res = MenuDAOs.MenuInsert(vo);
 		
-		if(I_res>0) {System.out.println("메뉴"+i+" 등록 성공!");
-		}else {System.out.println("메뉴등록실패..");
+		if(I_res>0) {
+			System.out.println("메뉴"+i+" 등록 성공!");
+		}else {
+			System.out.println("메뉴등록실패..");
 		};
 		
-		}
+		}//for문 닫기
 		
 		response.sendRedirect("Mystore.jsp");
 	}
-		
-	}
+}
 
 

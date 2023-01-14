@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model1.ReserveDetailsVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="com.smhrd.model1.ReservationVO"%>
@@ -15,9 +17,10 @@
 
 <body class="is-preload">
 	<%
-	ReservationVO rNumber = (ReservationVO) session.getAttribute("rNumber");
-	StoreVO storeName = (StoreVO) session.getAttribute("storeName");
-	StoreVO storeAddr = (StoreVO) session.getAttribute("storeAddr");%>
+	ReservationVO now_reserve = (ReservationVO) session.getAttribute("now_reserve");
+	ArrayList<ReserveDetailsVO> now_reserve_menu = (ArrayList<ReserveDetailsVO>) session.getAttribute("now_reserve_menu");
+	StoreVO now_reserve_store = (StoreVO) session.getAttribute("now_reserve_store");%>
+	
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
@@ -34,8 +37,8 @@
 	<br>
 
 
-	<h1><%=storeName%></h1>
-	<h3><%=storeAddr%></h>
+	<h1><%=now_reserve_store.getStore_Name()%></h1>
+	<h3><%=now_reserve_store.getStore_Addr()%></h>
 
 		<div >
 			<!-- value 값이 시간에 따라 증가하는 형식으로 코드를 짜봐야할 것 같습니당 -->

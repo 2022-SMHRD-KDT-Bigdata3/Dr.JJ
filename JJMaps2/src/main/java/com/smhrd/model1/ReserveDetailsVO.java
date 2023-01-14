@@ -14,6 +14,8 @@ public class ReserveDetailsVO {
 
  // 주문 수량
  private Long menu_Cnt;
+ 
+ private int menu_Price;
 
  
  
@@ -103,12 +105,13 @@ public String toString() {
 
 
 
-public ReserveDetailsVO(Long rd_Id, Long menu_Id, Long r_Number, Long menu_Cnt) {
+public ReserveDetailsVO(Long rd_Id, Long menu_Id, Long r_Number, Long menu_Cnt,int menu_Price) {
 	super();
 	this.rd_Id = rd_Id;
 	this.menu_Id = menu_Id;
 	this.r_Number = r_Number;
 	this.menu_Cnt = menu_Cnt;
+	this.menu_Price = menu_Price;
 }
 
 
@@ -125,11 +128,12 @@ public ReserveDetailsVO() {
 
 
 
-public ReserveDetailsVO(Long menu_Id, Long r_Number, Long menu_Cnt) {
+public ReserveDetailsVO(Long menu_Id, Long r_Number, Long menu_Cnt,int menu_Price) {
 	super();
 	this.menu_Id = menu_Id;
 	this.r_Number = r_Number;
 	this.menu_Cnt = menu_Cnt;
+	this.menu_Price = menu_Price;
 }
 
  

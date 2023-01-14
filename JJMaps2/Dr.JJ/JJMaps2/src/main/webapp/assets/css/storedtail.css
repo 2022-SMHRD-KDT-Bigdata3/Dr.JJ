@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "reset.css";
 
+
 /* 버튼효과 */
 input[type=text]{ 
     border: 1px solid gainsboro;
@@ -30,7 +31,32 @@ input[type=button]{
     width: 180px; 
 }
 
+input[type=submit]{
+	font-size: medium;
+    font-weight:bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+}
+
+input[type=submit]{ 
+    font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    margin-top: 15px;
+    border-radius: 5px; 
+    border: 1px solid  orangered;
+    background-color: orangered;
+    height: 40px; 
+    width: 180px; 
+} 
+
+
 button{
+	font-family: 'NanumSquareNeo-Variable';
     font-size: medium;
     font-weight: bold;
     color:whitesmoke; 
@@ -42,14 +68,15 @@ button{
 
 }
 
-input[type=submit]{ 
+
+input[type=submit].click{ 
     font-size: medium;
     font-weight: bold;
     color:whitesmoke; 
     margin-top: 15px;
     border-radius: 5px; 
-    border: 1px solid  orangered;
-    background-color: orangered;
+     border: 1px solid  #0E5049;
+    background-color: #0E5049;
     height: 40px; 
     width: 180px; 
 } 
@@ -81,6 +108,7 @@ input[type=submit]{
 }
 
 .button{
+  font-family : 'NanumSquareNeo-Variable';
   margin: 150px 500px 0 0;
   justify-content: center;
   align-items: center;
@@ -117,6 +145,28 @@ input[type=submit]{
     margin-right: auto;
     background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
   }
+  
+  .btn-2 {
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, #f6d365 0%, #0E5049, #f6d365 100%);
+  }
+
+#btnAdd{
+	diplay: block;
+ 	text-align: center;
+	font-size: medium;
+    font-weight: bold;
+    color:whitesmoke; 
+    border-radius: 5px; 
+    border: 1px solid  #0E5049;
+    background-color: #0E5049;
+    height: 40px;
+    width: 180px; 
+    }
+
 
 /* 폰트 및 로고작업 */
 
@@ -126,6 +176,13 @@ input[type=submit]{
     font-weight: normal;
     font-style: normal;
     
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .name{
@@ -138,7 +195,7 @@ input[type=submit]{
 body{
     margin-left: 10%;
     margin-right: 10%;
-     -ms-overflow-style: none;
+    -ms-overflow-style: none;
  }
  
 ::-webkit-scrollbar {
@@ -176,11 +233,12 @@ header{
 /*마이페이지 헤더*/
 
 #Title{
-	font-size: large;
+	font-family: 'NanumSquareNeo-Variable';
+	font-size: 30px;
     font-weight:bold;
     text-align: center;
     color: white;
-    padding: 40px;
+    padding: 30px;
 }
 
  a#id{
@@ -194,13 +252,43 @@ header{
     font-size: small;
 }
 
- /* My reivew CSS 
 
-  h1,h3,h5{
-    margin: 40px;
-    
-  }
-   */
+   /* searchResultEmpty 로그인영역 */
+
+#logme.menus>ul{
+	font-family: 'NanumSquareNeo-Variable';
+	width: 100%;
+	text-align:right;
+	margin-top:-20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ /*메인처럼 띄우고 싶을 때 긁어서 가져가시오.(로그인)*/
+#logme.menus>li{
+	display: inline-block;
+	height:12px;
+	line-height: 12px;
+}
+#logme.menus>li:last-child{
+	border-left: 1px solid #333;
+	padding-left: 10px;
+	margin-left: 4px;
+}
+#logme.menus>a{
+	color: #333;
+	font-size: 12px;
+	position: relative;
+	top: 2px;
+}
+a{ 
+	text-decoration: none;
+	} 
+	
+
+
+
+
   
    /* 예약 css */
 
@@ -239,6 +327,13 @@ header{
     height: 100%;
     object-fit: cover;
   }
+  
+  div#null{
+  font-family : 'NanumSquareNeo-Variable';
+  font-size: 20px;
+  }
+  
+
 
 
 /* join 헤더 */
@@ -246,30 +341,33 @@ div#logo{
     font-family : 'RixInooAriDuriR';
     font-size:larger;
     color: #FD6F22;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
-.pagename{
- 	
-    padding-top: 10px;
+.pagename>h1{
     color: white;
+    text-align: center;
 }
 
 
 /* 나브영역 */
 nav{
-    
+	font-family : 'NanumSquareNeo-Variable';
     width: 100%;
-    height: 90px;
-    background-color: aqua;
+    height: 50px;
+    background-color: #FD6F22;
 }
 
 h1{
+	color:white;
     text-align: center;
 }
 
+
 #sdtail{
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -280,24 +378,47 @@ h1{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .little{
-    padding-right: 200px;
+    padding-right: 210px;
     color: red;
-    font-size: small;
+    font-size: small; 
+    text-align: center;
 }
+
+.little2{
+	color:black;
+    font-size: small; 
+    text-align: center;
+}
+
+
+
+
+
+.little2{
+	margin-top:5px;
+    color:glay;
+    font-size: small;
+    text-align: center;
+}
+
+
 
 .pw{
     padding-right: 240px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .pwCheck{
     padding-right: 190px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
@@ -305,21 +426,25 @@ h1{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 .id{
     padding-right: 250px;
     color:black;
     font-weight:bold;
+    margin-bottom:5px;
 }
 
 
 .form{
-
     text-align: center;
 }
 
-
+.font1{
+	font-family: 'NanumSquareNeo-Variable';
+	text-align: left;
+}
 
 
 /*login 메인영역*/
@@ -336,7 +461,16 @@ h1{
     text-align: center;
 }
 
+.box_login {
+    border: 1px solid #c0c0c0;
+    padding: 22px 0;
+    position: relative;
+    margin: 40px 0 40px;
+    margin-left: 20%;
+    margin-right: 20%;
 
+
+}
 
 
 /* 메인영역 */
@@ -353,12 +487,15 @@ a:hover#review{
     width: 100%;
     height: 250px;
     background-color: #dee2e6;
+   
 }
 
 #main2{
     width: 100%;
-    height: 700px;
+    height: 400px;
     background-color: #dee2e6;
+   
+   
 }
 
 
@@ -368,14 +505,6 @@ a:hover#review{
     height: 80px;
     background-color: white;    
 }
-
-/*MYstoreJoin 메인*/
-
-h4{
-	background-color: #0E5049;  
-	opacity: 0.7;   
-}
-
 
 /*Renovaition메인*/
 
@@ -391,12 +520,62 @@ img{
     height: 30px;
     cursor: pointer;
     color:white;
-    background-color: orange; 
+   	bagcolor:orange;
     opacity: 0.7;
 }
 
 
+/* report영역 */
+.content{
+	  text-align: center;
+}
 
+.bt1{
+	 text-align: center;
+}
+
+
+
+/* Menuinsert영역 */
+.tr{
+	 font-weight:bold;
+}
+
+.price:invalid {
+	border: 2px solid red;
+}
+
+.menuinsert{
+	
+}
+
+/* reportService영역 */
+.repoet{
+	margin-top:40px;
+	width:99%;
+    height: 150px;
+    background-color:#FAFA96
+    
+}
+
+
+
+/*Mystore영역*/
+
+div>h4{
+	  font-weight:bold;
+}
+
+
+
+/*writeReview영역*/
+.store_name{
+	 text-align: center;
+}
+
+.sb{
+	 text-align: center;
+}
 
 /* 푸터영역 */
 #footer{
@@ -404,13 +583,11 @@ img{
     background-color: #f8f9fa;
     text-align: center;
     color: #ced4da;
-    height: 100px;
+    height: 200px;
     left: 0;
     right: 0;
     bottom: 0;
-    
-    
-    
+
 }
 #fix {
     position: fixed;
@@ -422,13 +599,71 @@ img{
     cursor: pointer;
     
   }
+  
+  
+.fix2{
+    position: fixed;
+    background-color: #0E5049;   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    cursor: pointer;
+    
+  }  
+  
+  
 
 #myr{
-  	font-size: large;
-    font-weight:bold;
+	font-family : 'NanumSquareNeo-Variable';
+  	font-size: 25px;
+    font-weight: lighter;
     text-align: center;
     color: white;
     padding: 40px;
+    margin-bottom: 10px;
     
 }
 
+/* basket영역 */
+
+.box_dashed {
+    border: 2px dashed #EA2129;
+    padding: 22px 0;
+    position: relative;
+    margin: 40px 0 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.alram{
+	text-align: center;
+}
+
+.basket{
+	font-family:'NanumSquareNeo-Variable';
+	margin: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #707070;
+   	margin-left:auto;
+   	margin-right: auto;
+}
+
+.basket-item{
+	position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.del{
+	text-align: right;
+}

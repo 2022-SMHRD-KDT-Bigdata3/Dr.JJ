@@ -1,14 +1,55 @@
 @charset "utf-8";
 @import "reset.css";
 
+
+/* 버튼 */
+
+.button{
+  font-family : 'NanumSquareNeo-Variable';
+  margin: 150px 500px 0 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+    flex: 1 1 auto;
+    
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    max-width: 400px;
+    min-width: 200px;
+   }
+
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+  
+  .btn-1 {
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, #f6d365 0%, #FD6F22 51%, #f6d365 100%);
+  }
+
+
+
 /* 바디태그 마진 */
 html, body {
-	overflow:hidden; 
-	scroll:no;
-	overflow:auto;
-	width:100%; 
-	overflow-x:hidden;  
-	overflow-y:hidden;
+	margin-left: 10px;
+    margin-right: 10px;
+    -ms-overflow-style: none;
 }
 
 /* 폰트 및 로고작업 */
@@ -19,6 +60,13 @@ html, body {
 		format('woff2');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 헤더영역 */
@@ -36,6 +84,13 @@ input {
 	padding: 10px 12px;
 	font-size: 14px;
 }
+
+input[type=submit]{
+	width:50px;
+	
+}
+
+
 
 
 
@@ -56,8 +111,7 @@ header>div#logo>span {
 	color: #0E5049;
 	text-align: center;
 	font-size: small;
-	margin-left: auto;
-	margin-right: auto;
+	
 }
 
 header {
@@ -68,49 +122,60 @@ header {
 	border-bottom: 1px solid rgb(234, 234, 234);
 }
 
-#login {
-	
-	color: black;
-	text-align: center;
-	margin: 0 0 0 5px;
-}
-
-#join {
-	
-	color: black;
-	text-align: center;
-	margin: 0 5px 0 5px;
-	
-}
-
-#mypage {
-
-	color: black;
-	text-align: center;
-	margin: 0 5px 0 5px;
-}
-
-#logout {
-
-	color: black;
-	text-align: center;
-	margin: 0 5px 0 5px;
-}
-
-.menu>#review {
-	color: black;
-	text-align: center;
-	margin-left: 5px;
-}
-
-.menu {
-	margin-top: -55px;
+.like {
 	margin-left: auto;
 	margin-right: auto;
-	float:right;
+	height: 100px;
+	max-height: 74px;
+	border-top: 1px solid rgb(234, 234, 234);
+	border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.love{
+	font-family: 'RixInooAriDuriR';
+	font-style:light;
+	font-size:35px;
+	text-align:center;
+	margin-top:20px;
+	
 }
 
 
+
+
+a{ 
+	text-decoration: none;
+	color: black;
+	} 
+	
+	
+
+#logme.menus>ul{
+	font-family: 'NanumSquareNeo-Variable';
+	width: 100%;
+	text-align:right;
+	margin-top:-60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logme.menus>li{
+	
+	display: inline-block;
+	height:12px;
+	line-height: 12px;
+}
+#logme.menus>li:last-child{
+	border-left: 1px solid #333;
+	padding-left: 10px;
+	margin-left: 4px;
+}
+#logme.menus>a{
+	color: #333;
+	font-size: 12px;
+	position: relative;
+	top: 2px;
+}
 
 .Header_Init_Section {
 	text-align: center;
@@ -128,20 +193,25 @@ header {
 
 /* nav영역 */
 #cate {
+	font-family: 'NanumSquareNeo-Variable';
 	display: block;
 	height: 20px;
-	width: 1000px;
-	margin-left : auto;
-	margin-right: auto;
+	width: 100px;
+	min-width: 100%;
+	text-align: center; 
 	background-color: #0E5049;
+	white-space : nowrap;
+	overflow: hidden; 
+	
 
 	
 }
 
-#cate>a {
+div.cate>a {
 	margin: 0 5px 0 5px;
 	color: #f8f9fa;
-	text-align: left; 
+	opacity: 70%;
+	
 	
 }
 
