@@ -28,7 +28,7 @@
 	<% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
 	<% StoreVO Storeinfo = (StoreVO)(session.getAttribute("Storeinfo")); %>
 <div>
-		<h2>예약확인</h2>
+		<h2 >예약확인</h2>
 		<button id="listBtn">예약 조회하기</button>
 		<table>
 			<tbody>

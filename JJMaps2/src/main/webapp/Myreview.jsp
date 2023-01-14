@@ -17,15 +17,14 @@
 teble {
 	text boder: 2px solid;
 	border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
 }
 
-th, td {
-	border: 1px solid;
-	padding: 10px 5px;
-}
 
 th {
-	background-color: orange;
+	background-color: #FFC314;
+	margin:auto; 
 }
 </style>
 
@@ -51,13 +50,13 @@ th {
 	<br>
 
 
-	<div id="null">
+	<div>
 		<br>
 		<div class="font1">
 			<a>내가 작성한 리뷰😄</a>
 		</div>
 		<br>
-		<div></div>
+
 		<table style="align: center; border: 1Px;" class="Myreviews">
 			<tr>
 				<th>번호</th>
@@ -84,6 +83,7 @@ th {
 
 			</tr>
 		</table>
+		
 		<%
 		}
 		%>
