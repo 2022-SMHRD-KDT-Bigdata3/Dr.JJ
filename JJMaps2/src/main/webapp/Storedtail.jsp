@@ -14,7 +14,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
        <meta name="format-detection" content="telephone-no">
      	 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
    </head>
    <body > 
@@ -32,22 +32,43 @@
 	</div>
 	</div>
     <!-- 가게소개 영역 -->
-    <nav>
-        <h1><%=store_info.getStore_Name() %></h1>
-        <div id="sdtail">
-            <a><%=store_info.getStore_Cate() %></a><br>
-            <a>별점</a>
-        </div>
-        
-    </nav>
     
-    <br>
+    <header class="bar">
+		<div id="Title">
+			 <h1>🧡<%=store_info.getStore_Name() %>🧡</h1>
+				<div id="sdtail">
+				 	<div>
+				 		<a style="font-size: 20px;"><%=store_info.getStore_Cate() %> &</a>
+				    	<a style="font-size: 20px;">별점</a>
+				    </div>
+				</div>
+		</div>
+	</header>
+    
+	<br>
 
-    <main id="main">메인 (가게설명)
-        <div>(위치)</div>
-        <div>(영업상태) 및 정보</div>
-        <div>전화번호</div>
-    </main>
+		<div id="null">
+			<main id="main">
+				<br>
+				<br>
+				<div class="boxx1">
+					<div>메인(가게설명)</div>
+					<br>
+					<div>위치:</div>
+					<br>
+					<div>(영업상태) 및 정보</div>
+					<br>
+					<div>전화번호</div>
+					<br>
+				</div>
+			</main>
+		</div><br>
+
+
+		<% Integer store_id = store_info.getStore_Id(); %>
+		<form class="form">
+		<button type="button" class="navyBtn" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰 쓰기</button>
+    </form><br><br>
 
 	<% Integer store_id = store_info.getStore_Id(); %>
 	<% ReviewDAO dao = new ReviewDAO(); %>
@@ -56,8 +77,20 @@
 		score = 0.0;
 	}%>
     <div id="review"><a id="review" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>(리뷰)</a></div>
+
     
     
+
+    
+    <div id="null">
+    <main id="main2"><br>
+    <div class=menu_pic class="boxx1">메인2 (메뉴 및 사진)</div><br>
+        <div class="boxx1">
+            <h3>메뉴판</h3><br>
+            <span>(맛있는 메뉴)</span><br>
+             
+            <table border="1px solid" class="addInput">
+
     <main id="main2">메인2 (메뉴 및 사진)
         <div>
             <h3>메뉴판</h3>
@@ -66,13 +99,14 @@
             
             
             <table border="1" class="addInput">
+
 			<tr>
 				<th>번호</th>
 				<th>메뉴이름</th>
 				<th>가격</th> 
 				<th>메뉴 설명</th>
 			</tr>
-		
+		</div>
             <% int i =1;
 			for(i=0;i<menu_info.size();i++){  int index =i+1;%>
 			
@@ -84,6 +118,12 @@
 				</tr>
 				
 			<% } %>
+
+     
+        </div><br>
+        <div>(영업상태) 및 정보</div><br>
+        <div>(전화번호)</div><br>
+
             
             </table>
         
@@ -94,7 +134,22 @@
         <div>(영업상태) 및 정보</div>
         <div>(전화번호)</div>
         <div>평점 ⭐ : <%=score %></div>
+
     </main>
+
+    <footer id = "fix" class="form" >
+
+						<form action="StoreDetail">
+							<input type="hidden" id="login_check"
+								value="<%=info != null ? info.getUser_Id() : ""%>"> <input
+								type="hidden" name="storeId"
+								value="<%=store_info.getStore_Id()%>"> 
+								<input type="hidden" name="send" value="Renovation.jsp">
+							<br><button>예약하기</button>
+						
+						
+						</form><br><br><br>
+
     <footer id = "fix"  >
     
     	<form action="StoreDetail" class="form">
@@ -107,7 +162,8 @@
  
 
 
-    <footer id = "footer">@JJUPJJUPBAKSA</footer>
+
+						<footer id = "footer">@JJUPJJUPBAKSA</footer><br>
     	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(document).ready(function() {
