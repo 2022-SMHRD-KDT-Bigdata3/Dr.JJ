@@ -10,6 +10,27 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
 		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
+		 
+		 <style>
+
+teble {
+	text-boder: 2px solid;
+	border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+th {
+	background-color: #FFC314;
+	margin:auto; 
+}
+
+</style>
+		 
+		 
+		 
+		 
 	   </head>
 
 
@@ -23,13 +44,15 @@
 				   <h1>현재 예약</h1>
 				</div>
 		  </header>
-
+<br><br>
 <body>
 	<% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
 	<% StoreVO Storeinfo = (StoreVO)(session.getAttribute("Storeinfo")); %>
-<div>
-		<h2 >예약확인</h2>
-		<button id="listBtn">예약 조회하기</button>
+
+
+<div style="text-align:center;" class="font1">
+		<h2 >예약확인</h2><br>
+		<button id="listBtn">예약 조회하기</button><br><br><br><br>
 		<table>
 			<tbody>
 				<tr>
