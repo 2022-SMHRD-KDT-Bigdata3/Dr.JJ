@@ -145,6 +145,7 @@ header {
 
 a{ 
 	text-decoration: none;
+	color: black;
 	} 
 	
 	
@@ -159,6 +160,7 @@ a{
 }
 
 #logme.menus>li{
+	
 	display: inline-block;
 	height:12px;
 	line-height: 12px;
