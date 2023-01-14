@@ -4,7 +4,7 @@
 <mapper namespace="com.smhrd.db1.ReservationMapper">
 
 	<insert id="create_r_num" parameterType="com.smhrd.model1.ReservationVO">
-		insert into reservations values (rNumber.seq.nextVal,#{store_Id},#{user_Id},#{r_time},#{p_time})
+		insert into reservations values (RESERVATIONS_SEQ.nextVal,#{store_Id},#{user_Id},#{r_time},#{p_time},1)
 	</insert>
 	
 	<select id="r_num_select"  parameterType="com.smhrd.model1.ReservationVO">

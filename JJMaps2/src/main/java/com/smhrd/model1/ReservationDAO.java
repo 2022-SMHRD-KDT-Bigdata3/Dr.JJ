@@ -30,4 +30,12 @@ public class ReservationDAO {
 		return r_number;
 	}
 
+	public ReservationVO select_reseve_by_rnum(Long r_Number) {
+		
+		session = sqlSessionFactory.openSession(true);
+		ReservationVO now_reserve = session.selectOne("select_reseve_by_rnum",r_Number);
+		session.close();
+		return now_reserve;
+	}
+
 }
