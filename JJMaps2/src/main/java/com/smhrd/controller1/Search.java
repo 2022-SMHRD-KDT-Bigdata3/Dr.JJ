@@ -2,7 +2,6 @@ package com.smhrd.controller1;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model1.MenuDAO;
 import com.smhrd.model1.MenuVO;
+import com.smhrd.model1.ReviewDAO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
 
@@ -36,7 +36,11 @@ public class Search extends HttpServlet {
 		//dao 호출하여 점포 db에서 쿼리조회 및 점포 리스트 반환 
 		StoreDAO StoreDAOs = new StoreDAO();
 		ArrayList<StoreVO> store_list = StoreDAOs.search(searchWord);
-		
+		ReviewDAO Rdao = new ReviewDAO();
+		ArrayList<Double> avgScore = new ArrayList<Double>();
+		for(int i=0;i<store_list.size();i++) {
+			avgScore.add(Rdao.avgScores(store_list.get(i).getStore_Id()));
+		}
 		//아이디별 점포 메뉴 검색 전체 배열()
 		MenuDAO menuDAOs = new MenuDAO();
 		ArrayList<ArrayList<MenuVO>> menu_List=new ArrayList<ArrayList<MenuVO>>();
@@ -51,7 +55,7 @@ public class Search extends HttpServlet {
 			System.out.println("검색 성공!");
 			request.setAttribute("store_list", store_list);
 			request.setAttribute("menu_List", menu_List);
-			
+			request.setAttribute("Scores", avgScore);
 			RequestDispatcher rdi = request.getRequestDispatcher("Search.jsp");
 			rdi.forward(request, response);
 			
