@@ -137,7 +137,7 @@
 							</form>
 						</footer>
 
-
+ 
 						<footer id="footer">@JJUPJJUPBAKSA</footer>
 						<br>
 						<script src="http://code.jquery.com/jquery-latest.min.js"></script>
