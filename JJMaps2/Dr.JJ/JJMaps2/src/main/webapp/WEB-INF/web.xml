@@ -101,12 +101,7 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.IdCheckService</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>StoreDetail</servlet-name>
-  	<display-name>StoreDetail</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
-  </servlet>
+  
   <servlet>
   	<servlet-name>StoreReservation</servlet-name>
   	<display-name>StoreReservation</display-name>
@@ -130,6 +125,12 @@
   	<display-name>ReviewService</display-name>
   	<description></description>
   	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<display-name>StoreDetail</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
   </servlet>
   
   
@@ -199,10 +200,6 @@
   	<url-pattern>/IdCheckService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreDetail</servlet-name>
-  	<url-pattern>/StoreDetail</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>StoreReservation</servlet-name>
   	<url-pattern>/StoreReservation</url-pattern>
   </servlet-mapping>
@@ -217,6 +214,10 @@
   <servlet-mapping>
   	<servlet-name>ReviewService</servlet-name>
   	<url-pattern>/ReviewService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<url-pattern>/StoreDetail</url-pattern>
   </servlet-mapping>
   
 
