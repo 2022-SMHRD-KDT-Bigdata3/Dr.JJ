@@ -98,7 +98,8 @@
         <input type="hidden" name="storeId" value="<%=store_info.getStore_Id()%>">
         <input type="hidden" name="send" value="Renovation.jsp">
         <button>예약하기</button>
-       <li><a id='review' href=''>리뷰</a></li>");
+        <li>
+        <button type="button" class="navyBtn" onClick="location.href='writeReview'">리뷰</button></li>");   
         </form>
  
 

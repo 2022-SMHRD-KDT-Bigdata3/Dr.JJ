@@ -54,7 +54,7 @@
 					종료 시간&nbsp;</span><input name="store_Close_Dt" type="time"
 					class="store_runtime"  required><br> <br> <br>
 					<span>기본 조리 시간&nbsp;</span><input name="Cook_time"
-					type="number" class="Cook_time" max="120"  required><br>
+					type="number" class="Cook_time" max="120"  required><br><br><br>
 
 				
 
