@@ -14,7 +14,8 @@ import com.google.gson.Gson;
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.ReservationDAO;
 import com.smhrd.model1.ReservationVO;
-import com.smhrd.model1.StoreVO;
+import com.smhrd.model1.ReserveDetailsDAO;
+import com.smhrd.model1.ReserveDetailsVO;
 
 /**
  * Servlet implementation class StoreReservation
@@ -29,10 +30,18 @@ public class StoreReservation extends HttpServlet {
 		Gson gson = new Gson();
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
-		StoreVO Storeinfo = (StoreVO)session.getAttribute("Storeinfo");
 		ReservationDAO dao = new ReservationDAO();
-		Integer store_id = Storeinfo.getStore_Id();
-		ArrayList<ReservationVO> list = dao.selectSreserv(store_id);
+		Integer store_id = Integer.parseInt(request.getParameter("store_id"));
+		ArrayList<ReservationVO> rlist = dao.rnumSelect(store_id);
+		ArrayList<ArrayList<ReserveDetailsVO>> list= new ArrayList<ArrayList<ReserveDetailsVO>>();
+		ReserveDetailsDAO rdao = new ReserveDetailsDAO();
+		System.out.println(rlist.toString());
+		for(int i=0;i<rlist.size();i++) {
+			System.out.println(rlist.get(i).getR_number());
+			Long r_number = rlist.get(i).getR_number();
+			list.add(rdao.storeReservation(r_number));
+		}
+		
 		System.out.println(list.toString());
 		if(list.size()!=0) {
 			System.out.println("예약조회 성공");

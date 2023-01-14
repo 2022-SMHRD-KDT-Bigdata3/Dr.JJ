@@ -20,13 +20,22 @@ public class ReserveDetailsDAO {
 		session.close();
 		return res;
 	}
-
-
-	public ArrayList<ReserveDetailsVO> reserve_detail_select(Long r_Number) {
+	public ArrayList<ReserveDetailsVO> storeReservation(Long r_number){
 		session=sqlSessionFactory.openSession(true);
-		 List<ReserveDetailsVO> r_Details_list = session.selectList("reserve_detail_select", r_Number);
+		List<ReserveDetailsVO> list = null;
+		list = session.selectList("store_reservation",r_number);
 		session.close();
-		return (ArrayList<ReserveDetailsVO>)r_Details_list;
+		
+		return (ArrayList<ReserveDetailsVO>)list;
 	}
+	public ArrayList<ReserveDetailsVO> reserve_detail_select(long r_Number) {
+		session=sqlSessionFactory.openSession(true);
+		List<ReserveDetailsVO> list = null;
+		list = session.selectList("reserve_detail_select",r_Number);
+		session.close();
+		
+		return (ArrayList<ReserveDetailsVO>)list;
+	}
+	
 	
 }
