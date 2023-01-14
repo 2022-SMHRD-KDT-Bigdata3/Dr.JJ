@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.servlet.ServletException;
@@ -22,10 +23,16 @@ public class MenuUpdate extends HttpServlet {
 		//메뉴 받아오기
 		request.setCharacterEncoding("UTF-8");
 		String[] menu_Name = request.getParameterValues("menu_Name");
-		String[] menu_Price = request.getParameterValues("menu_Price");
+		String[] priceString = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
+		
+		ArrayList<Integer> menu_Price=new ArrayList<Integer>();
+		for(int i=0; i<priceString.length;i++) {
+			menu_Price.add(Integer.parseInt(priceString[i]));
+		}
+		
 		System.out.println(Arrays.toString(menu_Name));
-		System.out.println(Arrays.toString(menu_Price));
+		System.out.println(menu_Price.toString());
 		System.out.println(Arrays.toString(menu_Detail));
 		
 		//로그인계정
@@ -48,7 +55,7 @@ public class MenuUpdate extends HttpServlet {
 		int I_res=0;
 		
 		for(int i=0; i<menu_Name.length; i++) {
-		MenuVO vo = new MenuVO(store_id ,user_id,menu_Name[i],menu_Price[i],menu_Detail[i]);
+		MenuVO vo = new MenuVO(store_id ,user_id,menu_Name[i],menu_Price.get(i),menu_Detail[i]);
 		I_res = MenuDAOs.MenuInsert(vo);
 		
 		if(I_res>0) {

@@ -1,6 +1,7 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.servlet.ServletException;
@@ -25,9 +26,14 @@ public class MenuInsert extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		String[] menu_Name = request.getParameterValues("menu_Name");
-		String[] menu_Price = request.getParameterValues("menu_Price");
+		String[] priceString = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
 		String[] menu_Pic = request.getParameterValues("menu_Pic");
+	
+		ArrayList<Integer> menu_Price=new ArrayList<Integer>();
+		for(int i=0; i<priceString.length;i++) {
+			menu_Price.add(Integer.parseInt(priceString[i]));
+		}
 
 		System.out.println(menu_Pic[0]);
 		
@@ -45,7 +51,7 @@ public class MenuInsert extends HttpServlet {
 		int res=0;
 		
 		for(int i=0; i<menu_Name.length; i++) {
-		MenuVO vo = new MenuVO(store_id ,user_id,menu_Name[i],menu_Price[i],menu_Detail[i]);
+		MenuVO vo = new MenuVO(store_id ,user_id,menu_Name[i],menu_Price.get(i),menu_Detail[i]);
 		res = MenuDAOs.MenuInsert(vo);
 		
 		if(res>0) {System.out.println("메뉴"+i+" 등록 성공!");
