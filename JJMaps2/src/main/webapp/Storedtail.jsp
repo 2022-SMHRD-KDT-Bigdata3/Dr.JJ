@@ -120,18 +120,6 @@
 
 					</main>
 
-					<footer id="fix" class="form">
-
-						<form action="StoreDetail">
-							<input type="hidden" id="login_check"
-								value="<%=info != null ? info.getUser_Id() : ""%>"> <input
-								type="hidden" name="storeId"
-								value="<%=store_info.getStore_Id()%>"> <input
-								type="hidden" name="send" value="Renovation.jsp"> <br>
-							<button>예약하기</button>
-
-
-						</form>
 						<br>
 						<br>
 						<br>
@@ -139,12 +127,13 @@
 						<footer id="fix">
 
 							<form action="StoreDetail" class="form">
+						
 								<input type="hidden" id="login_check"
 									value="<%=info!=null?info.getUser_Id():""%>"> <input
 									type="hidden" name="storeId"
 									value="<%=store_info.getStore_Id()%>"> <input
 									type="hidden" name="send" value="Renovation.jsp">
-								<br><button>예약하기</button>
+									<div id="myr">예약하기</div>
 							</form>
 						</footer>
 
