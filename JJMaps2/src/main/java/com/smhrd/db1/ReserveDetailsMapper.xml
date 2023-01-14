@@ -4,11 +4,11 @@
 <mapper namespace="com.smhrd.db1.ReserveDetailsMapper">
 
 	<insert id="reserve_menu_insert"  parameterType="com.smhrd.model1.ReserveDetailsVO">
-	insert into ReserveDetails values (RESERV_DETAILS_SEQ.nextval,#{menu_Id},#{r_Number},#{menu_Cnt})
+	insert into RESERV_DETAILS values (RESERV_DETAILS_SEQ.nextval,#{menu_Id},#{r_Number},#{menu_Cnt},#{menu_Price})
     </insert>
     
     
-    <select id="reserve_detail_select" >
-    select * from RESERV_DETAILS where R_NUMBER=#{r_Number}
+    <select id="reserve_detail_select" resultType="com.smhrd.model1.ReserveDetailsVO">
+    select * from RESERV_DETAILS where r_Number=#{r_Number}
     </select>
 </mapper>

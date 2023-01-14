@@ -70,7 +70,7 @@
 		<button type="button" class="navyBtn" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰 쓰기</button>
     </form><br><br>
 
-	<% Integer store_id = store_info.getStore_Id(); %>
+
 	<% ReviewDAO dao = new ReviewDAO(); %>
 	<% Double score=  dao.avgScores(store_id); 
 	if(score==null){

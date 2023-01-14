@@ -35,7 +35,10 @@ public class reserveInsert extends HttpServlet {
 		
 		// RESERVATIONS insert 하고 예약 번호 받아오기
 		ReservationDAO reservationDAOs=new ReservationDAO();
-		Long r_Number= reservationDAOs.create_r_num(rVo);
+		int res= reservationDAOs.create_r_num(rVo);
+		if(res>0) {System.out.println("예약성공");}
+		ReservationVO ReservationVOs= reservationDAOs.r_num_select(rVo);
+		long r_Number = (long)ReservationVOs.getR_number();
 		System.out.println("예약번호 발급 :"+r_Number);
 
 		
@@ -43,12 +46,13 @@ public class reserveInsert extends HttpServlet {
 		// input 받은 메뉴 아이디 배열과 가격 추출
 		MenuDAO menuDAOs=new MenuDAO();
 		String[] menu_list = request.getParameterValues("reserve_list");//input받은 메뉴 형변환 필요
+		System.out.println(Arrays.toString(menu_list));
 		ArrayList<Long> menu_Id_list = new ArrayList<Long>();//메뉴 id 리스트
 		ArrayList<Integer> price_list = new ArrayList<Integer>();//메뉴 단가 리스트
 		for(int i=0; i<menu_list.length;i++) {
 			Long menu= Long.parseLong(menu_list[i]);
 			menu_Id_list.add(menu);	
-			int price = menuDAOs.select_price(menu_list[i]);
+			int price = menuDAOs.select_price(Integer.parseInt(menu_list[i]));
 			price_list.add(price);
 		}
 		
@@ -71,7 +75,7 @@ public class reserveInsert extends HttpServlet {
 		
 		// 각 메뉴별로 이름, 수량 묶어서 
 		ReserveDetailsDAO r_d_Dao = new ReserveDetailsDAO();
-		int res=0;
+		res=0;
 		for(int i=0; i<menu_Cnt_list.size();i++) {
 			long menu_Id = menu_Id_list.get(i);
 			long menu_Cnt = menu_Cnt_list.get(i);
@@ -83,6 +87,7 @@ public class reserveInsert extends HttpServlet {
 		
 		
 		//예약메뉴리스트
+		
 		ArrayList<ReserveDetailsVO> now_reserve_menu=r_d_Dao.reserve_detail_select(r_Number);
 		ReservationVO now_reserve =  reservationDAOs.select_reseve_by_rnum(r_Number);
 		
