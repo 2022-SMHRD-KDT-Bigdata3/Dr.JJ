@@ -2,6 +2,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model1.MenuVO"%>
 <%@page import="com.smhrd.model1.StoreVO"%>
+<%@page import="com.smhrd.model1.ReviewDAO"%>
+<%@page import="com.smhrd.model1.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,6 +24,7 @@
 
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
+   
     <!-- 헤더영역 -->
     <div id="login_Body">
 			<div id="logo">
