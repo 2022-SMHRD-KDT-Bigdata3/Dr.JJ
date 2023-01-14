@@ -17,16 +17,9 @@
    </head>
    <body > 
    
-<<<<<<< HEAD
 
-=======
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
    <%	MemberVO info = (MemberVO)session.getAttribute("info");	%>
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-Bigdata3/Dr.JJ.git
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
     <!-- 헤더영역 -->

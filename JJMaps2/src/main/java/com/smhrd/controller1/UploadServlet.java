@@ -42,7 +42,7 @@ public class UploadServlet extends HttpServlet {
 					encType, // 인코딩 방법
 					// 동일한 이름이 존재하면 새로운 이름이 부여됨
 					new DefaultFileRenamePolicy());
-				String reviewPic = "http://localhost:8084/JJMap/"+multi.getFileNames();
+				String reviewPic = "http://localhost:8084/JJMap/upload/"+multi.getFilesystemName("uploadFile");
 				System.out.println(reviewPic);
 				int store_id = Integer.parseInt(multi.getParameter("store_id"));
 				System.out.println(store_id);
