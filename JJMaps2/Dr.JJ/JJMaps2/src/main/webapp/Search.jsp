@@ -46,8 +46,7 @@
             </header>
         </div>
         
-        <div id="allwidth">
-            <div id="map2"></div>
+      <br><br><br>
         <div class="list_wrap">
         
         
@@ -156,7 +155,7 @@
 			});
 
 			//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
-			downloadUrl('http://localhost:14510/JJMap/output.xml', function(
+			downloadUrl('http://localhost:8084/JJMap/output.xml', function(
 					data) {
 				console.log(data);
 				var xml = data.responseXML;
