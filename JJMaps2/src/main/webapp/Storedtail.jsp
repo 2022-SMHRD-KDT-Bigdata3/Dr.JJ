@@ -25,6 +25,7 @@
    <%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
    
+   
     <!-- 헤더영역 -->
     <div id="login_Body">
 			<div id="logo">
@@ -36,7 +37,6 @@
         <h1><%=store_info.getStore_Name() %></h1>
         <div id="sdtail">
             <a><%=store_info.getStore_Cate() %></a><br>
-            <a>별점</a>
         </div>
         
     </nav>
@@ -50,11 +50,7 @@
     </main>
 
 	<% Integer store_id = store_info.getStore_Id(); %>
-	<% ReviewDAO dao = new ReviewDAO(); %>
-	<% Double score=  dao.avgScores(store_id); 
-	if(score==null){
-		score = 0.0;
-	}%>
+
     <div id="review"><a id="review" onClick='location.href="ReviewService?store_id=<%=store_id %>"'>(리뷰)</a></div>
     
     
@@ -93,7 +89,7 @@
         </div>
         <div>(영업상태) 및 정보</div>
         <div>(전화번호)</div>
-        <div>평점 ⭐ : <%=score %></div>
+
     </main>
     <footer id = "fix"  >
     
