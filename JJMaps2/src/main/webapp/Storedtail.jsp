@@ -124,7 +124,7 @@
 						<br>
 						<br>
 
-						<footer id="fix">
+						
 
 							<form action="StoreDetail" class="form">
 						
@@ -135,7 +135,7 @@
 									type="hidden" name="send" value="Renovation.jsp">
 									<div id="myr"><input type="submit" value="예약하기"></div>
 							</form>
-						</footer>
+					
 
  
 						<footer id="footer">@JJUPJJUPBAKSA</footer>
