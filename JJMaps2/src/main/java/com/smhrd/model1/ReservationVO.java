@@ -6,112 +6,206 @@ import java.sql.Date;
 public class ReservationVO {
 
 
-
 // 예약 번호
- private Long rNumber;
+ private Long r_number;
 
  // 가게 아이디
- private Integer storeId;
+ private Integer store_Id;
 
  // 예약자 아이디
- private String userId;
+ private String user_Id;
 
- // 가게 메뉴
- private String storeMenu;
-
- // 음식 가격
- private String storePrice;
 
  // 예약 시간
- private Date rTime;
+ private String r_time;
 
- // 픽업 시간
- private Date pTime;
+ // 픽업 시간 
+ private String p_time;
+ 
 
- public Long getRNumber() {
-     return rNumber;
- }
+ 
+ 
+ 
+ 
+ 
 
- public void setRNumber(Long rNumber) {
-     this.rNumber = rNumber;
- }
 
- public Integer getStoreId() {
-     return storeId;
- }
-
- public void setStoreId(Integer storeId) {
-     this.storeId = storeId;
- }
-
- public String getUserId() {
-     return userId;
- }
-
- public void setUserId(String userId) {
-     this.userId = userId;
- }
-
- public String getStoreMenu() {
-     return storeMenu;
- }
-
- public void setStoreMenu(String storeMenu) {
-     this.storeMenu = storeMenu;
- }
-
- public String getStorePrice() {
-     return storePrice;
- }
-
- public void setStorePrice(String storePrice) {
-     this.storePrice = storePrice;
- }
-
- public Date getRTime() {
-     return rTime;
- }
-
- public void setRTime(Date rTime) {
-     this.rTime = rTime;
- }
-
- public Date getPTime() {
-     return pTime;
- }
-
- public void setPTime(Date pTime) {
-     this.pTime = pTime;
- }
- public ReservationVO(Integer storeId, String userId, String storeMenu, String storePrice, Date pTime) {
-		super();
-		this.storeId = storeId;
-		this.userId = userId;
-		this.storeMenu = storeMenu;
-		this.storePrice = storePrice;
-		this.pTime = pTime;
-	}
-
-public ReservationVO(Integer storeId, String userId) {
-	super();
-	this.storeId = storeId;
-	this.userId = userId;
+public Long getR_number() {
+	return r_number;
 }
 
- public ReservationVO(Integer storeId) {
-	super();
-	this.storeId = storeId;
+
+
+
+
+
+
+
+public Integer getStore_Id() {
+	return store_Id;
 }
 
-// Reservations 모델 복사
- public void CopyData(ReservationVO param)
- {
-     this.rNumber = param.getRNumber();
-     this.storeId = param.getStoreId();
-     this.userId = param.getUserId();
-     this.storeMenu = param.getStoreMenu();
-     this.storePrice = param.getStorePrice();
-     this.rTime = param.getRTime();
-     this.pTime = param.getPTime();
- }
+
+
+
+
+
+
+
+public String getUser_Id() {
+	return user_Id;
+}
+
+
+
+
+
+
+
+
+public String getR_time() {
+	return r_time;
+}
+
+
+
+
+
+
+
+
+public String getP_time() {
+	return p_time;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public void setR_number(Long r_number) {
+	this.r_number = r_number;
+}
+
+
+
+
+
+
+
+
+public void setStore_Id(Integer store_Id) {
+	this.store_Id = store_Id;
+}
+
+
+
+
+
+
+
+
+public void setUser_Id(String user_Id) {
+	this.user_Id = user_Id;
+}
+
+
+
+
+
+
+
+
+public void setR_time(String r_time) {
+	this.r_time = r_time;
+}
+
+
+
+
+
+
+
+
+public void setP_time(String p_time) {
+	this.p_time = p_time;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Override
+public String toString() {
+	return "ReservationVO [r_number=" + r_number + ", store_Id=" + store_Id + ", user_Id=" + user_Id + ", r_time="
+			+ r_time + ", p_time=" + p_time +  "]";
+}
+
+
+
+
+
+
+
+
+public ReservationVO(Long r_number, Integer store_Id, String user_Id, String r_time, String p_time) {
+	super();
+	this.r_number = r_number;
+	this.store_Id = store_Id;
+	this.user_Id = user_Id;
+	this.r_time = r_time;
+	this.p_time = p_time;
+}
+
+
+
+
+
+
+
+
+public ReservationVO(Integer store_Id, String user_Id, String r_time, String p_time) {
+	super();
+	this.store_Id = store_Id;
+	this.user_Id = user_Id;
+	this.r_time = r_time;
+	this.p_time = p_time;
+}
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
 }

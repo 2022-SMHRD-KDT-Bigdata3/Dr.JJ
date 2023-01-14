@@ -28,12 +28,26 @@ body {
 	<hr>
 
 	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c">
 		
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script type="text/javascript">
-		
+	function success({ coords, timestamp }) {
+		 console.log('coords', coords);
+        latitude = coords.latitude;   // 위도
+        longitude = coords.longitude; // 경도
+		console.log(latitude);       
+  		initMap(latitude,longitude);
+    }
+    function getUserLocation() {
+        if (!navigator.geolocation) {
+            throw "위치 정보가 지원되지 않습니다.";
+        }
+        navigator.geolocation.watchPosition(success);
+    }
+    getUserLocation()	
+	
 		var customLabel = {
 			붕어빵 : {
 				label : 'B'
@@ -60,7 +74,7 @@ body {
 
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
-				center : new google.maps.LatLng(35.15, 126.8),
+				center : new google.maps.LatLng(latitude, longitude),
 				zoom : 11,
 				mapTypeControl : true,
 				panControl : true,

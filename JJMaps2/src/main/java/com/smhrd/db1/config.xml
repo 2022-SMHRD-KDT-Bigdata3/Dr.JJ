@@ -30,7 +30,7 @@
 
 		<mapper resource="com/smhrd/db1/ReservationMapper.xml" />
 
-		<mapper resource="com/smhrd/db1/ReservationMapper.xml" />
+		<mapper resource="com/smhrd/db1/ReserveDetailsMapper.xml" />
 
 	</mappers>
 

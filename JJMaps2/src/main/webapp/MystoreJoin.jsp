@@ -53,6 +53,10 @@
 					type="time" class="store_runtime"   required><br> <br> <span>영업
 					종료 시간&nbsp;</span><input name="store_Close_Dt" type="time"
 					class="store_runtime"  required><br> <br> <br>
+					<span>기본 조리 시간&nbsp;</span><input name="Cook_time"
+					type="number" class="Cook_time" max="120"  required><br>
+
+				
 
 				<!-- 주소관련 input창 삭제 금지! 삭제하면 주소찾기 기능이 안되용~ -->
 

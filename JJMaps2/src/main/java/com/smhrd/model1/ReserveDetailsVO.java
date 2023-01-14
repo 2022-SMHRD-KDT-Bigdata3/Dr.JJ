@@ -4,55 +4,136 @@ package com.smhrd.model1;
 public class ReserveDetailsVO {
 
  // 예약상세 순번
- private Long rdId;
+ private Long rd_Id;
 
  // 메뉴 아이디
- private Double menuId;
+ private Long menu_Id;
 
  // 예약 번호
- private Long rNumber;
+ private Long r_Number;
 
  // 주문 수량
- private String menuCnt;
+ private Long menu_Cnt;
 
- public Long getRdId() {
-     return rdId;
- }
+ 
+ 
+ 
+ 
+ 
+public Long getRd_Id() {
+	return rd_Id;
+}
 
- public void setRdId(Long rdId) {
-     this.rdId = rdId;
- }
 
- public Double getMenuId() {
-     return menuId;
- }
 
- public void setMenuId(Double menuId) {
-     this.menuId = menuId;
- }
 
- public Long getRNumber() {
-     return rNumber;
- }
 
- public void setRNumber(Long rNumber) {
-     this.rNumber = rNumber;
- }
 
- public String getMenuCnt() {
-     return menuCnt;
- }
+public Long getMenu_Id() {
+	return menu_Id;
+}
 
- public void setMenuCnt(String menuCnt) {
-     this.menuCnt = menuCnt;
- }
 
- // ReservDetails 모델 복사
- public void CopyData(ReserveDetailsVO param)
- {
-     this.rdId = param.getRdId();
-     this.menuId = param.getMenuId();
-     this.rNumber = param.getRNumber();
-     this.menuCnt = param.getMenuCnt();
- }
+
+
+
+
+public Long getR_Number() {
+	return r_Number;
+}
+
+
+
+
+
+
+public Long getMenu_Cnt() {
+	return menu_Cnt;
+}
+
+
+
+
+
+
+public void setRd_Id(Long rd_Id) {
+	this.rd_Id = rd_Id;
+}
+
+
+
+
+
+
+public void setMenu_Id(Long menu_Id) {
+	this.menu_Id = menu_Id;
+}
+
+
+
+
+
+
+public void setR_Number(Long r_Number) {
+	this.r_Number = r_Number;
+}
+
+
+
+
+
+
+public void setMenu_Cnt(Long menu_Cnt) {
+	this.menu_Cnt = menu_Cnt;
+}
+
+
+
+
+
+
+@Override
+public String toString() {
+	return "ReserveDetailsVO [rd_Id=" + rd_Id + ", menu_Id=" + menu_Id + ", r_Number=" + r_Number + ", menu_Cnt="
+			+ menu_Cnt + "]";
+}
+
+
+
+
+
+
+public ReserveDetailsVO(Long rd_Id, Long menu_Id, Long r_Number, Long menu_Cnt) {
+	super();
+	this.rd_Id = rd_Id;
+	this.menu_Id = menu_Id;
+	this.r_Number = r_Number;
+	this.menu_Cnt = menu_Cnt;
+}
+
+
+
+
+
+
+public ReserveDetailsVO() {
+	super();
+}
+
+
+
+
+
+
+public ReserveDetailsVO(Long menu_Id, Long r_Number, Long menu_Cnt) {
+	super();
+	this.menu_Id = menu_Id;
+	this.r_Number = r_Number;
+	this.menu_Cnt = menu_Cnt;
+}
+
+ 
+ 
+ 
+ 
 }

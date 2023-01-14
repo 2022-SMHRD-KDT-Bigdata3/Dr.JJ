@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.smhrd.db1.ReservationMapper">
-<insert id="reserveInsert" parameterType="com.smhrd.model1.ReservationVO">
-	insert into reservations values (rNumber.seq.nextVal,#{storeId},#{userId},#{storeMenu},#{storePrice},sysdate,#{pTime})
-</insert>
+
+	<insert id="create_r_num" parameterType="com.smhrd.model1.ReservationVO">
+		insert into reservations values (rNumber.seq.nextVal,#{store_Id},#{user_Id},#{r_time},#{p_time})
+	</insert>
+	
+	<select id="r_num_select"  parameterType="com.smhrd.model1.ReservationVO">
+	 select r_number from RESERVATIONS where store_Id = #{store_Id}
+	</select>
+	
+
 </mapper>
