@@ -267,6 +267,7 @@ header{
 	margin-left: auto;
 	margin-right: auto;
 }
+
  /*메인처럼 띄우고 싶을 때 긁어서 가져가시오.(로그인)*/
 #logme.menus>li{
 	display: inline-block;
