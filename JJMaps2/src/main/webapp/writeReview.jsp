@@ -38,7 +38,7 @@ td {
     display: none;
 }
 #myform label{
-    font-size: 3em;
+    font-size: 1.8em;
     color: transparent;
     text-shadow: 0 0 0 #f0f0f0;
 }
@@ -90,7 +90,7 @@ td {
 
 	<div class="info">
 		<div class="info">
-			<img src="images/profil_img.jpg"">
+			<img src="images/store.png">
 			<h2 class="store_name">
 				<a href="Storedtail.jsp">마싯는 트럭</a>
 			</h2>
@@ -103,8 +103,8 @@ td {
 		<form id="myform" action="UploadServlet" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="store_id"  value= "<%=store_id%>">
 			<table>
-				<tr bgcolor="orange" height="50px">
-					<div style="color: orange" id="head">리뷰합니다!</div>
+				<tr bgcolor="orange">
+					<div id="null" style="color: balck; font-weight:bold;" id="head ">리뷰합니다!</div>
 				</tr>
 
 
@@ -123,10 +123,12 @@ td {
 						"real-input" class="image_inputType_file" onchange="readURL(this);"
 						accept="img/*" required multiple></td></tr><br> <br>
 				<tr>
-					<td>
-					<div class= "starScore">
+					<td><br>
+					
+				<!-- 별점 등록-->
+					<div id="null" class= "starScore">
 						<fieldset>
-							<span class="text-bold">별점을 선택해주세요</span> 
+							<span class="text-bold" style="font-weight:bold; color:orangered;">별점을 선택해주세요</span> <br>
 							<input type="radio" name="reviewStar" value="5" id="rate1">
 								<label for="rate1">★</label> 
 							<input type="radio" name="reviewStar" value="4" id="rate2">
@@ -141,10 +143,11 @@ td {
 						</div>
 					</td>
 				</tr>
-				<br>
+
 				<tr>
 					<div class="sb">
-						<td><input type="submit" value="등록"></td>
+						<td><br>
+						<input type="submit" value="등록"></td>
 					</div>
 					<br>
 					
