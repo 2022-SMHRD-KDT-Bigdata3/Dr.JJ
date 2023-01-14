@@ -4,7 +4,9 @@
 <mapper namespace="com.smhrd.db1.ReserveDetailsMapper">
 
 	<insert id="reserve_menu_insert"  parameterType="com.smhrd.model1.ReserveDetailsVO">
-	insert into ReserveDetails values (ReserveDetails_seq.nextval,#{menu_Id},#{r_Number},#{menu_Cnt})
+	insert into Reserv_Details values (ReserveDetails_seq.nextval,#{menu_Id},#{r_Number},#{menu_Cnt})
     </insert>
-    
+    <select id="store_reservation" resultType="com.smhrd.model1.ReserveDetailsVO">
+ 	select * from reserv_details wehre r_Number = #{r_number} 
+</select>
 </mapper>

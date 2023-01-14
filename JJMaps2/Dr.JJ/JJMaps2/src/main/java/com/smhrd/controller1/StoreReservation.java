@@ -13,7 +13,8 @@ import javax.servlet.http.HttpSession;
 import com.google.gson.Gson;
 import com.smhrd.model1.MemberVO;
 import com.smhrd.model1.ReservationDAO;
-import com.smhrd.model1.ReservationVO;
+import com.smhrd.model1.ReserveDetailsDAO;
+import com.smhrd.model1.ReserveDetailsVO;
 import com.smhrd.model1.StoreVO;
 
 /**
@@ -32,7 +33,13 @@ public class StoreReservation extends HttpServlet {
 		StoreVO Storeinfo = (StoreVO)session.getAttribute("Storeinfo");
 		ReservationDAO dao = new ReservationDAO();
 		Integer store_id = Storeinfo.getStore_Id();
-		ArrayList<ReservationVO> list = dao.selectSreserv(store_id);
+		ArrayList<Long> rNumlist = dao.rnumSelect(store_id);
+		ArrayList<ReserveDetailsVO> list = new ArrayList<ReserveDetailsVO>();
+		ReserveDetailsDAO rdao = new ReserveDetailsDAO();
+		for(int i=0;i<rNumlist.size();i++) {
+			list.add(rdao.storeReservation(rNumlist.get(i)));
+		}
+		
 		System.out.println(list.toString());
 		if(list.size()!=0) {
 			System.out.println("예약조회 성공");

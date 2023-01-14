@@ -17,5 +17,12 @@ public class ReserveDetailsDAO {
 		session.close();
 		return res;
 	}
+	public ReserveDetailsVO storeReservation(Long r_number){
+		session=sqlSessionFactory.openSession(true);
+		ReserveDetailsVO vo = session.selectOne("store_reservation",r_number);
+		session.close();
+		return vo;
+	}
+	
 	
 }

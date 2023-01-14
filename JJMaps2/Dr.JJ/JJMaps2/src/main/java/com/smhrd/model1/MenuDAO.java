@@ -2,7 +2,6 @@ package com.smhrd.model1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -46,6 +45,7 @@ public class MenuDAO {
 		session.close();
 		return res;
 	}
+	
 
 
 
