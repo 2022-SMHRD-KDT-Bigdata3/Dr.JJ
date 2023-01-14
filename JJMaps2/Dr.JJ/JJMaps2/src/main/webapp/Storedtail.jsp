@@ -49,18 +49,23 @@
 	</header>
 
 	<br>
-
+<% String status;
+if( store_info.getStore_Status()==0 ){
+	status = "영업중";
+}else{
+	status = "영업중이 아닙니다.";
+}%>
 	<div id="null">
 		<main id="main">
 			<br> <br>
 			<div class="boxx1">
-				<div>메인(가게설명)</div>
+				<div>카테고리 : <%=store_info.getStore_Cate() %> </div>
 				<br>
-				<div>위치:</div>
+				<div>위치: <%=store_info.getStore_Addr() %></div>
 				<br>
-				<div>(영업상태) 및 정보</div>
+				<div>(영업상태) 및 정보 : <%=status %></div>
 				<br>
-				<div>전화번호</div>
+				<div>전화번호 : <%=store_info.getStore_Tel() %></div>
 				<br>
 			</div>
 		</main>
