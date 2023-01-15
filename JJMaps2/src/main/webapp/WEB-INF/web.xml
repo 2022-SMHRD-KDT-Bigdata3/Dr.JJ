@@ -24,7 +24,7 @@
   	<servlet-class>com.smhrd.controller1.LogoutService</servlet-class>
   </servlet>
   
-  </servlet>
+  
   <servlet>
   	<servlet-name>Search</servlet-name>
   	<display-name>Search</display-name>

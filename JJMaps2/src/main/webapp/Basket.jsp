@@ -16,19 +16,32 @@
 	session.setAttribute("reserve_menu_id",reserve_list );
 	session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
 
-	<%
-	ReservationVO Storeinfo = (ReservationVO) session.getAttribute("ReservationVO");
-	%>
-	<%
-	ArrayList<Long> reserve_menu_id = (ArrayList<Long>) session.getAttribute("reserve_menu_id");
-	%>
-	<%
-	ArrayList<Long> reserve_menu_cnt = (ArrayList<Long>) session.getAttribute("reserve_menu_cnt");
-	%>
+	<%	ReservationVO Storeinfo = (ReservationVO) session.getAttribute("ReservationVO");	%>
+	<%	ArrayList<Long> reserve_menu_id = (ArrayList<Long>) session.getAttribute("reserve_menu_id");	%>
+	<%	ArrayList<Long> reserve_menu_cnt = (ArrayList<Long>) session.getAttribute("reserve_menu_cnt");	%>
 	<div id="logo">
 		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 	</div>
+<div class='head' id="logo">
+			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		</div>
+		<div class='head head_left'>
+			<%
+			if (info != null) {
+				if (info.getUser_Code().equals("1")) {
+				out.print("<a class=' head_text' href='Mystore.jsp'>오늘영업</a>");}
+				out.print("<a class=' head_text' id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<a class=' head_text' id='logout' href='LogoutService'>로그아웃</a></li>");
 
+				// smart 1234 -> usercode 0(일반이용자)
+				// ssss 1234 -> usercode 1(점포이용자)
+
+			} else {
+				out.print("<a class='head_text' id='login' href='Login.jsp'>로그인</a></li>");
+				out.print("<a class='head_text' id='join' href='Join.jsp'>회원가입</a></li>");
+			}
+			%> 
+			</div>
 	<header>
 		<div id="Title">장바구니</div>
 
