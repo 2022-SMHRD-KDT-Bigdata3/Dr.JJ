@@ -10,27 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no " />
 		 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />	 
-		 
-		 <style>
-
-teble {
-	text-boder: 2px solid;
-	border-collapse: collapse;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-
-th {
-	background-color: #FFC314;
-	margin:auto; 
-}
-
-</style>
-		 
-		 
-		 
-		 
 	   </head>
 
 
@@ -44,25 +23,22 @@ th {
 				   <h1>현재 예약</h1>
 				</div>
 		  </header>
-<br><br>
+
 <body>
 	<% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
-	<% StoreVO Storeinfo = (StoreVO)(session.getAttribute("Storeinfo")); %>
-
-
-<div style="text-align:center;" class="font1">
-		<h2 >예약확인</h2><br>
-		<button id="listBtn">예약 조회하기</button><br><br><br><br>
+<div>
+		<h2>예약확인</h2>
+		<button id="listBtn" onclick="loadReserve()">예약 조회하기</button>
 		<table>
 			<tbody>
 				<tr>
-					<td>주문순번</td>
-					<td>예약자</td>
-					<td>예약시간</td>
-					<td>픽업시간</td>
-					<td>메뉴</td>
-					<td>수량</td>
-					<td>삭제</td>
+					<th>주문순번</th>
+					<th>예약자</th>
+					<th>예약시간</th>
+					<th>픽업시간</th>
+					<th>메뉴</th>
+					<th>수량</th>
+					<th>삭제</th>
 				</tr>
 			</tbody>
 			<tbody id="Reservation">
@@ -77,9 +53,15 @@ th {
 <script>
 	function loadReserve(){
 	$.ajax({
-		url: "StoreReserve",
+		url: "StoreReservation",
 		method: "POST",
-		dataType : "JSON",
+		data:{"rd_Id":rd_Id,
+			"menu_Id":menu_Id,
+			"r_Number":r_Number,
+			"menu_Cnt":menu_Cnt,
+			"menu_Price":menu_Price
+		},
+		datatype :"Json",
 		success : resultJson,
 		error : errFun
 	})
@@ -87,20 +69,20 @@ th {
 	function resultJson(data){
 		console.log(data);
 		var html = "";
-		for(var i -0;i<data.length;i++){
+		for(var i =0;i<data.length;i++){
 			html += "<tr>";
 			html += "<td>"+(i+1)+"</td>";
-			html += "<td>"+data[i].user_id+"</td>";
-			html += "<td>"+data[i].rTime+"</td>";
-			html += "<td>"+data[i].pTime+"</td>";
-			html += "<td>"+data[i].storeMenu+"</td>";
-			html += "<td>"+data[i].storePrice+"</td>";
-			html += "<td<a href='javascript:removeMessage("+data[i].rNumber+");'>삭제</a></td>";
+			html += "<td>"+data.documents[i].menu_Id+"</td>";
+			html += "<td>"+data.documents[i].r_Number+"</td>";
+			html += "<td>"+data.documents[i].menu_Cnt+"</td>";
+			html += "<td>"+data.documents[i].menu_Price+"</td>";
+			html += "<td><a href='javascript:removeMessage("+data[i].rNumber+");'>삭제</a></td>";
 		}
 		$("#Reservation").html(html);
 	}
-	function errFun(){
-		console.log("통신실패ㅜㅜㅜㅜㅜㅜㅠ픂퓨ㅠ퓨ㅠㅍ");
+	function errFun(request,error){
+		console.log("통신실패ㅜㅜㅜㅜㅜㅜㅠ");
+		console.log("code:"+request.status+"\n"+"message"+request.responseText+"\n"+"error:" +error);
 	}
 </script>
 </html>
