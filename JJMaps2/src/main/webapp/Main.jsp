@@ -54,7 +54,7 @@ padding-top: 30px;}
 .head_text{
  display: inline-block;
  padding-right: 10px;
-
+ 
  color: rgb(141, 140, 140);
  letter-spacing :0.009em; 
  font-size: 0.9em;}
