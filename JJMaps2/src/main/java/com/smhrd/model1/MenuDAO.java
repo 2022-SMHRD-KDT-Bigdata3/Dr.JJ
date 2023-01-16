@@ -62,7 +62,7 @@ public class MenuDAO {
 		MenuVO menuVOs = session.selectOne("select_name",menu_Id);
 		String name = menuVOs.getMenu_Name();
 		session.close();
-		return name;
+		return name; 
 	}
 
 
