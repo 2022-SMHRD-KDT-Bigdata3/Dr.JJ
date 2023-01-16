@@ -89,7 +89,7 @@ table.type04 {
 <%if(now_reserve==null || now_reserve.getIsCooking()==0 ){ %>
 
 현재 주문한 예약이 없습니다😓<br>
-<a href="Main.jsp">주문하러 가기</a><br><br>
+<a href="Main.jsp">주문하러 가기</a><br><br><br>
 <button type="button" class="navyBtn" onClick="location.href='Main.jsp'">주문하러 가기</button>
 <%}else{ %>
 
