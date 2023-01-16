@@ -1,6 +1,5 @@
 package com.smhrd.model1;
 
-import java.sql.Date;
 
 //예약
 public class ReservationVO {

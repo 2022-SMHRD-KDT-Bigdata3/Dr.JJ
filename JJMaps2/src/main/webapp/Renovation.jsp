@@ -15,6 +15,7 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
 <style type="text/css">
@@ -104,21 +105,34 @@ padding-top: 11px;}
 			<h1>예약하기</h1>
 		</div>
 		
-		
 	</header>
+
+<br>
+<br>
+<br>
+
+	<div class="info" style="   margin-left: auto;
+    margin-right: auto;
+    text-align: center;">
+		
+	<img style="width=1px;"src="https://cdn-icons-png.flaticon.com/128/8339/8339313.png">
+	<br><br>
+	<span class="inline" style="font-size: 0.94em;display: block; color:rgb(141, 140, 140);">Category | <%=store_info.getStore_Cate() %></span><br>
+	<div class="inline" id="null" style="max-width:800px;min-width:300px;height: 70px;">	<span style="height: 2px; display: block; font-size: 1.8em; font-weight: bold; "><%=store_info.getStore_Name() %></span></div>
+	<a  href="https://map.kakao.com/link/roadview/<%=store_info.getLatitude()%>,<%=store_info.getLongitude()%>">
+
+	<div class="inline">
+	<span class="material-symbols-outlined" style=" display:inline-block; color:rgb(70, 70, 70);top:10px;">location_on</span>
+	<span  style="font-size: 1em; height: 20px; display: inline-block; font-weight: bold;color:rgb(70, 70, 70);"><%=store_info.getStore_Addr() %></span></a><br>
+	</div><br>
+		</div>
+
 
 
 	<form class="form" action="reserveInsert"  method="post">
 		<input class="hidden" name="store_Id" value="<%=store_info.getStore_Id()%>" type="text" >
 		<input class="hidden" name="user_Id" value="<%=info.getUser_Id()%>" type="text">
-		<div class="info">
-			<div class="info">
-				<img src="images/profil_img.jpg"> <br>
-
-				<h2><%=store_info.getStore_Name()%></h2>
-				<br>
-			</div>
-		</div>
+		
 
 		<h4 class="menu">MENU</h4>
 <div id="mainBody">
