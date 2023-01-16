@@ -90,7 +90,7 @@ td {
 
 	<div class="info">
 		<div class="info">
-			<img src="images/store.png">
+			<img src="images/profil_img.jpg">
 			<h2 class="store_name">
 				<a href="Storedtail.jsp">마싯는 트럭</a>
 			</h2>
