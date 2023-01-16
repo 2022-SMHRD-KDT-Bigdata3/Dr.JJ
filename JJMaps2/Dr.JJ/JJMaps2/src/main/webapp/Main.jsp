@@ -33,7 +33,11 @@
 		<div class="menu">
 		<div id="logme" class="menus">
 		<ul>
-
+		<%
+		if(info !=null &&info.getUser_Nick().equals("admin")){
+			out.print("<a href='CreateXml' method='post'>점포정보 최신화하기</a>");
+		}
+		%>
 
 			<%
 			if (info != null) {

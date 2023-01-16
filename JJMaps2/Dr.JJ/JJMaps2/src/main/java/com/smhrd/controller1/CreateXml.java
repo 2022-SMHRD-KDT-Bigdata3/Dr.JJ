@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +41,8 @@ public class CreateXml extends HttpServlet {
 				XMLWriter writer = new XMLWriter(out, format);
 				writer.write(document);
 				out.close();
+				RequestDispatcher rdi = request.getRequestDispatcher("Main.jsp");
+				rdi.forward(request, response);
 			} catch (IOException e) {
 				e.printStackTrace();
 			} catch (Exception e) {
