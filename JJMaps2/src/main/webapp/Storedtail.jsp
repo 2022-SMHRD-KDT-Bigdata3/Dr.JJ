@@ -16,6 +16,7 @@
 <meta name="format-detection" content="telephone-no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <style type="text/css">
 
@@ -49,6 +50,68 @@ padding-top: 11px;}
  }
 .inline{
  display: inline-block;}
+ 
+ .form{ display: inline-block;}
+ 
+ .star-ratings {
+    color: #aaa9a9; 
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: #aaa9a9;  /* Will override color (regardless of order) */
+
+  }
+   
+  .star-ratings-fill {
+    color: #fff58c;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: gold;
+  }
+   
+  .star-ratings-base {
+    z-index: 0;
+    padding: 0;
+    
+  }
+   table.type05 {
+    border-collapse: separate;
+     width: 100%;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+     text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 td {
+    padding: 10px;
+     padding-right: 20px;
+    text-align: right;
+    
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+
+    #pic_div{
+     text-align: center;
+    width:100px;
+    height:85px;
+     border-radius: 20px;
+     border: 0.1em solid  rgb(185, 185, 185);
+    }
+ 
  
 </style>
 </head>
@@ -94,7 +157,6 @@ padding-top: 11px;}
 			<div id="sdtail">
 				<div>
 				
-
 				</div>
 			</div>
 		</div>
@@ -104,80 +166,103 @@ padding-top: 11px;}
 	<div class="mainBody " >
 	<br>
 	<img style="width=1px;"src="https://cdn-icons-png.flaticon.com/128/8339/8339313.png">
+	<br><br>
 	<span class="inline" style="font-size: 0.94em;display: block; color:rgb(141, 140, 140);">Category | <%=store_info.getStore_Cate() %></span><br>
 	<div class="inline" id="null" style="max-width:800px;min-width:300px;height: 70px;">	<span style="height: 2px; display: block; font-size: 1.8em; font-weight: bold; "><%=store_info.getStore_Name() %></span></div>
-	<span class="inline" style="font-size: 1em; height: 70px; display: block; font-weight: bold;color:rgb(70, 70, 70);"><%=store_info.getStore_Addr() %></span><br>
-		<div class="star-ratings">
-			<div 
-		    class="star-ratings-fill space-x-2 text-lg"
-		    :style="{ width: ratingToPercent + '%' }"
-			>
-				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-			</div>
-			<div class="star-ratings-base space-x-2 text-lg">
-				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-			</div>
-		</div>	
-		
+	<a  href="https://map.kakao.com/link/roadview/<%=store_info.getLatitude()%>,<%=store_info.getLongitude()%>">
+	<br>
+	<div class="inline">
+	<span class="material-symbols-outlined" style=" display:inline-block; color:rgb(70, 70, 70);top:10px;">location_on</span>
+	<span  style="font-size: 1em; height: 20px; display: inline-block; font-weight: bold;color:rgb(70, 70, 70);"><%=store_info.getStore_Addr() %></span></a><br>
+	</div><br>
+	<div class="inline">
+	<span class="material-symbols-outlined" style=" display:inline-block; color:rgb(80, 80, 80);top:10px;">call</span>
+	<span  style="font-size: 1em; height:20px; display: inline-block; color:rgb(90, 90,9 0);"><%=store_info.getStore_Tel()%></span><br>
 	</div>
+	
+	
+	<br><br><br>
+		<div class="star-ratings" style="display: inline-block;">
+			<div 
+		    class="star-ratings-fill space-x-2 text-lg"  style=" width: 70% ; font-size: 2.2em;"
+			><br><br>
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>  
+			</div>
+			<div class="star-ratings-base space-x-2 text-lg"style="font-size: 2.2em;">
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			</div>
+		</div>	(3.6)
+		
+	</div> 
+	<br>
+	<br>
 	<br>
 
-
-	<% Integer store_id = store_info.getStore_Id(); %><br>
-	<form class="form">
-		<button type="button" class="navyBtn"
-			onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
-			쓰기</button>
-	</form>
-
-
-
-
-
-
-<table border="1" class="addInput">
-
-<tr>
-	<th>번호</th>
-	<th>메뉴이름</th>
-	<th>가격</th>
-	<th>메뉴 설명</th>
-</tr>
-</div>
-<% int i =1;
-for(i=0;i<menu_info.size();i++){  int index =i+1;%>
-
-<tr id="add_tr<%=i%>">
-	<td><%= index %></td>
-	<td><%=menu_info.get(i).getMenu_Name()%></td>
-	<td><%=menu_info.get(i).getMenu_Price()%>원</td>
-	<td><%=menu_info.get(i).getMenu_details()%></td>
-</tr>
-
-<% } %>
-
-</table>
-
-
-							
-
-					
-
-						
-
-		<form action="StoreDetail" class="form">
+		<form action="StoreDetail" class="form inline">
 	
 			<input type="hidden" id="login_check"
 				value="<%=info!=null?info.getUser_Id():""%>"> <input
 				type="hidden" name="storeId"
 				value="<%=store_info.getStore_Id()%>"> <input
 				type="hidden" name="send" value="Renovation.jsp">
-				<div id="myr"><input type="submit" value="예약하기"></div>
+			<div style="height:50px; display: inline-block;"><button>예약하기</button></div>
 		</form>
+				
+
+
+	<% Integer store_id = store_info.getStore_Id(); %>
+	<form class="form inline" >
+		<div style="height:50px; display: inline-block;"><button type="button" 
+			onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
+			보기</button></div>
+	</form>
+
+
+<br>
+<br>
+<hr style="border: solid 1px  #FD6F22;">
+<br>
+<div style=" margin-left: auto; text-align:center;
+    margin-right: auto;  font-family: 'NanumSquareNeo-Variable';letter-spacing :7px;" ><span>M E N U</span></div>
+<br>
+
+
+
+<table class="type05">
+
+
+	<%for (int i = 0; i < menu_info.size(); i++) {%>
+			<tr >
+			
+				<td><span style=" height: 110px ; padding-left:10px; display: table-cell; vertical-align: middle"><%=(i + 1)%></span></td>
+				<td><div id="pic_div" style=" height: 110px ; display: table-cell; vertical-align: middle;">
+				<%=menu_info.get(i).getMenu_Pic1() %></div></td>
+				<td><span class="menu_name" style="color: rgb(32, 32, 32); font-size: 1.05em; font-weight: bold; "><%=menu_info.get(i).getMenu_Name()%></span><br>
+				<span style="color: rgb(141, 140, 140); font-size: 0.8em;"><%=menu_info.get(i).getMenu_details()%></span>
+				<span style="height: 12px; display: block;"><br></span>
+				
+				가격 : <span id="menuPrice<%=i%>"><%=menu_info.get(i).getMenu_Price()%></span>원<br>
+				
+
+<% } %>
+
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+							
+
 					
 
+						
+
+	
+
  
-		<footer id="footer">@JJUPJJUPBAKSA</footer>
+		<footer id="footer" style="height: -10px;">@JJUPJJUPBAKSA</footer>
 		<br>
 		
 		
