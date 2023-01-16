@@ -40,6 +40,7 @@
   right: -7px;
   margin: 0;
 }
+
 #logo{
 width:230px;
 heigh:80px;
