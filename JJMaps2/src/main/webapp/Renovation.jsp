@@ -52,7 +52,7 @@ justify-content: center;}
   }
   #mainBody{max-width: 800px;
   min-width: 300px;
-  			 text-align: center;
+  			 text-align: center; 
   			     margin-left: auto;
     margin-right: auto;}
     #pic_div{
