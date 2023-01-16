@@ -51,7 +51,7 @@ justify-content: center;}
     border-bottom: 1px solid #ccc;
   }
   #mainBody{max-width: 800px;
-  min-width: 300px;
+  min-width: 300px; 
   			 text-align: center; 
   			     margin-left: auto;
     margin-right: auto;}
