@@ -95,14 +95,10 @@ input[type=submit]{
 
 
 header>div#logo>a {
-	margin-top: 10px;
 	display: block;
 	color: #FD6F22;
 	font-family: 'RixInooAriDuriR';
-	font-size: 50px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	font-size: 40px;
 }
 
 header>div#logo>span {
@@ -111,12 +107,10 @@ header>div#logo>span {
 	color: #0E5049;
 	text-align: center;
 	font-size: small;
-	
+	margin-top: 8px;
 }
 
 header {
-	margin-left: auto;
-	margin-right: auto;
 	height: 100px;
 	max-height: 74px;
 	border-bottom: 1px solid rgb(234, 234, 234);

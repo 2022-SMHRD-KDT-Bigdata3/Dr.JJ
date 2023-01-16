@@ -55,7 +55,7 @@ public class reserveInsert extends HttpServlet {
 			menu_Id_list.add(menu);	
 			int price = menuDAOs.select_price(Integer.parseInt(menu_list[i]));
 			price_list.add(price);
-			String menuname = menuDAOs.select_name(Integer.parseInt(menu_list[i]));
+			String menuname = menuDAOs.select_name(menu);
 			menu_name.add(menuname);
 			
 		}

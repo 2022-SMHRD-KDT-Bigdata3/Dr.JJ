@@ -19,5 +19,9 @@
 	 select * from reservations where store_Id = #{store_Id}
 	</select>
 	
+	<select id="select_Reservation"  resultType="com.smhrd.model1.ReservationVO">
+	 select * from reservations where user_id = #{user_id} and isCooking= 1
+	</select>
+	
 
 </mapper>

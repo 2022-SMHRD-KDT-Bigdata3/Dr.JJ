@@ -139,6 +139,13 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.Timer</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>NowReserve</servlet-name>
+  	<display-name>NowReserve</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.NowReserve</servlet-class>
+  </servlet>
+ 
   
   
   
@@ -230,6 +237,12 @@
   	<servlet-name>Timer</servlet-name>
   	<url-pattern>/Timer</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>NowReserve</servlet-name>
+  	<url-pattern>/NowReserve</url-pattern>
+  </servlet-mapping>
+
   
 
 

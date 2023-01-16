@@ -51,6 +51,14 @@ public class ReservationDAO {
 		return (ArrayList<ReservationVO>) list;
 	}
 
+
+	public ReservationVO select_Reservation(String user_id) {
+		session = sqlSessionFactory.openSession(true);
+		ReservationVO reservationVOs=session.selectOne("select_Reservation",user_id);
+		session.close();
+		return reservationVOs;
+	}
+
 	
 	
 	

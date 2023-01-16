@@ -57,13 +57,15 @@ public class MenuDAO {
 	}
 
 
-	public String select_name(int menu_Id) {
+	public String select_name(Long menu_Id) {
 		session = sqlSessionFactory.openSession(true);
-		MenuVO menuVOs = session.selectOne("select_price",menu_Id);
+		MenuVO menuVOs = session.selectOne("select_name",menu_Id);
 		String name = menuVOs.getMenu_Name();
 		session.close();
 		return name;
 	}
+
+
 
 
 

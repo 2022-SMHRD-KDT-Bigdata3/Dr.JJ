@@ -24,5 +24,9 @@
 	select * from menus where menu_Id = #{menu_Id}
 	</select>
 	
+	<select id="select_name" resultType="com.smhrd.model1.MenuVO">
+	select * from menus where menu_Id = #{menu_Id}
+	</select>
+	
 
 </mapper>

@@ -54,7 +54,6 @@ padding-top: 30px;}
 .head_text{
  display: inline-block;
  padding-right: 10px;
- 
  color: rgb(141, 140, 140);
  letter-spacing :0.009em; 
  font-size: 0.9em;}
@@ -69,13 +68,15 @@ padding-top: 30px;}
 	%>
 
 	<header>
-		<div  id="logo">
-			<a>쩝쩝여지도</a> <span id="main_st">당신의 맛있는 지도</span>
+		<div  id="logo"  style="margin-top: 10px;">
+			<a style=" font-size:2em;">쩝쩝여지도</a> 
+			<span id="main_st" style="
+    font-weight: bold; font-size:0.8em;font-family: 'NanumSquareNeo-Variable'; letter-spacing :0.7px;" >당신의 맛있는 지도</span>
 
 		</div>
 		<!-- 로그인 여부 판별-->
 		<div class='head head_left'>
-
+<br>
 
 			<%
 			if (info != null) {
@@ -123,9 +124,8 @@ padding-top: 30px;}
 	<main>
 	<header class="like">
 		<div class="love">
-			<h2>카테고리</h2>
-			
-			
+			<span style="font-family: 'NanumSquareNeo-Variable';letter-spacing :7px; color:  #0E5049" >CATEGORY</span>
+
 		</div>
 	</header>
 	<div class="button">
