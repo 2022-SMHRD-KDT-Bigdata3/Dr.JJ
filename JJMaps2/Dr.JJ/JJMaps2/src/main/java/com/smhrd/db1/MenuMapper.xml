@@ -20,6 +20,8 @@
 		delete menus where user_id=#{user_Id}
 	</delete>
 	
-	
+	<select id="select_price" resultType="com.smhrd.model1.MenuVO">
+	select * from menus where menu_Id = #{menu_Id}
+	</select>
 
 </mapper>

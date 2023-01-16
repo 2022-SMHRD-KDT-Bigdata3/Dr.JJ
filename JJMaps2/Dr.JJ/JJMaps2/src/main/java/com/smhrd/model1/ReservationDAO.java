@@ -29,11 +29,11 @@ public class ReservationDAO {
 		session.close();
 		return r_number;
 	}
-	public ArrayList<Long> rnumSelect(Integer store_id) {
+	public ArrayList<ReservationVO> rnumSelect(Integer store_id) {
 		session = sqlSessionFactory.openSession(true);
-		List<Long> list = session.selectList("r_num_select",store_id);
+		List<ReservationVO> list = session.selectList("r_num_select",store_id);
 		session.close();
-		return (ArrayList<Long>) list;
+		return (ArrayList<ReservationVO>) list;
 	}
 
 }

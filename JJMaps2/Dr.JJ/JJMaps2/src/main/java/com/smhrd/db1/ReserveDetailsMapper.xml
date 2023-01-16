@@ -7,6 +7,6 @@
 	insert into Reserv_Details values (ReserveDetails_seq.nextval,#{menu_Id},#{r_Number},#{menu_Cnt})
     </insert>
     <select id="store_reservation" resultType="com.smhrd.model1.ReserveDetailsVO">
- 	select * from reserv_details wehre r_Number = #{r_number} 
+ 	select * from reserv_details where r_Number = #{r_number} 
 </select>
 </mapper>

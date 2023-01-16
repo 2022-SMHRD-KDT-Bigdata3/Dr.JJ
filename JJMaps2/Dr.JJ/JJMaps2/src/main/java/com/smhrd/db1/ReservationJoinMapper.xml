@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.db1.ReservationJoinMapper">
+<select id="AllbyR" resultType="com.smhrd.model1.ReservationJoinVO">
+	select * from reserv_details d, reservations r where d.r_number = r.r_number and d.r_number= #{r_Number_1}
+</select>
+</mapper>
