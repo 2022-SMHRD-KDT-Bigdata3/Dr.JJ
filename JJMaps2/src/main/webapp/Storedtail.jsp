@@ -17,6 +17,40 @@
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+<style type="text/css">
+
+
+
+.head{
+
+display: inline-block;}
+
+.head_left{float: right;
+padding-top: 11px;}
+
+.head_text{
+ display: inline-block;
+ padding-right: 10px;
+ color: rgb(141, 140, 140);
+ letter-spacing :0.009em; 
+ font-size: 0.9em;}
+ 
+#mainBody{max-width: 600px;
+			min-width: 300px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+ }
+.inline{
+ display: inline-block;}
+ 
+</style>
 </head>
 <body>
 
@@ -28,20 +62,38 @@
 
 	<!-- 헤더영역 -->
 	<div id="login_Body">
-		<div id="logo">
+		<div class='head' id="logo">
 			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
 		</div>
+		
+	
+		
+		<div class='head head_left'>
+			<%
+			if (info != null) {
+				out.print("<a class=' head_text' id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<a class=' head_text' id='logout' href='LogoutService'>로그아웃</a></li>");
+
+				// smart 1234 -> usercode 0(일반이용자)
+				// ssss 1234 -> usercode 1(점포이용자)
+
+			} else {
+				out.print("<a class='head_text' id='login' href='Login.jsp'>로그인</a></li>");
+				out.print("<a class='head_text' id='join' href='Join.jsp'>회원가입</a></li>");
+			}
+			%> 
+			</div>
 	</div>
 	<!-- 가게소개 영역 -->
 
 	<header class="bar">
 		<div id="Title">
 			<h1>
-				🧡<%=store_info.getStore_Name() %>🧡
+			
 			</h1>
 			<div id="sdtail">
 				<div>
-					<a style="font-size: 20px;"><%=store_info.getStore_Cate() %></a>
+				
 
 				</div>
 			</div>
@@ -49,21 +101,24 @@
 	</header>
 
 	<br>
-
-	<div id="null">
-		<main id="main">
-			<br> <br>
-			<div class="boxx1">
-				<div>메인(가게설명)</div>
-				<br>
-				<div>위치:</div>
-				<br>
-				<div>(영업상태) 및 정보</div>
-				<br>
-				<div>전화번호</div>
-				<br>
+	<div class="mainBody " >
+	<br>
+	<img style="width=1px;"src="https://cdn-icons-png.flaticon.com/128/8339/8339313.png">
+	<span class="inline" style="font-size: 0.94em;display: block; color:rgb(141, 140, 140);">Category | <%=store_info.getStore_Cate() %></span><br>
+	<div class="inline" id="null" style="max-width:800px;min-width:300px;height: 70px;">	<span style="height: 2px; display: block; font-size: 1.8em; font-weight: bold; "><%=store_info.getStore_Name() %></span></div>
+	<span class="inline" style="font-size: 1em; height: 70px; display: block; font-weight: bold;color:rgb(70, 70, 70);"><%=store_info.getStore_Addr() %></span><br>
+		<div class="star-ratings">
+			<div 
+		    class="star-ratings-fill space-x-2 text-lg"
+		    :style="{ width: ratingToPercent + '%' }"
+			>
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			</div>
-		</main>
+			<div class="star-ratings-base space-x-2 text-lg">
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			</div>
+		</div>	
+		
 	</div>
 	<br>
 
@@ -74,74 +129,60 @@
 			onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
 			쓰기</button>
 	</form>
-	<br>
-	<br>
-
-	<div id="null">
-		<main id="main2"><br><br>
-			<div class=menu_pic>메인2 (메뉴 및 사진)</div>
-			<br>
-			<div>
-				<h3>메뉴판</h3>
-				<br> <span>(맛있는 메뉴)</span><br>
-
-				<table border="1px solid" class="addInput">
-<br><br><br><br>
-					<main id="main2" >
-						메인2 (메뉴 및 사진)
-						<div><br>
-							<h3>메뉴판</h3><br>
-							<span>(맛있는 메뉴)</span><br>
 
 
 
-							<table border="1" class="addInput">
 
-								<tr>
-									<th>번호</th>
-									<th>메뉴이름</th>
-									<th>가격</th>
-									<th>메뉴 설명</th>
-								</tr>
-								</div>
-								<% int i =1;
-			for(i=0;i<menu_info.size();i++){  int index =i+1;%>
 
-								<tr id="add_tr<%=i%>">
-									<td><%= index %></td>
-									<td><%=menu_info.get(i).getMenu_Name()%></td>
-									<td><%=menu_info.get(i).getMenu_Price()%>원</td>
-									<td><%=menu_info.get(i).getMenu_details()%></td>
-								</tr>
 
-								<% } %>
+<table border="1" class="addInput">
 
-							</table>
+<tr>
+	<th>번호</th>
+	<th>메뉴이름</th>
+	<th>가격</th>
+	<th>메뉴 설명</th>
+</tr>
+</div>
+<% int i =1;
+for(i=0;i<menu_info.size();i++){  int index =i+1;%>
 
-					</main>
+<tr id="add_tr<%=i%>">
+	<td><%= index %></td>
+	<td><%=menu_info.get(i).getMenu_Name()%></td>
+	<td><%=menu_info.get(i).getMenu_Price()%>원</td>
+	<td><%=menu_info.get(i).getMenu_details()%></td>
+</tr>
 
-						<br>
-						<br>
-						<br>
+<% } %>
 
-						<footer id="fix">
+</table>
 
-							<form action="StoreDetail" class="form">
+
+							
+
+					
+
 						
-								<input type="hidden" id="login_check"
-									value="<%=info!=null?info.getUser_Id():""%>"> <input
-									type="hidden" name="storeId"
-									value="<%=store_info.getStore_Id()%>"> <input
-									type="hidden" name="send" value="Renovation.jsp">
-									<div id="myr"><input type="submit" value="예약하기"></div>
-							</form>
-						</footer>
+
+		<form action="StoreDetail" class="form">
+	
+			<input type="hidden" id="login_check"
+				value="<%=info!=null?info.getUser_Id():""%>"> <input
+				type="hidden" name="storeId"
+				value="<%=store_info.getStore_Id()%>"> <input
+				type="hidden" name="send" value="Renovation.jsp">
+				<div id="myr"><input type="submit" value="예약하기"></div>
+		</form>
+					
 
  
-						<footer id="footer">@JJUPJJUPBAKSA</footer>
-						<br>
-						<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-						<script>
+		<footer id="footer">@JJUPJJUPBAKSA</footer>
+		<br>
+		
+		
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
 $(document).ready(function() {
     $('.form').submit(function() {
         if ($('#login_check').val()==="") {
@@ -156,6 +197,12 @@ $(document).ready(function() {
     }); // end submit()
 }); // end ready()
 
+
+
+ratingToPercent() {
+    const score = + this.restaurant.averageScore * 20;
+    return score + 1.5;
+}
 </script>
 </body>
 </html>

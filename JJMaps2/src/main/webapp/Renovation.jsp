@@ -18,9 +18,59 @@
 
 
 <style type="text/css">
-.btnCalc {width: 15px; height:20px;}
+.btnCalc {width: 20px; height:20px;
+display: inline-flex;
+align-items:center; 
+justify-content: center;}
 .hidden{display:none}
-.numOut{width: 15px;}
+.numOut{width: 15px;
+ text-align: center;}
+
+
+  table.type05 {
+    border-collapse: separate;
+     width: 100%;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 td {
+    padding: 10px;
+     padding-right: 20px;
+    text-align: right;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  #mainBody{max-width: 800px;
+  min-width: 300px;
+  			 text-align: center;
+  			     margin-left: auto;
+    margin-right: auto;}
+    #pic_div{
+     text-align: center;
+    width:100px;
+    height:100px;
+     border-radius: 20px;
+     border: 0.1em solid  rgb(185, 185, 185);
+    }
+.head{
+display: inline-block;}
+.head_left{float: right;
+padding-top: 11px;}
+.head_text{
+ display: inline-block;
+ padding-right: 10px;
+ color: rgb(141, 140, 140); 
+ letter-spacing :0.009em; 
+ font-size: 0.9em;}
 
 </style>
 </head>
@@ -34,14 +84,27 @@
 	<%	ArrayList<MenuVO> menu_info = (ArrayList<MenuVO>) request.getAttribute("menu_info");	%>
 
 
-	<div id="logo">
-		<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
-	</div>
+	
+	<div class='head' id="logo">
+			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		</div>
+		<div class='head head_left'>
+			<%
+			if (info != null) {
+				out.print("<a class=' head_text' id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<a class=' head_text' id='logout' href='LogoutService'>로그아웃</a></li>");
+
+			}
+			%> 
+			</div>
+	
 
 	<header class="bar">
 		<div id="Title">
 			<h1>예약하기</h1>
 		</div>
+		
+		
 	</header>
 
 
@@ -58,38 +121,38 @@
 		</div>
 
 		<h4 class="menu">MENU</h4>
-
+<div id="mainBody">
 		<!--메뉴수량 선택-->
-		<table border="1px solid black" width="350px">
+		<table class="type05">
 
+      
 			<%for (int i = 0; i < menu_info.size(); i++) {%>
 			<tr>
 			
 				<input id="reserve_Check<%=i%>" class="hidden" name="reserve_list" type="checkbox" readonly="readonly" value="<%=menu_info.get(i).getMenu_Id()%>">
-				<td rowspan="3"><%=(i + 1)%></td>
-				<td rowspan="3">사진</td>
-				<td><H3 class="menu_name"><%=menu_info.get(i).getMenu_Name()%></H3></td>
-			</tr>
-			<tr>
-				<td><span><%=menu_info.get(i).getMenu_details()%></span></td>
-			</tr>
-			<tr>
-				<td>가격 : <span id="menuPrice<%=i%>"><%=menu_info.get(i).getMenu_Price()%></span>원
-				</td>
-				<td>
-					<button id="btnPlus<%=i%>" class="btnPlus btnCalc" type="button" onclick="up1('<%=i%>')">+</button>
-					<input id="numOut<%=i%>" class="numOut" name="food_count" value="0" >
+				<td><span style=" height: 110px ; display: table-cell; vertical-align: middle"><%=(i + 1)%></span></td>
+				<td><div id="pic_div" style=" height: 110px ; display: table-cell; vertical-align: middle;">
+				<%=menu_info.get(i).getMenu_Pic1() %></div></td>
+				<td><span class="menu_name" style="color: rgb(32, 32, 32); font-size: 1.05em; font-weight: bold; "><%=menu_info.get(i).getMenu_Name()%></span><br>
+				<span style="color: rgb(141, 140, 140); font-size: 0.8em;"><%=menu_info.get(i).getMenu_details()%></span>
+				<span style="height: 12px; display: block;"><br></span>
+				
+				가격 : <span id="menuPrice<%=i%>"><%=menu_info.get(i).getMenu_Price()%></span>원<br>
+				
 					<button id="btnMinus<%=i%>" class="btnMinus btnCalc" type="button" onclick="down1('<%=i%>')">-</button>
+					<input id="numOut<%=i%>" class="numOut " name="food_count" value="0" >
+					<button id="btnPlus<%=i%>" class="btnPlus btnCalc" type="button" onclick="up1('<%=i%>')">+</button>
 				</td>
 			</tr>
 			<%}%>
  
 		</table>
+	
 
 
-		<hr style="border: solid 1px gray;">
+		<hr style="border: solid 1px  #FD6F22;">
 		<div class="total_price">
-			<h4>현재 주문 금액 : <span id="total">0</span></h4><br>
+			<span style="display: block; padding-top: 10px; font-size: 1em; font-weight: bold; " >현재 주문 금액 : <span id="total">0</span>원</span><br>
 		</div>
 		
 		<!--시간 계산 -->
@@ -99,11 +162,8 @@
 		   SimpleDateFormat sf = new SimpleDateFormat("HH:mm");
 		   String time=sf.format(nowTime).toString();
 		   int now_h = Integer.parseInt(time.substring(0, 2));
-		   out.print("now_h:"+now_h);//검증 후 삭제
 		   int now_m = Integer.parseInt(time.substring(3)); 
-		   out.print("now_m:"+now_m);//검증 후 삭제
 		   int now=((now_h*60)+now_m);
-		   out.print("now:"+now);//검증 후 삭제
 		   
 		   //개점 시간 계산
 		   int opne_h = Integer.parseInt(store_info.getStore_Open_Dt().substring(0, 2));
@@ -124,27 +184,30 @@
 			opne_h = (opne - opne_m)/60; %>
 			<input id="pic_OK_opne" type="hidden" value="<%=opne%>" >
 			<input id="pic_OK_close" type="hidden" value="<%=((close_h*60)+close_m)%>" >
-			<h4>픽업 가능 시간 : <span ><%=opne_h%>:<%=opne_m<10?"0"+opne_m:opne_m%>부터  
-			<%=close_h%>:<%=close_m<10?"0"+close_m:close_m%> 까지!</span></h4><br>
 			<input id="p_time" name="p_time" type = "time" 
 			min="<%=opne_h%>:<%=opne_m%>" 
-			max="<%=close_h%>:<%=close_m%>" name="p_time">에 가지러 갈게요
+			max="<%=close_h%>:<%=close_m%>" name="p_time"> 에 가지러 갈게요<br>
+				<span style="display: block; padding-top: 11px;color: rgb(141, 140, 140); font-size: 0.93em;">픽업 가능 시간은
+				<%=opne_h%>:<%=opne_m<10?"0"+opne_m:opne_m%>부터  
+				<%=close_h%>:<%=close_m<10?"0"+close_m:close_m%> 까지 입니다.</span> 
 		<%}else{
 			now=now + store_info.getCook_time();
-			out.print("now+Cook_time:"+now);//검증 후 삭제
 			now_m = now % 60;
 			now_h = (now - now_m)/60;%>
 			<input id="pic_OK_opne" type="hidden" value="<%=now%>" >
 			<input id="pic_OK_close" type="hidden" value="<%=((close_h*60)+close_m)%>" >
-		<h4>픽업 가능 시간 : <span ><%=now_h%>:<%=now_m<10?"0"+now_m:now_m%> 부터 <%=close_h%>:<%=close_m<10?"0"+close_m:close_m%> 까지!</span></h4><br>
 			<input id="p_time" name="p_time" type = "time" 
 			min="<%=now_h%>:<%=now_m%>" 
-			max="<%=close_h%>:<%=close_m%>" name="p_time">에 가지러 갈게요
+			max="<%=close_h%>:<%=close_m%>" name="p_time"> 에 가지러 갈게요<br>
+				<span style="display: block; padding-top: 11px;color: rgb(141, 140, 140); font-size: 0.93em;">픽업 가능 시간은
+				<%=now_h%>:<%=now_m<10?"0"+now_m:now_m%> 부터 
+				<%=close_h%>:<%=close_m<10?"0"+close_m:close_m%> 까지 입니다.</span>
 		
 		<%}%>
 		
-		<br><br><br>
-		<input type="submit" value="예약하기" >
+		<br><br>
+		<input type="submit" value="예약하기" 
+		style="font-size: 1.3em; font-weight: bold; ">
 
 		<br> <br>
 	</form>

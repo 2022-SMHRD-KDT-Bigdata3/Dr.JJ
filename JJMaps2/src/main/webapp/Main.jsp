@@ -14,7 +14,51 @@
 <meta name="format-detection" content="telephone-no">
 <link rel="stylesheet" type="text/css" href="assets/css/jjmain.css">
 
+<style type="text/css">
+.search {
+  top: 130px;
+  position: relative;
+  width: 300px;
+}
 
+#search_box {
+  width:100%;
+  height: 25px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 40px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+   opacity:0.87;
+}
+
+#search_img {
+  position : absolute;
+  width: 17px;
+  top: 3px;
+  right: -7px;
+  margin: 0;
+}
+#logo{
+width:230px;
+heigh:80px;
+left:40%;
+display: inline-block;
+position: relative;
+}
+.head{
+display: inline-block;}
+.head_left{float: right;
+padding-top: 30px;}
+.head_text{
+ display: inline-block;
+ padding-right: 10px;
+ 
+ color: rgb(141, 140, 140);
+ letter-spacing :0.009em; 
+ font-size: 0.9em;}
+</style>
 
 
 
@@ -25,87 +69,44 @@
 	%>
 
 	<header>
-		<div id="logo">
+		<div  id="logo">
 			<a>쩝쩝여지도</a> <span id="main_st">당신의 맛있는 지도</span>
 
 		</div>
 		<!-- 로그인 여부 판별-->
-		<div class="menu">
-		<div id="logme" class="menus">
-		<ul>
+		<div class='head head_left'>
 
 
 			<%
 			if (info != null) {
 				if (info.getUser_Code().equals("1")) {
-					out.print("<a href='Mystore.jsp'>오늘영업</a>");
+					out.print("<a class='head_text' href='Mystore.jsp'>오늘영업</a>");
 				}
-				out.print("<li><a id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
-				out.print("<li><a id='logout' href='LogoutService'>로그아웃</a></li>");
+				out.print("<a class='head_text'  id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<a  class='head_text' id='logout' href='LogoutService'>로그아웃</a></li>");
 
 				// smart 1234 -> usercode 0(일반이용자)
 				// ssss 1234 -> usercode 1(점포이용자)
 
 			} else {
-				out.print("<li><a id='login' href='Login.jsp'>로그인</a></li>");
-				out.print("<li><a id='join' href='Join.jsp'>회원가입</a></li>");
+				out.print("<a class='head_text' id='login' href='Login.jsp'>로그인</a></li>");
+				out.print("<a class='head_text' id='join' href='Join.jsp'>회원가입</a></li>");
 			}
 			%> 
-			</ul>
-</div>
+
 		</div>
 	</header>
-	<div id="cate" class ="cate">
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a> 
-		<a>붕어빵</a>
-		<a>타코야키</a>
-		<a>호떡</a>
-		<a>순대</a>
-		<a>분식류</a>
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a>
-		<a>호떡</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>http://localhost:8081/JJMap/Mystore.jsp
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-
-	</div>
+	
 	<div class="Header_Init_Section">
 		<div id="header_img">
 		
 			<form action="Search">
 
-				<div>
+				<div class="search">
 				
-					<input class="search" name="searchWord" type="text" placeholder="검색어 입력 ">
-					<input type="submit" value="검색">
+					<input id="search_box" name="searchWord" type="text" placeholder="     메뉴, 점포명, 지역명  검색 ">
+					<input type="image" id="search_img" style="border:none;"
+					src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
 
 				</div>
 			</form>
@@ -117,49 +118,6 @@
 
 	<!-- 여기까지 헤더 -->
 
-	<div id="cate" class ="cate">
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a> 
-		<a>붕어빵</a>
-		<a>타코야키</a>
-		<a>호떡</a>
-		<a>순대</a>
-		<a>분식류</a>
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a>
-		<a>호떡</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-		<a>붕어빵</a>
-		<a>타코야키</a> 
-		<a>호떡</a> 
-		<a>순대</a> 
-		<a>분식류</a> 
-		<a>기타</a>
-	
-
-	</div>
 	
 	<br>
 	<main>
@@ -182,6 +140,7 @@
 			<p class="btn btn-1">분식류</p>
 			<br>
 			<p class="btn btn-1">기타</p>
+		</div>		
 	<br>
 	<br>
 	<br>

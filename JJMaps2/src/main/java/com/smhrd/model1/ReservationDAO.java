@@ -44,7 +44,13 @@ public class ReservationDAO {
 		session.close();
 		return ReservationVOs;
 	}
-	
+	public ArrayList<ReservationVO> rnumSelect(Integer store_id) {
+		session = sqlSessionFactory.openSession(true);
+		List<ReservationVO> list = session.selectList("rnumSelect",store_id);
+		session.close();
+		return (ArrayList<ReservationVO>) list;
+	}
+
 	
 	
 	

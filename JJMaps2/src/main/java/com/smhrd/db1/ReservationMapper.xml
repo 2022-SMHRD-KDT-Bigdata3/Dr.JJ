@@ -15,7 +15,9 @@
 	 select * from RESERVATIONS where r_Number=#{r_Number}
 	</select>
 	
-	
+	<select id="rnumSelect"  resultType="com.smhrd.model1.ReservationVO">
+	 select * from reservations where store_Id = #{store_Id}
+	</select>
 	
 
 </mapper>
