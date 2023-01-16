@@ -45,6 +45,13 @@ public class MenuDAO {
 		session.close();
 		return res;
 	}
+	public String select_name(Long menu_Id) {
+		session = sqlSessionFactory.openSession(true);
+		MenuVO menuVOs = session.selectOne("select_price",menu_Id);
+		String name = menuVOs.getMenu_Name();
+		session.close();
+		return name;
+	}
 	
 
 
