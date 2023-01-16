@@ -140,6 +140,7 @@ padding-top: 30px;}
 			<p class="btn btn-1">분식류</p>
 			<br>
 			<p class="btn btn-1">기타</p>
+		</div>		
 	<br>
 	<br>
 	<br>

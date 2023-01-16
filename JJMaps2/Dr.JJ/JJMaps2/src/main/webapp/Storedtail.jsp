@@ -26,11 +26,12 @@
    <%   StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
    <%   ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
 <% String status;
-if( store_info.getStore_Status()==0 ){
+if( store_info.getStore_Status()!=0 ){
 	status = "영업중";
 }else{
 	status = "영업중이 아닙니다.";
 }%>
+   <% Integer store_id = store_info.getStore_Id(); %>
    <!-- 헤더영역 -->
    <div id="login_Body">
       <div id="logo">
@@ -39,6 +40,7 @@ if( store_info.getStore_Status()==0 ){
    </div>
    <!-- 가게소개 영역 -->
 
+			<a href ="StoreReservation?store_id=<%=store_id %>">가게 예약목록 확인하기</a>
    <header class="bar">
       <div id="Title">
          <h1>
@@ -73,7 +75,7 @@ if( store_info.getStore_Status()==0 ){
    <br>
 
 
-   <% Integer store_id = store_info.getStore_Id(); %><br>
+<br>
    <form class="form">
       <button type="button" class="navyBtn"
          onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
