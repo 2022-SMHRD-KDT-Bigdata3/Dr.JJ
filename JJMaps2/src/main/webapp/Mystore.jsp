@@ -8,6 +8,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
 <style type="text/css">
@@ -52,6 +54,20 @@ width:160px;
 heigt:90px;
 margin-left: auto;
     margin-right: auto;}
+    
+    
+     .btn_reservation {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.10);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-radius: 50px;
+   vertical-align: middle;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.btn_reservation:hover {
+  box-shadow: 0 14px 15px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.12);
+}
 
 </style>
 
@@ -93,16 +109,17 @@ margin-left: auto;
    </table>
     
    
- 
+
    
    
-   <form class="form" style=" margin-Top: -101px;">
+   <form class="form" style=" margin-Top: -120px;">
 	
 		<div class="button">
-			<div style=" width:170px; height:40px; font-weight: bold; 
-			font-size:0.1em; font-family: 'NanumSquareNeo-Variable'; ">영업 예약 보기</div>
+			<div class="btn_reservation" style=" width:170px; height:45px; line-height : 45px;  vertical-align: middle;
+			font-size:0.9em; font-family: 'NanumSquareNeo-Variable'; color:white;
+background-color: #f03d3d; " >영업 예약 보기</div>
 			<br>
-			<br><br>
+
 			<br><br>
 			<br><br>
 		

@@ -122,7 +122,8 @@ padding-top: 11px;}
 
 	<%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
 	<%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
-
+	<% Double Scores = (Double)request.getAttribute("Scores"); %>
+	
 	<!-- 헤더영역 -->
 	<div id="login_Body">
 		<div class='head' id="logo">
@@ -180,18 +181,17 @@ padding-top: 11px;}
 	<span  style="font-size: 1em; height:20px; display: inline-block; color:rgb(90, 90,9 0);"><%=store_info.getStore_Tel()%></span><br>
 	</div>
 	
-	
 	<br><br><br>
 		<div class="star-ratings" style="display: inline-block;">
 			<div 
-		    class="star-ratings-fill space-x-2 text-lg"  style=" width: 70% ; font-size: 2.2em;"
+		    class="star-ratings-fill space-x-2 text-lg"  style=" width: <%=Scores*20 %>% ; font-size: 2.2em;"
 			><br><br>
 				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>  
 			</div>
 			<div class="star-ratings-base space-x-2 text-lg"style="font-size: 2.2em;">
 				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 			</div>
-		</div>	(3.6)
+		</div>	(<%=Scores%>)
 		
 	</div> 
 	<br>
@@ -210,10 +210,9 @@ padding-top: 11px;}
 				
 
 
-	<% Integer store_id = store_info.getStore_Id(); %>
 	<form class="form inline" >
 		<div style="height:50px; display: inline-block;"><button type="button" 
-			onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
+			onClick='location.href="ReviewService?store_id=<%=store_info.getStore_Id() %>"'>리뷰
 			보기</button></div>
 	</form>
 

@@ -235,9 +235,9 @@ String rnum=rn.format(nowTime).toString();
                 	console.log("ptime :"+ptime+ " now_Time : "+now_Time + "p-now:"+(ptime - now_Time));
                 	console.log("cTime :"+cTime);
                 if((prograss_fulltime - ing_time)>cTime){
-                    $('#progress_text').text("예약 접수 완료! 픽업 잊지마세요😉"+now_Time);
+                    $('#progress_text').text("예약 접수 완료! 픽업 잊지마세요😉");
                 }else if((prograss_fulltime - ing_time)>0){
-                    $('#progress_text').text("사장님이 열심히 조리중💦💦"+now_Time);                    
+                    $('#progress_text').text("사장님이 열심히 조리중💦💦");                    
                 }else{
                     $('#progress_text').text("픽업이 완료되었습니다😊");
                 }

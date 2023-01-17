@@ -10,4 +10,6 @@
 <select id="scores" resultType="com.smhrd.model1.ReviewVO">
 	select * from reviews where store_id = #{store_id}
 </select>
+
+
 </mapper>
