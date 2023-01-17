@@ -29,7 +29,7 @@ public class ReviewDAO {
 		session.close();
 		return (ArrayList<ReviewVO>) list;
 	}
-	public Double avgScores(Integer store_id){
+	public Double avgScores(int store_id){
 		session = sqlSessionFactory.openSession(true);
 		List<ReviewVO> list = null;
 		list = session.selectList("scores", store_id);

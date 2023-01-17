@@ -8,8 +8,69 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />		 
+<style type="text/css">
+.toggleSwitch {
+  width: 100px;
+  height: 50px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+  cursor: pointer;
+  margin: 30px;
+}
+
+.toggleSwitch .toggleButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #f03d3d;
+}
+
+#toggle:checked ~ .toggleSwitch {
+  background: #f03d3d;
+}
+
+#toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 44px);
+  background: #fff;
+}
+
+.toggleSwitch, .toggleButton {
+  transition: all 0.2s ease-in;
+}
+
+.toggldiv{
+width:160px;
+heigt:90px;
+margin-left: auto;
+    margin-right: auto;}
+    
+    
+     .btn_reservation {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.10);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-radius: 50px;
+   vertical-align: middle;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.btn_reservation:hover {
+  box-shadow: 0 14px 15px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.12);
+}
+
+</style>
+
 </head>
 	<body class="is-preload">
 	   <% MemberVO info = (MemberVO)(session.getAttribute("info"));%>
@@ -22,11 +83,46 @@
 				   <h1 id="Title">점포 페이지</h1>
 				</div>
 	</header> 
+<br>
+<br>
+<br>
+<br>
+   <table style="    margin-left: auto;
+    margin-right: auto;" >
+ 
+   <td>
+  <span id="off" style="display: inline-block;vertical-align:middle; color:rgb(184, 184, 184);
+  font-weight: bold; font-size:2em;font-family: 'NanumSquareNeo-Variable'; ">OFF</span></td>
+   
+    <td>
+    <div class="toggldiv" style="display: inline-block;vertical-align:middle;">
+   			<input type="checkbox" id="toggle" hidden> 
+			<label for="toggle" class="toggleSwitch">
+		 <span class="toggleButton"></span>
+			</label>
+   		</div>
+   </td>
+   <td><span id="on" style="display: inline-block;vertical-align:middle; color:#f03d3d;
+   font-weight: bold; font-size:2em;font-family: 'NanumSquareNeo-Variable';">ON</span></td>
+
+   
+   </table>
+    
+   
+
    
    
-   <form class="form">
+   <form class="form" style=" margin-Top: -120px;">
 	
 		<div class="button">
+			<div class="btn_reservation" style=" width:170px; height:45px; line-height : 45px;  vertical-align: middle;
+			font-size:0.9em; font-family: 'NanumSquareNeo-Variable'; color:white;
+background-color: #f03d3d; " >영업 예약 보기</div>
+			<br>
+
+			<br><br>
+			<br><br>
+		
 			<p class="btn btn-2" onclick="location.href='StoreDetail?user_id=<%=info.getUser_Id()%>'">내 점포 상세 페이지</p>
 			<br>
 			<p class="btn btn-2" onclick="location.href='MystoreJoin.jsp'">내 점포 정보 수정</p>
@@ -45,7 +141,7 @@
 	<br>
 	<br>
 	<br>
-	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 	<script>
 	
 		function next() {

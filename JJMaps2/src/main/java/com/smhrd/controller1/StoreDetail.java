@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.model1.MenuDAO;
 import com.smhrd.model1.MenuVO;
+import com.smhrd.model1.ReviewDAO;
+import com.smhrd.model1.ReviewVO;
 import com.smhrd.model1.StoreDAO;
 import com.smhrd.model1.StoreVO;
 
@@ -58,15 +60,20 @@ public class StoreDetail extends HttpServlet {
 			menulist =  menuDAOs.menu_Select_user_id(user_Id);	
 		}
 		
+
+				
+		//리뷰 객체 받아오기 
+		ReviewDAO Rdao = new ReviewDAO();
+		Double avgScore =Rdao.avgScores(store_id);
 		
-			
 
 			try {//예약하기 페이지로 재활용
 				String send = request.getParameter("send");
 				System.out.println("예약하기"+send);
 				HttpSession session = request.getSession();
 				request.setAttribute("store_info", storeVOs);
-				request.setAttribute("menu_info", menulist);
+				request.setAttribute("menu_info", menulist);			
+				request.setAttribute("Scores", avgScore);
 				RequestDispatcher rdi = request.getRequestDispatcher(send);
 	    		rdi.forward(request, response);
 			} catch (Exception e) {

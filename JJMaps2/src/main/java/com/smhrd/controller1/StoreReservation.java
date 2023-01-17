@@ -19,9 +19,7 @@ import com.smhrd.model1.ReserveDetailsDAO;
 import com.smhrd.model1.ReserveDetailsVO;
 import com.smhrd.model1.StoreDAO;
 
-/**
- * Servlet implementation class StoreReservation
- */
+
 public class StoreReservation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
