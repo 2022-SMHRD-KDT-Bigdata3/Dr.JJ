@@ -10,6 +10,8 @@
 	<select id="r_num_select"  resultType="com.smhrd.model1.ReservationVO">
 	 select * from reservations where store_Id = #{store_Id}
 	</select>
-	
+	<select id="r_num"  resultType="com.smhrd.model1.ReservationVO">
+	 select * from reservations where user_Id = #{user_Id}
+	</select>
 
 </mapper>

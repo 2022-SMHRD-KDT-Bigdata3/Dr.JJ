@@ -42,7 +42,7 @@ public class StoreReservation extends HttpServlet {
 		ReservationJoinDAO jdao = new ReservationJoinDAO();
 		ReserveDetailsDAO rdao = new ReserveDetailsDAO();
 		System.out.println(rlist.toString());
-		String[] re_id;
+		
 		for(int i=0;i<rlist.size();i++) {
 			System.out.println(rlist.get(i).getR_number());
 			if(rlist.get(i).getR_number()!=null){

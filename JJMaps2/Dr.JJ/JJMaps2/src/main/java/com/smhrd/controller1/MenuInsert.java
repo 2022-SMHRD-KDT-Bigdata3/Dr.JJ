@@ -1,7 +1,6 @@
 package com.smhrd.controller1;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +26,11 @@ public class MenuInsert extends HttpServlet {
 		String[] menu_Name = request.getParameterValues("menu_Name");
 		String[] menu_Price = request.getParameterValues("menu_Price");
 		String[] menu_Detail = request.getParameterValues("menu_Detail");
+		if(request.getParameterValues("menu_Pic") != null) {
 		String[] menu_Pic = request.getParameterValues("menu_Pic");
-
 		System.out.println(menu_Pic[0]);
+		}
+		
 		
 		//로그인계정
 		HttpSession session = request.getSession();

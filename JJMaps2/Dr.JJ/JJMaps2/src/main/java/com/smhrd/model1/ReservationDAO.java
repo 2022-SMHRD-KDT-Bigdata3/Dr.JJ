@@ -35,5 +35,12 @@ public class ReservationDAO {
 		session.close();
 		return (ArrayList<ReservationVO>) list;
 	}
+	public ArrayList<ReservationVO> rnumSelect(String user_id) {
+		session = sqlSessionFactory.openSession(true);
+		List<ReservationVO> list = session.selectList("rnum",user_id);
+		session.close();
+		return (ArrayList<ReservationVO>) list;
+	}
+
 
 }

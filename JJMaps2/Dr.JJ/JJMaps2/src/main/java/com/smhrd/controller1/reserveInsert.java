@@ -3,7 +3,6 @@ package com.smhrd.controller1;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -88,7 +87,7 @@ public class reserveInsert extends HttpServlet {
 		session.setAttribute("reserve_Num",r_Number );
 //		session.setAttribute("reserve_menu_id",reserve_list );
 //		session.setAttribute("reserve_menu_cnt", menu_Cnt_list);
-		response.sendRedirect("현재예약.jsp");
+		response.sendRedirect("Main.jsp");
 		
 		// else if 장바구니일 때, 메뉴id와 수량 리스트 보내기 
 		}else if(Basket!="") {
