@@ -119,7 +119,7 @@
 
     </div>
     <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c"
+	src="https://maps.googleapis.com/maps/api/js?key=본인apikey"
 	>	
 	</script>
 	<script type="text/javascript">
