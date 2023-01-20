@@ -28,7 +28,7 @@ body {
 	<hr>
 
 	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=본인apikey">
+		src="https://maps.googleapis.com/maps/api/js?key=본인apikey입력">
 		
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
