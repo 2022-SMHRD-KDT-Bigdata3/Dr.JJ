@@ -21,6 +21,27 @@ th,td {
 	text-align : center;
 	height : 50px;
     }
+   
+  table.type05 {
+    border-collapse: separate;
+     width: 100%;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
 </style>
 <body class="is-preload">
 	<div id="logo">
@@ -43,7 +64,7 @@ th,td {
 	MenuDAO mdao = new MenuDAO();
 	%>
 	<div align="center">
-		<table>
+		<table class="type05">
 			<tbody>
 				<tr>
 					<th>주문순번</th>

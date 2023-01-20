@@ -15,7 +15,7 @@ public class MenuVO {
  private String menu_name;
 
  // 메뉴 가격
- private String menu_price;
+ private int menu_price;
 
  // 메뉴 사진1
  private String menu_pic1;
@@ -44,7 +44,7 @@ public MenuVO() {
 
 
 
-public MenuVO(int store_id, String user_Id, String menu_Name, String menu_Price, String menu_details) {
+public MenuVO(int store_id, String user_Id, String menu_Name, int menu_Price, String menu_details) {
 	super();
 	this.store_id = store_id;
 	this.User_id = user_Id;
@@ -56,7 +56,7 @@ public MenuVO(int store_id, String user_Id, String menu_Name, String menu_Price,
 
 
 
-public MenuVO(int menu_Id, int store_id, String menu_Name, String menu_Price, String menu_Pic1, String menu_Pic2,
+public MenuVO(int menu_Id, int store_id, String menu_Name, int menu_Price, String menu_Pic1, String menu_Pic2,
 		String menu_Pic3, String user_Id, String menu_details) {
 	super();
 	this.menu_Id = menu_Id;
@@ -86,7 +86,7 @@ public String getMenu_Name() {
 }
 
 
-public String getMenu_Price() {
+public int getMenu_Price() {
 	return menu_price;
 }
 
@@ -131,7 +131,7 @@ public void setMenu_Name(String menu_Name) {
 }
 
 
-public void setMenu_Price(String menu_Price) {
+public void setMenu_Price(int menu_Price) {
 	this.menu_price = menu_Price;
 }
 

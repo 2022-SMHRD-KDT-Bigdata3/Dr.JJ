@@ -22,7 +22,7 @@ public class StoreDetail extends HttpServlet {
 	// serch.jsp에서 a태그 href 타고 온 것
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-
+		
 		//스토어 id 받아오기
 		int store_id=0;
 		String user_Id="";
@@ -33,10 +33,10 @@ public class StoreDetail extends HttpServlet {
 		}
 		System.out.println(store_id);
 		System.out.println(user_Id);
-
-
-
-
+		
+		
+		
+		
 		//스토어 객체 받아오기
 		StoreDAO storeDAOs= new StoreDAO();
 		StoreVO storeVOs=null;
@@ -46,20 +46,20 @@ public class StoreDetail extends HttpServlet {
 		}else {
 		storeVOs =  storeDAOs.mystoreselect(user_Id);	
 		}
-
-
+		
+		
 		//menu 객체 받아오기 
 		MenuDAO menuDAOs=new MenuDAO();
 		ArrayList<MenuVO> menulist=new ArrayList<MenuVO>();
-
+		
 		if(store_id!=0) {
 			menulist =  menuDAOs.menuSelect(store_id);
 		}else {
 			menulist =  menuDAOs.menu_Select_user_id(user_Id);	
 		}
-
-
-
+		
+		
+			
 
 			try {//예약하기 페이지로 재활용
 				String send = request.getParameter("send");
@@ -70,25 +70,25 @@ public class StoreDetail extends HttpServlet {
 				RequestDispatcher rdi = request.getRequestDispatcher(send);
 	    		rdi.forward(request, response);
 			} catch (Exception e) {
-
+				
 				if(storeVOs!=null) {
 					HttpSession session = request.getSession();
 					request.setAttribute("store_info", storeVOs);
 					request.setAttribute("menu_info", menulist);
 					RequestDispatcher rdi = request.getRequestDispatcher("Storedtail.jsp");
 					rdi.forward(request, response);
-
-
+					
+					
 				}else{
 					response.sendRedirect("Main.jsp");
 				}
-
+				
 			}
-
-
-
-
-
+		
+		
+		
+		
+		
 	}
 
 }

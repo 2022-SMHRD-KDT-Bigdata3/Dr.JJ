@@ -136,7 +136,22 @@ public class StoreDAO {
 	public StoreVO store_Select_Storeid(int store_id) {
 		session = sqlSessionFactory.openSession(true);
 		StoreVO vo = session.selectOne("store_Select_Storeid", store_id);
+		session.close();
 		return vo;
+	}
+
+	public int Store_close(Integer store_id) {
+		session = sqlSessionFactory.openSession(true);
+		 int res = session.update("Store_close", store_id);
+		session.close();
+		return res;
+	}
+
+	public int Store_opne(Integer store_id) {
+		session = sqlSessionFactory.openSession(true);
+		 int res = session.update("Store_opne", store_id);
+		session.close();
+		return res;
 	}
 
 	

@@ -94,32 +94,16 @@ input[type=submit]{
 
 
 
-header>div#logo>a {
-	margin-top: 10px;
-	display: block;
-	color: #FD6F22;
-	font-family: 'RixInooAriDuriR';
-	font-size: 50px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-header>div#logo>span {
-	font-family: 'RixInooAriDuriR';
-	display: block;
-	color: #0E5049;
-	text-align: center;
-	font-size: small;
-	
-}
+
+ 
 
 header {
-	margin-left: auto;
-	margin-right: auto;
 	height: 100px;
 	max-height: 74px;
 	border-bottom: 1px solid rgb(234, 234, 234);
+	text-align:center; 
+
 }
 
 .like {
@@ -176,6 +160,37 @@ a{
 	position: relative;
 	top: 2px;
 }
+
+@media(max-width: 400px){
+.search {
+  top: 130px;
+  position: relative;
+  width: 150px!important;
+}
+
+#search_box {
+  width:100%!important;
+  height: 25px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 40px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+   opacity:0.87;
+}
+#search_box::placeholder {
+  opacity: 0;}
+#search_img {
+  position : absolute;
+  width: 17px;
+  top: 3px;
+  right: -7px;
+  margin: 0;
+}
+}
+
+
 
 .Header_Init_Section {
 	text-align: center;
@@ -235,3 +250,16 @@ div.cate>a {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

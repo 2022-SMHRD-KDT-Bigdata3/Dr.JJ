@@ -1,5 +1,6 @@
 package com.smhrd.model1;
 
+
 //예약
 public class ReservationVO {
 
@@ -24,14 +25,14 @@ public class ReservationVO {
  
 
  
- 
- 
+
+  
  
  
 
 
 public Long getR_number() {
-   return r_number;
+	return r_number;
 }
 
 
@@ -42,7 +43,7 @@ public Long getR_number() {
 
 
 public Integer getStore_Id() {
-   return store_Id;
+	return store_Id;
 }
 
 
@@ -53,7 +54,7 @@ public Integer getStore_Id() {
 
 
 public String getUser_Id() {
-   return user_Id;
+	return user_Id;
 }
 
 
@@ -64,7 +65,7 @@ public String getUser_Id() {
 
 
 public String getR_time() {
-   return r_time;
+	return r_time;
 }
 
 
@@ -75,7 +76,7 @@ public String getR_time() {
 
 
 public String getP_time() {
-   return p_time;
+	return p_time;
 }
 
 
@@ -92,7 +93,7 @@ public String getP_time() {
 
 
 public void setR_number(Long r_number) {
-   this.r_number = r_number;
+	this.r_number = r_number;
 }
 
 
@@ -103,7 +104,7 @@ public void setR_number(Long r_number) {
 
 
 public void setStore_Id(Integer store_Id) {
-   this.store_Id = store_Id;
+	this.store_Id = store_Id;
 }
 
 
@@ -114,7 +115,7 @@ public void setStore_Id(Integer store_Id) {
 
 
 public void setUser_Id(String user_Id) {
-   this.user_Id = user_Id;
+	this.user_Id = user_Id;
 }
 
 
@@ -125,7 +126,7 @@ public void setUser_Id(String user_Id) {
 
 
 public void setR_time(String r_time) {
-   this.r_time = r_time;
+	this.r_time = r_time;
 }
 
 
@@ -136,7 +137,7 @@ public void setR_time(String r_time) {
 
 
 public void setP_time(String p_time) {
-   this.p_time = p_time;
+	this.p_time = p_time;
 }
 
 
@@ -154,8 +155,8 @@ public void setP_time(String p_time) {
 
 @Override
 public String toString() {
-   return "ReservationVO [r_number=" + r_number + ", store_Id=" + store_Id + ", user_Id=" + user_Id + ", r_time="
-         + r_time + ", p_time=" + p_time +  "]";
+	return "ReservationVO [r_number=" + r_number + ", store_Id=" + store_Id + ", user_Id=" + user_Id + ", r_time="
+			+ r_time + ", p_time=" + p_time +  "]";
 }
 
 
@@ -166,13 +167,13 @@ public String toString() {
 
 
 public ReservationVO(Long r_number, Integer store_Id, String user_Id, String r_time, String p_time, int isCooking) {
-   super();
-   this.r_number = r_number;
-   this.store_Id = store_Id;
-   this.user_Id = user_Id;
-   this.r_time = r_time;
-   this.p_time = p_time;
-   this.isCooking = isCooking;
+	super();
+	this.r_number = r_number;
+	this.store_Id = store_Id;
+	this.user_Id = user_Id;
+	this.r_time = r_time;
+	this.p_time = p_time;
+	this.isCooking = isCooking;
 }
 
 
@@ -183,12 +184,12 @@ public ReservationVO(Long r_number, Integer store_Id, String user_Id, String r_t
 
 
 public ReservationVO(Integer store_Id, String user_Id, String r_time, String p_time) {
-   super();
-   this.store_Id = store_Id;
-   this.user_Id = user_Id;
-   this.r_time = r_time;
-   this.p_time = p_time;
-   this.isCooking = 1; //1요리중 0픽업완료(완료된 예약)
+	super();
+	this.store_Id = store_Id;
+	this.user_Id = user_Id;
+	this.r_time = r_time;
+	this.p_time = p_time;
+	this.isCooking = 1; //1요리중 0픽업완료(완료된 예약)
 }
 
 
@@ -199,7 +200,7 @@ public ReservationVO(Integer store_Id, String user_Id, String r_time, String p_t
 
 
 public int getIsCooking() {
-   return isCooking;
+	return isCooking;
 }
 
 
@@ -210,7 +211,7 @@ public int getIsCooking() {
 
 
 public void setIsCooking(int isCooking) {
-   this.isCooking = isCooking;
+	this.isCooking = isCooking;
 }
 
 

@@ -12,77 +12,99 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="format-detection" content="telephone-no">
     
-    <link rel="stylesheet" type="text/css" href="assets/css/search.css">
     <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/search.css">
     
     <title>Document</title>
     <style>
 
-#map, #map2 {
-	width : 1000px;
-	height : 700px;
+#map {
+   width : 77%;
+   height : 700px;
+   padding-left:-100px;
+   top:10px;
+   
 }
+
+
 </style>
 </head>
 <body>
 
-		<div id="logo">
-			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
-		</div>
+      <div id="logo">
+         <a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+      </div>
 
 
-	<% ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
-	<% ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
-	<% ArrayList<Double> Scores = (ArrayList<Double>)request.getAttribute("Scores"); %>
-					
-					
+   <% ArrayList<StoreVO> store_list=(ArrayList<StoreVO>)request.getAttribute("store_list");%>
+   <% ArrayList<ArrayList<MenuVO>> menu_List=(ArrayList<ArrayList<MenuVO>>)request.getAttribute("menu_List");%>
+   <% ArrayList<Double> Scores = (ArrayList<Double>)request.getAttribute("Scores"); %>
+               
+               
         <div id="headerdiv">
             <header>
                <!-- <a class="header_emt" id="main_Logo" href="Main.jsp">로고</a> --> 
-                <form class="header_emt " id="main_form" action="Search" >
-                        <input name="searchWord" class="header_emt search" type="text" placeholder="검색어 입력">
-                        <input class="header_emt search" type="submit" value="검색">
-                    </form>
+                         <form action="Search">
+
+            <div class="search">
+<br>
+               <input id="search_box" name="searchWord" type="text"
+                  placeholder="     메뉴, 점포명, 지역명  검색 "> <input type="image"
+                  id="search_img" style="border: none;"
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+
+            </div>
+         </form>
             </header>
         </div>
         
-      <br><br><br>
+        <div id="allwidth">
+        <br><br><br>
         <div class="list_wrap">
         
         
         <% for(int i=0; i<store_list.size();i++){ %>
-     		 <%int storeId =store_list.get(i).getStore_Id(); %>
-					<% Double score = 0.0;
-					if(Scores.get(i) !=null){
-						score= Scores.get(i);
-					}	%>		
+            <%int storeId =store_list.get(i).getStore_Id(); 
+            String noimg="http://gdimg.gmarket.co.kr/1729899548/still/600?ver=1578298746";%>
+               <% Double score = 0.0;
+               if(Scores.get(i) !=null){
+                  score= Scores.get(i);
+               }   %>      
                 <div class="list_one">
-                    <table>
-                        <tr>
-                            <td>
-                            <img id="store_img<%=i%>" src="assets/css/images/samplefood.JPG">
-                            </td>
-                            
-                            <td>
-                            
-                                <a class ="list_store"> <%=store_list.get(i).getStore_Cate() %></a><br>
-                                <a class ="list_store" id="store_name" href="StoreDetail?storeId=<%=storeId%>"><h3><%=store_list.get(i).getStore_Name() %></h3></a>
-                                <a class ="list_store"id="store_score"> ⭐ <%=score %> </a><br>
-                                <a class ="list_store" id="store_Addr" href="StoreDetail?storeId=<%=storeId%>"><%=store_list.get(i).getStore_Addr() %></a><br>
+                            <img id="store_img<%=i%>" class="img"  src='<%=noimg %>' ">
+            
+                              <div class="list_open">
+                     <%if (store_list.get(i).getStore_Status()>0){%>
+                        <a style="font-size: 0.65em;  color:rgb(100, 100, 100);">🌞 영업중</a><br>
+                        <%if(store_list.get(i).getStore_Card_Yn()>0){%>
+                        <a style="font-size: 0.65em;  color:rgb(101, 100, 100);">💳 카드가능</a><br>
+                        <a style="font-size: 0.65em;  color:rgb(101, 100, 100);">🛒 예약가능</a>   
+                        <%} %>
+                     <% }else{ %>
+                        <a style="font-size: 0.65em;  color:rgb(101, 100, 100);">🌑 영업마감</a>
+                     <%} %>
+                     </div>
+
+
+                     <div class="listtext">
+                                <a class ="list_store" style="font-size: 0.8em;display: inline-block;padding-bottom:5px; color:rgb(141, 140, 140);"> <%=store_list.get(i).getStore_Cate() %></a>
+                                <a class ="list_store"id="store_score" style="font-size: 0.8em;display: inline-block;"> ⭐ <%=score %> </a><br>
+                                <a class ="list_store" id="store_name" style="font-size: 1em; font-weight: bold; font-family: 'NanumSquareNeo-Variable';color:rgb(20, 20, 20);"
+                                href="StoreDetail?storeId=<%=storeId%>"><h3><%=store_list.get(i).getStore_Name() %></h3></a>
+                                <br>
+                                <a class ="list_store" id="store_Addr" href="StoreDetail?storeId=<%=storeId%>"style="font-size: 0.8em; color:rgb(80, 80, 80);display: inline-block;padding-bottom:8px;"><%=store_list.get(i).getStore_Addr() %></a><br>
                                 <% int store_menu_size = menu_List.get(i).size();
                                 if(store_menu_size>=4){
-	                                for(int j=0;j<4;j++ ){%>
-	                                	<a class ="list_store" href="StoreDetail?storeId=<%=storeId%>"><span>#<%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
-	                                <% } 
+                                   for(int j=0;j<4;j++ ){%>
+                                      <a class ="list_store" href="StoreDetail?storeId=<%=storeId%>"style="font-size: 0.75em;display: inline-block;padding-bottom:5px;  color:rgb(80, 80, 80);"><span><%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
+                                   <% } 
                                 }else{
-                                	for(int j=0;j<store_menu_size;j++ ){%>
-	                               <a class ="list_store" href="StoreDetail?storeId=<%=storeId%>"> <span>#<%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
-	                                <% }
-                                	}%>
-                            
-                            </td>
-                        </tr>
-                    </table>
+                                   for(int j=0;j<store_menu_size;j++ ){%>
+                                  <a class ="list_store" href="StoreDetail?storeId=<%=storeId%>"style="font-size: 0.75em;display: inline-block;padding-bottom:5px;color:rgb(80, 80, 80);"> <span>#<%=menu_List.get(i).get(j).getMenu_Name()%></span></a>
+                                   <% }
+                                   }%>
+                                    </div>
+
                 </div>
                 
                  <% }%>
@@ -97,7 +119,7 @@
 
     </div>
     <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=발급받은키"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEPJDeugq2FzPRXwKhL0m7tmCiDz-9p1c"
 	>	
 	</script>
 	<script type="text/javascript">
@@ -155,7 +177,7 @@
 			});
 
 			//Url 포트 에러시 실행한 브라우저 창에 나온 포트번호로 번호만 바꾸면 됨!
-			downloadUrl('http://localhost:8084/JJMap/output.xml', function(
+			downloadUrl('http://localhost:14510/JJMap/output.xml', function(
 					data) {
 				console.log(data);
 				var xml = data.responseXML;

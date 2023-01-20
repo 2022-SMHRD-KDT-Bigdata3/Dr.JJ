@@ -25,5 +25,13 @@
 	<select id="store_Select_Storeid" resultType="com.smhrd.model1.StoreVO">
 	select * from stores where store_Id =#{store_Id}
 	</select>
+	
+	
+	<update id="Store_close" >
+    update Stores set store_Status = '0' where store_id=#{store_id}
+	</update>
+	<update id="Store_opne" >
+    update Stores set store_Status = '1' where store_id=#{store_id}
+	</update>
 
 </mapper>

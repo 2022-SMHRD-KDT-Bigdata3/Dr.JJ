@@ -3,7 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>MapJJ</display-name>
+  <display-name>JJmap</display-name>
   
   <servlet>
   	<servlet-name>Login</servlet-name>
@@ -23,12 +23,8 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.LogoutService</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>WebSocket</servlet-name>
-  	<display-name>WebSocket</display-name>
-  	<description></description>
-  	<servlet-class>Ws.WebSocket</servlet-class>
-  </servlet>
+  
+  
   <servlet>
   	<servlet-name>Search</servlet-name>
   	<display-name>Search</display-name>
@@ -101,7 +97,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller1.IdCheckService</servlet-class>
   </servlet>
-  
+  <servlet>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<display-name>StoreDetail</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
+  </servlet>
   <servlet>
   	<servlet-name>StoreReservation</servlet-name>
   	<display-name>StoreReservation</display-name>
@@ -127,11 +128,36 @@
   	<servlet-class>com.smhrd.controller1.ReviewService</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StoreDetail</servlet-name>
-  	<display-name>StoreDetail</display-name>
+  	<servlet-name>Basket</servlet-name>
+  	<display-name>Basket</display-name>
   	<description></description>
-  	<servlet-class>com.smhrd.controller1.StoreDetail</servlet-class>
+  	<servlet-class>com.smhrd.controller1.Basket</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Timer</servlet-name>
+  	<display-name>Timer</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.Timer</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NowReserve</servlet-name>
+  	<display-name>NowReserve</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.NowReserve</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StoreToday</servlet-name>
+  	<display-name>StoreToday</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreToday</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StoreClose</servlet-name>
+  	<display-name>StoreClose</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller1.StoreClose</servlet-class>
+  </servlet>
+ 
   
   
   
@@ -146,10 +172,6 @@
   <servlet-mapping>
   	<servlet-name>LogoutService</servlet-name>
   	<url-pattern>/LogoutService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>WebSocket</servlet-name>
-  	<url-pattern>/WebSocket</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Search</servlet-name>
@@ -200,6 +222,10 @@
   	<url-pattern>/IdCheckService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+  	<servlet-name>StoreDetail</servlet-name>
+  	<url-pattern>/StoreDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
   	<servlet-name>StoreReservation</servlet-name>
   	<url-pattern>/StoreReservation</url-pattern>
   </servlet-mapping>
@@ -216,9 +242,27 @@
   	<url-pattern>/ReviewService</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StoreDetail</servlet-name>
-  	<url-pattern>/StoreDetail</url-pattern>
+  	<servlet-name>Basket</servlet-name>
+  	<url-pattern>/Basket</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Timer</servlet-name>
+  	<url-pattern>/Timer</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>NowReserve</servlet-name>
+  	<url-pattern>/NowReserve</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreToday</servlet-name>
+  	<url-pattern>/StoreToday</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StoreClose</servlet-name>
+  	<url-pattern>/StoreClose</url-pattern>
+  </servlet-mapping>
+
   
 
 

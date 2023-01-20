@@ -11,6 +11,10 @@
 <link rel="stylesheet" href="assets/css/storedtail.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <title>Mypage</title>
+<style type="text/css">
+.userspace{text-align:center;}
+.button{margin-top:80px;}
+</style>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -32,23 +36,18 @@
 	<br>
 
 	<div class="info">
-
-		<div class="box" style="background: #bdbdbd;">
-			<img class="profile">
-		</div>
+<br><br><br>
+		
+			<img  src="https://cdn-icons-png.flaticon.com/512/1738/1738691.png"style="
+    border-radius: 50%;">
 		<br>
-		<div id=null>
+		<div id=null class="userspace">
 		<strong> <span><%=info.getUser_Nick()%>
 				님</span> </span> <a id="id">(<%=info.getUser_Id()%>)</a>
-		</strong> <br> <br> <a id="pass" href="#">비밀번호 변경</a> <a id="pass"
-			href="#">프로필 사진수정</a> <br> <br></div>
-		<hr width="100%" color="black">
-
-
-
+		</strong>
 
 		<div class="button">
-			<p class="btn btn-1" onClick='location.href="Reserve1.jsp"'>현재 예약
+			<p class="btn btn-1" onClick='location.href="NowReserve"'>현재 예약
 				보기</p>
 			<br>
 			<p class="btn btn-1" onClick='location.href="Myreview"'>내 리뷰

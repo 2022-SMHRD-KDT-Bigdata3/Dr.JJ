@@ -4,11 +4,23 @@
 <mapper namespace="com.smhrd.db1.ReservationMapper">
 
 	<insert id="create_r_num" parameterType="com.smhrd.model1.ReservationVO">
-		insert into reservations values (rNumber.seq.nextVal,#{store_Id},#{user_Id},#{r_time},#{p_time})
+		insert into reservations values (RESERVATIONS_SEQ.nextVal,#{store_Id},#{user_Id},#{r_time},#{p_time},1)
 	</insert>
 	
-	<select id="r_num_select"  resultType="com.smhrd.model1.ReservationVO">
+	<select id="r_num_select"  parameterType="com.smhrd.model1.ReservationVO" resultType="com.smhrd.model1.ReservationVO">
+	 select * from RESERVATIONS where store_Id = #{store_Id} and user_Id = #{user_Id} and r_time = #{r_time} and p_time = #{p_time} and isCooking= #{isCooking}
+	</select>
+	
+	<select id="select_reseve_by_rnum"  parameterType="Long" resultType="com.smhrd.model1.ReservationVO">
+	 select * from RESERVATIONS where r_Number=#{r_Number}
+	</select>
+	
+	<select id="rnumSelect"  resultType="com.smhrd.model1.ReservationVO">
 	 select * from reservations where store_Id = #{store_Id}
+	</select>
+	
+	<select id="select_Reservation"  resultType="com.smhrd.model1.ReservationVO">
+	 select * from reservations where user_id = #{user_id} and isCooking= 1
 	</select>
 	<select id="r_num"  resultType="com.smhrd.model1.ReservationVO">
 	 select * from reservations where user_Id = #{user_Id}

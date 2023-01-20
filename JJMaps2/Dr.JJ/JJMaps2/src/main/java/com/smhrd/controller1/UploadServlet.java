@@ -33,7 +33,8 @@ public class UploadServlet extends HttpServlet {
 		int uploadFileSizeLimit = 5 * 1024 * 1024;
 		String encType = "UTF-8";
 		ServletContext context = getServletContext();
-		String uploadFilePath = "C:/Users/smhrd/git/repository17/JJMaps2/src/main/webapp/upload/";
+		String uploadFilePath = "C:/Users/smhrd/Documents/카카오톡 받은 파일/JJMaps2 (1)/src/main/webapp/upload";
+		//uploadFilePath => 파일 실제 저장경로임 !!! 다른곳에 프로젝트를 저장하고 실행했을경우 바꿔주어야함
 		
 		try {
 			MultipartRequest multi = new MultipartRequest(request, // request 객체
@@ -42,7 +43,7 @@ public class UploadServlet extends HttpServlet {
 					encType, // 인코딩 방법
 					// 동일한 이름이 존재하면 새로운 이름이 부여됨
 					new DefaultFileRenamePolicy());
-				String reviewPic = "http://localhost:8084/JJMap/upload/"+multi.getFilesystemName("uploadFile");
+				String reviewPic = "http://localhost:14510/JJMap2/upload/"+multi.getFilesystemName("uploadFile");
 				System.out.println(reviewPic);
 				int store_id = Integer.parseInt(multi.getParameter("store_id"));
 				System.out.println(store_id);

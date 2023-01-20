@@ -29,20 +29,37 @@ public class StoreReservation extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
+		
+		//스토어 주인 user id 추출
 		HttpSession session = request.getSession();
 		MemberVO info = (MemberVO)session.getAttribute("info");
 		String user_id = info.getUser_Id();
+		
+		//스토어 아이디 추출
 		StoreDAO sdao = new StoreDAO();
 		Integer store_id = sdao.getStoreId(user_id);
-		ReservationDAO dao = new ReservationDAO();
 		
+		
+		//스토어 opne
+		int res = sdao.Store_opne(store_id);
+		if(res>0) {System.out.println("점포 오픈 ");};
+		
+		
+		//reservation VO 추출 ( 예약 번호, 가게 아이디, 예약자 아이디, 예약 시간, 픽업 시간 )
+		ReservationDAO dao = new ReservationDAO();
 		System.out.println("가게아이디 : " + store_id);
 		ArrayList<ReservationVO> rlist = dao.rnumSelect(store_id);
+		
+		
 		ArrayList<ReservationJoinVO> list= new ArrayList<ReservationJoinVO>();
+		
 		ReservationJoinDAO jdao = new ReservationJoinDAO();
 		ReserveDetailsDAO rdao = new ReserveDetailsDAO();
 		System.out.println(rlist.toString());
 		
+
+		
+		String[] re_id;
 		for(int i=0;i<rlist.size();i++) {
 			System.out.println(rlist.get(i).getR_number());
 			if(rlist.get(i).getR_number()!=null){

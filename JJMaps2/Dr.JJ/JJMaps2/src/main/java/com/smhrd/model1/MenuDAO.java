@@ -2,6 +2,7 @@ package com.smhrd.model1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -45,14 +46,28 @@ public class MenuDAO {
 		session.close();
 		return res;
 	}
-	public String select_name(Long menu_Id) {
+
+
+	public int select_price(int menu_Id) {
 		session = sqlSessionFactory.openSession(true);
 		MenuVO menuVOs = session.selectOne("select_price",menu_Id);
+		int price = menuVOs.getMenu_Price();
+		session.close();
+		return price;
+	}
+
+
+	public String select_name(Long menu_Id) {
+		session = sqlSessionFactory.openSession(true);
+		MenuVO menuVOs = session.selectOne("select_name",menu_Id);
 		String name = menuVOs.getMenu_Name();
 		session.close();
-		return name;
+		return name; 
 	}
-	
+
+
+
+
 
 
 

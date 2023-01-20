@@ -469,7 +469,6 @@ h1{
     margin-left: 20%;
     margin-right: 20%;
 
-
 }
 
 
@@ -579,11 +578,10 @@ div>h4{
 
 /* 푸터영역 */
 #footer{
-    padding-bottom: 10em;
+
     background-color: #f8f9fa;
     text-align: center;
     color: #ced4da;
-    height: 200px;
     left: 0;
     right: 0;
     bottom: 0;

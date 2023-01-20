@@ -28,6 +28,14 @@ public class ReserveDetailsDAO {
 		
 		return (ArrayList<ReserveDetailsVO>)list;
 	}
+	public ArrayList<ReserveDetailsVO> reserve_detail_select(long r_Number) {
+		session=sqlSessionFactory.openSession(true);
+		List<ReserveDetailsVO> list = null;
+		list = session.selectList("reserve_detail_select",r_Number);
+		session.close();
+		
+		return (ArrayList<ReserveDetailsVO>)list;
+	}
 	
 	
 }

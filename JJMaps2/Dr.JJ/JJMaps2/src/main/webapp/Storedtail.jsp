@@ -5,154 +5,276 @@
 <%@page import="com.smhrd.model1.ReviewDAO"%>
 <%@page import="com.smhrd.model1.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>jj login</title>
 <meta charset="utf-8" />
 <meta name="viewport"
-   content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone-no">
 <link rel="stylesheet" type="text/css" href="assets/css/storedtail.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+<style type="text/css">
+
+
+
+.head{
+
+display: inline-block;}
+
+.head_left{float: right;
+padding-top: 11px;}
+
+.head_text{
+ display: inline-block;
+ padding-right: 10px;
+ color: rgb(141, 140, 140);
+ letter-spacing :0.009em; 
+ font-size: 0.9em;}
+ 
+#mainBody{max-width: 600px;
+			min-width: 300px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+ }
+.inline{
+ display: inline-block;}
+ 
+ .form{ display: inline-block;}
+ 
+ .star-ratings {
+    color: #aaa9a9; 
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: #aaa9a9;  /* Will override color (regardless of order) */
+
+  }
+   
+  .star-ratings-fill {
+    color: #fff58c;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: gold;
+  }
+   
+  .star-ratings-base {
+    z-index: 0;
+    padding: 0;
+    
+  }
+   table.type05 {
+    border-collapse: separate;
+     width: 100%;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+     text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 td {
+    padding: 10px;
+     padding-right: 20px;
+    text-align: right;
+    
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+
+    #pic_div{
+     text-align: center;
+    width:100px;
+    height:85px;
+     border-radius: 20px;
+     border: 0.1em solid  rgb(185, 185, 185);
+    }
+ 
+ 
+</style>
 </head>
 <body>
 
+	
+	<%	MemberVO info = (MemberVO)session.getAttribute("info");	%>
 
-   <%   MemberVO info = (MemberVO)session.getAttribute("info");   %>
+	<%	StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
+	<%	ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
+	<% if(store_info !=null && info.getUser_Id().equals(store_info.getUser_Id())){%>
+		<a href="StoreReservation"> 현재 점포 예약보기 </a>
+	<%}%>
+	
+	<!-- 헤더영역 -->
+	<div id="login_Body">
+		<div class='head' id="logo">
+			<a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
+		</div>
+		
+	
+		
+		<div class='head head_left'>
+			<%
+			if (info != null) {
+				out.print("<a class=' head_text' id='mypage' href='Mypage.jsp'>마이페이지</a></li>");
+				out.print("<a class=' head_text' id='logout' href='LogoutService'>로그아웃</a></li>");
 
-   <%   StoreVO store_info=(StoreVO)request.getAttribute("store_info");%>
-   <%   ArrayList<MenuVO> menu_info=(ArrayList<MenuVO>)request.getAttribute("menu_info");%>
-<% String status;
-if( store_info.getStore_Status()!=0 ){
-	status = "영업중";
-}else{
-	status = "영업중이 아닙니다.";
-}%>
-   <% Integer store_id = store_info.getStore_Id(); %>
-   <!-- 헤더영역 -->
-   <div id="login_Body">
-      <div id="logo">
-         <a onClick='location.href="Main.jsp"'>쩝쩝여지도</a><br>
-      </div>
-   </div>
-   <!-- 가게소개 영역 -->
+				// smart 1234 -> usercode 0(일반이용자)
+				// ssss 1234 -> usercode 1(점포이용자)
 
-			<a href ="StoreReservation?store_id=<%=store_id %>">가게 예약목록 확인하기</a>
-   <header class="bar">
-      <div id="Title">
-         <h1>
-            🧡<%=store_info.getStore_Name() %>🧡
-         </h1>
-         <div id="sdtail">
-            <div>
-               <a style="font-size: 20px;"><%=store_info.getStore_Cate() %></a>
+			} else {
+				out.print("<a class='head_text' id='login' href='Login.jsp'>로그인</a></li>");
+				out.print("<a class='head_text' id='join' href='Join.jsp'>회원가입</a></li>");
+			}
+			%> 
+			</div>
+	</div>
+	<!-- 가게소개 영역 -->
 
-            </div>
-         </div>
-      </div>
-   </header>
+	<header class="bar">
+		<div id="Title">
+			<h1>
+			
+			</h1>
+			<div id="sdtail">
+				<div>
+				
+				</div>
+			</div>
+		</div>
+	</header>
 
-   <br>
+	<br>
+	<div class="mainBody " >
+	<br>
+	<img style="width=1px;"src="https://cdn-icons-png.flaticon.com/128/8339/8339313.png">
+	<br><br>
+	<span class="inline" style="font-size: 0.94em;display: block; color:rgb(141, 140, 140);">Category | <%=store_info.getStore_Cate() %></span><br>
+	<div class="inline" id="null" style="max-width:800px;min-width:300px;height: 70px;">	<span style="height: 2px; display: block; font-size: 1.8em; font-weight: bold; "><%=store_info.getStore_Name() %></span></div>
+	<a  href="https://map.kakao.com/link/roadview/<%=store_info.getLatitude()%>,<%=store_info.getLongitude()%>">
+	<br>
+	<div class="inline">
+	<span class="material-symbols-outlined" style=" display:inline-block; color:rgb(70, 70, 70);top:10px;">location_on</span>
+	<span  style="font-size: 1em; height: 20px; display: inline-block; font-weight: bold;color:rgb(70, 70, 70);"><%=store_info.getStore_Addr() %></span></a><br>
+	</div><br>
+	<div class="inline">
+	<span class="material-symbols-outlined" style=" display:inline-block; color:rgb(80, 80, 80);top:10px;">call</span>
+	<span  style="font-size: 1em; height:20px; display: inline-block; color:rgb(90, 90,9 0);"><%=store_info.getStore_Tel()%></span><br>
+	</div>
+	
+	
+	<br><br><br>
+		<div class="star-ratings" style="display: inline-block;">
+			<div 
+		    class="star-ratings-fill space-x-2 text-lg"  style=" width: 70% ; font-size: 2.2em;"
+			><br><br>
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>  
+			</div>
+			<div class="star-ratings-base space-x-2 text-lg"style="font-size: 2.2em;">
+				<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+			</div>
+		</div>	(3.6)
+		
+	</div> 
+	<br>
+	<br>
+	<br>
 
-   <div id="null">
-      <main id="main">
-         <br> <br>
-         <div class="boxx1">
-            <div>카테고리 : <%=store_info.getStore_Cate() %></div>
-            <br>
-            <div>위치: <%=store_info.getStore_Addr() %></div>
-            <br>
-            <div>(영업상태) 및 정보 : <%=status %></div>
-            <br>
-            <div>전화번호 : <%=store_info.getStore_Tel() %></div>
-            <br>
-         </div>
-      </main>
-   </div>
-   <br>
+		<form action="StoreDetail" class="form inline">
+	
+			<input type="hidden" id="login_check"
+				value="<%=info!=null?info.getUser_Id():""%>"> <input
+				type="hidden" name="storeId"
+				value="<%=store_info.getStore_Id()%>"> <input
+				type="hidden" name="send" value="Renovation.jsp">
+			<div style="height:50px; display: inline-block;"><button>예약하기</button></div>
+		</form>
+				
+
+
+	<% Integer store_id = store_info.getStore_Id(); %>
+	<form class="form inline" >
+		<div style="height:50px; display: inline-block;"><button type="button" 
+			onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
+			쓰기</button></div>
+	</form>
 
 
 <br>
-   <form class="form">
-      <button type="button" class="navyBtn"
-         onClick='location.href="ReviewService?store_id=<%=store_id %>"'>리뷰
-         쓰기</button>
-   </form>
-   <br>
-   <br>
-
-   <div id="null">
-      <main id="main2"><br><br>
-         <div class=menu_pic>메인2 (메뉴 및 사진)</div>
-         <br>
-         <div>
-            <h3>메뉴판</h3>
-            <br> <span>(맛있는 메뉴)</span><br>
-
-            <table border="1px solid" class="addInput">
-<br><br><br><br>
-               <main id="main2" >
-                  메인2 (메뉴 및 사진)
-                  <div><br>
-                     <h3>메뉴판</h3><br>
-                     <span>(맛있는 메뉴)</span><br>
+<br>
+<hr style="border: solid 1px  #FD6F22;">
+<br>
+<div style=" margin-left: auto; text-align:center;
+    margin-right: auto;  font-family: 'NanumSquareNeo-Variable';letter-spacing :7px;" ><span>M E N U</span></div>
+<br>
 
 
 
-                     <table border="1" class="addInput">
-
-                        <tr>
-                           <th>번호</th>
-                           <th>메뉴이름</th>
-                           <th>가격</th>
-                           <th>메뉴 설명</th>
-                        </tr>
-                        </div>
-                        <% int i =1;
-         for(i=0;i<menu_info.size();i++){  int index =i+1;%>
-
-                        <tr id="add_tr<%=i%>">
-                           <td><%= index %></td>
-                           <td><%=menu_info.get(i).getMenu_Name()%></td>
-                           <td><%=menu_info.get(i).getMenu_Price()%>원</td>
-                           <td><%=menu_info.get(i).getMenu_details()%></td>
-                        </tr>
-
-                        <% } %>
-
-                     </table>
-
-               </main>
-
-                  <br>
-                  <br>
-                  <br>
-
-                  <footer id="fix">
-
-                     <form action="StoreDetail" class="form">
-                  
-                        <input type="hidden" id="login_check"
-                           value="<%=info!=null?info.getUser_Id():""%>"> <input
-                           type="hidden" name="storeId"
-                           value="<%=store_info.getStore_Id()%>"> <input
-                           type="hidden" name="send" value="Renovation.jsp">
-                           <div id="myr"><input type="submit" value="예약하기"></div>
-                     </form>
-                  </footer>
+<table class="type05">
 
 
-                  <footer id="footer">@JJUPJJUPBAKSA</footer>
-                  <br>
-                  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-                  <script>
+	<%for (int i = 0; i < menu_info.size(); i++) {%>
+			<tr >
+			
+				<td><span style=" height: 110px ; padding-left:10px; display: table-cell; vertical-align: middle"><%=(i + 1)%></span></td>
+				<td><div id="pic_div" style=" height: 110px ; display: table-cell; vertical-align: middle;">
+				<%=menu_info.get(i).getMenu_Pic1() %></div></td>
+				<td><span class="menu_name" style="color: rgb(32, 32, 32); font-size: 1.05em; font-weight: bold; "><%=menu_info.get(i).getMenu_Name()%></span><br>
+				<span style="color: rgb(141, 140, 140); font-size: 0.8em;"><%=menu_info.get(i).getMenu_details()%></span>
+				<span style="height: 12px; display: block;"><br></span>
+				
+				가격 : <span id="menuPrice<%=i%>"><%=menu_info.get(i).getMenu_Price()%></span>원<br>
+				
+
+<% } %>
+
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+							
+
+					
+
+						
+
+	
+
+ 
+		<footer id="footer" style="height: -10px;">@JJUPJJUPBAKSA</footer>
+		<br>
+		
+		
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
 $(document).ready(function() {
     $('.form').submit(function() {
         if ($('#login_check').val()==="") {
-            Swal.fire({
+        	 Swal.fire({
                  icon: '',
                  title: '',
                  text: '로그인을 해주세요.',
@@ -163,6 +285,12 @@ $(document).ready(function() {
     }); // end submit()
 }); // end ready()
 
+
+
+ratingToPercent() {
+    const score = + this.restaurant.averageScore * 20;
+    return score + 1.5;
+}
 </script>
 </body>
 </html>

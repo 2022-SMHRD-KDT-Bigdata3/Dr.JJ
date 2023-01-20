@@ -45,6 +45,17 @@ public class ReservationJoinVO {
 	 
 	 
 
+		@Override
+	public String toString() {
+		return "ReservationJoinVO [r_number=" + r_number + ", store_Id=" + store_Id + ", user_Id=" + user_Id
+				+ ", r_time=" + r_time + ", p_time=" + p_time + ", isCooking=" + isCooking + ", rd_Id=" + rd_Id
+				+ ", menu_Id=" + menu_Id + ", r_Number_1=" + r_Number_1 + ", menu_Cnt=" + menu_Cnt + ", menu_Price="
+				+ menu_Price + "]";
+	}
+
+
+
+
 		public ReservationJoinVO(Long rd_Id, Long menu_Id, Long r_Number_1, Long menu_Cnt, int menu_Price,Long r_number, Integer store_Id, String user_Id, String r_time, String p_time,
 				int isCooking) {
 			super();
